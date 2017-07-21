@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="IdentifierExpected" xml:space="preserve">
+    <value>Bezeichner erwartet: '{0}'.</value>
+  </data>
+  <data name="NewlineInString" xml:space="preserve">
+    <value>Zeilenumbruch in Zeichenkette nicht erlaubt.</value>
+  </data>
+  <data name="EndOfFileExpected" xml:space="preserve">
+    <value>Ende der Datei erwartet.</value>
+  </data>
+  <data name="InvalidEnumForLeftPosition" xml:space="preserve">
+    <value>ShapePosition muss einer der Werte 'Left', 'Center', oder 'Right' sein.</value>
+  </data>
+  <data name="UseOfUndefinedBaseStyle" xml:space="preserve">
+    <value>Die unbekannte Basis-Formatvorlage '{0}' wurde verwendet.</value>
+  </data>
+  <data name="UnexpectedSymbol" xml:space="preserve">
+    <value>Unerwartetes Symbol '{0}'.</value>
+  </data>
+  <data name="NullAssignmentNotSupported" xml:space="preserve">
+    <value>Zuweisung von 'null' an '{0}' ist nicht erlaubt.</value>
+  </data>
+  <data name="OutOfRange" xml:space="preserve">
+    <value>Der gültige Bereich liegt innerhalb von '{0}'.</value>
+  </data>
+  <data name="InvalidColorString" xml:space="preserve">
+    <value>Aus der Zeichenkette '{0}' konnte keine Farbe eingelesen werden.</value>
+  </data>
+  <data name="MissingBracketRight" xml:space="preserve">
+    <value>Schließende eckige Klammer nach '{0}' fehlt.</value>
+  </data>
+  <data name="MissingObligatoryProperty" xml:space="preserve">
+    <value>Obigatorische Eigenschaft '{0}' wurde an '{1}' nicht gesetzt.</value>
+  </data>
+  <data name="InvalidFieldType" xml:space="preserve">
+    <value>Ungültiger Feldtyp: '{0}'.</value>
+  </data>
+  <data name="NullExpected" xml:space="preserve">
+    <value>Null erwartet: '{0}'.</value>
+  </data>
+  <data name="InvalidType" xml:space="preserve">
+    <value>Variablentyp '{0}' wird von '{1}' nicht unterstützt.</value>
+  </data>
+  <data name="InvalidEnum" xml:space="preserve">
+    <value>'{0}' '{1}'.</value>
+  </data>
+  <data name="EmptyBaseStyle" xml:space="preserve">
+    <value>Die Basis-Formatvorlage darf nicht leer sein.    </value>
+  </data>
+  <data name="UndefinedBaseStyle" xml:space="preserve">
+    <value>Die Basis-Formatvorlage '{0}' ist nicht definiert.</value>
+  </data>
+  <data name="InvalidEnumForTopPosition" xml:space="preserve">
+    <value> ShapePosition einer der Werte 'Top', 'Center', oder 'Bottom' sein.</value>
+  </data>
+  <data name="MissingBraceRight" xml:space="preserve">
+    <value>Schließende geschweifte Klammer nach '{0}' fehlt.</value>
+  </data>
+  <data name="SymbolNotAllowed" xml:space="preserve">
+    <value>Symbol '{0}' ist in diesem Zusammenhang nichterlaubt.</value>
+  </data>
+  <data name="UnknownChartType" xml:space="preserve">
+    <value>Unbekannter Diagrammtyp: '{0}'</value>
+  </data>
+  <data name="NoAccess" xml:space="preserve">
+    <value>Zugriff verweigert: '{0}' existiert nur für den internen Gebrauch.</value>
+  </data>
+  <data name="MissingBracketLeft" xml:space="preserve">
+    <value>Öffnende eckige Klammer nach '{0}' fehlt.</value>
+  </data>
+  <data name="SymbolIsNotAnObject" xml:space="preserve">
+    <value>Symbol '{0}' ist kein Objekt.</value>
+  </data>
+  <data name="BaseStyleRequired" xml:space="preserve">
+    <value>Es muss eine Basis-Formatvorlage definiert werden.</value>
+  </data>
+  <data name="SymbolsExpected" xml:space="preserve">
+    <value>Eines der folgenden Symbole {0} erwartet.</value>
+  </data>
+  <data name="InvalidSymbolType" xml:space="preserve">
+    <value>Ungültiges Symbol '{0}'.</value>
+  </data>
+  <data name="RealExpected" xml:space="preserve">
+    <value>Fließkomma-Wert erwartet: '{0}'.</value>
+  </data>
+  <data name="StringExpected" xml:space="preserve">
+    <value>Zeichenkette erwartet: '{0}'.</value>
+  </data>
+  <data name="MissingParenRight" xml:space="preserve">
+    <value>Schließende runde Klammer nach '{0}' fehlt.</value>
+  </data>
+  <data name="InvalidFontSize" xml:space="preserve">
+    <value>Die Fontgröße '{0}' is ausserhalb des erlaubten Bereichs.</value>
+  </data>
+  <data name="NumberExpected" xml:space="preserve">
+    <value>Zahl erwartet: '{0}'.</value>
+  </data>
+  <data name="InvalidFieldFormat" xml:space="preserve">
+    <value>'{0}' ist kein gültiges Format für ein numerisches Feld.</value>
+  </data>
+  <data name="UseOfUndefinedStyle" xml:space="preserve">
+    <value>Die unbekannte Formatvorlage '{0}' wurde verwendet.</value>
+  </data>
+  <data name="MissingParenLeft" xml:space="preserve">
+    <value>Öffnende runde Klammer nach '{0}' fehlt.</value>
+  </data>
+  <data name="InvalidInfoFieldName" xml:space="preserve">
+    <value>Die Eigenschaft 'Name' an 'InfoField' hat den ungültigen Wert '{0}'.</value>
+  </data>
+  <data name="InvalidUnitType" xml:space="preserve">
+    <value>'{0}' ist ein unbekannter Maß für ein 'Unit'-Objekt.</value>
+  </data>
+  <data name="ParentAlreadySet" xml:space="preserve">
+    <value>Wert vom Typ '{0}' muss geklont werden, bevor we an '{1}' gesetzt werden kann.</value>
+  </data>
+  <data name="EscapeSequenceNotAllowed" xml:space="preserve">
+    <value>Ungültige Escapesequenz.</value>
+  </data>
+  <data name="KeyWordExpected" xml:space="preserve">
+    <value>Schlüsselwort '{1}' - '{0}' erwartet.</value>
+  </data>
+  <data name="IntegerExpected" xml:space="preserve">
+    <value>Ganze Zahl erwartet: '{0}'.</value>
+  </data>
+  <data name="InvalidRange" xml:space="preserve">
+    <value>Ungültiger Bereich: '{0}'.</value>
+  </data>
+  <data name="InvalidColor" xml:space="preserve">
+    <value>Ungültiger Farbwert: '{0}'.</value>
+  </data>
+  <data name="BoolExpected" xml:space="preserve">
+    <value>Boolescher Wert erwartet: '{0}'.</value>
+  </data>
+  <data name="OperatorExpected" xml:space="preserve">
+    <value>Syntaxfehler: Operator '{0}' erwartet.</value>
+  </data>
+  <data name="InvalidDocumentObjectType" xml:space="preserve">
+    <value>Das übergebene Dokumentobjekt ist in diesem Zusammenhang nicht gültig.</value>
+  </data>
+  <data name="InsertNullNotAllowed" xml:space="preserve">
+    <value>In ein Collection-Objekt darf keine null eingefügt werden.</value>
+  </data>
+  <data name="StyleNameExpected" xml:space="preserve">
+    <value>'{0}' ist kein gültiger Name für eine Formatvorlage.</value>
+  </data>
+  <data name="SymbolExpected" xml:space="preserve">
+    <value>Symbol '{0}' erwartet, '{1}' vorgefunden.</value>
+  </data>
+  <data name="MissingBraceLeft" xml:space="preserve">
+    <value>Öffnende geschweifte Klammer nach '{0}' fehlt.</value>
+  </data>
+  <data name="InvalidUnitValue" xml:space="preserve">
+    <value> '{0}' ist keine gültige Zeichenkette für ein 'Unit'-Objekt.</value>
+  </data>
+  <data name="StyleExpected" xml:space="preserve">
+    <value>Der übergebene Wert muss vom Typ MigraDoc.DocumentObjectModel.Style sein.</value>
+  </data>
+  <data name="InvalidValueForOperation" xml:space="preserve">
+    <value>Operation '{1}' ist für den Wert '{0}' nicht gültig.</value>
+  </data>
+  <data name="MissingComma" xml:space="preserve">
+    <value>Komma fehlt.</value>
+  </data>
+  <data name="UnexpectedEndOfFile" xml:space="preserve">
+    <value>Unerwartetes Dateiende.</value>
+  </data>
+  <data name="InvalidAssignment" xml:space="preserve">
+    <value>Ungültige Zuweisung an '{0}'.</value>
+  </data>
+  <data name="InvalidValueName" xml:space="preserve">
+    <value>'{0}' ist ein ungültiger Wertname.</value>
+  </data>
+</root>

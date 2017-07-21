@@ -1,0 +1,2 @@
+<FixedPage xmlns="http://schemas.microsoft.com/xps/2005/06" xmlns:x="http://schemas.microsoft.com/xps/2005/06/resourcedictionary-key" xml:lang="en-us" Width="480" Height="640"><FixedPage.Resources><ResourceDictionary><ImageBrush x:Key="b0" ViewportUnits="Absolute" TileMode="FlipY" ViewboxUnits="Absolute" Viewbox="0,0,133.316663777748,133.316663777748" Viewport="0,0,24,12" ImageSource="/Resources/391e184a-1516-4385-800b-a05f5f361995.png" />
+</ResourceDictionary></FixedPage.Resources><Path Fill="{StaticResource b0}" Data="M0,0L240,0 240,120 0,120Z" /></FixedPage>

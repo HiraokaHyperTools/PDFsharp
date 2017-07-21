@@ -1,0 +1,9 @@
+<FixedPage xmlns="http://schemas.microsoft.com/xps/2005/06" xmlns:x="http://schemas.microsoft.com/xps/2005/06/resourcedictionary-key" xml:lang="en-us" Width="510.23622047244095" Height="680.3149606299213">
+  <FixedPage.Resources>
+    <ResourceDictionary>
+      <ImageBrush x:Key="b0" ViewportUnits="Absolute" TileMode="None" ViewboxUnits="Absolute" Viewbox="0,0,133.333333333333,133.333333333333" Viewport="5,5,210,130" ImageSource="/Resources/912cacd0-3310-43c7-81ed-c8eaa784da1d.png" />
+    </ResourceDictionary>
+  </FixedPage.Resources>
+  <Path Fill="#FFFFFFFF" Data="M0,0L510.24,0 510.24,680.31 0,680.31Z" />
+  <Path Fill="{StaticResource b0}" RenderTransform="1,0,0,1,23.4120734908137,24.0629921259843" Data="M215,70C215,105.9 167.99,135 110,135 52.01,135 5,105.9 5,70 5,34.1 52.01,5 110,5 167.99,5 215,34.1 215,70Z" />
+</FixedPage>

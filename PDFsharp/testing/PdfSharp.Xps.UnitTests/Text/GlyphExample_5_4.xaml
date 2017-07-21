@@ -1,0 +1,17 @@
+﻿<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Width="510" Height="680" Background="White">
+
+  <Glyphs Fill="#000000" FontRenderingEmSize="48"
+    OriginX="100" OriginY="100"
+    UnicodeString="AFQ"
+    Indices=";,100,30,10;"
+    BidiLevel="1"
+    FontUri="c:/Windows/Fonts/Arial.ttf" />
+  <!-- 
+    36 0 0 36 50.9883 405 Tm
+    (A)Tj
+    -0.911 0.1 Td
+    (F)Tj
+    -0.867 -0.1 Td
+    (Q)Tj
+    -->
+</Canvas>

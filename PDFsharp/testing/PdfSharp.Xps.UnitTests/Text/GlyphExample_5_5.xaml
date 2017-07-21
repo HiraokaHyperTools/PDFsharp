@@ -1,0 +1,9 @@
+﻿<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Width="510" Height="680" Background="White">
+
+  <Glyphs Fill="#000000" FontRenderingEmSize="48"
+    OriginX="100" OriginY="100"
+    UnicodeString="AFQ"
+    Indices=";,100,30,10;"
+    IsSideways="true"          
+    FontUri="c:/Windows/Fonts/Arial.ttf" />
+</Canvas>

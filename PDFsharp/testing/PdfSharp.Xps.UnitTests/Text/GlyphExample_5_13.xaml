@@ -1,0 +1,36 @@
+﻿<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Width="510" Height="680" Background="White">
+
+  <!-- "ёжик в тумане" using pre-composed "ё" -->
+  <Glyphs
+    OriginX="35"
+    OriginY="35"
+    xml:lang="ru-RU"
+    UnicodeString="ёжик в тумане"
+    FontUri="c:/Windows/Fonts/Times.ttf"
+    FontRenderingEmSize="20"
+    Fill="#009900" />
+  
+  <!-- "ёжик в тумане" using composition of "e" and diaeresis -->
+  <Glyphs
+    OriginX="35"
+    OriginY="70"
+    xml:lang="ru-RU"
+    UnicodeString="ёжик в тумане"
+    Indices="(1:2)72;142,0,-40"
+    FontUri="c:/Windows/Fonts/Times.ttf"
+    FontRenderingEmSize="20"
+    Fill="#009900" />
+  
+  <!-- "ёжик в тумане" Forced rendering right-to-left showing combining mark in logical order -->
+  <Glyphs
+    OriginX="155"
+    OriginY="105"
+    BidiLevel="1"
+    xml:lang="ru-RU"
+    UnicodeString="ёжик в тумане"
+    Indices="(1:2)72;142,0,-40"
+    FontUri="c:/Windows/Fonts/Times.ttf"
+    FontRenderingEmSize="20"
+    Fill="#009900" />
+
+</Canvas>

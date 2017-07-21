@@ -1,0 +1,318 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8E18EF36-98CB-4796-ACB4-E0AABA942D9C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PdfSharp.Xps.UnitTests</RootNamespace>
+    <AssemblyName>PdfSharp.Xps.UnitTests</AssemblyName>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>StrongnameKey.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;WPF</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;WPF</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="ReachFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.XML" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="!DebuggingDemo.cs" />
+    <Compile Include="ComplexDrawings\!ComplexDrawings.cs" />
+    <Compile Include="Graphics\4.2.3.1 Smooth Bezier Curve Abbreviated Syntax.cs" />
+    <Compile Include="Helpers\VisualsHelper.cs" />
+    <Compile Include="Helpers\GeometrieSamples.cs" />
+    <Compile Include="Helpers\VisualPresenter.cs" />
+    <Compile Include="Helpers\TestBase.cs" />
+    <Compile Include="Primitives.Clipping\UnitTest1.cs" />
+    <Compile Include="Primitives.Fill\BrushFactory.cs" />
+    <Compile Include="Primitives.Fill\FillImageBrush.cs" />
+    <Compile Include="Primitives.Fill\FillVisualBrush.cs" />
+    <Compile Include="Primitives.Fill\FillRadialGradientBrush.cs" />
+    <Compile Include="Primitives.Fill\FillLinearGradientBrush.cs" />
+    <Compile Include="Primitives.Fill\FillSolidColorBrush.cs" />
+    <Compile Include="Primitives.Glyphs.Xaml\Test01.cs" />
+    <Compile Include="Primitives.Glyphs\GlyphIndices.cs" />
+    <Compile Include="Primitives.Glyphs\Umlauts.cs" />
+    <Compile Include="Primitives.Glyphs\StartItSimple.cs" />
+    <Compile Include="Primitives.Clipping\ClippingGeometry.cs" />
+    <Compile Include="Primitives.Paths\AbbreviationSyntax.cs" />
+    <Compile Include="Primitives.Paths\PathBezierSegments.cs" />
+    <Compile Include="Primitives.Paths\PathArcSegments.cs" />
+    <Compile Include="Primitives.Paths\PathQuadraticBezierSegments.cs" />
+    <Compile Include="Primitives.Paths\PathDCPrimitives.cs" />
+    <Compile Include="Primitives.Paths\PathLineSegments.cs" />
+    <Compile Include="Primitives.Stroke\StrokeLinearGradientBrush.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Qlbm\!QLMB.cs" />
+    <Compile Include="Rendering\RenderingXpsDocument.cs" />
+    <Compile Include="Text\SimpleText.cs" />
+    <Compile Include="Text\GlyphExamples.cs">
+      <SubType>
+      </SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Compile>
+    <Compile Include="Typography\RenderingTypography.cs" />
+    <Compile Include="XpsFiles\SampleXpsDocuments_1_0.cs" />
+    <Compile Include="XpsParsing\ParsingXpsDocument.cs" />
+    <Compile Include="XpsParsing\%28PrimaryFixedPayload.Test01%29.cs" />
+    <Compile Include="XpsParsing\FileParser.cs" />
+    <Compile Include="xternal\Rendering.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Test02.png" />
+    <EmbeddedResource Include="Resources\Test01x.png" />
+    <EmbeddedResource Include="Resources\Test01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\code\PdfSharp\PdfSharp-WPF.csproj">
+      <Project>{02FCC0BB-2AA2-43BA-8D2F-66D168B87A1D}</Project>
+      <Name>PdfSharp-WPF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\code\PdfSharp.Xps\PdfSharp.Xps.csproj">
+      <Project>{0BC3964B-A3BC-49D5-9B7C-463299B5A166}</Project>
+      <Name>PdfSharp.Xps</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ComplexDrawings\Camera.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Primitives.Glyphs\GlyphFiles\ClusterMap.xps" />
+    <EmbeddedResource Include="Qlbm\MB03.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Qlbm\MB04.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <None Include="StrongnameKey.snk" />
+    <Resource Include="Qlbm\arial.ttf" />
+    <None Include="Test References\PdfSharp.Xps.accessor" />
+    <None Include="Typography\CalibriPoster.xps" />
+    <None Include="Typography\CambriaPoster.xps" />
+    <None Include="Typography\CandaraPoster.xps" />
+    <None Include="Typography\ConsolasPoster.xps" />
+    <None Include="Typography\ConstantiaPoster.xps" />
+    <None Include="Typography\CorbelPoster.xps" />
+    <None Include="Typography\TypeSamples.xps" />
+    <None Include="xternal\XPS_export_test.xps" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Primitives.Glyphs.Xaml\Test01.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Graphics\4.2.3.1 Smooth Bezier Curve Abbreviated Syntax.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Text\GlyphExample_5_7.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ComplexDrawings\Glasses.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ComplexDrawings\MigraDoc.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ComplexDrawings\PopCan.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ComplexDrawings\Coffee.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ComplexDrawings\TestfromJanŠiroký.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Primitives.Paths\Mitered.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Qlbm\MB01.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Qlbm\QL_logo_color.tif" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Qlbm\MB02.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Text\SimpleText01.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Text\GlyphExample_5_9.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Text\SimpleText02.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Text\GlyphExample_5_10.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Text\GlyphExample_5_11.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Text\GlyphExample_5_1_2_3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Text\GlyphExample_5_1_2_4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Text\GlyphExample_5_3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Text\GlyphExample_5_6.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Text\GlyphExample_5_4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Text\GlyphExample_5_5.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Text\GlyphExample_5_12.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Text\GlyphExample_5_13.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Text\SimpleText03.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Text\SimpleText04.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="OpacityMasks\" />
+    <Folder Include="Primitives.Canvas\" />
+    <Folder Include="Primitives.Geometries\" />
+    <Folder Include="Primitives.Transforming\" />
+    <Folder Include="XamlTests\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

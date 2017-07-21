@@ -1,0 +1,130 @@
+﻿  <Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Width="800" Height="1066"  RenderTransform="0.6,0,0,0.6,0,0" Background="Beige">
+  <!--Path RenderTransform=".7,0,0,.7,0,20" Data="M 30,20 l 258.24,0 0,56.64 -258.24,0 Z">
+    <Path.Fill>
+      <ImageBrush ImageSource="QL_logo_color.tif" Viewbox="0,0,258.24,56.64" ViewboxUnits="Absolute" Viewport="50,20,193.68,42.48" ViewportUnits="Absolute" />
+    </Path.Fill>
+  </Path-->
+  <!--Glyphs Fill="#ff000000" FontUri="arial.ttf" FontRenderingEmSize="12" OriginX="40" OriginY="1015" UnicodeString="Copyright &#xa9; 2006 QualityLogic, Inc." />
+  <Glyphs Fill="#ff000000" FontUri="arial.ttf" FontRenderingEmSize="12" OriginX="475" OriginY="1003" UnicodeString="For information on QualityLogic XPS test products," />
+  <Glyphs Fill="#ff000000" FontUri="arial.ttf" FontRenderingEmSize="12" OriginX="480" OriginY="1015" UnicodeString="go to http://go.microsoft.com/fwlink/?LinkId=66319" FixedPage.NavigateUri="http://go.microsoft.com/fwlink/?LinkId=66319" />
+  <Glyphs Fill="#ff000000" FontUri="arial.ttf" FontRenderingEmSize="20" OriginX="764" OriginY="60" BidiLevel="1" UnicodeString="tseT seirtemoeG dna shtaP SPX" /-->
+  <Canvas RenderTransform="1,0,0,1,20,20">
+    <Path Stroke="sc#1.0,1.0,0.0" Data="M 20,60 L 250,60" StrokeThickness="8" StrokeEndLineCap="Round" StrokeStartLineCap="Triangle" />
+    <Path Stroke="sc#0.0,1.0,0.0" Data="M 250,75 L 20,75" StrokeThickness="8" StrokeEndLineCap="Square" StrokeStartLineCap="Triangle" />
+    <Path Stroke="sc#0.0,1.0,1.0" Data="M 20,90 L 250,90" StrokeThickness="8" StrokeEndLineCap="Round" />
+    <Path Stroke="sc#1.0,0.0,1.0" Data="M 250,105 L 20,105" StrokeThickness="8" />
+    <Path Stroke="sc#1.0,1.0,0.0" Data="M 30,120 L 30,330" StrokeThickness="8" StrokeEndLineCap="Round" StrokeStartLineCap="Triangle" />
+    <Path Stroke="sc#0.0,1.0,0.0" Data="M 45,330 L 45,120" StrokeThickness="8" StrokeEndLineCap="Square" StrokeStartLineCap="Triangle" />
+    <Path Stroke="sc#0.0,1.0,1.0" Data="M 60,120 L 60,330" StrokeThickness="8" StrokeEndLineCap="Round" />
+    <Path Stroke="sc#1.0,0.0,1.0" Data="M 75,330 L 75,120" StrokeThickness="8" />
+    <Path Stroke="sc#1.0,1.0,0.0" Data="M 90,120 L 250,330" StrokeThickness="8" StrokeEndLineCap="Round" StrokeStartLineCap="Triangle" />
+    <Path Stroke="sc#0.0,1.0,0.0" Data="M 235,330 L 90,140" StrokeThickness="8" StrokeEndLineCap="Square" StrokeStartLineCap="Triangle" />
+    <Path Stroke="sc#0.0,1.0,1.0" Data="M 90,160 L 220,330" StrokeThickness="8" StrokeEndLineCap="Round" />
+    <Path Stroke="sc#1.0,0.0,1.0" Data="M 205,330 L 90,180" StrokeThickness="8" />
+    <Path Stroke="sc#0.0,1.0,0.0" Data="M 250,310 L 105,120" StrokeThickness="8" StrokeEndLineCap="Square" StrokeStartLineCap="Triangle" />
+    <Path Stroke="sc#0.0,1.0,1.0" Data="M 120,120 L 250,290" StrokeThickness="8" StrokeEndLineCap="Round" />
+    <Path Stroke="sc#1.0,0.0,1.0" Data="M 250,270 L 135,120" StrokeThickness="8" />
+  </Canvas>
+  <Canvas RenderTransform="1,0,0,1,20,20">
+    <Path RenderTransform="1,0,0,1,264.67,0" Stroke="#0000ff" StrokeThickness="8" Data="M 20,60 L 250,60 250,330 20,330 20,60" />
+    <Path RenderTransform="1,0,0,1,264.67,0" Stroke="#0000ff" StrokeThickness="8" Data="M 40,80 L 230,80 230,310 40,310 Z" />
+    <Path RenderTransform="1,0,0,1,264.67,0" Stroke="#0000ff" StrokeThickness="8" Data="M 60,100 L 210,100 210,290 60,290 60,100" StrokeLineJoin="Round" />
+    <Path RenderTransform="1,0,0,1,264.67,0" Stroke="#0000ff" StrokeThickness="8" Data="M 80,120 L 190,120 190,270 80,270 80,120 Z" StrokeLineJoin="Bevel" />
+    <Path RenderTransform="1,0,0,1,264.67,0" Stroke="#0000ff" StrokeThickness="8" StrokeLineJoin="Miter" StrokeMiterLimit="1">
+      <Path.Data>
+        <PathGeometry>
+          <PathFigure StartPoint="100,140">
+            <PolyLineSegment Points="170,140 170,250 100,250 100,140" />
+          </PathFigure>
+        </PathGeometry>
+      </Path.Data>
+    </Path>
+  </Canvas>
+  <Path RenderTransform="1,0,0,1,20,352" Stroke="#7f00ff" StrokeThickness="4">
+    <Path.Data>
+      <PathGeometry>
+        <PathFigure StartPoint="20,50">
+          <PolyBezierSegment Points="45,0 70,100 95,50 120,0 145,100 170,50 195,0 220,100 245,50 220,0 195,100 170,50 145,0 120,100 95,50 70,0 45,100 20,50" />
+        </PathFigure>
+      </PathGeometry>
+    </Path.Data>
+  </Path>
+  <Path RenderTransform="1,0,0,1,20,352" Stroke="#ff007f" StrokeThickness="4" Data="M 20,100 C 45,50 70,150 95,100 S 145,150 170,100 220,150 245,100 C 220,50 195,150 170,100 S 120,150 95,100 45,150 20,100" />
+  <Path RenderTransform="1,0,0,1,20,352" Stroke="#ff7f7f" StrokeThickness="4" Data="M 20,150 c 25,-50 50,50 75,0 s 50,50 75,0 50,50 75,0 c -25,-50 -50,50 -75,0 s -50,50 -75,0 -50,50 -75,0" />
+  <Path RenderTransform="1,0,0,1,20,352" Stroke="#7f00ff" StrokeThickness="4">
+    <Path.Data>
+      <PathGeometry>
+        <PathFigure StartPoint="20,200" IsClosed="true">
+          <PolyBezierSegment Points="100,125 180,275 240,200 165,240 315,280 240,320 180,245 100,395 20,320" />
+        </PathFigure>
+      </PathGeometry>
+    </Path.Data>
+  </Path>
+  <Path RenderTransform="1,0,0,1,284.67,372" Stroke="#7fff00" StrokeThickness="4">
+    <Path.Data>
+      <PathGeometry>
+        <PathFigure StartPoint="50,20">
+          <PolyQuadraticBezierSegment Points="100,50 50,80 100,110 50,140 100,170 50,200 100,230 50,260 100,290 50,320" />
+        </PathFigure>
+      </PathGeometry>
+    </Path.Data>
+  </Path>
+  <Path RenderTransform="1,0,0,1,264.67,372" Stroke="#00ff7f" StrokeThickness="4" Data="M 120,20 Q 200,50 120,80 200,110 120,140 200,170 120,200 200,230 120,260 200,290 120,320" />
+  <Path RenderTransform="1,0,0,1,264.67,372" Stroke="#00ff7f" StrokeThickness="4" Data="M 200,20 q 50,30 0,60 50,30 0,60 50,30 0,60 50,30 0,60 50,30 0,60" />
+  <Path RenderTransform="1,0,0,1,519.34,352" Fill="#7f007f" StrokeThickness="4" Data="F 0 M 20,100 a 116,60 0 1 1 232,0 116,60 0 1 1 -232,0M 30,100 a 106,50 0 1 0 212,0 106,50 0 1 0 -212,0M 40,100 a 96,40 0 1 0 192,0 96,40 0 1 0 -192,0M 50,100 a 86,30 0 1 0 172,0 86,30 0 1 0 -172,0M 60,100 a 76,20 0 1 1 152,0 76,20 0 1 1 -152,0M 70,100 a 66,10 0 1 0 132,0 66,10 0 1 0 -132,0" />
+  <Path RenderTransform="1,0,0,1,519.34,352" Fill="#7f007f" StrokeThickness="4" Data="F 1 M 20,250 A 116,60 0 1 1 252,250 116,60 0 1 1 20,250M 30,250 A 106,50 0 1 0 242,250 106,50 0 1 0 30,250M 40,250 A 96,40 0 1 0 232,250 96,40 0 1 0 40,250M 50,250 A 86,30 0 1 0 222,250 86,30 0 1 0 50,250M 60,250 A 76,20 0 1 1 212,250 76,20 0 1 1 60,250M 70,250 A 66,10 0 1 0 202,250 66,10 0 1 0 70,250" />
+  <Path RenderTransform="1,0,0,1,529.34,30" Stroke="#0000ff" StrokeThickness="4">
+    <Path.Data>
+      <PathGeometry>
+        <PathFigure StartPoint="140,50" IsClosed="false">
+          <ArcSegment Point="240,100" Size="200,50" RotationAngle="330" IsLargeArc="false" SweepDirection="Counterclockwise" />
+        </PathFigure>
+        <PathFigure StartPoint="140,50" IsClosed="false">
+          <ArcSegment Point="240,100" Size="200,50" RotationAngle="-40" IsLargeArc="false" SweepDirection="Counterclockwise" />
+        </PathFigure>
+        <PathFigure StartPoint="140,50" IsClosed="false">
+          <ArcSegment Point="240,100" Size="200,50" RotationAngle="310" IsLargeArc="false" SweepDirection="Counterclockwise" />
+        </PathFigure>
+        <PathFigure StartPoint="140,50" IsClosed="false">
+          <ArcSegment Point="240,100" Size="200,50" RotationAngle="-60" IsLargeArc="false" SweepDirection="Counterclockwise" />
+        </PathFigure>
+        <PathFigure StartPoint="140,50" IsClosed="false">
+          <ArcSegment Point="240,100" Size="200,50" RotationAngle="280" IsLargeArc="false" SweepDirection="Counterclockwise" />
+        </PathFigure>
+        <PathFigure StartPoint="140,50" IsClosed="false">
+          <ArcSegment Point="240,100" Size="200,50" RotationAngle="-90" IsLargeArc="false" SweepDirection="Counterclockwise" />
+        </PathFigure>
+      </PathGeometry>
+    </Path.Data>
+  </Path>
+  <Canvas RenderTransform=".8,0,0,.8,20,744">
+    <Path Stroke="#0000ff" StrokeThickness="8" StrokeDashArray="5 5" StrokeDashCap="Round" Data="M 136,5  a 120,150 180 1 1 0,300 120,150 0 1 1 0,-300" />
+    <Path Stroke="#0000ff" StrokeThickness="8" StrokeDashArray="4 4" StrokeDashCap="Square" Data="M 136,25  a 100,130 180 1 1 0,260 100,130 0 1 1 0,-260" />
+    <Path Stroke="#0000ff" StrokeThickness="8" StrokeDashArray="3 3" StrokeDashCap="Triangle" Data="M 136,45  a 80,110  180 1 1 0,220 80,110  0 1 1 0,-220" />
+    <Path Stroke="#0000ff" StrokeThickness="8" StrokeDashArray="2 2" StrokeDashCap="Round" Data="M 136,65 a 60,90   180 1 1 0,180 60,90   0 1 1 0,-180" />
+    <Path Stroke="#0000ff" StrokeThickness="8" StrokeDashArray="1 1" StrokeDashCap="Flat" Data="M 136,85 a 40,70   180 1 1 0,140 40,70   0 1 1 0,-140" />
+    <Path Stroke="#0000ff" StrokeThickness="8" StrokeDashArray="1.0 1.5" StrokeDashCap="Triangle" Data="M 136,105 a 20,50   180 1 1 0,100 20,50   0 1 1 0,-100" />
+  </Canvas>
+  <Path RenderTransform="1,0,0,1,249.67,664" Stroke="#ff0000" Fill="#3fff0000" StrokeThickness="4">
+    <Path.Data>
+      <PathGeometry>
+        <PathFigure StartPoint="20,70" IsClosed="true">
+          <PolyLineSegment Points="250,70 250,300 20,300" />
+        </PathFigure>
+        <PathFigure StartPoint="135,70">
+          <ArcSegment Size="115,115" IsLargeArc="true" RotationAngle="0" SweepDirection="Counterclockwise" Point="135,300" />
+          <ArcSegment Size="115,115" IsLargeArc="true" RotationAngle="0" SweepDirection="Counterclockwise" Point="135,70" />
+        </PathFigure>
+        <PathFigure StartPoint="135,70">
+          <PolyQuadraticBezierSegment Points="270,185 135,300" />
+          <PolyQuadraticBezierSegment Points="0,185 135,70" />
+        </PathFigure>
+        <PathFigure StartPoint="250,185">
+          <PolyBezierSegment Points="173.34,85 96.67,285 20,185" />
+          <PolyBezierSegment Points="96.67,85 173.34,285 250,185" />
+        </PathFigure>
+      </PathGeometry>
+    </Path.Data>
+  </Path>
+  <Path RenderTransform=".9,0,0,1,519.34,674" Stroke="#ff00ff" Fill="#3fff00ff" StrokeThickness="4" Data="M 20,40 L 20,20 40,20 40,40 60,40 60,20 80,20 80,40 100,40 100,20 120,20 120,40 140,40 140,20 160,20 160,40 180,40 180,20 200,20 200,40 220,40 220,20 240,20A 20,20 0 1 1 240,60 20,20 0 1 1 240,100 20,20 0 1 1 240,140 20,20 0 1 1 240,180 20,20 0 1 1 240,220 20,20 0 1 1 240,260 20,20 0 1 1 240,300c -10,20 -20,-20 -30,0 -10,20 -20,-20 -30,0 -10,20 -20,-20 -30,0 -10,20 -20,-20 -30,0 -10,20 -20,-20 -30,0 -10,20 -20,-20 -30,0 -10,20 -20,-20 -30,0q -20,-20 -10,-40 20,-20 0,-40 -20,-20 0,-40 20,-20 0,-40 -20,-20 0,-40 20,-20 0,-40 -20,-20 0,-20" />
+</Canvas>

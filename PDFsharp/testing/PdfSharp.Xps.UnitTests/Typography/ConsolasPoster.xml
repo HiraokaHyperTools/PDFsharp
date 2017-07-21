@@ -1,0 +1,59 @@
+<FixedPage xmlns="http://schemas.microsoft.com/xps/2005/06" xmlns:x="http://schemas.microsoft.com/xps/2005/06/resourcedictionary-key" xml:lang="und" Width="816" Height="1056"><FixedPage.Resources><ResourceDictionary><VisualBrush x:Key="b0" ViewportUnits="Absolute" TileMode="None" ViewboxUnits="Absolute" Viewbox="277,-0.5,817,1057" Viewport="0,0,817,1057">
+    <VisualBrush.Visual>
+        <Canvas>
+            <Canvas RenderTransform="1,0,0,1,277.5,0">
+                <Path Stroke="#FFFFC800" StrokeThickness="1" StrokeLineJoin="Round" Fill="#FFFF9500" RenderTransform="1,0,0,1,-0.5,-0.5" Data="M0.5,0.5L816.5,0.5 816.5,1056.5 0.5,1056.5Z" />
+                <Glyphs OriginX="0" OriginY="16.56" FontRenderingEmSize="18" FontUri="/Resources/0b20b2df-530c-427a-ae49-f5634206280c.ODTTF" UnicodeString="MICROSOFT CLEARTYPE FONT COLLECTION" Fill="#FF000000" xml:lang="en-us" RenderTransform="1.33333,0,0,1.33333,55.3333,41.2568" />
+                <Canvas RenderTransform="1.33333,0,0,1.33333,51.3333,69.5263">
+                    <Glyphs OriginX="0" OriginY="30.3566666666667" FontRenderingEmSize="33" FontUri="/Resources/0b20b2df-530c-427a-ae49-f5634206280c.ODTTF" UnicodeString="Consolas | " Fill="#FF000000" xml:lang="en-us" />
+                    <Glyphs OriginX="199.576666666667" OriginY="30.3566666666667" FontRenderingEmSize="33" FontUri="/Resources/0b20b2df-530c-427a-ae49-f5634206280c.ODTTF" UnicodeString="Κόνσολας | " Fill="#FF000000" xml:lang="en-us" />
+                    <Glyphs OriginX="399.153333333333" OriginY="30.3566666666667" FontRenderingEmSize="33" FontUri="/Resources/0b20b2df-530c-427a-ae49-f5634206280c.ODTTF" UnicodeString="Консолас" Fill="#FF000000" xml:lang="en-us" />
+                </Canvas>
+                <Canvas RenderTransform="1.33333,0,0,1.33333,55.3333,128.616">
+                    <Glyphs OriginX="0" OriginY="12.95" FontRenderingEmSize="12" FontUri="/Resources/cbd14010-6ca9-4f8a-9694-d2b0078b0cf8.ODTTF" UnicodeString="Designer:" Fill="#FF000000" xml:lang="en-us" />
+                    <Glyphs OriginX="62.6566666666667" OriginY="12.95" FontRenderingEmSize="12" FontUri="/Resources/0b20b2df-530c-427a-ae49-f5634206280c.ODTTF" UnicodeString=" Luc(as) de Groot" Fill="#FF000000" xml:lang="en-us" />
+                    <Glyphs OriginX="0" OriginY="28.91" FontRenderingEmSize="12" FontUri="/Resources/cbd14010-6ca9-4f8a-9694-d2b0078b0cf8.ODTTF" UnicodeString="Type family:" Fill="#FF000000" xml:lang="en-us" />
+                    <Glyphs OriginX="82.4466666666667" OriginY="28.91" FontRenderingEmSize="12" FontUri="/Resources/0b20b2df-530c-427a-ae49-f5634206280c.ODTTF" UnicodeString=" 4 styles (regular, italic, bold, bold italic) ; 713 glyphs per font" Fill="#FF000000" xml:lang="en-us" />
+                    <Glyphs OriginX="0" OriginY="44.87" FontRenderingEmSize="12" FontUri="/Resources/cbd14010-6ca9-4f8a-9694-d2b0078b0cf8.ODTTF" UnicodeString="Layout features:" Fill="#FF000000" xml:lang="en-us" />
+                    <Glyphs OriginX="108.833333333333" OriginY="44.87" FontRenderingEmSize="12" FontUri="/Resources/0b20b2df-530c-427a-ae49-f5634206280c.ODTTF" UnicodeString=" stylistic alternates, localized forms, uppercase-sensitive forms," Fill="#FF000000" xml:lang="en-us" />
+                    <Glyphs OriginX="0" OriginY="58.92" FontRenderingEmSize="12" FontUri="/Resources/0b20b2df-530c-427a-ae49-f5634206280c.ODTTF" UnicodeString="oldstyle figures, lining figures, arbitrary fractions, superscript, subscript" Fill="#FF000000" xml:lang="en-us" />
+                </Canvas>
+                <Canvas RenderTransform="1.33333,0,0,1.33333,130.445,845.602">
+                    <Glyphs OriginX="0" OriginY="10.3033333333333" FontRenderingEmSize="11.2" FontUri="/Resources/0b20b2df-530c-427a-ae49-f5634206280c.ODTTF" UnicodeString="DESIGNER DESCRIPTION: Consolas is intended for use in programming " Fill="#FF000000" xml:lang="en-us" />
+                    <Glyphs OriginX="0" OriginY="23.4166666666667" FontRenderingEmSize="11.2" FontUri="/Resources/0b20b2df-530c-427a-ae49-f5634206280c.ODTTF" UnicodeString="environments and other circumstances where a monospaced font is specified. " Fill="#FF000000" xml:lang="en-us" />
+                    <Glyphs OriginX="0" OriginY="36.53" FontRenderingEmSize="11.2" FontUri="/Resources/0b20b2df-530c-427a-ae49-f5634206280c.ODTTF" UnicodeString="All characters have the same width, like old typewriters, making it a " Fill="#FF000000" xml:lang="en-us" />
+                    <Glyphs OriginX="0" OriginY="49.6433333333333" FontRenderingEmSize="11.2" FontUri="/Resources/0b20b2df-530c-427a-ae49-f5634206280c.ODTTF" UnicodeString="good choice for personal and business correspondence. The improved Windows " Fill="#FF000000" xml:lang="en-us" />
+                    <Glyphs OriginX="0" OriginY="62.7566666666667" FontRenderingEmSize="11.2" FontUri="/Resources/0b20b2df-530c-427a-ae49-f5634206280c.ODTTF" UnicodeString="font display allowed a design with proportions closer to normal text" Fill="#FF000000" xml:lang="en-us" />
+                    <Glyphs OriginX="0" OriginY="75.87" FontRenderingEmSize="11.2" FontUri="/Resources/0b20b2df-530c-427a-ae49-f5634206280c.ODTTF" UnicodeString="than traditional monospaced fonts like Courier. This allows for more " Fill="#FF000000" xml:lang="en-us" />
+                    <Glyphs OriginX="0" OriginY="88.9833333333333" FontRenderingEmSize="11.2" FontUri="/Resources/0b20b2df-530c-427a-ae49-f5634206280c.ODTTF" UnicodeString="comfortable reading of extended text on-screen. The look of text can be " Fill="#FF000000" xml:lang="en-us" />
+                    <Glyphs OriginX="0" OriginY="102.096666666667" FontRenderingEmSize="11.2" FontUri="/Resources/0b20b2df-530c-427a-ae49-f5634206280c.ODTTF" UnicodeString="tuned to personal taste by varying the number of bars and waves." Fill="#FF000000" xml:lang="en-us" />
+                </Canvas>
+                <Glyphs OriginX="0" OriginY="15.6266666666667" FontRenderingEmSize="20" FontUri="/Resources/c8a38d1f-bdde-43da-8e30-7360613e667f.ODTTF" UnicodeString="MICRO" Fill="#FF000000" xml:lang="en-us" RenderTransform="1.33333,0,0,1.33333,647.781,1016.33" />
+                <Canvas RenderTransform="1.33333,0,0,1.33333,45.3333,312.685">
+                    <Glyphs OriginX="37.9233333333333" OriginY="71.7533333333333" FontRenderingEmSize="78" FontUri="/Resources/cbd14010-6ca9-4f8a-9694-d2b0078b0cf8.ODTTF" UnicodeString="punkish " Fill="#FFB50B0B" xml:lang="en-us" />
+                    <Glyphs OriginX="0" OriginY="163.083333333333" FontRenderingEmSize="78" FontUri="/Resources/cbd14010-6ca9-4f8a-9694-d2b0078b0cf8.ODTTF" UnicodeString="   radiation" Fill="#FFB50B0B" xml:lang="en-us" />
+                </Canvas>
+                <Canvas RenderTransform="1.33333,0,0,1.33333,37.3309,565.523">
+                    <Glyphs OriginX="0" OriginY="35.8766666666667" FontRenderingEmSize="39" FontUri="/Resources/9f31487f-dd9c-4f58-bf87-5a516463ac7f.ODTTF" UnicodeString="“The nicest monospaced " Fill="#FF000000" xml:lang="en-us" />
+                    <Glyphs OriginX="0" OriginY="81.5433333333334" FontRenderingEmSize="39" FontUri="/Resources/9f31487f-dd9c-4f58-bf87-5a516463ac7f.ODTTF" UnicodeString="   fonts were found on " Fill="#FF000000" xml:lang="en-us" />
+                    <Glyphs OriginX="0" OriginY="127.21" FontRenderingEmSize="39" FontUri="/Resources/9f31487f-dd9c-4f58-bf87-5a516463ac7f.ODTTF" UnicodeString="    real typewriters " Fill="#FF000000" xml:lang="en-us" />
+                    <Glyphs OriginX="107.216666666667" OriginY="172.876666666667" FontRenderingEmSize="39" FontUri="/Resources/9f31487f-dd9c-4f58-bf87-5a516463ac7f.ODTTF" UnicodeString="with a fresh ribbon.”" Fill="#FF000000" xml:lang="en-us" />
+                </Canvas>
+                <Canvas RenderTransform="1.33333,0,0,1.33333,93.0109,254.487">
+                    <Glyphs OriginX="0" OriginY="18.4" FontRenderingEmSize="20" FontUri="/Resources/9f31487f-dd9c-4f58-bf87-5a516463ac7f.ODTTF" UnicodeString="ABCDEFGHIJKLMNOPQRSTUVWXYZ" Fill="#FF000000" xml:lang="en-us" />
+                    <Glyphs OriginX="0" OriginY="41.8166666666667" FontRenderingEmSize="20" FontUri="/Resources/9f31487f-dd9c-4f58-bf87-5a516463ac7f.ODTTF" UnicodeString="    abcdefghijklmnopqrstuvwxyz0123456789" Fill="#FF000000" xml:lang="en-us" />
+                </Canvas>
+                <Glyphs OriginX="0" OriginY="236.42" FontRenderingEmSize="257" FontUri="/Resources/cbd14010-6ca9-4f8a-9694-d2b0078b0cf8.ODTTF" UnicodeString="@" Fill="#50FFFFFF" xml:lang="en-us" RenderTransform="1.33333,0,0,1.33333,529.9,47.3681" />
+                <Glyphs OriginX="0" OriginY="236.42" FontRenderingEmSize="257" FontUri="/Resources/0b20b2df-530c-427a-ae49-f5634206280c.ODTTF" UnicodeString="0123" Fill="#1FFFFFFF" xml:lang="en-us" RenderTransform="1.33333,0,0,1.33333,0,690.035" />
+                <Canvas RenderTransform="1.33333,0,0,1.33333,82.7793,418.369">
+                    <Glyphs OriginX="0" OriginY="44.1566666666667" FontRenderingEmSize="48" FontUri="/Resources/0b20b2df-530c-427a-ae49-f5634206280c.ODTTF" UnicodeString="DockPanel.SetDock    " Fill="#15000000" xml:lang="en-us" />
+                    <Glyphs OriginX="0" OriginY="100.36" FontRenderingEmSize="48" FontUri="/Resources/0b20b2df-530c-427a-ae49-f5634206280c.ODTTF" UnicodeString="mainPanel.Children  " Fill="#15000000" xml:lang="en-us" />
+                    <Glyphs OriginX="0" OriginY="156.563333333333" FontRenderingEmSize="48" FontUri="/Resources/0b20b2df-530c-427a-ae49-f5634206280c.ODTTF" UnicodeString="mainPanel.Height    " Fill="#15000000" xml:lang="en-us" />
+                    <Glyphs OriginX="0" OriginY="212.766666666667" FontRenderingEmSize="48" FontUri="/Resources/0b20b2df-530c-427a-ae49-f5634206280c.ODTTF" UnicodeString="mainPanel.Width     " Fill="#15000000" xml:lang="en-us" />
+                    <Glyphs OriginX="0" OriginY="268.97" FontRenderingEmSize="48" FontUri="/Resources/0b20b2df-530c-427a-ae49-f5634206280c.ODTTF" UnicodeString="return mainPanel;" Fill="#15000000" xml:lang="en-us" />
+                </Canvas>
+            </Canvas>
+        </Canvas>
+    </VisualBrush.Visual>
+</VisualBrush>
+</ResourceDictionary></FixedPage.Resources><Path Fill="{StaticResource b0}" Data="M0,0L817,0 817,1057 0,1057Z" /></FixedPage>
