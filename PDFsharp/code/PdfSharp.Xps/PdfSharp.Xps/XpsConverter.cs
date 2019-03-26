@@ -301,6 +301,59 @@ namespace PdfSharp.Xps
     }
 
 
+    /// <summary>
+    /// Implements the PDF file to XPS file conversion.
+    /// </summary>
+    public static void Convert(Stream xpsInStream, Stream pdfOutStream, bool closePdfStream)
+    {
+      if (xpsInStream == null)
+        throw new ArgumentNullException("xpsInStream");
+
+      if (pdfOutStream == null)
+        throw new ArgumentNullException("pdfOutStream");
+
+      XpsDocument xpsDocument = null;
+      try
+      {
+        xpsDocument = XpsDocument.Open(xpsInStream);
+        FixedDocument fixedDocument = xpsDocument.GetDocument();
+        PdfDocument pdfDocument = new PdfDocument();
+        PdfRenderer renderer = new PdfRenderer();
+
+        int pageIndex = 0;
+        foreach (FixedPage page in fixedDocument.Pages)
+        {
+          if (page == null)
+            continue;
+          Debug.WriteLine(String.Format("  page={0}", pageIndex));
+          PdfPage pdfPage = renderer.CreatePage(pdfDocument, page);
+          renderer.RenderPage(pdfPage, page);
+          pageIndex++;
+
+#if DEBUG
+          // stop at page...
+          if (pageIndex == 50)
+            break;
+#endif
+        }
+        pdfDocument.Save(pdfOutStream, closePdfStream);
+        xpsDocument.Close();
+        xpsDocument = null;
+      }
+      catch (Exception ex)
+      {
+        Debug.WriteLine(ex.Message);
+        if (xpsDocument != null)
+          xpsDocument.Close();
+        throw;
+      }
+      finally
+      {
+        if (xpsDocument != null)
+          xpsDocument.Close();
+      }
+    }
+
     static public void SaveXpsPageToBitmap(string xpsFileName)
     {
       System.Windows.Xps.Packaging.XpsDocument xpsDoc = new System.Windows.Xps.Packaging.XpsDocument(xpsFileName, System.IO.FileAccess.Read);
