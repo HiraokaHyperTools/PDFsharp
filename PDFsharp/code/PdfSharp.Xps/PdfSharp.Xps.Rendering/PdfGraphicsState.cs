@@ -122,10 +122,10 @@ namespace PdfSharp.Xps.Rendering
 
         Color color = sBrush.Color;
 
-        double opacity = path.Opacity * color.ScA;
+        double opacity = Opacity * path.Opacity * color.ScA;
         if (opacity < 1)
         {
-          PdfExtGState extGState = this.writer.Owner.ExtGStateTable.GetExtGStateStroke(color.ScA);
+          PdfExtGState extGState = this.writer.Owner.ExtGStateTable.GetExtGStateStroke(opacity);
           string gs = this.writer.Resources.AddExtGState(extGState);
           this.writer.WriteLiteral("{0} gs\n", gs);
 
