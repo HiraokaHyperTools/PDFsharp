@@ -1,16 +1,18 @@
 <?xml version="1.0"?>
-<package >
+<package>
   <metadata>
     <id>kenjiuno.PdfSharp-WPF</id>
     <version>$version$</version>
     <authors>kenjiuno</authors>
     <owners>www.pdfsharp.net</owners>
-    <licenseUrl>https://github.com/HiraokaHyperTools/PDFsharp/blob/master/LICENSE</licenseUrl>
+    <license type="file">LICENSE</license>
     <projectUrl>https://github.com/HiraokaHyperTools/PDFsharp</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>PDFsharp - A .NET library for processing PDF</description>
-    <releaseNotes>Nothing!</releaseNotes>
-    <copyright>Copyright 2017</copyright>
+    <copyright>Copyright 2017, 2019</copyright>
     <tags>PdfSharp WPF</tags>
   </metadata>
+  <files>
+    <file src="../../../LICENSE" />
+  </files>
 </package>

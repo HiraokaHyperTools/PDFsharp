@@ -5,15 +5,17 @@
     <version>$version$</version>
     <authors>kenjiuno</authors>
     <owners>www.pdfsharp.net</owners>
-    <licenseUrl>https://github.com/HiraokaHyperTools/PDFsharp/blob/master/LICENSE</licenseUrl>
+    <license type="file">LICENSE</license>
     <projectUrl>https://github.com/HiraokaHyperTools/PDFsharp</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>PDFsharp - A .NET library for processing PDF</description>
-    <releaseNotes>Nothing!</releaseNotes>
-    <copyright>Copyright 2017</copyright>
+    <copyright>Copyright 2017, 2019</copyright>
     <tags>PdfSharp Xps XpsConverter</tags>
     <dependencies>
-      <dependency id="kenjiuno.PdfSharp-WPF" version="1.31.1789" />
+      <dependency id="kenjiuno.PdfSharp-WPF" version="1.31.5197" />
     </dependencies>
   </metadata>
+  <files>
+    <file src="../../../LICENSE" />
+  </files>
 </package>

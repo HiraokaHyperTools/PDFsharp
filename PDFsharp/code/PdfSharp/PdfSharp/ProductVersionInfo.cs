@@ -84,7 +84,7 @@ namespace PdfSharp
     /// <summary>
     /// The copyright information.
     /// </summary>
-    public const string Copyright = "Copyright © 2005-2009 empira Software GmbH.";
+    public const string Copyright = "Copyright ï¿½ 2005-2009 empira Software GmbH.";
 
     /// <summary>
     /// The trademark the product.
@@ -109,7 +109,7 @@ namespace PdfSharp
     /// <summary>
     /// The build number of the product.
     /// </summary>
-    public const string VersionBuild = "4604";  // Build = days since 2005-01-01  -  change this values ONLY HERE
+    public const string VersionBuild = "5197";  // Build = days since 2005-01-01  -  change this values ONLY HERE
 
     /// <summary>
     /// The patch number of the product.
