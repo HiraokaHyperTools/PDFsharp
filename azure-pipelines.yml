@@ -31,3 +31,15 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+- task: NuGetCommand@2
+  inputs:
+    command: 'pack'
+    feedsToUse: 'select'
+    packagesToPack: '**/PdfSharp-WPF.csproj;**/PdfSharp.Xps.csproj'
+    versioningScheme: 'off'
+
+- task: PublishPipelineArtifact@0
+  inputs:
+    artifactName: 'nupkg'
+    targetPath: '$(Build.ArtifactStagingDirectory)'
