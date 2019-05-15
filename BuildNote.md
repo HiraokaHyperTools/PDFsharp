@@ -29,6 +29,10 @@ Open `PDFsharp\code\PdfSharp.Xps\Properties\AssemblyInfo.cs`
 
 Increase version: `AssemblyVersion`
 
+Open `PDFsharp\code\PdfSharp.Xps\PdfSharp.Xps.nuspec`
+
+Match `<dependency id="kenjiuno.PdfSharp-WPF" version="1.31.5247" />`
+
 ```bat
 chdir D:\Git\pdfsharp\PDFsharp\code\PdfSharp.Xps
 nuget pack PdfSharp.Xps.csproj -Build -Properties Configuration=Release
