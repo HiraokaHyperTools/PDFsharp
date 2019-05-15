@@ -77,8 +77,8 @@ namespace PdfSharp.UnitTests.Images
       gfx.DrawImage(image, x, 0);
     }
 
-    string jpegSamplePath = "../../../../../../dev/XGraphicsLab/images/Z3.jpg";
-    string gifSamplePath = "../../../../../../dev/XGraphicsLab/images/Test.gif";
+    string jpegSamplePath = "../../../../../dev/XGraphicsLab/images/Z3.jpg";
+    string gifSamplePath = "../../../../../dev/XGraphicsLab/images/Test.gif";
     //string pngSamplePath = "../../../../../../XGraphicsLab/images/Test.png";
     //string tiffSamplePath = "../../../../../../XGraphicsLab/images/Rose (RGB 8).tif";
     //string pdfSamplePath = "../../../../../../PDFs/SomeLayout.pdf";
