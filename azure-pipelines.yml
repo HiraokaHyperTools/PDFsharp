@@ -41,7 +41,8 @@ steps:
     packagesToPack: '**/PdfSharp-WPF.csproj;**/PdfSharp.Xps.csproj'
     versioningScheme: 'off'
 
-- task: PublishPipelineArtifact@0
+- task: PublishBuildArtifacts@1
   inputs:
-    artifactName: 'nupkg'
-    targetPath: '$(Build.ArtifactStagingDirectory)'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'npkg'
+    publishLocation: 'Container'
