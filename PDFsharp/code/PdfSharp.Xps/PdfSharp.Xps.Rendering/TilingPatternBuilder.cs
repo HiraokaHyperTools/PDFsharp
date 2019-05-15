@@ -356,12 +356,20 @@ namespace PdfSharp.Xps.Rendering
       // view box
       XRect box = new XRect(0, 0, width, height);
 
-      pdfForm.Elements.SetRectangle(PdfFormXObject.Keys.BBox, new PdfRectangle(0, height, width, 0));
-      pdfForm.Elements.SetMatrix(PdfFormXObject.Keys.Matrix, new XMatrix());
+      pdfForm.Elements.SetRectangle(PdfFormXObject.Keys.BBox, new PdfRectangle(
+          brush.Viewbox.X,
+          brush.Viewbox.Y,
+          width + brush.Viewbox.X,
+          height + brush.Viewbox.Y
+          ));
 
       PdfContentWriter writer = new PdfContentWriter(Context, pdfForm);
 
-      pdfForm.Elements.SetMatrix(PdfFormXObject.Keys.Matrix, new XMatrix());
+      pdfForm.Elements.SetMatrix(PdfFormXObject.Keys.Matrix, new XMatrix(
+          1, 0, 
+          0, 1, 
+          -brush.Viewbox.X, -brush.Viewbox.Y
+          ));
 
       writer.BeginContentRaw();
       writer.WriteLiteral("-100 Tz\n");
