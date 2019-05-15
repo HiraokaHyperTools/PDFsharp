@@ -146,7 +146,9 @@ namespace PdfSharp.UnitTests.Helpers
       this.image.Save(Path.Combine(OutputDirectory, Name + ".png"), ImageFormat.Png);
 #endif
 #if WPF
-      this.dc.Close();
+      // - Workaround for:
+      //   System.InvalidOperationException: Cannot use a DependencyObject that belongs to a different thread than its parent Freezable
+      //this.dc.Close();
       this.image.Render(this.dv);
 
       FileStream stream = new FileStream(Path.Combine(OutputDirectory, Name + ".png"), FileMode.Create);
