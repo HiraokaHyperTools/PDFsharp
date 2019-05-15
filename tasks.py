@@ -1,6 +1,7 @@
 from invoke import task
 import os
 import re
+import xml.etree.ElementTree as ET
 
 dirname = os.path.dirname(os.path.abspath(__file__))
 
@@ -75,6 +76,27 @@ def setPdfSharpXpsVersion(version): # kenjiuno.PdfSharp.Xps
     text = updateAssemblyAttribute(text, "AssemblyVersion", version)
     writeAllText(filePath, text)
 
+def updateNuspec(nuspecFilePath):
+    filePath = os.path.join(dirname, nuspecFilePath)
+    tree = ET.parse(filePath)
+    package = tree.getroot()
+    changes = 0
+    if package is not None:
+        metadata = package.find("metadata")
+        if metadata is not None:
+            dependencies = metadata.find("dependencies")
+            if dependencies is not None:
+                for dependency in dependencies.findall("dependency"):
+                    id = dependency.attrib["id"]
+                    if id in assemblies:
+                        currentVersion = dependency.attrib["version"]
+                        newVersion = assemblies[id]["getver"]()
+                        if currentVersion != newVersion:
+                            dependency.attrib["version"] = newVersion
+                            changes += 1
+    if changes != 0:
+        tree.write(filePath, "UTF-8")
+
 assemblies = {
     "kenjiuno.PdfSharp-WPF": {
         "getver": (lambda: getPdfSharpWpfVersion()),
@@ -107,6 +129,8 @@ def setver(c, assembly, version):
         assembly = assemblyAliases[assembly]
     (assemblies[assembly])["setver"](version)
 
+    updateNuspecDependencies(c)
+
 @task()
 def days(c):
     """
@@ -116,3 +140,7 @@ def days(c):
     a = datetime.datetime(2005, 1, 1)
     b = datetime.datetime.now()
     print((b-a).days)
+
+@task()
+def updateNuspecDependencies(c):
+    updateNuspec('PDFsharp/code/PdfSharp.Xps/PdfSharp.Xps.nuspec')
