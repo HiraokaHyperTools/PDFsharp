@@ -90,11 +90,11 @@ namespace PdfSharp.Xps.UnitTests.XpsFiles
     /// <summary>
     /// The Quality Logic samples are very hard to parse and render...
     /// </summary>
-    [TestMethod]
+    [TestMethod, Ignore]
     public void QualityLogicXpsSamples()
     {
       // Download from http://www.microsoft.com/whdc/xps/xpssampdoc.mspx
-      string path = "PdfSharp/testing/SampleXpsDocuments_1_0/QualitLogicSamples";
+      string path = "PdfSharp/testing/SampleXpsDocuments_1_0/QualityLogicSamples";
       string dir = GetDirectory(path);
       if (dir == null)
         throw new FileNotFoundException("Path not found: " + path);
