@@ -46,7 +46,10 @@ namespace PdfSharp.Xps.UnitTests.XpsFiles
       string path = "PdfSharp/testing/SampleXpsDocuments_1_0/QualityLogicMinBar";
       string dir = GetDirectory(path);
       if (dir == null)
-        throw new FileNotFoundException("Path not found: " + path);
+      {
+        Assert.Inconclusive("Path not found: " + path);
+        return;
+      }
       if (!Directory.Exists(dir))
       {
         Assert.Inconclusive("Path not found: " + path + ". Follow instructions in ../../../SampleXpsDocuments_1_0/!readme.txt to download samples from the Internet.");
@@ -100,7 +103,10 @@ namespace PdfSharp.Xps.UnitTests.XpsFiles
       string path = "PdfSharp/testing/SampleXpsDocuments_1_0/QualityLogicSamples";
       string dir = GetDirectory(path);
       if (dir == null)
-        throw new FileNotFoundException("Path not found: " + path);
+      {
+        Assert.Inconclusive("Path not found: " + path);
+        return;
+      }
       if (!Directory.Exists(dir))
       {
         Assert.Inconclusive("Path not found: " + path + ". Follow instructions in ../../../SampleXpsDocuments_1_0/!readme.txt to download samples from the Internet.");

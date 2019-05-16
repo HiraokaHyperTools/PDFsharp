@@ -43,7 +43,10 @@ namespace PdfSharp.Xps.UnitTests.XpsRendering
       string path = "PdfSharp/testing/SampleXpsDocuments_1_0";
       string dir = GetDirectory(path);
       if (dir == null)
-        throw new FileNotFoundException("Path not found: " + path + ". Follow instructions in ../../../SampleXpsDocuments_1_0/!readme.txt to download samples from the Internet.");
+      {
+        Assert.Inconclusive("Path not found: " + path + ". Follow instructions in ../../../SampleXpsDocuments_1_0/!readme.txt to download samples from the Internet.");
+        return;
+      }
       if (!Directory.Exists(dir))
       {
         Assert.Inconclusive("Path not found: " + path + ". Follow instructions in ../../../SampleXpsDocuments_1_0/!readme.txt to download samples from the Internet.");
