@@ -48,12 +48,18 @@ namespace PdfSharp.Xps.UnitTests.Typography
       if (dir == null)
         throw new FileNotFoundException("Path not found: " + path + ". Follow instructions in ../../../SampleXpsDocuments_1_0/!readme.txt to download samples from the Internet.");
       if (!Directory.Exists(dir))
-        throw new FileNotFoundException("Path not found: " + path + ". Follow instructions in ../../../SampleXpsDocuments_1_0/!readme.txt to download samples from the Internet.");
+      {
+        Assert.Inconclusive("Path not found: " + path + ". Follow instructions in ../../../SampleXpsDocuments_1_0/!readme.txt to download samples from the Internet.");
+        return;
+      }
 
       string[] files = Directory.GetFiles(dir, "*Poster.xps", SearchOption.TopDirectoryOnly);
 
       if (files.Length == 0)
-        throw new Exception("No sample file found.");
+      {
+        Assert.Inconclusive("No sample file found.");
+        return;
+      }
 
       foreach (string filename in files)
       {

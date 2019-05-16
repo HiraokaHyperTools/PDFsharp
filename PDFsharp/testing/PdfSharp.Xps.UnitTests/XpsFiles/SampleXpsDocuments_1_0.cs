@@ -48,7 +48,10 @@ namespace PdfSharp.Xps.UnitTests.XpsFiles
       if (dir == null)
         throw new FileNotFoundException("Path not found: " + path);
       if (!Directory.Exists(dir))
-        throw new FileNotFoundException("Path not found: " + path + ". Follow instructions in ../../../SampleXpsDocuments_1_0/!readme.txt to download samples from the Internet.");
+      {
+        Assert.Inconclusive("Path not found: " + path + ". Follow instructions in ../../../SampleXpsDocuments_1_0/!readme.txt to download samples from the Internet.");
+        return;
+      }
 
       string[] files = Directory.GetFiles(dir, "*.xps", SearchOption.AllDirectories);
       foreach (string filename in files)
@@ -99,7 +102,10 @@ namespace PdfSharp.Xps.UnitTests.XpsFiles
       if (dir == null)
         throw new FileNotFoundException("Path not found: " + path);
       if (!Directory.Exists(dir))
-        throw new FileNotFoundException("Path not found: " + path + ". Follow instructions in ../../../SampleXpsDocuments_1_0/!readme.txt to download samples from the Internet.");
+      {
+        Assert.Inconclusive("Path not found: " + path + ". Follow instructions in ../../../SampleXpsDocuments_1_0/!readme.txt to download samples from the Internet.");
+        return;
+      }
 
       string[] files = Directory.GetFiles(dir, "*.xps", SearchOption.AllDirectories);
       foreach (string filename in files)
