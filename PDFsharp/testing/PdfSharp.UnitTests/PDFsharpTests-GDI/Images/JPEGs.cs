@@ -77,10 +77,10 @@ namespace PdfSharp.UnitTests.Images
       gfx.DrawImage(image, x, 0);
     }
 
-    string dllDir => TestContext.TestRunDirectory;
+    string dllDir => Path.GetDirectoryName(new Uri(System.Reflection.Assembly.GetAssembly(typeof(JPEGs)).CodeBase).LocalPath);
 
-    string jpegSamplePath => Path.Combine(dllDir, "../../../../../dev/XGraphicsLab/images/Z3.jpg");
-    string gifSamplePath => Path.Combine(dllDir, "../../../../../dev/XGraphicsLab/images/Test.gif");
+    string jpegSamplePath => Path.Combine(dllDir, "../../../../../../dev/XGraphicsLab/images/Z3.jpg");
+    string gifSamplePath => Path.Combine(dllDir, "../../../../../../dev/XGraphicsLab/images/Test.gif");
 
     //string pngSamplePath = "../../../../../../XGraphicsLab/images/Test.png";
     //string tiffSamplePath = "../../../../../../XGraphicsLab/images/Rose (RGB 8).tif";
