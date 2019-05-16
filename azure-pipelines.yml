@@ -10,7 +10,7 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: '**/PdfSharp.Xps.sln;**/PDFsharpTests-GDI.sln;**/PDFsharpTests-WPF.sln;**/PdfSharp-XPS.sln'
+  solution: '**/PdfSharp.Xps.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
@@ -26,6 +26,24 @@ steps:
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: VSBuild@1
+  inputs:
+    solution: '**/PDFsharpTests-GDI.sln'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: VSBuild@1
+  inputs:
+    solution: '**/PDFsharpTests-WPF.sln'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: VSBuild@1
+  inputs:
+    solution: '**/PdfSharp-XPS.sln'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
