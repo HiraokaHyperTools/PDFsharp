@@ -10,7 +10,7 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: '**/PdfSharp.Xps.sln'
+  solution: '**/PdfSharp.Xps.sln;**/PDFsharpTests-GDI.sln;**/PDFsharpTests-WPF.sln;**/PdfSharp-XPS.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
