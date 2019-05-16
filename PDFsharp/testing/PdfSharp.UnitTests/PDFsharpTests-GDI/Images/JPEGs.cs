@@ -43,12 +43,14 @@ namespace PdfSharp.UnitTests.Images
       EndImage();
     }
 
+    [DeploymentItem("../../../../../dev/XGraphicsLab/images/Z3.jpg")]
     [TestMethod]
     public void TestJPEGs()
     {
       Render("JPEGs", RenderJPEGs);
     }
 
+    [DeploymentItem("../../../../../dev/XGraphicsLab/images/Test.gif")]
     [TestMethod]
     public void TestGIFs()
     {
@@ -59,7 +61,7 @@ namespace PdfSharp.UnitTests.Images
     {
       gfx.TranslateTransform(15, 20);
 
-      XImage image = XImage.FromFile(jpegSamplePath);
+      XImage image = XImage.FromFile("Z3.jpg");
 
       // Left position in point
       double x = (250 - image.PixelWidth * 72 / image.HorizontalResolution) / 2;
@@ -70,17 +72,12 @@ namespace PdfSharp.UnitTests.Images
     {
       gfx.TranslateTransform(15, 20);
 
-      XImage image = XImage.FromFile(gifSamplePath);
+      XImage image = XImage.FromFile("Test.gif");
 
       // Left position in point
       double x = (250 - image.PixelWidth * 72 / image.HorizontalResolution) / 2;
       gfx.DrawImage(image, x, 0);
     }
-
-    string dllDir => Path.GetDirectoryName(new Uri(System.Reflection.Assembly.GetAssembly(typeof(JPEGs)).CodeBase).LocalPath);
-
-    string jpegSamplePath => Path.Combine(dllDir, "../../../../../../dev/XGraphicsLab/images/Z3.jpg");
-    string gifSamplePath => Path.Combine(dllDir, "../../../../../../dev/XGraphicsLab/images/Test.gif");
 
     //string pngSamplePath = "../../../../../../XGraphicsLab/images/Test.png";
     //string tiffSamplePath = "../../../../../../XGraphicsLab/images/Rose (RGB 8).tif";
