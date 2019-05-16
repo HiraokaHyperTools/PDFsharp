@@ -43,7 +43,7 @@ steps:
 
 - task: VSBuild@1
   inputs:
-    solution: '**/PdfSharp-XPS.sln'
+    solution: '**/PdfSharp.Xps.UnitTests/PdfSharp-XPS.sln'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
