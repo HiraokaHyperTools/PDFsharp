@@ -48,13 +48,27 @@ namespace PdfSharp.Xps.UnitTests.Text
       // /TT0 1 Tf
       // (!)Tj
       // ET
-      RenderVisual("GlyphExample 5.1.2.3", new XamlPresenter(GetType(), "GlyphExample_5_1_2_3.xaml").CreateContent);
+      try
+      {
+        RenderVisual("GlyphExample 5.1.2.3", new XamlPresenter(GetType(), "GlyphExample_5_1_2_3.xaml").CreateContent);
+      }
+      catch (FileNotFoundException)
+      {
+        Assert.Inconclusive("browau.ttf not found");
+      }
     }
 
     [TestMethod]
     public void GlyphExample_5_1_2_4()
     {
-      RenderVisual("GlyphExample 5.1.2.4", new XamlPresenter(GetType(), "GlyphExample_5_1_2_4.xaml").CreateContent);
+      try
+      {
+        RenderVisual("GlyphExample 5.1.2.4", new XamlPresenter(GetType(), "GlyphExample_5_1_2_4.xaml").CreateContent);
+      }
+      catch (FileNotFoundException)
+      {
+        Assert.Inconclusive("latha.ttf not found");
+      }
     }
 
     [TestMethod]
@@ -94,7 +108,14 @@ namespace PdfSharp.Xps.UnitTests.Text
     [TestMethod]
     public void GlyphExample_5_7()
     {
-      RenderVisual("GlyphExample 5-7", new XamlPresenter(GetType(), "GlyphExample_5_7.xaml").CreateContent);
+      try
+      {
+        RenderVisual("GlyphExample 5-7", new XamlPresenter(GetType(), "GlyphExample_5_7.xaml").CreateContent);
+      }
+      catch (FileNotFoundException)
+      {
+        Assert.Inconclusive("msmincho.ttf not found");
+      }
     }
 
     [TestMethod]

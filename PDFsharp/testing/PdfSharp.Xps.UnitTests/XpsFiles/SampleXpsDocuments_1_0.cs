@@ -46,9 +46,15 @@ namespace PdfSharp.Xps.UnitTests.XpsFiles
       string path = "PdfSharp/testing/SampleXpsDocuments_1_0/QualityLogicMinBar";
       string dir = GetDirectory(path);
       if (dir == null)
-        throw new FileNotFoundException("Path not found: " + path);
+      {
+        Assert.Inconclusive("Path not found: " + path);
+        return;
+      }
       if (!Directory.Exists(dir))
-        throw new FileNotFoundException("Path not found: " + path + ". Follow instructions in ../../../SampleXpsDocuments_1_0/!readme.txt to download samples from the Internet.");
+      {
+        Assert.Inconclusive("Path not found: " + path + ". Follow instructions in ../../../SampleXpsDocuments_1_0/!readme.txt to download samples from the Internet.");
+        return;
+      }
 
       string[] files = Directory.GetFiles(dir, "*.xps", SearchOption.AllDirectories);
       foreach (string filename in files)
@@ -90,16 +96,22 @@ namespace PdfSharp.Xps.UnitTests.XpsFiles
     /// <summary>
     /// The Quality Logic samples are very hard to parse and render...
     /// </summary>
-    [TestMethod]
+    [TestMethod, Ignore]
     public void QualityLogicXpsSamples()
     {
       // Download from http://www.microsoft.com/whdc/xps/xpssampdoc.mspx
-      string path = "PdfSharp/testing/SampleXpsDocuments_1_0/QualitLogicSamples";
+      string path = "PdfSharp/testing/SampleXpsDocuments_1_0/QualityLogicSamples";
       string dir = GetDirectory(path);
       if (dir == null)
-        throw new FileNotFoundException("Path not found: " + path);
+      {
+        Assert.Inconclusive("Path not found: " + path);
+        return;
+      }
       if (!Directory.Exists(dir))
-        throw new FileNotFoundException("Path not found: " + path + ". Follow instructions in ../../../SampleXpsDocuments_1_0/!readme.txt to download samples from the Internet.");
+      {
+        Assert.Inconclusive("Path not found: " + path + ". Follow instructions in ../../../SampleXpsDocuments_1_0/!readme.txt to download samples from the Internet.");
+        return;
+      }
 
       string[] files = Directory.GetFiles(dir, "*.xps", SearchOption.AllDirectories);
       foreach (string filename in files)

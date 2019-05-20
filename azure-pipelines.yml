@@ -29,6 +29,24 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
+- task: VSBuild@1
+  inputs:
+    solution: '**/PDFsharpTests-GDI.sln'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: VSBuild@1
+  inputs:
+    solution: '**/PDFsharpTests-WPF.sln'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: VSBuild@1
+  inputs:
+    solution: '**/PdfSharp.Xps.UnitTests/PdfSharp-XPS.sln'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
 - task: VSTest@2
   inputs:
     platform: '$(buildPlatform)'

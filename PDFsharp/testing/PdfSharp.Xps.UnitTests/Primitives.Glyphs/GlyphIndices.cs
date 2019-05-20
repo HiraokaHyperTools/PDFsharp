@@ -32,6 +32,7 @@ namespace PdfSharp.Xps.UnitTests.Primitives.Glyphs
     {
     }
 
+    [DeploymentItem("../../Primitives.Glyphs/GlyphFiles/ClusterMap.xps")]
     [TestMethod]
     public void TestGlyphIndices()
     {
@@ -48,8 +49,7 @@ namespace PdfSharp.Xps.UnitTests.Primitives.Glyphs
     /// </summary>
     void ParseFile(string file)
     {
-      string baseDir = GetDirectory("PdfSharp/testing/PdfSharp.Xps.UnitTests/Primitives.Glyphs/GlyphFiles");
-      string filename = System.IO.Path.Combine(baseDir, file + ".xps");
+      string filename = file + ".xps";
 
       PdfDocument document = new PdfDocument();
       try

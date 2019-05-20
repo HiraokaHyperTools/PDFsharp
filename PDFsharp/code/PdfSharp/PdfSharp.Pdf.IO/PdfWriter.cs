@@ -508,7 +508,7 @@ namespace PdfSharp.Pdf.IO
         TimeSpan duration = DateTime.Now - document.creation;
 
         this.stream.Position = this.commentPosition;
-        WriteRaw("Creation date: " + document.creation.ToString("G"));
+        WriteRaw("Creation date: " + document.creation.ToString("G", CultureInfo.InvariantCulture));
         this.stream.Position = this.commentPosition + 50;
         WriteRaw("Creation time: " + duration.TotalSeconds.ToString("0.000", CultureInfo.InvariantCulture) + " seconds");
         this.stream.Position = this.commentPosition + 100;

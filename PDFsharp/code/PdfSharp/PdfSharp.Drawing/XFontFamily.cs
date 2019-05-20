@@ -264,7 +264,7 @@ namespace PdfSharp.Drawing
       XFontFamily[] result;
 #if GDI
       System.Drawing.FontFamily[] families = null;
-      families = System.Drawing.FontFamily.GetFamilies(graphics.gfx);
+      families = System.Drawing.FontFamily.Families;
       int count = families.Length;
       result = new XFontFamily[count];
       for (int idx = 0; idx < count; idx++)
