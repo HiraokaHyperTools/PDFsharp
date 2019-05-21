@@ -221,6 +221,14 @@ namespace PdfSharp.Fonts
     }
     static FontDescriptorStock global;
 
+    public static FontDescriptorStock NewInstance
+    {
+      get
+      {
+        return new FontDescriptorStock();
+      }
+    }
+
     Dictionary<FontSelector, FontDescriptor> table;
 
     /// <summary>

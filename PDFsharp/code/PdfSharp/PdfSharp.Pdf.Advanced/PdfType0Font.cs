@@ -58,7 +58,7 @@ namespace PdfSharp.Pdf.Advanced
       Elements.SetName(Keys.Subtype, "/Type0");
       Elements.SetName(Keys.Encoding, vertical ? "/Identity-V" : "/Identity-H");
 
-      OpenTypeDescriptor ttDescriptor = (OpenTypeDescriptor)FontDescriptorStock.Global.CreateDescriptor(font);
+      OpenTypeDescriptor ttDescriptor = (OpenTypeDescriptor)FontDescriptorStock.NewInstance.CreateDescriptor(font);
       this.fontDescriptor = new PdfFontDescriptor(document, ttDescriptor);
       this.fontOptions = font.PdfOptions;
       Debug.Assert(this.fontOptions != null);
@@ -113,7 +113,7 @@ namespace PdfSharp.Pdf.Advanced
       Elements.SetName(Keys.Subtype, "/Type0");
       Elements.SetName(Keys.Encoding, vertical ? "/Identity-V" : "/Identity-H");
 
-      OpenTypeDescriptor ttDescriptor = (OpenTypeDescriptor)FontDescriptorStock.Global.CreateDescriptor(idName, fontData);
+      OpenTypeDescriptor ttDescriptor = (OpenTypeDescriptor)FontDescriptorStock.NewInstance.CreateDescriptor(idName, fontData);
       this.fontDescriptor = new PdfFontDescriptor(document, ttDescriptor);
       this.fontOptions = new XPdfFontOptions(PdfFontEncoding.Unicode, PdfFontEmbedding.Always);
       Debug.Assert(this.fontOptions != null);
