@@ -61,7 +61,7 @@ namespace PdfSharp.Pdf.Advanced
       Elements.SetName(Keys.Subtype, "/TrueType");
 
       // TrueType with WinAnsiEncoding only
-      OpenTypeDescriptor ttDescriptor = (OpenTypeDescriptor)FontDescriptorStock.Global.CreateDescriptor(font);
+      OpenTypeDescriptor ttDescriptor = (OpenTypeDescriptor)FontDescriptorStock.NewInstance.CreateDescriptor(font);
       this.fontDescriptor = new PdfFontDescriptor(document, ttDescriptor);
       this.fontOptions = font.PdfOptions;
       Debug.Assert(this.fontOptions != null);

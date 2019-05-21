@@ -571,7 +571,7 @@ namespace PdfSharp.Drawing
       {
         if (this.fontMetrics == null)
         {
-          FontDescriptor descriptor = FontDescriptorStock.Global.CreateDescriptor(this);
+          FontDescriptor descriptor = FontDescriptorStock.NewInstance.CreateDescriptor(this);
           this.fontMetrics = descriptor.FontMetrics;
         }
         return this.fontMetrics;

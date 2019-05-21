@@ -181,7 +181,7 @@ namespace PdfSharp.Drawing
 
     public static int GetWpfValue(XFontFamily family, XFontStyle style, GWV value)
     {
-      FontDescriptor descriptor = FontDescriptorStock.Global.CreateDescriptor(family, style);
+      FontDescriptor descriptor = FontDescriptorStock.NewInstance.CreateDescriptor(family, style);
       XFontMetrics metrics = descriptor.FontMetrics;
 
       switch (value)
@@ -220,7 +220,7 @@ namespace PdfSharp.Drawing
     {
 #if !SILVERLIGHT
       // TODOWPF: check for correctness
-      FontDescriptor descriptor = FontDescriptorStock.Global.CreateDescriptor(family, style);
+      FontDescriptor descriptor = FontDescriptorStock.NewInstance.CreateDescriptor(family, style);
       XFontMetrics metrics = descriptor.FontMetrics;
 
       style &= XFontStyle.Regular | XFontStyle.Bold | XFontStyle.Italic | XFontStyle.BoldItalic; // same as XFontStyle.BoldItalic
