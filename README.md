@@ -1,6 +1,6 @@
 # PDFsharp
 
-[![Build Status](https://kenuno1.visualstudio.com/PDFsharp/_apis/build/status/HiraokaHyperTools.PDFsharp?branchName=master)](https://kenuno1.visualstudio.com/PDFsharp/_build/latest?definitionId=3&branchName=master)
+[![Build Status](https://dev.azure.com/HiraokaHyperTools/PDFsharp/_apis/build/status/HiraokaHyperTools.PDFsharp?branchName=master)](https://dev.azure.com/HiraokaHyperTools/PDFsharp/_build/latest?definitionId=3&branchName=master)
 
 NuGet:
 
