@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="!DebuggingDemo.cs" />
     <Compile Include="ComplexDrawings\!ComplexDrawings.cs" />
+    <Compile Include="EnvAdaption\TestEnv.cs" />
     <Compile Include="Graphics\4.2.3.1 Smooth Bezier Curve Abbreviated Syntax.cs" />
     <Compile Include="Helpers\VisualsHelper.cs" />
     <Compile Include="Helpers\GeometrieSamples.cs" />
