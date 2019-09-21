@@ -431,24 +431,6 @@ namespace PdfSharp.Xps.UnitTests.Helpers
       pdfResultDocument.Save(resultFileName);
     }
 
-    protected string GetDirectory(string path)
-    {
-      string dir = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location); // Directory.GetCurrentDirectory();
-      string dirName = path.Substring(0, path.IndexOf('/'));
-
-      int slash;
-      while ((slash = dir.LastIndexOf("\\")) != -1)
-      {
-        if (dir.EndsWith(dirName, StringComparison.InvariantCultureIgnoreCase))
-        {
-          dir = Path.Combine(dir, path.Substring(path.IndexOf('/') + 1));
-          return dir;
-        }
-        dir = dir.Substring(0, slash);
-      }
-      return null;
-    }
-
     public string Name;
     Visual visual;
     RenderTargetBitmap image;

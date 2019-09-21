@@ -92,6 +92,7 @@
     <Compile Include="Primitives.Stroke\StrokeLinearGradientBrush.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Qlbm\!QLMB.cs" />
+    <Compile Include="Render2\XpsToPdfToPngAndCompare.cs" />
     <Compile Include="Rendering\RenderingXpsDocument.cs" />
     <Compile Include="Text\SimpleText.cs" />
     <Compile Include="Text\GlyphExamples.cs">
@@ -137,6 +138,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+    <None Include="Render2\xps\bulletMarks.xps">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="StrongnameKey.snk" />
     <Resource Include="Qlbm\arial.ttf" />
     <None Include="Test References\PdfSharp.Xps.accessor" />
@@ -315,12 +319,24 @@
     <Folder Include="Primitives.Transforming\" />
     <Folder Include="XamlTests\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Render2\png-reference\bulletMarks-1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Render2\tools\win32\pdftoppm.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
-  <Target Name="AfterBuild">
-  </Target>
   -->
+  <Target Name="AfterBuild">
+    <ItemGroup>
+      <SampleXpsDocuments Include="..\SampleXpsDocuments_1_0\**\*.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(SampleXpsDocuments)" DestinationFolder="$(TargetDir)\SampleXpsDocuments_1_0\%(RecursiveDir)" SkipUnchangedFiles="true" />
+  </Target>
 </Project>
