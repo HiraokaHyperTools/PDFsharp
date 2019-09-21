@@ -1,18 +1,24 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+# Runs great on Python 3.6.4
+
 from invoke import task
 import os
 import re
 import xml.etree.ElementTree as ET
+import codecs
 
 dirname = os.path.dirname(os.path.abspath(__file__))
 
 def readAllText(fp):
-    f = open(fp)
+    f = codecs.open(fp, "r", "utf-8")
     text = f.read()
     f.close
     return text
 
 def writeAllText(fp, text):
-    f = open(fp, "w")
+    f = codecs.open(fp, "w", "utf-8")
     f.write(text)
     f.close()
 
