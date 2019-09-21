@@ -40,20 +40,15 @@ namespace PdfSharp.Xps.UnitTests.Render2
     }
 
     [TestMethod]
+    [DeploymentItem("Render2/xps", "xps")]
+    [DeploymentItem("Render2/png-reference", "png-reference")]
+    [DeploymentItem("Render2/tools", "tools")]
     public void TestRegressionByRasterization()
     {
-      string path = "PdfSharp/testing/PdfSharp.Xps.UnitTests/Render2";
-      string dir = GetDirectory(path);
-      if (dir == null)
-      {
-        Assert.Inconclusive("Path not found: " + path + ".");
-        return;
-      }
-      if (!Directory.Exists(dir))
-      {
-        Assert.Inconclusive("Path not found: " + path + ".");
-        return;
-      }
+      string dir = TestContext.TestDeploymentDir;
+
+      Directory.CreateDirectory(Path.Combine(dir, "pdf"));
+      Directory.CreateDirectory(Path.Combine(dir, "png"));
 
       string pdftoppm = Path.Combine(dir, "tools/win32/pdftoppm.exe");
       
