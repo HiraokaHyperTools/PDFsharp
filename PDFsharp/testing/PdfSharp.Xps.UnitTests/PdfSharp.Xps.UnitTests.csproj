@@ -138,6 +138,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+    <None Include="Render2\xps\bulletMarks.xps">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="StrongnameKey.snk" />
     <Resource Include="Qlbm\arial.ttf" />
     <None Include="Test References\PdfSharp.Xps.accessor" />
@@ -315,6 +318,14 @@
     <Folder Include="Primitives.Geometries\" />
     <Folder Include="Primitives.Transforming\" />
     <Folder Include="XamlTests\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Render2\png-reference\bulletMarks-1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Render2\tools\win32\pdftoppm.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
