@@ -40,11 +40,12 @@ namespace PdfSharp.Xps.UnitTests.XpsFiles
     /// The Quality Logic samples are very hard to parse and render...
     /// </summary>
     [TestMethod]
+    [DeploymentItem("SampleXpsDocuments_1_0", "SampleXpsDocuments_1_0")]
     public void QualityLogicMinBar()
     {
       // Download from http://www.microsoft.com/whdc/xps/xpssampdoc.mspx
-      string path = "PdfSharp/testing/SampleXpsDocuments_1_0/QualityLogicMinBar";
-      string dir = GetDirectory(path);
+      string path = "SampleXpsDocuments_1_0/QualityLogicMinBar";
+      string dir = (path);
       if (dir == null)
       {
         Assert.Inconclusive("Path not found: " + path);
@@ -97,11 +98,12 @@ namespace PdfSharp.Xps.UnitTests.XpsFiles
     /// The Quality Logic samples are very hard to parse and render...
     /// </summary>
     [TestMethod, Ignore]
+    [DeploymentItem("SampleXpsDocuments_1_0", "SampleXpsDocuments_1_0")]
     public void QualityLogicXpsSamples()
     {
       // Download from http://www.microsoft.com/whdc/xps/xpssampdoc.mspx
-      string path = "PdfSharp/testing/SampleXpsDocuments_1_0/QualityLogicSamples";
-      string dir = GetDirectory(path);
+      string path = "SampleXpsDocuments_1_0/QualityLogicSamples";
+      string dir = (path);
       if (dir == null)
       {
         Assert.Inconclusive("Path not found: " + path);

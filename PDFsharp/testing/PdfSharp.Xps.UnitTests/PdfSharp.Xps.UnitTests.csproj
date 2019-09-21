@@ -332,7 +332,11 @@
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
-  <Target Name="AfterBuild">
-  </Target>
   -->
+  <Target Name="AfterBuild">
+    <ItemGroup>
+      <SampleXpsDocuments Include="..\SampleXpsDocuments_1_0\**\*.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(SampleXpsDocuments)" DestinationFolder="$(TargetDir)\SampleXpsDocuments_1_0\%(RecursiveDir)" SkipUnchangedFiles="true" />
+  </Target>
 </Project>

@@ -15,6 +15,7 @@ using PdfSharp.Xps.UnitTests.Helpers;
 using PdfSharp.Xps.XpsModel;
 using PdfSharp.Xps.Rendering;
 using IOPath = System.IO.Path;
+using Path = System.IO.Path;
 
 namespace PdfSharp.Xps.UnitTests.Typography
 {
@@ -40,11 +41,12 @@ namespace PdfSharp.Xps.UnitTests.Typography
     }
 
     [TestMethod]
+    [DeploymentItem("SampleXpsDocuments_1_0", "SampleXpsDocuments_1_0")]
     public void TestRenderingTypographySamples()
     {
 #if true
-      string path = "PdfSharp/testing/SampleXpsDocuments_1_0/MXDW";
-      string dir = GetDirectory(path);
+      string path = "SampleXpsDocuments_1_0/MXDW";
+      string dir = (path);
       if (dir == null)
       {
         Assert.Inconclusive("Path not found: " + path + ". Follow instructions in ../../../SampleXpsDocuments_1_0/!readme.txt to download samples from the Internet.");

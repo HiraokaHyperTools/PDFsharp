@@ -38,10 +38,11 @@ namespace PdfSharp.Xps.UnitTests.Xternal
     }
 
     [TestMethod]
+    [DeploymentItem("SampleXpsDocuments_1_0", "SampleXpsDocuments_1_0")]
     public void TestExternalXpsFiles()
     {
-      string path = "PdfSharp/testing/SampleXpsDocuments_1_0/";
-      string dir = GetDirectory(path);
+      string path = "SampleXpsDocuments_1_0";
+      string dir = (path);
       if (dir == null)
       {
         Assert.Inconclusive("Path not found: " + path + ". Follow instructions in ../../../SampleXpsDocuments_1_0/!readme.txt to download samples from the Internet.");
