@@ -19,8 +19,7 @@ python GetVersionBuild.py
 Run:
 
 ```bat
-chdir D:\Git\pdfsharp\PDFsharp\code\PdfSharp
-nuget pack PdfSharp-WPF.csproj -Build -Properties Configuration=Release
+nuget pack PDFsharp\code\PdfSharp\PdfSharp-WPF.csproj -Build -Properties "Configuration=Release;Platform=AnyCPU"
 ```
 
 ## Build: kenjiuno.PdfSharp-WPF
@@ -34,8 +33,7 @@ Open `PDFsharp\code\PdfSharp.Xps\PdfSharp.Xps.nuspec`
 Match `<dependency id="kenjiuno.PdfSharp-WPF" version="1.31.5247" />`
 
 ```bat
-chdir D:\Git\pdfsharp\PDFsharp\code\PdfSharp.Xps
-nuget pack PdfSharp.Xps.csproj -Build -Properties Configuration=Release
+nuget pack PDFsharp\code\PdfSharp.Xps\PdfSharp.Xps.csproj -Build -Properties "Configuration=Release;Platform=AnyCPU"
 ```
 
 ## Publish
