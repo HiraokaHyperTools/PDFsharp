@@ -394,6 +394,8 @@ namespace PdfSharp.Xps.Rendering
       bool mustRender = false;
       bool hasOffset = false;
 
+      bool symbol = descriptor != null && descriptor.fontData.cmap.symbol;
+
       do
       {
         GlyphIndices.GlyphMapping clusterMapping = new GlyphIndices.GlyphMapping(42);
@@ -468,9 +470,19 @@ namespace PdfSharp.Xps.Rendering
 
           // get index of current glyph
           if (mapping.HasGlyphIndex)
+          {
             glyphIndex = mapping.GlyphIndex;
+          }
+          else if (symbol)
+          {
+            char ch = unicodeString[codeIdx];
+            glyphIndex = ch + (descriptor.fontData.os2.usFirstCharIndex & 0xFF00); // @@@
+            glyphIndex = descriptor.CharCodeToGlyphIndex((char)glyphIndex);
+          }
           else
+          {
             glyphIndex = descriptor.CharCodeToGlyphIndex(unicodeString[codeIdx]);
+          }
 
           // add glyph index to the fonts 'used glyph table'
           realizedFont.AddGlyphIndices(new string((char)glyphIndex, 1));
