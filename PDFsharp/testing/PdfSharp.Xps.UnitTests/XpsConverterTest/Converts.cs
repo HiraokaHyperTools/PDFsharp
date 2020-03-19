@@ -16,11 +16,11 @@ namespace PdfSharp.Xps.UnitTests.XpsConverterTest
     public TestContext TestContext { get; set; }
 
     [TestMethod]
-    [DeploymentItem("XpsConverterTest/xps", "xps")]
+    [DeploymentItem("XpsConverterTest/xps", "XpsConverterTest/xps")]
     public void Convert1()
     {
       var testRootDir = TestContext.TestDeploymentDir;
-      var xpsFile = Path.Combine(testRootDir, "xps", "page1.xps");
+      var xpsFile = Path.Combine(testRootDir, "XpsConverterTest/xps", "page1.xps");
       var pdfFile = Path.ChangeExtension(xpsFile, ".pdf");
 
       XpsConverter.Convert(xpsFile);
@@ -29,12 +29,12 @@ namespace PdfSharp.Xps.UnitTests.XpsConverterTest
     }
 
     [TestMethod]
-    [DeploymentItem("XpsConverterTest/xps", "xps")]
+    [DeploymentItem("XpsConverterTest/xps", "XpsConverterTest/xps")]
     public void Convert2()
     {
       var testRootDir = TestContext.TestDeploymentDir;
-      var xpsFile = Path.Combine(testRootDir, "xps", "page1.xps");
-      var pdfFile = Path.Combine(testRootDir, "xps", "page1_2.pdf");
+      var xpsFile = Path.Combine(testRootDir, "XpsConverterTest/xps", "page1.xps");
+      var pdfFile = Path.Combine(testRootDir, "XpsConverterTest/xps", "page1_2.pdf");
 
       XpsConverter.Convert(xpsFile, pdfFile, 0);
 
@@ -42,15 +42,15 @@ namespace PdfSharp.Xps.UnitTests.XpsConverterTest
     }
 
     [TestMethod]
-    [DeploymentItem("XpsConverterTest/xps", "xps")]
+    [DeploymentItem("XpsConverterTest/xps", "XpsConverterTest/xps")]
     public void ConvertManyInput()
     {
       var testRootDir = TestContext.TestDeploymentDir;
 
-      var xps1File = Path.Combine(testRootDir, "xps", "page1.xps");
-      var xps2File = Path.Combine(testRootDir, "xps", "page2.xps");
-      var xps3File = Path.Combine(testRootDir, "xps", "page3.xps");
-      var pdfFile = Path.Combine(testRootDir, "xps", "page_123.pdf");
+      var xps1File = Path.Combine(testRootDir, "XpsConverterTest/xps", "page1.xps");
+      var xps2File = Path.Combine(testRootDir, "XpsConverterTest/xps", "page2.xps");
+      var xps3File = Path.Combine(testRootDir, "XpsConverterTest/xps", "page3.xps");
+      var pdfFile = Path.Combine(testRootDir, "XpsConverterTest/xps", "page_123.pdf");
 
       var pdfDoc = XpsConverter.Convert(
           XpsDocument.Open(xps1File).GetDocument().Pages
