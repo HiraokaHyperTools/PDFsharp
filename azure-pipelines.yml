@@ -5,6 +5,7 @@
 
 trigger:
 - master
+- fix-*
 
 pool:
   vmImage: 'windows-latest'
