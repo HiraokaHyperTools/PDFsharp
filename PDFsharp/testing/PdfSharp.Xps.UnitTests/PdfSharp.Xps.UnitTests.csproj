@@ -101,6 +101,7 @@
       <Generator>MSBuild:Compile</Generator>
     </Compile>
     <Compile Include="Typography\RenderingTypography.cs" />
+    <Compile Include="XpsConverterTest\Converts.cs" />
     <Compile Include="XpsFiles\SampleXpsDocuments_1_0.cs" />
     <Compile Include="XpsParsing\ParsingXpsDocument.cs" />
     <Compile Include="XpsParsing\%28PrimaryFixedPayload.Test01%29.cs" />
@@ -151,6 +152,15 @@
     <None Include="Typography\ConstantiaPoster.xps" />
     <None Include="Typography\CorbelPoster.xps" />
     <None Include="Typography\TypeSamples.xps" />
+    <None Include="XpsConverterTest\xps\page1.xps">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XpsConverterTest\xps\page2.xps">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XpsConverterTest\xps\page3.xps">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="xternal\XPS_export_test.xps" />
   </ItemGroup>
   <ItemGroup>
