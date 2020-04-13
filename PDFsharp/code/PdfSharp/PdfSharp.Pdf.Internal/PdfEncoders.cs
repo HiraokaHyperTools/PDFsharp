@@ -88,12 +88,18 @@ namespace PdfSharp.Pdf.Internal
       get
       {
         if (PdfEncoders.winAnsiEncoding == null)
+        {
+#if !NETFRAMEWORK
+          Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+#endif
           PdfEncoders.winAnsiEncoding =
 #if !SILVERLIGHT
             Encoding.GetEncoding(1252);
 #else
  Encoding.GetEncoding("utf-8"); // AGHACK
 #endif
+        }
+
         return PdfEncoders.winAnsiEncoding;
       }
     }
@@ -456,7 +462,7 @@ namespace PdfSharp.Pdf.Internal
     }
 
     /// <summary>
-    /// Converts WinAnsi to DocEncode characters. Incomplete, just maps € and some other characters.
+    /// Converts WinAnsi to DocEncode characters. Incomplete, just maps Ð‚ and some other characters.
     /// </summary>
     static byte[] docencode_______ = new byte[256]
     {
