@@ -111,7 +111,9 @@ namespace PdfSharp.Drawing
       //typeface = s_typefaces[0];
 
       // BUG: does not work with fonts that have others than the four default styles
+#pragma warning disable 618
       FormattedText formattedText = new FormattedText(text, new CultureInfo("en-us"), FlowDirection.LeftToRight, typeface, emSize, brush);
+#pragma warning restore 618
       //formattedText.SetFontWeight(FontWeights.Bold);
       //formattedText.SetFontStyle(FontStyles.Oblique);
       //formattedText.SetFontStretch(FontStretches.Condensed);
