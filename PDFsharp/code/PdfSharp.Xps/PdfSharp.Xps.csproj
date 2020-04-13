@@ -11,6 +11,16 @@
     <RootNamespace>PdfSharp.Xps</RootNamespace>
     <AssemblyName>PdfSharp.Xps</AssemblyName>
 
+    <PackageId>kenjiuno.PdfSharp.Xps</PackageId>
+    <Authors>kenjiuno</Authors>
+    <Owners>www.pdfsharp.net</Owners>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/HiraokaHyperTools/PDFsharp</RepositoryUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageDescription>PDFsharp - A .NET library for processing PDF</PackageDescription>
+    <Copyright>Copyright 2017, 2019</Copyright>
+    <PackageTags>PdfSharp Xps XpsConverter</PackageTags>
+
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>StrongnameKey.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
@@ -179,6 +189,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="StrongnameKey.snk" />
+    <None Include="..\..\..\LICENSE" Pack="true" Visible="false" PackagePath="" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PdfSharp\PdfSharp-WPF.csproj" />

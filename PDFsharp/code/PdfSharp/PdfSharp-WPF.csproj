@@ -14,6 +14,16 @@
     <RootNamespace>PdfSharp</RootNamespace>
     <AssemblyName>PdfSharp-WPF</AssemblyName>
 
+    <PackageId>kenjiuno.PdfSharp-WPF</PackageId>
+    <Authors>kenjiuno</Authors>
+    <Owners>www.pdfsharp.net</Owners>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/HiraokaHyperTools/PDFsharp</RepositoryUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageDescription>PDFsharp - A .NET library for processing PDF</PackageDescription>
+    <Copyright>Copyright 2017, 2019</Copyright>
+    <PackageTags>PdfSharp WPF</PackageTags>
+
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>StrongnameKey.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
@@ -329,6 +339,7 @@
 
   <ItemGroup>
     <None Include="StrongnameKey.snk" />
+    <None Include="..\..\..\LICENSE" Pack="true" Visible="false" PackagePath="" />
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('netcoreapp')) ">
