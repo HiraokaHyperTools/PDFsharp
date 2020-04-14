@@ -19,19 +19,11 @@ steps:
 - checkout: self
   submodules: true
 
-- task: NuGetToolInstaller@1
+- task: DotNetCoreCLI@2
   inputs:
-    versionSpec: '>=4.9'
-
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '$(solution)'
-
-- task: VSBuild@1
-  inputs:
-    solution: '$(solution)'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    command: 'build'
+    projects: '$(solution)'
+    arguments: '-c $(buildConfiguration) /p:Platform="$(buildPlatform)"'
 
 - task: VSBuild@1
   inputs:
@@ -56,9 +48,11 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: NuGetCommand@2
+- task: DotNetCoreCLI@2
   inputs:
     command: 'pack'
+    configuration: '$(buildConfiguration)'
+    nobuild: true
     feedsToUse: 'select'
     packagesToPack: '**/PdfSharp-WPF.csproj;**/PdfSharp.Xps.csproj'
     versioningScheme: 'off'
