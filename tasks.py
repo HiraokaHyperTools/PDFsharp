@@ -99,30 +99,27 @@ def setPdfSharpXpsVersion(version):  # kenjiuno.PdfSharp.Xps
     writeAllText(filePath, text)
 
 
-def updateNuspec(nuspecFilePath):
-    filePath = os.path.join(dirname, nuspecFilePath)
+def updateProjectDependencies(projectFilePath):
+    filePath = os.path.join(dirname, projectFilePath)
     tree = ET.parse(filePath)
-    package = tree.getroot()
+    project = tree.getroot()
     changes = 0
-    if package is not None:
-        metadata = package.find("metadata")
-        if metadata is not None:
-            dependencies = metadata.find("dependencies")
-            if dependencies is not None:
-                for dependency in dependencies.findall("dependency"):
-                    id = dependency.attrib["id"]
-                    if id in assemblies:
-                        currentVersion = dependency.attrib["version"]
-                        newVersion = assemblies[id]["getver"]()
-                        if currentVersion != newVersion:
-                            dependency.attrib["version"] = newVersion
-                            changes += 1
+    if project is not None:
+        packages = project.findall("./ItemGroup/PackageReference")
+        for package in packages:
+            id = package.attrib["Include"]
+            if id in assemblies:
+                currentVersion = package.attrib["Version"]
+                newVersion = assemblies[id]["getver"]()
+                if currentVersion != newVersion:
+                    package.attrib["Version"] = newVersion
+                    changes += 1
     if changes != 0:
         tree.write(filePath, "UTF-8")
 
 
 def updateNuspecs():
-    updateNuspec('PDFsharp/code/PdfSharp.Xps/PdfSharp.Xps.nuspec')
+    updateProjectDependencies('PDFsharp/code/PdfSharp.Xps/PdfSharp.Xps.csproj')
 
 
 assemblies = {

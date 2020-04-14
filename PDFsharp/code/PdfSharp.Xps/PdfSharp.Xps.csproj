@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
     <TargetFrameworks>net40;netcoreapp3.0;netcoreapp3.1</TargetFrameworks>
@@ -189,11 +189,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="StrongnameKey.snk" />
-    <None Include="..\..\..\LICENSE" Pack="true" Visible="false" PackagePath="" />
+    <None Include="..\..\..\LICENSE" Pack="true" PackagePath="" Visible="false" />
   </ItemGroup>
-  <ItemGroup>
+
+  <ItemGroup Condition=" '$(BuildingInsideVisualStudio)' == 'true' ">
     <ProjectReference Include="..\PdfSharp\PdfSharp-WPF.csproj" />
   </ItemGroup>
+
+  <ItemGroup Condition=" '$(BuildingInsideVisualStudio)' != 'true' ">
+    <PackageReference Include="kenjiuno.PdfSharp-WPF" Version="1.31.5556" />
+  </ItemGroup>
+
   <ItemGroup Condition=" $(TargetFramework.StartsWith('net4')) ">
     <Reference Include="ReachFramework" />
   </ItemGroup>
