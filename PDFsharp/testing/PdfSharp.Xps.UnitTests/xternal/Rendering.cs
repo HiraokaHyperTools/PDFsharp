@@ -73,29 +73,31 @@ namespace PdfSharp.Xps.UnitTests.Xternal
         try
         {
           int docIndex = 0;
-          XpsDocument xpsDoc = XpsDocument.Open(filename);
-          foreach (FixedDocument doc in xpsDoc.Documents)
+          using (XpsDocument xpsDoc = XpsDocument.Open(filename))
           {
-            PdfDocument pdfDoc = new PdfDocument();
-            PdfRenderer renderer = new PdfRenderer();
-
-            int pageIndex = 0;
-            foreach (FixedPage page in doc.Pages)
+            foreach (FixedDocument doc in xpsDoc.Documents)
             {
-              Debug.WriteLine(String.Format("  doc={0}, page={1}", docIndex, pageIndex));
-              PdfPage pdfPage = renderer.CreatePage(pdfDoc, page);
-              renderer.RenderPage(pdfPage, page);
-              pageIndex++;
+              PdfDocument pdfDoc = new PdfDocument();
+              PdfRenderer renderer = new PdfRenderer();
+
+              int pageIndex = 0;
+              foreach (FixedPage page in doc.Pages)
+              {
+                Debug.WriteLine(String.Format("  doc={0}, page={1}", docIndex, pageIndex));
+                PdfPage pdfPage = renderer.CreatePage(pdfDoc, page);
+                renderer.RenderPage(pdfPage, page);
+                pageIndex++;
+              }
+
+              string pdfFilename = IOPath.GetFileNameWithoutExtension(filename);
+              if (docIndex != 0)
+                pdfFilename += docIndex.ToString();
+              pdfFilename += ".pdf";
+              pdfFilename = IOPath.Combine(IOPath.GetDirectoryName(filename), pdfFilename);
+
+              pdfDoc.Save(pdfFilename);
+              docIndex++;
             }
-
-            string pdfFilename = IOPath.GetFileNameWithoutExtension(filename);
-            if (docIndex != 0)
-              pdfFilename += docIndex.ToString();
-            pdfFilename += ".pdf";
-            pdfFilename = IOPath.Combine(IOPath.GetDirectoryName(filename), pdfFilename);
-
-            pdfDoc.Save(pdfFilename);
-            docIndex++;
           }
         }
         catch (Exception ex)
