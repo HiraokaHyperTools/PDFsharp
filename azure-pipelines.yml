@@ -28,19 +28,19 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
-    solution: '**/PDFsharpTests-GDI.sln'
+    projects: '**/PDFsharpTests-GDI.sln'
     arguments: '-c $(buildConfiguration) /p:Platform="$(buildPlatform)"'
 
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
-    solution: '**/PDFsharpTests-WPF.sln'
+    projects: '**/PDFsharpTests-WPF.sln'
     arguments: '-c $(buildConfiguration) /p:Platform="$(buildPlatform)"'
 
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
-    solution: '**/PdfSharp.Xps.UnitTests/PdfSharp-XPS.sln'
+    projects: '**/PdfSharp.Xps.UnitTests/PdfSharp-XPS.sln'
     arguments: '-c $(buildConfiguration) /p:Platform="$(buildPlatform)"'
 
 - task: VSTest@2
