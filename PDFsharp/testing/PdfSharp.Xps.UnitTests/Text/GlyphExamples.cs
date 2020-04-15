@@ -2,7 +2,8 @@
 using System.Text;
 using System.Collections.Generic;
 using System.Globalization;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
+using NUnit.Helper;
 using System.Reflection;
 using System.IO;
 using System.Xml;
@@ -17,23 +18,23 @@ namespace PdfSharp.Xps.UnitTests.Text
   /// <summary>
   /// Test glyphs.
   /// </summary>
-  [TestClass]
+  [GotoWorkDirectory]
   public class GlyphExamples : TestBase
   {
-    public TestContext TestContext { get; set; }
+    public TestContext TestContext => TestContext.CurrentContext;
 
-    [TestInitialize]
+    [SetUp]
     public void TestInitialize()
     {
     }
 
-    [TestCleanup]
+    [TearDown]
     public void TestCleanup()
     {
     }
 
 
-    [TestMethod]
+    [Test]
     public void GlyphExample_5_1_2_3()
     {
       // BT
@@ -58,7 +59,7 @@ namespace PdfSharp.Xps.UnitTests.Text
       }
     }
 
-    [TestMethod]
+    [Test]
     public void GlyphExample_5_1_2_4()
     {
       try
@@ -71,7 +72,7 @@ namespace PdfSharp.Xps.UnitTests.Text
       }
     }
 
-    [TestMethod]
+    [Test]
     public void GlyphExample_5_3()
     {
       // BT
@@ -87,25 +88,25 @@ namespace PdfSharp.Xps.UnitTests.Text
       RenderVisual("GlyphExample 5-3", new XamlPresenter(GetType(), "GlyphExample_5_3.xaml").CreateContent);
     }
 
-    [TestMethod]
+    [Test]
     public void GlyphExample_5_4()
     {
       RenderVisual("GlyphExample 5-4", new XamlPresenter(GetType(), "GlyphExample_5_4.xaml").CreateContent);
     }
 
-    [TestMethod]
+    [Test]
     public void GlyphExample_5_5()
     {
       RenderVisual("GlyphExample 5-5", new XamlPresenter(GetType(), "GlyphExample_5_5.xaml").CreateContent);
     }
 
-    [TestMethod]
+    [Test]
     public void GlyphExample_5_6()
     {
       RenderVisual("GlyphExample 5-6", new XamlPresenter(GetType(), "GlyphExample_5_6.xaml").CreateContent);
     }
 
-    [TestMethod]
+    [Test]
     public void GlyphExample_5_7()
     {
       try
@@ -118,19 +119,19 @@ namespace PdfSharp.Xps.UnitTests.Text
       }
     }
 
-    [TestMethod]
+    [Test]
     public void GlyphExample_5_9()
     {
       RenderVisual("GlyphExample 5-9", new XamlPresenter(GetType(), "GlyphExample_5_9.xaml").CreateContent);
     }
 
-    [TestMethod]
+    [Test]
     public void GlyphExample_5_10()
     {
       RenderVisual("GlyphExample 5-10", new XamlPresenter(GetType(), "GlyphExample_5_10.xaml").CreateContent);
     }
 
-    [TestMethod]
+    [Test]
     public void GlyphExample_5_11()
     {
       // BT
@@ -146,13 +147,13 @@ namespace PdfSharp.Xps.UnitTests.Text
       RenderVisual("GlyphExample 5-11", new XamlPresenter(GetType(), "GlyphExample_5_11.xaml").CreateContent);
     }
 
-    [TestMethod]
+    [Test]
     public void GlyphExample_5_12()
     {
       RenderVisual("GlyphExample 5-12", new XamlPresenter(GetType(), "GlyphExample_5_12.xaml").CreateContent);
     }
 
-    [TestMethod]
+    [Test]
     public void GlyphExample_5_13()
     {
       RenderVisual("GlyphExample 5-13", new XamlPresenter(GetType(), "GlyphExample_5_13.xaml").CreateContent);

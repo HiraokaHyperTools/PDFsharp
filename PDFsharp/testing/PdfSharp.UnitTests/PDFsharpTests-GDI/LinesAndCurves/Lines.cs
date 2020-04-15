@@ -2,7 +2,8 @@
 using System.Text;
 using System.IO;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
+using NUnit.Helper;
 #if GDI
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -21,45 +22,45 @@ namespace PdfSharp.UnitTests.LinesAndCurves
   /// <summary>
   /// Tests lines and polylines.
   /// </summary>
-  [TestClass]
+  [GotoWorkDirectory]
   public class Lines : TestBase
   {
     /// <summary>
     /// Gets or sets the test context which provides information about and functionality for the current test run.
     ///</summary>
-    public TestContext TestContext { get; set; }
+    public TestContext TestContext => TestContext.CurrentContext;
 
-    [ClassInitialize()]
-    public static void ClassInitialize(TestContext testContext)
+    [OneTimeSetUp]
+    public static void ClassInitialize()
     {
     }
 
-    [ClassCleanup()]
+    [OneTimeTearDown]
     public static void MyClassCleanup()
     {
     }
 
-    [TestInitialize()]
+    [SetUp]
     public void TestInitialize()
     {
       BeginPdf();
       BeginImage();
     }
 
-    [TestCleanup()]
+    [TearDown]
     public void TestCleanup() 
     {
       EndPdf();
       EndImage();
     }
 
-    [TestMethod]
+    [Test]
     public void TestDrawLine()
     {
       Render("Lines", RenderLines);
     }
 
-    [TestMethod]
+    [Test]
     public void TestDrawLines()
     {
       Render("PolyLines", RenderPolyLines);

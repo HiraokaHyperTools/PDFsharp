@@ -2,7 +2,8 @@
 using System.Text;
 using System.Collections.Generic;
 using System.Globalization;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
+using NUnit.Helper;
 using System.Windows;
 using System.Windows.Markup;
 using System.Windows.Media;
@@ -14,22 +15,22 @@ namespace PdfSharp.Xps.UnitTests.Graphics
   /// <summary>
   /// Test glyphs.
   /// </summary>
-  [TestClass]
+  [GotoWorkDirectory]
   public class SmoothBezierCurveAbbreviatedSyntax : TestBase
   {
-    public TestContext TestContext { get; set; }
+    public TestContext TestContext => TestContext.CurrentContext;
 
-    [TestInitialize]
+    [SetUp]
     public void TestInitialize()
     {
     }
 
-    [TestCleanup]
+    [TearDown]
     public void TestCleanup()
     {
     }
 
-    [TestMethod]
+    [Test]
     public void TestSmoothBezierCurveAbbreviatedSyntax()
     {
      //RenderVisual("4.2.3.1 Smooth Bezier Curve Abbreviated Syntax", CreateContent);

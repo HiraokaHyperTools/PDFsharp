@@ -2,7 +2,8 @@
 using System.Diagnostics;
 using System.Text;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
+using NUnit.Helper;
 using System.Reflection;
 using System.IO;
 using System.Xml;
@@ -21,17 +22,17 @@ namespace PdfSharp.Xps.UnitTests.XpsFiles
   /// <summary>
   /// Summary description for TestExample
   /// </summary>
-  [TestClass]
+  [GotoWorkDirectory]
   public class SampleXpsDocuments_1_0 : TestBase
   {
-    public TestContext TestContext { get; set; }
+    public TestContext TestContext => TestContext.CurrentContext;
 
-    [TestInitialize]
+    [SetUp]
     public void TestInitialize()
     {
     }
 
-    [TestCleanup]
+    [TearDown]
     public void TestCleanup()
     {
     }
@@ -39,8 +40,8 @@ namespace PdfSharp.Xps.UnitTests.XpsFiles
     /// <summary>
     /// The Quality Logic samples are very hard to parse and render...
     /// </summary>
-    [TestMethod]
-    [DeploymentItem("SampleXpsDocuments_1_0", "SampleXpsDocuments_1_0")]
+    [Test]
+    [DeploymentItemFrom("@testing/SampleXpsDocuments_1_0", "SampleXpsDocuments_1_0")]
     public void QualityLogicMinBar()
     {
       // Download from http://www.microsoft.com/whdc/xps/xpssampdoc.mspx
@@ -97,8 +98,8 @@ namespace PdfSharp.Xps.UnitTests.XpsFiles
     /// <summary>
     /// The Quality Logic samples are very hard to parse and render...
     /// </summary>
-    [TestMethod, Ignore]
-    [DeploymentItem("SampleXpsDocuments_1_0", "SampleXpsDocuments_1_0")]
+    [Test]
+    [DeploymentItemFrom("@testing/SampleXpsDocuments_1_0", "SampleXpsDocuments_1_0")]
     public void QualityLogicXpsSamples()
     {
       // Download from http://www.microsoft.com/whdc/xps/xpssampdoc.mspx
@@ -152,7 +153,7 @@ namespace PdfSharp.Xps.UnitTests.XpsFiles
       }
     }
 
-    //[TestMethod]
+    //[Test]
     public void TestRenderingAllSamples()
     {
       string dir = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location); // Directory.GetCurrentDirectory();

@@ -19,11 +19,31 @@ steps:
 - checkout: self
   submodules: true
 
-- task: DotNetCoreCLI@2
+- task: NuGetToolInstaller@1
   inputs:
-    command: 'build'
-    projects: '$(solution)'
-    arguments: '-c $(buildConfiguration) /p:Platform="$(buildPlatform)"'
+    versionSpec: '>=4.9'
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '**/PDFsharpTests-GDI.sln'
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '**/PDFsharpTests-WPF.sln'
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '**/PdfSharp.Xps.UnitTests/PdfSharp-XPS.sln'
+
+- task: VSBuild@1
+  inputs:
+    solution: '$(solution)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
 
 - task: VSBuild@1
   inputs:
@@ -48,11 +68,9 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: DotNetCoreCLI@2
+- task: NuGetCommand@2
   inputs:
     command: 'pack'
-    configuration: '$(buildConfiguration)'
-    nobuild: true
     feedsToUse: 'select'
     packagesToPack: '**/PdfSharp-WPF.csproj;**/PdfSharp.Xps.csproj'
     versioningScheme: 'off'

@@ -2,7 +2,8 @@
 using System.Text;
 using System.Collections.Generic;
 using System.Globalization;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
+using NUnit.Helper;
 using System.Windows;
 using System.Windows.Media;
 using PdfSharp.Xps.UnitTests.Helpers;
@@ -12,22 +13,22 @@ namespace PdfSharp.Xps.UnitTests.Primitives.Glyphs
   /// <summary>
   /// Test glyphs.
   /// </summary>
-  [TestClass]
+  [GotoWorkDirectory]
   public class StartItSimple : TestBase
   {
-    public TestContext TestContext { get; set; }
+    public TestContext TestContext => TestContext.CurrentContext;
 
-    [TestInitialize]
+    [SetUp]
     public void TestInitialize()
     {
     }
 
-    [TestCleanup]
+    [TearDown]
     public void TestCleanup()
     {
     }
 
-    [TestMethod]
+    [Test]
     public void TestGlyphsHelloWorld()
     {
       RenderVisual("GlyphsHelloWorld", CreateHellWorld);

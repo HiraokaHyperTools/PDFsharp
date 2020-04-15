@@ -18,6 +18,7 @@ using PdfSharp;
 using PdfSharp.Drawing;
 using PdfSharp.Pdf;
 using PdfSharp.Pdf.IO;
+using System.IO.Packaging;
 
 namespace PdfSharp.Xps.UnitTests.Helpers
 {
@@ -326,7 +327,8 @@ namespace PdfSharp.Xps.UnitTests.Helpers
     /// </summary>
     public void SaveXps()
     {
-      XpsDocument xpsDocument = new XpsDocument(Path.Combine(OutputDirectory, Name + ".xps"), FileAccess.ReadWrite);
+      var zipFile = Package.Open(Path.Combine(OutputDirectory, Name + ".xps"), FileMode.Create);
+      XpsDocument xpsDocument = new XpsDocument(zipFile);
       PageContent pageContent = new PageContent();
 
       FixedPage fixedPage = new FixedPage();
@@ -358,6 +360,7 @@ namespace PdfSharp.Xps.UnitTests.Helpers
       XpsDocumentWriter xpsWriter = XpsDocument.CreateXpsDocumentWriter(xpsDocument);
       xpsWriter.Write(fixedDocument);
       xpsDocument.Close();
+      zipFile.Close();
 
       // Must call at least two times GC.Collect this to get access to the xps file even I write synchronously. This is a bug in WPF.
       // Vista 64 .NET 3.5 SP1 installed

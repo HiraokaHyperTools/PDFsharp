@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Text;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
+using NUnit.Helper;
 using System.Windows;
 using System.Windows.Media;
 using PdfSharp.Xps.UnitTests.Helpers;
@@ -11,22 +12,22 @@ namespace PdfSharp.Xps.UnitTests.Primitives.Fill
   /// <summary>
   /// Test linear gradient brushes.
   /// </summary>
-  [TestClass]
+  [GotoWorkDirectory]
   public class FillLinearGradientBrush : TestBase
   {
-    public TestContext TestContext { get; set; }
+    public TestContext TestContext => TestContext.CurrentContext;
 
-    [TestInitialize]
+    [SetUp]
     public void TestInitialize()
     {
     }
 
-    [TestCleanup]
+    [TearDown]
     public void TestCleanup()
     {
     }
 
-    [TestMethod]
+    [Test]
     public void TestFillLinearGradientBrush1()
     {
       RenderVisual("FillLinearGradientBrush 1", CreateFillLinearGradientBrush1);
@@ -88,7 +89,7 @@ namespace PdfSharp.Xps.UnitTests.Primitives.Fill
       return dv;
     }
 
-    [TestMethod]
+    [Test]
     public void TestFillLinearGradientBrush2()
     {
       RenderVisual("FillLinearGradientBrush2", CreateFillLinearGradientBrush2);
@@ -148,7 +149,7 @@ namespace PdfSharp.Xps.UnitTests.Primitives.Fill
       return dv;
     }
 
-    [TestMethod]
+    [Test]
     public void TestFillLinearGradientBrush3()
     {
       RenderVisual("FillLinearGradientBrush Transparency", CreateFillLinearGradientBrush3);
@@ -196,7 +197,7 @@ namespace PdfSharp.Xps.UnitTests.Primitives.Fill
       return dv;
     }
 
-    [TestMethod]
+    [Test]
     public void TestFillLinearGradientBrush4()
     {
       RenderVisual("FillLinearGradientBrush 4", CreateFillLinearGradientBrush4);

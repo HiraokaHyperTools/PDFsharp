@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
+using NUnit.Helper;
 using PdfSharp.Xps.UnitTests.Helpers;
 using PdfSharp.Xps.XpsModel;
 using System;
@@ -10,16 +11,16 @@ using Path = System.IO.Path;
 
 namespace PdfSharp.Xps.UnitTests.XpsConverterTest
 {
-  [TestClass]
+  [GotoWorkDirectory]
   public class Converts
   {
-    public TestContext TestContext { get; set; }
+    public TestContext TestContext => TestContext.CurrentContext;
 
-    [TestMethod]
-    [DeploymentItem("XpsConverterTest/xps", "XpsConverterTest/xps")]
+    [Test]
+    [DeploymentItemFrom("@PdfSharp.Xps.UnitTests/XpsConverterTest/xps", "XpsConverterTest/xps")]
     public void Convert1()
     {
-      var testRootDir = TestContext.TestDeploymentDir;
+      var testRootDir = TestContext.WorkDirectory;
       var xpsFile = Path.Combine(testRootDir, "XpsConverterTest/xps", "page1.xps");
       var pdfFile = Path.ChangeExtension(xpsFile, ".pdf");
 
@@ -28,11 +29,11 @@ namespace PdfSharp.Xps.UnitTests.XpsConverterTest
       Assert.IsTrue(File.Exists(pdfFile));
     }
 
-    [TestMethod]
-    [DeploymentItem("XpsConverterTest/xps", "XpsConverterTest/xps")]
+    [Test]
+    [DeploymentItemFrom("@PdfSharp.Xps.UnitTests/XpsConverterTest/xps", "XpsConverterTest/xps")]
     public void Convert2()
     {
-      var testRootDir = TestContext.TestDeploymentDir;
+      var testRootDir = TestContext.WorkDirectory;
       var xpsFile = Path.Combine(testRootDir, "XpsConverterTest/xps", "page1.xps");
       var pdfFile = Path.Combine(testRootDir, "XpsConverterTest/xps", "page1_2.pdf");
 
@@ -41,11 +42,11 @@ namespace PdfSharp.Xps.UnitTests.XpsConverterTest
       Assert.IsTrue(File.Exists(pdfFile));
     }
 
-    [TestMethod]
-    [DeploymentItem("XpsConverterTest/xps", "XpsConverterTest/xps")]
+    [Test]
+    [DeploymentItemFrom("@PdfSharp.Xps.UnitTests/XpsConverterTest/xps", "XpsConverterTest/xps")]
     public void ConvertManyInput()
     {
-      var testRootDir = TestContext.TestDeploymentDir;
+      var testRootDir = TestContext.WorkDirectory;
 
       var xps1File = Path.Combine(testRootDir, "XpsConverterTest/xps", "page1.xps");
       var xps2File = Path.Combine(testRootDir, "XpsConverterTest/xps", "page2.xps");

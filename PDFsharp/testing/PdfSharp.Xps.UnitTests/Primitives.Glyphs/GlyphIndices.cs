@@ -4,7 +4,8 @@ using System.IO;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Diagnostics;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
+using NUnit.Helper;
 using System.Windows;
 using System.Windows.Media;
 using PdfSharp.Pdf;
@@ -17,23 +18,23 @@ namespace PdfSharp.Xps.UnitTests.Primitives.Glyphs
   /// <summary>
   /// Test glyphindices.
   /// </summary>
-  [TestClass]
+  [GotoWorkDirectory]
   public class GlyphIndices : TestBase
   {
-    public TestContext TestContext { get; set; }
+    public TestContext TestContext => TestContext.CurrentContext;
 
-    [TestInitialize]
+    [SetUp]
     public void TestInitialize()
     {
     }
 
-    [TestCleanup]
+    [TearDown]
     public void TestCleanup()
     {
     }
 
-    [DeploymentItem("../../Primitives.Glyphs/GlyphFiles/ClusterMap.xps")]
-    [TestMethod]
+    [DeploymentItemFrom("@PdfSharp.Xps.UnitTests/Primitives.Glyphs/GlyphFiles/ClusterMap.xps")]
+    [Test]
     public void TestGlyphIndices()
     {
       ParseFile("ClusterMap"); //Samples of ClusterCodeUnitCount & ClusterGlyphCount
