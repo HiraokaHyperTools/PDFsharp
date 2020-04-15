@@ -37,6 +37,8 @@ steps:
       **/PDFsharp.UnitTests-GDI.dll
       **/PdfSharp.UnitTests-WPF.dll
       **/PdfSharp.Xps.UnitTests.dll
+      !**/*TestAdapter.dll
+      !**/obj/**
 
 - task: DotNetCoreCLI@2
   inputs:
