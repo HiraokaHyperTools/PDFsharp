@@ -27,6 +27,18 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '**/PDFsharpTests-GDI.sln'
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '**/PDFsharpTests-WPF.sln'
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '**/PdfSharp.Xps.UnitTests/PdfSharp-XPS.sln'
+
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
