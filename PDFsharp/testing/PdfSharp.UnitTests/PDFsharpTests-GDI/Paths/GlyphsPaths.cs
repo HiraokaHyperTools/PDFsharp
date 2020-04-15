@@ -21,7 +21,7 @@ namespace PdfSharp.UnitTests.Paths
   /// <summary>
   /// 
   /// </summary>
-  
+  [GotoWorkDirectory]
   public class GlyphsPaths : TestBase
   {
     /// <summary>

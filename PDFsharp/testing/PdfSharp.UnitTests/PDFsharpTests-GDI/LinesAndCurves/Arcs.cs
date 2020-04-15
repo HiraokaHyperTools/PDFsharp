@@ -21,7 +21,7 @@ namespace PdfSharp.UnitTests.LinesAndCurves
   /// <summary>
   /// Test arces.
   /// </summary>
-  
+  [GotoWorkDirectory]
   public class Arcs : TestBase
   {
     /// <summary>

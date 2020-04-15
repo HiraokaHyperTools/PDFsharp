@@ -21,7 +21,7 @@ namespace PdfSharp.UnitTests.Shapes
   /// <summary>
   /// 
   /// </summary>
-  
+  [GotoWorkDirectory]
   public class Pies : TestBase
   {
     /// <summary>

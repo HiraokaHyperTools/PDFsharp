@@ -8,7 +8,7 @@ using System.Text;
 
 namespace PdfSharp.UnitTests
 {
-  [AttributeUsage(AttributeTargets.Method,
+  [AttributeUsage(AttributeTargets.Method | AttributeTargets.Class,
     AllowMultiple = false,
     Inherited = false)]
   public class GotoWorkDirectoryAttribute : Attribute, IApplyToContext

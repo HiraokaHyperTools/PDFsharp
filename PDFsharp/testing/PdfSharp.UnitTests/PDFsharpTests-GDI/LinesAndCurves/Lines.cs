@@ -21,7 +21,7 @@ namespace PdfSharp.UnitTests.LinesAndCurves
   /// <summary>
   /// Tests lines and polylines.
   /// </summary>
-  
+  [GotoWorkDirectory]
   public class Lines : TestBase
   {
     /// <summary>

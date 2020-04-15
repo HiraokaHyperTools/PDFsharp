@@ -21,7 +21,7 @@ namespace PdfSharp.UnitTests.LinesAndCurves
   /// <summary>
   /// Test Béziers curves.
   /// </summary>
-  
+  [GotoWorkDirectory]
   public class Beziers : TestBase
   {
     public Beziers()

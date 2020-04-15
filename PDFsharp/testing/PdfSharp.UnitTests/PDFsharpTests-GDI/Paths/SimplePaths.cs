@@ -21,7 +21,7 @@ namespace PdfSharp.UnitTests.Paths
   /// <summary>
   /// Test curves.
   /// </summary>
-  
+  [GotoWorkDirectory]
   public class SimplePaths : TestBase
   {
     /// <summary>

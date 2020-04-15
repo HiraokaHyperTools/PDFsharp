@@ -21,7 +21,7 @@ namespace PdfSharp.UnitTests.Text
   /// <summary>
   /// 
   /// </summary>
-  
+  [GotoWorkDirectory]
   public class TextStyles1 : TestBase
   {
     /// <summary>

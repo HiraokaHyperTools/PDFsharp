@@ -21,7 +21,7 @@ namespace PdfSharp.UnitTests.Images
   /// <summary>
   /// 
   /// </summary>
-  
+  [GotoWorkDirectory]
   public class JPEGs : TestBase
   {
     /// <summary>
@@ -44,7 +44,6 @@ namespace PdfSharp.UnitTests.Images
     }
 
     [DeploymentItemFrom("@PDFsharp/dev/XGraphicsLab/images/Z3.jpg")]
-    [GotoWorkDirectory]
     [Test]
     public void TestJPEGs()
     {
@@ -52,7 +51,6 @@ namespace PdfSharp.UnitTests.Images
     }
 
     [DeploymentItemFrom("@PDFsharp/dev/XGraphicsLab/images/Test.gif")]
-    [GotoWorkDirectory]
     [Test]
     public void TestGIFs()
     {
