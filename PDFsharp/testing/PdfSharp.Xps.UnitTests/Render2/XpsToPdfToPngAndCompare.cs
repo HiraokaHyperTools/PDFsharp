@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Text;
 using System.Collections.Generic;
 using NUnit.Framework;
+using NUnit.Helper;
 using System.Reflection;
 using System.IO;
 using System.Xml;
@@ -24,10 +25,10 @@ namespace PdfSharp.Xps.UnitTests.Render2
   /// <summary>
   /// Summary description for TestExample
   /// </summary>
-  
+  [GotoWorkDirectory]
   public class XpsToPdfToPngAndCompare : TestBase
   {
-    public TestContext TestContext { get; set; }
+    public TestContext TestContext => TestContext.CurrentContext;
 
     [SetUp]
     public void TestInitialize()
@@ -40,12 +41,12 @@ namespace PdfSharp.Xps.UnitTests.Render2
     }
 
     [Test]
-    [DeploymentItem("Render2/xps", "xps")]
-    [DeploymentItem("Render2/png-reference", "png-reference")]
-    [DeploymentItem("Render2/tools", "tools")]
+    [DeploymentItemFrom("@PdfSharp.Xps.UnitTests/Render2/xps", "xps")]
+    [DeploymentItemFrom("@PdfSharp.Xps.UnitTests/Render2/png-reference", "png-reference")]
+    [DeploymentItemFrom("@PdfSharp.Xps.UnitTests/Render2/tools", "tools")]
     public void TestRegressionByRasterization()
     {
-      string dir = TestContext.TestDeploymentDir;
+      string dir = TestContext.WorkDirectory;
 
       Directory.CreateDirectory(Path.Combine(dir, "pdf"));
       Directory.CreateDirectory(Path.Combine(dir, "png"));
@@ -116,7 +117,7 @@ namespace PdfSharp.Xps.UnitTests.Render2
           hash.ComputeHash(File.ReadAllBytes(pngRefFile))
         );
 
-        Assert.AreEqual(hashReference, hashConverted, true, 
+        Assert.AreEqual(hashReference, hashConverted,
           $"{Path.GetFileNameWithoutExtension(pngFile)} differs!"
         );
       }

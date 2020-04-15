@@ -2,6 +2,7 @@
 using System.Text;
 using System.Collections.Generic;
 using NUnit.Framework;
+using NUnit.Helper;
 using System.Windows;
 using System.Windows.Media;
 using PdfSharp.Xps.UnitTests.Helpers;
@@ -11,10 +12,10 @@ namespace PdfSharp.Xps.UnitTests.Primitives.Fill
   /// <summary>
   /// Test visual brushes.
   /// </summary>
-  
+  [GotoWorkDirectory]
   public class FillVisualBrush : TestBase
   {
-    public TestContext TestContext { get; set; }
+    public TestContext TestContext => TestContext.CurrentContext;
 
     [SetUp]
     public void TestInitialize()

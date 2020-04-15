@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace PdfSharp.UnitTests
+namespace NUnit.Helper
 {
   [AttributeUsage(AttributeTargets.Method | AttributeTargets.Class,
     AllowMultiple = false,

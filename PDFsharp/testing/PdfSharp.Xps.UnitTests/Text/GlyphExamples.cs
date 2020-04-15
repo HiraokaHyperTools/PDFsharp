@@ -3,6 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using System.Globalization;
 using NUnit.Framework;
+using NUnit.Helper;
 using System.Reflection;
 using System.IO;
 using System.Xml;
@@ -17,10 +18,10 @@ namespace PdfSharp.Xps.UnitTests.Text
   /// <summary>
   /// Test glyphs.
   /// </summary>
-  
+  [GotoWorkDirectory]
   public class GlyphExamples : TestBase
   {
-    public TestContext TestContext { get; set; }
+    public TestContext TestContext => TestContext.CurrentContext;
 
     [SetUp]
     public void TestInitialize()

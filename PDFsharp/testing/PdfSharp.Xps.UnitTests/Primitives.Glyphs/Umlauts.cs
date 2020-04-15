@@ -3,6 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using System.Globalization;
 using NUnit.Framework;
+using NUnit.Helper;
 using System.Windows;
 using System.Windows.Media;
 using PdfSharp.Xps.UnitTests.Helpers;
@@ -12,10 +13,10 @@ namespace PdfSharp.Xps.UnitTests.Primitives.Glyphs
   /// <summary>
   /// Test glyphs.
   /// </summary>
-  
+  [GotoWorkDirectory]
   public class Umlauts : TestBase
   {
-    public TestContext TestContext { get; set; }
+    public TestContext TestContext => TestContext.CurrentContext;
 
     [SetUp]
     public void TestInitialize()

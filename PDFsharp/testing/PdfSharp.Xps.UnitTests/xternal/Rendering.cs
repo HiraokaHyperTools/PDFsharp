@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Text;
 using System.Collections.Generic;
 using NUnit.Framework;
+using NUnit.Helper;
 using System.Reflection;
 using System.IO;
 using System.Xml;
@@ -22,10 +23,10 @@ namespace PdfSharp.Xps.UnitTests.Xternal
   /// <summary>
   /// 
   /// </summary>
-  
+  [GotoWorkDirectory]
   public class Rendering : TestBase
   {
-    public TestContext TestContext { get; set; }
+    public TestContext TestContext => TestContext.CurrentContext;
 
     [SetUp]
     public void TestInitialize()
@@ -38,7 +39,7 @@ namespace PdfSharp.Xps.UnitTests.Xternal
     }
 
     [Test]
-    [DeploymentItem("SampleXpsDocuments_1_0", "SampleXpsDocuments_1_0")]
+    [DeploymentItemFrom("@testing/SampleXpsDocuments_1_0", "SampleXpsDocuments_1_0")]
     public void TestExternalXpsFiles()
     {
       string path = "SampleXpsDocuments_1_0";

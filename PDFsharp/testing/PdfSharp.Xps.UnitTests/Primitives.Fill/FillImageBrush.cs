@@ -2,6 +2,7 @@
 using System.Text;
 using System.Collections.Generic;
 using NUnit.Framework;
+using NUnit.Helper;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -12,10 +13,10 @@ namespace PdfSharp.Xps.UnitTests.Primitives.Fill
   /// <summary>
   /// Test solid color brushes.
   /// </summary>
-  
+  [GotoWorkDirectory]
   public class FillImageBrush : TestBase
   {
-    public TestContext TestContext { get; set; }
+    public TestContext TestContext => TestContext.CurrentContext;
 
     [SetUp]
     public void TestInitialize()

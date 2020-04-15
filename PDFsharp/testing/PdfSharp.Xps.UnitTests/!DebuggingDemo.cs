@@ -3,13 +3,14 @@ using System.Diagnostics;
 using System.Text;
 using System.Collections.Generic;
 using NUnit.Framework;
+using NUnit.Helper;
 
 namespace PdfSharp.Xps.UnitTests
 {
   /// <summary>
   /// Summary description for _DebuggingDemo
   /// </summary>
-  
+  [GotoWorkDirectory]
   public class DebuggingDemo
   {
     /// <summary>

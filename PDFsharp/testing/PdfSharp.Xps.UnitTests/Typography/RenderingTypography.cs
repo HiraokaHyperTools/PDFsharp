@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Text;
 using System.Collections.Generic;
 using NUnit.Framework;
+using NUnit.Helper;
 using System.Reflection;
 using System.IO;
 using System.Xml;
@@ -24,11 +25,11 @@ namespace PdfSharp.Xps.UnitTests.Typography
   /// <summary>
   /// Summary description for TestExample
   /// </summary>
-  
+  [GotoWorkDirectory]
   public class RenderingTypography : TestBase
   {
 
-    public TestContext TestContext { get; set; }
+    public TestContext TestContext => TestContext.CurrentContext;
 
     [SetUp]
     public void TestInitialize()
@@ -41,7 +42,7 @@ namespace PdfSharp.Xps.UnitTests.Typography
     }
 
     [Test]
-    [DeploymentItem("SampleXpsDocuments_1_0", "SampleXpsDocuments_1_0")]
+    [DeploymentItemFrom("@testing/SampleXpsDocuments_1_0", "SampleXpsDocuments_1_0")]
     public void TestRenderingTypographySamples()
     {
 #if true

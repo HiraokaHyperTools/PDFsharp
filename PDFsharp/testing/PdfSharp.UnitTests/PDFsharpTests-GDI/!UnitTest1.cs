@@ -3,13 +3,14 @@ using System.Text;
 using System.Collections.Generic;
 
 using NUnit.Framework;
+using NUnit.Helper;
 
 namespace PDFsharpTestsGDI
 {
   /// <summary>
   /// Summary description for UnitTest1
   /// </summary>
-  
+  [GotoWorkDirectory]
   public class UnitTest1
   {
     public UnitTest1()

@@ -8,7 +8,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace PdfSharp.UnitTests
+namespace NUnit.Helper
 {
   [AttributeUsage(AttributeTargets.Method,
     AllowMultiple = true,
@@ -17,11 +17,13 @@ namespace PdfSharp.UnitTests
   {
     private readonly string path;
     private readonly string outputDirectory;
+    private readonly bool flattenOutput;
 
-    public DeploymentItemFromAttribute(string path, string outputDirectory = null)
+    public DeploymentItemFromAttribute(string path, string outputDirectory = null, bool flattenOutput = false)
     {
       this.path = path.Replace('/', '\\');
       this.outputDirectory = outputDirectory;
+      this.flattenOutput = flattenOutput;
     }
 
     public void ApplyToContext(TestExecutionContext context)
@@ -67,9 +69,13 @@ namespace PdfSharp.UnitTests
       }
       else if (Directory.Exists(inputOne))
       {
-        foreach (var subOne in Directory.GetDirectories(inputOne).Concat(Directory.GetFiles(inputOne)))
+        foreach (var subOne in Directory.GetDirectories(inputOne))
         {
-          RecursiveCopy(subOne, Path.Combine(outputDir, Path.GetFileName(subOne)));
+          RecursiveCopy(subOne, flattenOutput ? outputDir : Path.Combine(outputDir, Path.GetFileName(subOne)));
+        }
+        foreach (var subOne in Directory.GetFiles(inputOne))
+        {
+          RecursiveCopy(subOne, outputDir);
         }
       }
     }

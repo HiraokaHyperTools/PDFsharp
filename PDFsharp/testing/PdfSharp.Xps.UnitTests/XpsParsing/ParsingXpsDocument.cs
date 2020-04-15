@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Text;
 using System.Collections.Generic;
 using NUnit.Framework;
+using NUnit.Helper;
 using System.Reflection;
 using System.IO;
 using System.Xml;
@@ -21,10 +22,10 @@ namespace PdfSharp.Xps.UnitTests.XpsParsing
   /// <summary>
   /// Summary description for TestExample
   /// </summary>
-  
+  [GotoWorkDirectory]
   public class ParsingXpsDocument : TestBase
   {
-    public TestContext TestContext { get; set; }
+    public TestContext TestContext => TestContext.CurrentContext;
 
     [SetUp]
     public void TestInitialize()

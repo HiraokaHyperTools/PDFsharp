@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Text;
 using System.Collections.Generic;
 using NUnit.Framework;
+using NUnit.Helper;
 using System.Reflection;
 using System.IO;
 using System.Xml;
@@ -22,10 +23,10 @@ namespace PdfSharp.Xps.UnitTests.XpsRendering
   /// <summary>
   /// Summary description for TestExample
   /// </summary>
-  
+  [GotoWorkDirectory]
   public class RenderingXpsDocument : TestBase
   {
-    public TestContext TestContext { get; set; }
+    public TestContext TestContext => TestContext.CurrentContext;
 
     [SetUp]
     public void TestInitialize()
@@ -38,7 +39,7 @@ namespace PdfSharp.Xps.UnitTests.XpsRendering
     }
 
     [Test]
-    [DeploymentItem("SampleXpsDocuments_1_0", "SampleXpsDocuments_1_0")]
+    [DeploymentItemFrom("@testing/SampleXpsDocuments_1_0", "SampleXpsDocuments_1_0")]
     public void TestRenderingAllSamples()
     {
       string path = "SampleXpsDocuments_1_0";

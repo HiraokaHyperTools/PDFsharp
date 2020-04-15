@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Diagnostics;
 using NUnit.Framework;
+using NUnit.Helper;
 using System.Windows;
 using System.Windows.Media;
 using PdfSharp.Pdf;
@@ -17,10 +18,10 @@ namespace PdfSharp.Xps.UnitTests.Primitives.Glyphs
   /// <summary>
   /// Test glyphindices.
   /// </summary>
-  
+  [GotoWorkDirectory]
   public class GlyphIndices : TestBase
   {
-    public TestContext TestContext { get; set; }
+    public TestContext TestContext => TestContext.CurrentContext;
 
     [SetUp]
     public void TestInitialize()
@@ -32,7 +33,7 @@ namespace PdfSharp.Xps.UnitTests.Primitives.Glyphs
     {
     }
 
-    [DeploymentItem("../../Primitives.Glyphs/GlyphFiles/ClusterMap.xps")]
+    [DeploymentItemFrom("@PdfSharp.Xps.UnitTests/Primitives.Glyphs/GlyphFiles/ClusterMap.xps")]
     [Test]
     public void TestGlyphIndices()
     {

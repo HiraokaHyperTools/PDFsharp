@@ -2,6 +2,7 @@
 using System.Text;
 using System.Collections.Generic;
 using NUnit.Framework;
+using NUnit.Helper;
 using System.Reflection;
 using System.IO;
 using System.Xml;
@@ -13,10 +14,10 @@ using PdfSharp.Xps.UnitTests.Helpers;
 
 namespace PdfSharp.Xps.UnitTests.Qlbm
 {
-  
+  [GotoWorkDirectory]
   public class QLMB : TestBase
   {
-    public TestContext TestContext { get; set; }
+    public TestContext TestContext => TestContext.CurrentContext;
 
     [SetUp]
     public void TestInitialize()
