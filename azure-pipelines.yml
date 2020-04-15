@@ -24,21 +24,16 @@ steps:
     command: 'build'
     projects: |
       $(solution)
+    arguments: '-c $(buildConfiguration) /p:Platform="$(buildPlatform)"'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'test'
+    projects: |
       **/PDFsharpTests-GDI.sln
       **/PDFsharpTests-WPF.sln
       **/PdfSharp.Xps.UnitTests/PdfSharp-XPS.sln
     arguments: '-c $(buildConfiguration) /p:Platform="$(buildPlatform)"'
-
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-    testAssemblyVer2: |
-      **/PDFsharp.UnitTests-GDI.dll
-      **/PdfSharp.UnitTests-WPF.dll
-      **/PdfSharp.Xps.UnitTests.dll
-      !**/*TestAdapter.dll
-      !**/obj/**
 
 - task: DotNetCoreCLI@2
   inputs:
