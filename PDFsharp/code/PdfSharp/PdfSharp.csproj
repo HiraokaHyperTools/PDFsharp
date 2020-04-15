@@ -1,5 +1,11 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
+    <TargetFrameworks>net40;netcoreapp3.0;netcoreapp3.1</TargetFrameworks>
+    <UseWindowsForms>true</UseWindowsForms>
+
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <EnableDefaultItems>false</EnableDefaultItems>
+
     <ProjectType>Local</ProjectType>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
@@ -92,21 +98,6 @@
     <DebugType>none</DebugType>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System">
-      <Name>System</Name>
-    </Reference>
-    <Reference Include="System.Data">
-      <Name>System.Data</Name>
-    </Reference>
-    <Reference Include="System.Drawing">
-      <Name>System.Drawing</Name>
-    </Reference>
-    <Reference Include="System.Windows.Forms">
-      <Name>System.Windows.Forms</Name>
-    </Reference>
-    <Reference Include="System.Xml">
-      <Name>System.XML</Name>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="!internal\Directives.cs" />
@@ -761,22 +752,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="PdfSharp.Drawing.BarCodes\%40BarCodes.txt" />
     <Content Include="PdfSharp.SharpZipLib\ReadMe.txt" />
-    <Content Include="Resources\Messages.de.txt" />
-    <Content Include="Resources\Messages.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="PdfSharp.Forms\PagePreview.resx">
-      <DependentUpon>PagePreview.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="PdfSharp.Forms\PagePreviewCanvas.resx">
       <DependentUpon>PagePreviewCanvas.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Messages.de.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Messages.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
@@ -803,9 +782,11 @@
   <ItemGroup>
     <Folder Include="AGInternals\" />
     <Folder Include="PdfSharp.Drawing.Wpf\" />
-    <Folder Include="Resources\images\" />
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('netcoreapp')) ">
+    <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.7.0" />
+  </ItemGroup>
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
