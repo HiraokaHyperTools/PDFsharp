@@ -33,6 +33,10 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+    testAssemblyVer2: |
+      **/PDFsharp.UnitTests-GDI.dll
+      **/PdfSharp.UnitTests-WPF.dll
+      **/PdfSharp.Xps.UnitTests.dll
 
 - task: DotNetCoreCLI@2
   inputs:
