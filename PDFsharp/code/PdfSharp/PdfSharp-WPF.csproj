@@ -15,7 +15,7 @@
     <AssemblyName>PdfSharp-WPF</AssemblyName>
 
     <PackageId>kenjiuno.PdfSharp-WPF</PackageId>
-    <PackageVersion>1.31.5556</PackageVersion>
+    <PackageVersion>1.31.5584</PackageVersion>
     <Authors>kenjiuno</Authors>
     <Owners>www.pdfsharp.net</Owners>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
