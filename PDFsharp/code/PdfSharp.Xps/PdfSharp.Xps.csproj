@@ -192,11 +192,11 @@
     <None Include="..\..\..\LICENSE" Pack="true" PackagePath="" Visible="false" />
   </ItemGroup>
 
-  <ItemGroup Condition=" '$(BuildingInsideVisualStudio)' == 'true' ">
+  <ItemGroup Condition=" true or '$(BuildingInsideVisualStudio)' == 'true' ">
     <ProjectReference Include="..\PdfSharp\PdfSharp-WPF.csproj" />
   </ItemGroup>
 
-  <ItemGroup Condition=" '$(BuildingInsideVisualStudio)' != 'true' ">
+  <ItemGroup Condition=" false and '$(BuildingInsideVisualStudio)' != 'true' ">
     <PackageReference Include="kenjiuno.PdfSharp-WPF" Version="1.31.5556" />
   </ItemGroup>
 
