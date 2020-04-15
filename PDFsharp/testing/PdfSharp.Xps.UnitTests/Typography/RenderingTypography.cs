@@ -75,34 +75,35 @@ namespace PdfSharp.Xps.UnitTests.Typography
         Debug.WriteLine(filename);
         try
         {
-          XpsDocument xpsDoc = XpsDocument.Open(filename);
-
-          int docIndex = 0;
-          foreach (FixedDocument doc in xpsDoc.Documents)
+          using (XpsDocument xpsDoc = XpsDocument.Open(filename))
           {
-            PdfDocument pdfDocument = new PdfDocument();
-            //PdfRenderer renderer = new PdfRenderer();
-            XpsConverter converter = new XpsConverter(pdfDocument, xpsDoc);
-
-            int pageIndex = 0;
-            foreach (FixedPage page in doc.Pages)
+            int docIndex = 0;
+            foreach (FixedDocument doc in xpsDoc.Documents)
             {
-              Debug.WriteLine(String.Format("  doc={0}, page={1}", docIndex, pageIndex));
+              PdfDocument pdfDocument = new PdfDocument();
+              //PdfRenderer renderer = new PdfRenderer();
+              XpsConverter converter = new XpsConverter(pdfDocument, xpsDoc);
 
-              // HACK: API is senseless
-              PdfPage pdfPage = converter.CreatePage(pageIndex);
-              converter.RenderPage(pdfPage, pageIndex);
-              pageIndex++;
+              int pageIndex = 0;
+              foreach (FixedPage page in doc.Pages)
+              {
+                Debug.WriteLine(String.Format("  doc={0}, page={1}", docIndex, pageIndex));
+
+                // HACK: API is senseless
+                PdfPage pdfPage = converter.CreatePage(pageIndex);
+                converter.RenderPage(pdfPage, pageIndex);
+                pageIndex++;
+              }
+
+              string pdfFilename = IOPath.GetFileNameWithoutExtension(filename);
+              if (docIndex != 0)
+                pdfFilename += docIndex.ToString();
+              pdfFilename += ".pdf";
+              pdfFilename = IOPath.Combine(IOPath.GetDirectoryName(filename), pdfFilename);
+
+              pdfDocument.Save(pdfFilename);
+              docIndex++;
             }
-
-            string pdfFilename = IOPath.GetFileNameWithoutExtension(filename);
-            if (docIndex != 0)
-              pdfFilename += docIndex.ToString();
-            pdfFilename += ".pdf";
-            pdfFilename = IOPath.Combine(IOPath.GetDirectoryName(filename), pdfFilename);
-
-            pdfDocument.Save(pdfFilename);
-            docIndex++;
           }
         }
         catch (Exception ex)
