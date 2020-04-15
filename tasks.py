@@ -64,6 +64,12 @@ def setPdfSharpWpfVersion(version):  # kenjiuno.PdfSharp-WPF
     })
     writeAllText(filePath, text)
 
+    filePath = os.path.join(
+        dirname, "PDFsharp/code/PdfSharp/PdfSharp-WPF.csproj")
+    text = readAllText(filePath)
+    text = updatePackageVersion(text, "PackageVersion", version)
+    writeAllText(filePath, text)
+
 
 def extractAssemblyAttributePairs(text):
     pairs = {}
@@ -77,6 +83,18 @@ def getPdfSharpXpsVersion():  # kenjiuno.PdfSharp.Xps
         dirname, "PDFsharp/code/PdfSharp.Xps/Properties/AssemblyInfo.cs"))
     pairs = extractAssemblyAttributePairs(text)
     return pairs["AssemblyVersion"]
+
+
+def updatePackageVersion(text, elementName, value):
+    text = re.sub(
+        "<" + re.escape(elementName) +
+        ">[^<]+</" + re.escape(elementName) + ">",
+        "<" + (elementName)+">" + value + "</" + (elementName) + ">",
+        text,
+        0,
+        re.MULTILINE
+    )
+    return text
 
 
 def updateAssemblyAttribute(text, key, value):
@@ -98,31 +116,34 @@ def setPdfSharpXpsVersion(version):  # kenjiuno.PdfSharp.Xps
     text = updateAssemblyAttribute(text, "AssemblyVersion", version)
     writeAllText(filePath, text)
 
+    filePath = os.path.join(
+        dirname, "PDFsharp/code/PdfSharp.Xps/PdfSharp.Xps.csproj")
+    text = readAllText(filePath)
+    text = updatePackageVersion(text, "PackageVersion", version)
+    writeAllText(filePath, text)
 
-def updateNuspec(nuspecFilePath):
-    filePath = os.path.join(dirname, nuspecFilePath)
+
+def updateProjectDependencies(projectFilePath):
+    filePath = os.path.join(dirname, projectFilePath)
     tree = ET.parse(filePath)
-    package = tree.getroot()
+    project = tree.getroot()
     changes = 0
-    if package is not None:
-        metadata = package.find("metadata")
-        if metadata is not None:
-            dependencies = metadata.find("dependencies")
-            if dependencies is not None:
-                for dependency in dependencies.findall("dependency"):
-                    id = dependency.attrib["id"]
-                    if id in assemblies:
-                        currentVersion = dependency.attrib["version"]
-                        newVersion = assemblies[id]["getver"]()
-                        if currentVersion != newVersion:
-                            dependency.attrib["version"] = newVersion
-                            changes += 1
+    if project is not None:
+        packages = project.findall("./ItemGroup/PackageReference")
+        for package in packages:
+            id = package.attrib["Include"]
+            if id in assemblies:
+                currentVersion = package.attrib["Version"]
+                newVersion = assemblies[id]["getver"]()
+                if currentVersion != newVersion:
+                    package.attrib["Version"] = newVersion
+                    changes += 1
     if changes != 0:
         tree.write(filePath, "UTF-8")
 
 
 def updateNuspecs():
-    updateNuspec('PDFsharp/code/PdfSharp.Xps/PdfSharp.Xps.nuspec')
+    updateProjectDependencies('PDFsharp/code/PdfSharp.Xps/PdfSharp.Xps.csproj')
 
 
 assemblies = {

@@ -12,8 +12,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Documents;
 using System.Windows.Controls;
 using System.Windows.Markup;
-using System.Windows.Xps;
-using System.Windows.Xps.Packaging;
 using PdfSharp;
 using PdfSharp.Drawing;
 using PdfSharp.Pdf;
