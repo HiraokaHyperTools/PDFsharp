@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Text;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
+using NUnit.Helper;
 using System.Reflection;
 using System.IO;
 using System.Xml;
@@ -16,71 +17,71 @@ namespace PdfSharp.Xps.UnitTests.ComplexDrawings
   /// <summary>
   /// Summary description for TestExample
   /// </summary>
-  [TestClass]
+  [GotoWorkDirectory]
   public class ComplexDrawings : TestBase
   {
-    public TestContext TestContext { get; set; }
+    public TestContext TestContext => TestContext.CurrentContext;
 
-    [TestInitialize]
+    [SetUp]
     public void TestInitialize()
     {
     }
 
-    [TestCleanup]
+    [TearDown]
     public void TestCleanup()
     {
     }
 
-    [TestMethod]
+    [Test]
     public void TestCamera()
     {
       RenderVisual("Camera", new XamlPresenter(GetType(), "Camera.xaml").CreateContent);
     }
 
-    [TestClass]
+    
     public class Glasses : TestBase
     {
-      [TestMethod]
+      [Test]
       public void TestGlasses()
       {
         RenderVisual("Glasses", new XamlPresenter(GetType(), "Glasses.xaml").CreateContent);
       }
     }
 
-    [TestClass]
+    
     public class MigraDoc : TestBase
     {
-      [TestMethod]
+      [Test]
       public void TestMigraDoc()
       {
         RenderVisual("MigraDoc", new XamlPresenter(GetType(), "MigraDoc.xaml").CreateContent);
       }
     }
 
-    [TestClass]
+    
     public class PopCan : TestBase
     {
-      [TestMethod]
+      [Test]
       public void TestPopCan()
       {
         RenderVisual("PopCan", new XamlPresenter(GetType(), "PopCan.xaml").CreateContent);
       }
     }
 
-    [TestClass]
+    
     public class Coffee : TestBase
     {
-      [TestMethod]
+      [Test]
       public void TestCoffee()
       {
         RenderVisual("Coffee", new XamlPresenter(GetType(), "Coffee.xaml").CreateContent);
       }
     }
 
-    [TestClass]
+    
     public class Jan_Široký: TestBase
     {
-      [TestMethod]
+      [Test]
       public void Test_from_Jan_Široký()
       {
         RenderVisual("Test from Jan Široký.xaml", new XamlPresenter(GetType(), "TestfromJanŠiroký.xaml").CreateContent);

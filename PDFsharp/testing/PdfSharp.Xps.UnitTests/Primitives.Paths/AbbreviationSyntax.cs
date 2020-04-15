@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Text;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
+using NUnit.Helper;
 using System.Windows;
 using System.Windows.Media;
 using PdfSharp.Xps.UnitTests.Helpers;
@@ -11,22 +12,22 @@ namespace PdfSharp.Xps.UnitTests.Primitives.Paths
   /// <summary>
   /// Test arc segments.
   /// </summary>
-  [TestClass]
+  [GotoWorkDirectory]
   public class AbbreviationSyntax : TestBase
   {
-    public TestContext TestContext { get; set; }
+    public TestContext TestContext => TestContext.CurrentContext;
 
-    [TestInitialize]
+    [SetUp]
     public void TestInitialize()
     {
     }
 
-    [TestCleanup]
+    [TearDown]
     public void TestCleanup()
     {
     }
 
-    [TestMethod]
+    [Test]
     public void TestMiteredAbbreviatedSyntax()
     {
       // PDF renders incorrect, same as Acrobat created PDF

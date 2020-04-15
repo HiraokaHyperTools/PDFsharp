@@ -2,7 +2,8 @@
 using System.Text;
 using System.IO;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
+using NUnit.Helper;
 #if GDI
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -21,7 +22,7 @@ namespace PdfSharp.UnitTests.Text
   /// <summary>
   /// 
   /// </summary>
-  [TestClass]
+  [GotoWorkDirectory]
   public class TextStyles2 : TestBase
   {
     /// <summary>
@@ -29,21 +30,21 @@ namespace PdfSharp.UnitTests.Text
     ///</summary>
     public TestContext TestContext { get; set; }
 
-    [TestInitialize]
+    [SetUp]
     public void TestInitialize()
     {
       BeginPdf();
       BeginImage();
     }
 
-    [TestCleanup]
+    [TearDown]
     public void TestCleanup()
     {
       EndPdf();
       EndImage();
     }
 
-    [TestMethod]
+    [Test]
     public void TestTextStyles2_Times_New_Roman_embedded()
     {
       Render("TextStyles_Times_New_Roman_embedded", RenderTextStyles);

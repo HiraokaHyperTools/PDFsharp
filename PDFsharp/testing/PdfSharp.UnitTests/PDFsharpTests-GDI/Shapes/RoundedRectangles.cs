@@ -2,7 +2,8 @@
 using System.Text;
 using System.IO;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
+using NUnit.Helper;
 #if GDI
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -21,7 +22,7 @@ namespace PdfSharp.UnitTests.Shapes
   /// <summary>
   /// 
   /// </summary>
-  [TestClass]
+  [GotoWorkDirectory]
   public class RoundedRectangles : TestBase
   {
     /// <summary>
@@ -29,21 +30,21 @@ namespace PdfSharp.UnitTests.Shapes
     ///</summary>
     public TestContext TestContext { get; set; }
 
-    [TestInitialize()]
+    [SetUp]
     public void TestInitialize()
     {
       BeginPdf();
       BeginImage();
     }
 
-    [TestCleanup()]
+    [TearDown]
     public void TestCleanup()
     {
       EndPdf();
       EndImage();
     }
 
-    [TestMethod]
+    [Test]
     public void TestRoundedRectangles()
     {
       Render("RoundedRectangles", RenderRoundedRectangles);

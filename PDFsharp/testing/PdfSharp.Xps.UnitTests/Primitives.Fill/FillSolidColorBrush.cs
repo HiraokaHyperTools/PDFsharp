@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Text;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
+using NUnit.Helper;
 using System.Windows;
 using System.Windows.Media;
 using PdfSharp.Xps.UnitTests.Helpers;
@@ -11,22 +12,22 @@ namespace PdfSharp.Xps.UnitTests.Primitives.Fill
   /// <summary>
   /// Test solid color brushes.
   /// </summary>
-  [TestClass]
+  [GotoWorkDirectory]
   public class FillSolidColorBrush : TestBase
   {
-    public TestContext TestContext { get; set; }
+    public TestContext TestContext => TestContext.CurrentContext;
 
-    [TestInitialize]
+    [SetUp]
     public void TestInitialize()
     {
     }
 
-    [TestCleanup]
+    [TearDown]
     public void TestCleanup()
     {
     }
 
-    [TestMethod]
+    [Test]
     public void TestFillSolidColorBrushRgb1()
     {
       RenderVisual("SolidColorBrush RGB (1)", CreateSolidColorBrushRgb1);
@@ -92,7 +93,7 @@ namespace PdfSharp.Xps.UnitTests.Primitives.Fill
       return dv;
     }
 
-    //[TestMethod]
+    //[Test]
     public void TestFillSolidColorBrushCmyk()
     {
       RenderVisual("SolidColorBrush CMYK", CreateSolidColorBrushCmyk);

@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfSharp.Xps", "..\..\code\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfSharp.Xps.UnitTests", "PdfSharp.Xps.UnitTests.csproj", "{8E18EF36-98CB-4796-ACB4-E0AABA942D9C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnit.Helper", "..\NUnit.Helper\NUnit.Helper.csproj", "{DF15C2AA-8DC0-45B0-8D1F-1B72B95BC58B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{8E18EF36-98CB-4796-ACB4-E0AABA942D9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E18EF36-98CB-4796-ACB4-E0AABA942D9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E18EF36-98CB-4796-ACB4-E0AABA942D9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF15C2AA-8DC0-45B0-8D1F-1B72B95BC58B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF15C2AA-8DC0-45B0-8D1F-1B72B95BC58B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF15C2AA-8DC0-45B0-8D1F-1B72B95BC58B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF15C2AA-8DC0-45B0-8D1F-1B72B95BC58B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
