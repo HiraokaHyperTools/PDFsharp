@@ -10,6 +10,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>PdfSharp.Xps</RootNamespace>
     <AssemblyName>PdfSharp.Xps</AssemblyName>
+    <PackageVersion>1.1.5</PackageVersion>
 
     <PackageId>kenjiuno.PdfSharp.Xps</PackageId>
     <Authors>kenjiuno</Authors>
@@ -192,12 +193,8 @@
     <None Include="..\..\..\LICENSE" Pack="true" PackagePath="" Visible="false" />
   </ItemGroup>
 
-  <ItemGroup Condition=" true or '$(BuildingInsideVisualStudio)' == 'true' ">
+  <ItemGroup>
     <ProjectReference Include="..\PdfSharp\PdfSharp-WPF.csproj" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" false and '$(BuildingInsideVisualStudio)' != 'true' ">
-    <PackageReference Include="kenjiuno.PdfSharp-WPF" Version="1.31.5556" />
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('net4')) ">

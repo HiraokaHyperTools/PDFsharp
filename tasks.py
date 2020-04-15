@@ -64,6 +64,12 @@ def setPdfSharpWpfVersion(version):  # kenjiuno.PdfSharp-WPF
     })
     writeAllText(filePath, text)
 
+    filePath = os.path.join(
+        dirname, "PDFsharp/code/PdfSharp/PdfSharp-WPF.csproj")
+    text = readAllText(filePath)
+    text = updatePackageVersion(text, "PackageVersion", version)
+    writeAllText(filePath, text)
+
 
 def extractAssemblyAttributePairs(text):
     pairs = {}
@@ -77,6 +83,18 @@ def getPdfSharpXpsVersion():  # kenjiuno.PdfSharp.Xps
         dirname, "PDFsharp/code/PdfSharp.Xps/Properties/AssemblyInfo.cs"))
     pairs = extractAssemblyAttributePairs(text)
     return pairs["AssemblyVersion"]
+
+
+def updatePackageVersion(text, elementName, value):
+    text = re.sub(
+        "<" + re.escape(elementName) +
+        ">[^<]+</" + re.escape(elementName) + ">",
+        "<" + (elementName)+">" + value + "</" + (elementName) + ">",
+        text,
+        0,
+        re.MULTILINE
+    )
+    return text
 
 
 def updateAssemblyAttribute(text, key, value):
@@ -96,6 +114,12 @@ def setPdfSharpXpsVersion(version):  # kenjiuno.PdfSharp.Xps
         dirname, "PDFsharp/code/PdfSharp.Xps/Properties/AssemblyInfo.cs")
     text = readAllText(filePath)
     text = updateAssemblyAttribute(text, "AssemblyVersion", version)
+    writeAllText(filePath, text)
+
+    filePath = os.path.join(
+        dirname, "PDFsharp/code/PdfSharp.Xps/PdfSharp.Xps.csproj")
+    text = readAllText(filePath)
+    text = updatePackageVersion(text, "PackageVersion", version)
     writeAllText(filePath, text)
 
 

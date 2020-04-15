@@ -15,6 +15,7 @@
     <AssemblyName>PdfSharp-WPF</AssemblyName>
 
     <PackageId>kenjiuno.PdfSharp-WPF</PackageId>
+    <PackageVersion>1.31.5556</PackageVersion>
     <Authors>kenjiuno</Authors>
     <Owners>www.pdfsharp.net</Owners>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -333,8 +334,6 @@
 
   <ItemGroup>
     <Content Include="PdfSharp.SharpZipLib\ReadMe.txt" />
-    <Content Include="Resources\Messages.de.txt" />
-    <Content Include="Resources\Messages.txt" />
   </ItemGroup>
 
   <ItemGroup>
