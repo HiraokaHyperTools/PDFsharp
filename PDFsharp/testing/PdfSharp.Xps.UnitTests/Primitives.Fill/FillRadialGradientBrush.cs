@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System.Windows;
 using System.Windows.Media;
 using PdfSharp.Xps.UnitTests.Helpers;
@@ -11,22 +11,22 @@ namespace PdfSharp.Xps.UnitTests.Primitives.Fill
   /// <summary>
   /// Test radial gradient brushes.
   /// </summary>
-  [TestClass]
+  
   public class FillRadialGradientBrush : TestBase
   {
     public TestContext TestContext { get; set; }
 
-    [TestInitialize]
+    [SetUp]
     public void TestInitialize()
     {
     }
 
-    [TestCleanup]
+    [TearDown]
     public void TestCleanup()
     {
     }
 
-    [TestMethod]
+    [Test]
     public void TestFillRadialGradientBrush1()
     {
       RenderVisual("FillRadialGradientBrush 1", CreateFillRadialGradientBrush1);
@@ -89,7 +89,7 @@ namespace PdfSharp.Xps.UnitTests.Primitives.Fill
       return dv;
     }
 
-    [TestMethod]
+    [Test]
     public void TestFillRadialGradientBrush2()
     {
       RenderVisual("FillRadialGradientBrush 2", CreateFillRadialGradientBrush2);
@@ -152,7 +152,7 @@ namespace PdfSharp.Xps.UnitTests.Primitives.Fill
       return dv;
     }
 
-    [TestMethod]
+    [Test]
     public void TestFillRadialGradientBrush3()
     {
       RenderVisual("FillRadialGradientBrush 3", CreateFillRadialGradientBrush3);
@@ -266,7 +266,7 @@ namespace PdfSharp.Xps.UnitTests.Primitives.Fill
       return dv;
     }
 
-    [TestMethod]
+    [Test]
     public void TestFillRadialGradientBrush4()
     {
       // Reflect

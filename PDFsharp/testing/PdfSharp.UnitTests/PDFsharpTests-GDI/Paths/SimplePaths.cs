@@ -2,7 +2,7 @@
 using System.Text;
 using System.IO;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 #if GDI
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -21,7 +21,7 @@ namespace PdfSharp.UnitTests.Paths
   /// <summary>
   /// Test curves.
   /// </summary>
-  [TestClass]
+  
   public class SimplePaths : TestBase
   {
     /// <summary>
@@ -29,27 +29,27 @@ namespace PdfSharp.UnitTests.Paths
     ///</summary>
     public TestContext TestContext { get; set; }
 
-    [TestInitialize()]
+    [SetUp]
     public void TestInitialize()
     {
       BeginPdf();
       BeginImage();
     }
 
-    [TestCleanup()]
+    [TearDown]
     public void TestCleanup() 
     {
       EndPdf();
       EndImage();
     }
 
-    [TestMethod]
+    [Test]
     public void TestOpenPath()
     {
       Render("OpenPath", RenderOpenPath);
     }
 
-    [TestMethod]
+    [Test]
     public void TestClosedPath()
     {
       Render("ClosedPath", RenderClosedPath);

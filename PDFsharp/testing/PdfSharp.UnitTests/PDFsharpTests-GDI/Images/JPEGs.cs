@@ -2,7 +2,7 @@
 using System.Text;
 using System.IO;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 #if GDI
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -21,7 +21,7 @@ namespace PdfSharp.UnitTests.Images
   /// <summary>
   /// 
   /// </summary>
-  [TestClass]
+  
   public class JPEGs : TestBase
   {
     /// <summary>
@@ -29,29 +29,31 @@ namespace PdfSharp.UnitTests.Images
     ///</summary>
     public TestContext TestContext { get; set; }
 
-    [TestInitialize()]
+    [SetUp]
     public void TestInitialize()
     {
       BeginPdf();
       BeginImage();
     }
 
-    [TestCleanup()]
+    [TearDown]
     public void TestCleanup()
     {
       EndPdf();
       EndImage();
     }
 
-    [DeploymentItem("../../../../../dev/XGraphicsLab/images/Z3.jpg")]
-    [TestMethod]
+    [DeploymentItemFrom("@PDFsharp/dev/XGraphicsLab/images/Z3.jpg")]
+    [GotoWorkDirectory]
+    [Test]
     public void TestJPEGs()
     {
       Render("JPEGs", RenderJPEGs);
     }
 
-    [DeploymentItem("../../../../../dev/XGraphicsLab/images/Test.gif")]
-    [TestMethod]
+    [DeploymentItemFrom("@PDFsharp/dev/XGraphicsLab/images/Test.gif")]
+    [GotoWorkDirectory]
+    [Test]
     public void TestGIFs()
     {
       Render("GIFs", RenderGIFs);

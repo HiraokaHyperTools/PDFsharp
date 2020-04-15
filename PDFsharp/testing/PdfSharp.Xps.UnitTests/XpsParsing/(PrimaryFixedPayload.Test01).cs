@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System.Reflection;
 using System.IO;
 using System.Xml;
@@ -16,22 +16,22 @@ namespace PdfSharp.Xps.UnitTests.XpsParsing
   /// <summary>
   /// Summary description for TestExample
   /// </summary>
-  [TestClass]
+  
   public class PrimaryFixedPayload : TestBase
   {
     public TestContext TestContext { get; set; }
 
-    [TestInitialize]
+    [SetUp]
     public void TestInitialize()
     {
     }
 
-    [TestCleanup]
+    [TearDown]
     public void TestCleanup()
     {
     }
 
-//    [TestMethod]
+//    [Test]
     public void Test01()
     {
       string[] files = Directory.GetFiles("../../../XPS-TestDocuments", "*.xps", SearchOption.AllDirectories);

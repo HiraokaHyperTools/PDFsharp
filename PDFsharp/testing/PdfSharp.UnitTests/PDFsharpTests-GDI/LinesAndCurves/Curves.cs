@@ -2,7 +2,7 @@
 using System.Text;
 using System.IO;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 #if GDI
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -21,7 +21,7 @@ namespace PdfSharp.UnitTests.LinesAndCurves
   /// <summary>
   /// Test curves.
   /// </summary>
-  [TestClass]
+  
   public class Curves : TestBase
   {
     /// <summary>
@@ -29,21 +29,21 @@ namespace PdfSharp.UnitTests.LinesAndCurves
     ///</summary>
     public TestContext TestContext { get; set; }
 
-    [TestInitialize()]
+    [SetUp]
     public void TestInitialize()
     {
       BeginPdf();
       BeginImage();
     }
 
-    [TestCleanup()]
+    [TearDown]
     public void TestCleanup() 
     {
       EndPdf();
       EndImage();
     }
 
-    [TestMethod]
+    [Test]
     public void TestCurves()
     {
       Render("Curves", RenderCurves);

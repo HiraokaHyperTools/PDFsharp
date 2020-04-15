@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System.Windows;
 using System.Windows.Media;
 using PdfSharp.Xps.UnitTests.Helpers;
@@ -11,22 +11,22 @@ namespace PdfSharp.Xps.UnitTests.Primitives.Clipping
   /// <summary>
   /// Test clipping.
   /// </summary>
-  [TestClass]
+  
   public class ClippingGeometry : TestBase
   {
     public TestContext TestContext { get; set; }
 
-    [TestInitialize]
+    [SetUp]
     public void TestInitialize()
     {
     }
 
-    [TestCleanup]
+    [TearDown]
     public void TestCleanup()
     {
     }
 
-    [TestMethod]
+    [Test]
     public void TestClipping()
     {
       RenderVisual("ClippingGeometry", CreateClippingGeometry);

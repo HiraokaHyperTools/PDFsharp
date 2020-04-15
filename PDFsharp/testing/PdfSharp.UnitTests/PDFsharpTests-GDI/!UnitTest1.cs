@@ -2,14 +2,14 @@
 using System.Text;
 using System.Collections.Generic;
 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace PDFsharpTestsGDI
 {
   /// <summary>
   /// Summary description for UnitTest1
   /// </summary>
-  [TestClass]
+  
   public class UnitTest1
   {
     public UnitTest1()
@@ -42,24 +42,24 @@ namespace PDFsharpTestsGDI
     // You can use the following additional attributes as you write your tests:
     //
     // Use ClassInitialize to run code before running the first test in the class
-    // [ClassInitialize()]
+    // [OneTimeSetUp]
     // public static void MyClassInitialize(TestContext testContext) { }
     //
     // Use ClassCleanup to run code after all tests in a class have run
-    // [ClassCleanup()]
+    // [OneTimeTearDown]
     // public static void MyClassCleanup() { }
     //
     // Use TestInitialize to run code before running each test 
-    // [TestInitialize()]
+    // [SetUp]
     // public void MyTestInitialize() { }
     //
     // Use TestCleanup to run code after each test has run
-    // [TestCleanup()]
+    // [TearDown]
     // public void MyTestCleanup() { }
     //
     #endregion
 
-    [TestMethod]
+    [Test]
     public void TestMethod1()
     {
       //

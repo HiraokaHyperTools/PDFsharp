@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Text;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System.Reflection;
 using System.IO;
 using System.Xml;
@@ -24,22 +24,22 @@ namespace PdfSharp.Xps.UnitTests.Render2
   /// <summary>
   /// Summary description for TestExample
   /// </summary>
-  [TestClass]
+  
   public class XpsToPdfToPngAndCompare : TestBase
   {
     public TestContext TestContext { get; set; }
 
-    [TestInitialize]
+    [SetUp]
     public void TestInitialize()
     {
     }
 
-    [TestCleanup]
+    [TearDown]
     public void TestCleanup()
     {
     }
 
-    [TestMethod]
+    [Test]
     [DeploymentItem("Render2/xps", "xps")]
     [DeploymentItem("Render2/png-reference", "png-reference")]
     [DeploymentItem("Render2/tools", "tools")]

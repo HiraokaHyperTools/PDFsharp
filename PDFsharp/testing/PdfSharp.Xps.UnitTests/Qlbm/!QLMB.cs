@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System.Reflection;
 using System.IO;
 using System.Xml;
@@ -13,40 +13,40 @@ using PdfSharp.Xps.UnitTests.Helpers;
 
 namespace PdfSharp.Xps.UnitTests.Qlbm
 {
-  [TestClass]
+  
   public class QLMB : TestBase
   {
     public TestContext TestContext { get; set; }
 
-    [TestInitialize]
+    [SetUp]
     public void TestInitialize()
     {
     }
 
-    [TestCleanup]
+    [TearDown]
     public void TestCleanup()
     {
     }
 
-    [TestMethod]
+    [Test]
     public void MB01()
     {
       RenderVisual("Quality Logic MinBar 01", new XamlPresenter(GetType(), "MB01.xaml").CreateContent);
     }
 
-    [TestMethod]
+    [Test]
     public void MB02()
     {
       RenderVisual("Quality Logic MinBar 02", new XamlPresenter(GetType(), "MB02.xaml").CreateContent);
     }
 
-    [TestMethod]
+    [Test]
     public void MB03()
     {
       RenderVisual("Quality Logic MinBar 03", new XamlPresenter(GetType(), "MB03.xaml").CreateContent);
     }
 
-    [TestMethod]
+    [Test]
     public void MB04()
     {
       RenderVisual("Quality Logic MinBar 04", new XamlPresenter(GetType(), "MB04.xaml").CreateContent);

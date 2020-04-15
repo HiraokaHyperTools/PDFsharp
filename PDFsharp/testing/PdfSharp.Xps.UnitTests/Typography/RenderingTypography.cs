@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Text;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System.Reflection;
 using System.IO;
 using System.Xml;
@@ -24,23 +24,23 @@ namespace PdfSharp.Xps.UnitTests.Typography
   /// <summary>
   /// Summary description for TestExample
   /// </summary>
-  [TestClass]
+  
   public class RenderingTypography : TestBase
   {
 
     public TestContext TestContext { get; set; }
 
-    [TestInitialize]
+    [SetUp]
     public void TestInitialize()
     {
     }
 
-    [TestCleanup]
+    [TearDown]
     public void TestCleanup()
     {
     }
 
-    [TestMethod]
+    [Test]
     [DeploymentItem("SampleXpsDocuments_1_0", "SampleXpsDocuments_1_0")]
     public void TestRenderingTypographySamples()
     {

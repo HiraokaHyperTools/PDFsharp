@@ -2,7 +2,7 @@
 using System.Text;
 using System.Collections.Generic;
 using System.Globalization;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System.Reflection;
 using System.IO;
 using System.Xml;
@@ -17,22 +17,22 @@ namespace PdfSharp.Xps.UnitTests.Primitives.Glyphs.Xaml
   /// <summary>
   /// Test glyphs.
   /// </summary>
-  [TestClass]
+  
   public class Test01 : TestBase
   {
     public TestContext TestContext { get; set; }
 
-    [TestInitialize]
+    [SetUp]
     public void TestInitialize()
     {
     }
 
-    [TestCleanup]
+    [TearDown]
     public void TestCleanup()
     {
     }
 
-    [TestMethod]
+    [Test]
     public void TestTest01()
     {
       RenderVisual("4.2.3.1 Smooth Bézier Curve Abbreviated Syntax ", new XamlPresenter(GetType(), "Test01.xaml").CreateContent);

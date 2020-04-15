@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using PdfSharp.Xps.UnitTests.Helpers;
 using PdfSharp.Xps.XpsModel;
 using System;
@@ -10,12 +10,12 @@ using Path = System.IO.Path;
 
 namespace PdfSharp.Xps.UnitTests.XpsConverterTest
 {
-  [TestClass]
+  
   public class Converts
   {
     public TestContext TestContext { get; set; }
 
-    [TestMethod]
+    [Test]
     [DeploymentItem("XpsConverterTest/xps", "XpsConverterTest/xps")]
     public void Convert1()
     {
@@ -28,7 +28,7 @@ namespace PdfSharp.Xps.UnitTests.XpsConverterTest
       Assert.IsTrue(File.Exists(pdfFile));
     }
 
-    [TestMethod]
+    [Test]
     [DeploymentItem("XpsConverterTest/xps", "XpsConverterTest/xps")]
     public void Convert2()
     {
@@ -41,7 +41,7 @@ namespace PdfSharp.Xps.UnitTests.XpsConverterTest
       Assert.IsTrue(File.Exists(pdfFile));
     }
 
-    [TestMethod]
+    [Test]
     [DeploymentItem("XpsConverterTest/xps", "XpsConverterTest/xps")]
     public void ConvertManyInput()
     {

@@ -2,7 +2,7 @@
 using System.Text;
 using System.Collections.Generic;
 using System.Globalization;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System.Reflection;
 using System.IO;
 using System.Xml;
@@ -17,22 +17,22 @@ namespace PdfSharp.Xps.UnitTests.Text
   /// <summary>
   /// Test glyphs.
   /// </summary>
-  [TestClass]
+  
   public class SimpleText : TestBase
   {
     public TestContext TestContext { get; set; }
 
-    [TestInitialize]
+    [SetUp]
     public void TestInitialize()
     {
     }
 
-    [TestCleanup]
+    [TearDown]
     public void TestCleanup()
     {
     }
 
-    [TestMethod]
+    [Test]
     public void SimpleText01()
     {
       // 18 0 0 18 7.5 442.5 Tm
@@ -40,7 +40,7 @@ namespace PdfSharp.Xps.UnitTests.Text
       RenderVisual("Simple Text 01", new XamlPresenter(GetType(), "SimpleText01.xaml").CreateContent);
     }
 
-    [TestMethod]
+    [Test]
     public void SimpleText02()
     {
       // 0 18 -18 0 7.5 442.5 Tm
@@ -48,7 +48,7 @@ namespace PdfSharp.Xps.UnitTests.Text
       RenderVisual("Simple Text 02", new XamlPresenter(GetType(), "SimpleText02.xaml").CreateContent);
     }
 
-    [TestMethod]
+    [Test]
     public void SimpleText03()
     {
       // -1.112 Tc 18 0 0 18 289.0049 442.5 Tm
