@@ -61,6 +61,7 @@
     <Compile Include="Helpers\GeometrieSamples.cs" />
     <Compile Include="Helpers\VisualPresenter.cs" />
     <Compile Include="Helpers\TestBase.cs" />
+    <Compile Include="NavigateUri\HyperlinkTest.cs" />
     <Compile Include="Primitives.Clipping\UnitTest1.cs" />
     <Compile Include="Primitives.Fill\BrushFactory.cs" />
     <Compile Include="Primitives.Fill\FillImageBrush.cs" />
@@ -122,6 +123,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="NavigateUri\Hyperlink.xps" />
     <None Include="packages.config" />
     <None Include="Primitives.Glyphs\GlyphFiles\ClusterMap.xps" />
     <EmbeddedResource Include="Qlbm\MB03.xaml">
