@@ -27,6 +27,7 @@ steps:
       $(solution)
     arguments: '-c $(buildConfiguration) /p:Platform="$(buildPlatform)"'
     includeNuGetOrg: true
+    noCache: true
 
 - task: DotNetCoreCLI@2
   inputs:
@@ -37,6 +38,7 @@ steps:
       **/PdfSharp.Xps.UnitTests/PdfSharp-XPS.sln
     arguments: '-c $(buildConfiguration) /p:Platform="$(buildPlatform)"'
     includeNuGetOrg: true
+    noCache: true
 
 - task: DotNetCoreCLI@2
   inputs:
@@ -47,6 +49,7 @@ steps:
     packagesToPack: '**/PdfSharp-WPF.csproj;**/PdfSharp.Xps.csproj'
     versioningScheme: 'off'
     includeNuGetOrg: true
+    noCache: true
 
 - task: PublishBuildArtifacts@1
   inputs:
