@@ -9,6 +9,7 @@ trigger:
 - pr-*
 
 pool:
+  name: Default
   demands:
   - POPPLER_WIN32_BUILDER -equals 1
 
