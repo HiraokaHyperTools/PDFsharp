@@ -9,7 +9,9 @@ trigger:
 - pr-*
 
 pool:
-  vmImage: 'vs2017-win2016'
+  #vmImage: 'vs2017-win2016'
+  demands:
+  - POPPLER_WIN32_BUILDER -equals 1
 
 variables:
   solution: '**/PdfSharp.Xps.sln'
