@@ -9,7 +9,7 @@ trigger:
 - pr-*
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'vs2017-win2016'
 
 variables:
   solution: '**/PdfSharp.Xps.sln'
