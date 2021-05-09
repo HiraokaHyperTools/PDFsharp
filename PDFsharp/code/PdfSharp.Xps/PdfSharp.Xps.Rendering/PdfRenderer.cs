@@ -37,7 +37,8 @@ namespace PdfSharp.Xps.Rendering
     {
       this.page = page;
 
-      this.context = new DocumentRenderingContext(page.Owner);
+      this.reuseableTable = this.reuseableTable ?? new ReuseableTable();
+      this.context = new DocumentRenderingContext(page.Owner, reuseableTable);
 
       //this.page.Width = fixedPage.Width;
       //this.page.Height = fixedPage.Height;
@@ -77,5 +78,6 @@ namespace PdfSharp.Xps.Rendering
     PdfPage page;
     PdfContentWriter writer;
     DocumentRenderingContext context;
+    ReuseableTable reuseableTable;
   }
 }

@@ -198,7 +198,12 @@ namespace PdfSharp.Xps.Rendering
       //formWriter.Size = brush.Viewport.Size;
       writer.BeginContentRaw();
 
-      string imageID = writer.Resources.AddImage(new PdfImage(Context.PdfDocument, ximage));
+      string imageID = writer.Resources.AddImage(
+        Context.ReuseableTable.ImageBrushes.GetOrAdd(
+          brush.Describe(),
+          () => new PdfImage(Context.PdfDocument, ximage)
+        )
+      );
       XMatrix matrix = new XMatrix();
       //double scaleX = brush.Viewport.Width / brush.Viewbox.Width * 4 / 3 * ximage.PointWidth;
       //double scaleY = brush.Viewport.Height / brush.Viewbox.Height * 4 / 3 * ximage.PointHeight;

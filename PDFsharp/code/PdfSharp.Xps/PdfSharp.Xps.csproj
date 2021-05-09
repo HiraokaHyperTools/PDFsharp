@@ -69,8 +69,10 @@
     <Compile Include="PdfSharp.Xps.Parsing\XpsParser.SolidColorBrush.cs" />
     <Compile Include="PdfSharp.Xps.Parsing\XpsParser.VisualBrush.cs" />
     <Compile Include="PdfSharp.Xps.Rendering\BuilderBase.cs" />
+    <Compile Include="PdfSharp.Xps.Rendering\extensions\DictExtensions.cs" />
     <Compile Include="PdfSharp.Xps.Rendering\PdfContentWriter-Glyphs.cs" />
     <Compile Include="PdfSharp.Xps.Rendering\RadialShadingBuilder.cs" />
+    <Compile Include="PdfSharp.Xps.Rendering\ReuseableTable.cs" />
     <Compile Include="PdfSharp.Xps\DevHelper.cs" />
     <Compile Include="PdfSharp.Xps.Rendering\XPGlyphs.cs" />
     <Compile Include="PdfSharp.Xps.Rendering\XPCanvas.cs" />

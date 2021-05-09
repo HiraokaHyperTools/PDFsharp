@@ -79,5 +79,7 @@ namespace PdfSharp.Xps.XpsModel
     /// parts in the package [M2.1]. 
     /// </summary>
     public string ImageSource { get; set; }
+
+    public string Describe() => $"ImageBrush:\t{ImageSource}";
   }
 }
