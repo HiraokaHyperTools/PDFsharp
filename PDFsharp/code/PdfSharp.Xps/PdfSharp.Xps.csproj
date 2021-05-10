@@ -10,7 +10,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>PdfSharp.Xps</RootNamespace>
     <AssemblyName>PdfSharp.Xps</AssemblyName>
-    <PackageVersion>1.1.7</PackageVersion>
+    <PackageVersion>1.1.8</PackageVersion>
 
     <PackageId>kenjiuno.PdfSharp.Xps</PackageId>
     <Authors>kenjiuno</Authors>
