@@ -20,6 +20,17 @@ namespace PdfSharp.Xps.Rendering
     public DocumentRenderingContext(PdfDocument pdfDocument) //, XpsDocument xpsDocument)
     {
       this.pdfDocument = pdfDocument;
+      this.reuseableTable = new ReuseableTable();
+      //this.xpsDocument = xpsDocument;
+    }
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="DocumentRenderingContext"/> class.
+    /// </summary>
+    public DocumentRenderingContext(PdfDocument pdfDocument, ReuseableTable reuseableTable)
+    {
+      this.pdfDocument = pdfDocument;
+      this.reuseableTable = reuseableTable;
       //this.xpsDocument = xpsDocument;
     }
 
@@ -31,6 +42,9 @@ namespace PdfSharp.Xps.Rendering
       get { return this.pdfDocument; }
     }
     PdfDocument pdfDocument;
+
+    public ReuseableTable ReuseableTable => reuseableTable;
+    ReuseableTable reuseableTable;
 
     ///// <summary>
     ///// Gets the XPS document.
