@@ -184,6 +184,28 @@ namespace PdfSharp.Xps.XpsModel
       return string.Join("/", elements);
     }
 
+    private static Uri ResolveAntiMonikerInPath(Uri path)
+    {
+      var elements = new List<string>(path.OriginalString.Split('/'));
+      for (var x = 0; x < elements.Count; x++)
+      {
+        if (elements[x] == "..")
+        {
+          elements.RemoveAt(x);
+          if (x >= 2)
+          {
+            elements.RemoveAt(x - 1);
+            x -= 2;
+          }
+          else
+          {
+            x -= 1;
+          }
+        }
+      }
+      return new Uri(string.Join("/", elements), UriKind.Relative);
+    }
+
     internal byte[] GetPartAsBytes(string uriString)
     {
       return GetPartAsBytes(this.package, uriString);
@@ -209,6 +231,8 @@ namespace PdfSharp.Xps.XpsModel
       if (uriString.StartsWith("/.."))
         uriString = uriString.Substring(3);
 #endif
+      target = ResolveAntiMonikerInPath(target);
+
       ZipPackagePart part = package.GetPart(target) as ZipPackagePart;
 
       byte[] bytes = null;

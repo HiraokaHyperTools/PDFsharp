@@ -39,7 +39,7 @@ namespace PdfSharp.Xps.Rendering
       // Get the font object.
       // Important: font.PdfFont is not yet defined here on the first call
       string uriString = brush.ImageSource;
-      BitmapSource bitmapSource = payload.GetImage(uriString);
+      BitmapSource bitmapSource = payload.GetImage(PathHelper.Combine(fpage.UriString + "/", uriString));
 
       XPImage xpImage = new XPImage(bitmapSource);
 
