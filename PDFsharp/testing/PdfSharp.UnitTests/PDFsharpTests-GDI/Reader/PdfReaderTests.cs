@@ -19,6 +19,12 @@ namespace PdfSharp.UnitTests.Reader
     }
 
     [Test]
+    public void Test16()
+    {
+      DoOpen(@"H:\DL2\DSA.pdf");
+    }
+
+    [Test]
     public void OpenHelloWorldTest()
     {
       // PdfSharp.Pdf.IO.PdfReaderException : Token '/Count' was not expected.

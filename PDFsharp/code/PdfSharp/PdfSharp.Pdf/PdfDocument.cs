@@ -124,7 +124,7 @@ namespace PdfSharp.Pdf
       ////this.font = new PdfFont();
       //this.objects = new PdfObjectTable(this);
       //this.trailer = new PdfTrailer(this);
-      this.irefTable = new PdfReferenceTable(this);
+      this.irefTable = new PdfCrossReferenceTable(this);
       this.lexer = lexer;
     }
 
@@ -134,7 +134,7 @@ namespace PdfSharp.Pdf
       this.fontTable = new PdfFontTable(this);
       this.imageTable = new PdfImageTable(this);
       this.trailer = new PdfTrailer(this);
-      this.irefTable = new PdfReferenceTable(this);
+      this.irefTable = new PdfCrossReferenceTable(this);
       this.trailer.CreateNewDocumentIDs();
     }
 
@@ -804,7 +804,7 @@ namespace PdfSharp.Pdf
     }
 
     internal PdfTrailer trailer;
-    internal PdfReferenceTable irefTable;
+    internal PdfCrossReferenceTable irefTable;
     internal Stream outStream;
 
     // Imported Document

@@ -516,7 +516,7 @@ namespace PdfSharp.Pdf.IO
         this.stream.Position = this.commentPosition + 150;
         WriteRaw("Pages: " + document.Pages.Count.ToString());
         this.stream.Position = this.commentPosition + 200;
-        WriteRaw("Objects: " + document.irefTable.objectTable.Count.ToString());
+        WriteRaw("Objects: " + document.irefTable.ObjectTable.Count.ToString());
       }
     }
 

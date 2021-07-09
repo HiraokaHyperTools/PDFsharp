@@ -368,7 +368,7 @@ namespace PdfSharp.Pdf.IO
             iref.GetType();
           }
           // Set maximum object number
-          document.irefTable.maxObjectNumber = Math.Max(document.irefTable.maxObjectNumber, iref.ObjectNumber);
+          document.irefTable._maxObjectNumber = Math.Max(document.irefTable._maxObjectNumber, iref.ObjectNumber);
         }
         // Encrypt all objects
         if (xrefEncrypt != null)

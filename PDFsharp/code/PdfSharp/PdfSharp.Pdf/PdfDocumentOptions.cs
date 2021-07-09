@@ -80,5 +80,16 @@ namespace PdfSharp.Pdf
       set { this.noCompression = value; }
     }
     bool noCompression;
+
+    /// <summary>
+    /// Gets or sets the flate encode mode. Besides the balanced default mode you can set modes for best compression (slower) or best speed (larger files).
+    /// </summary>
+    public PdfFlateEncodeMode FlateEncodeMode
+    {
+      get { return _flateEncodeMode; }
+      set { _flateEncodeMode = value; }
+    }
+    PdfFlateEncodeMode _flateEncodeMode = PdfFlateEncodeMode.Default;
+
   }
 }

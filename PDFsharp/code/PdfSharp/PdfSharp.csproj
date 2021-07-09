@@ -155,6 +155,8 @@
     <Compile Include="PdfSharp.Pdf.AcroForms\PdfSignatureField.cs" />
     <Compile Include="PdfSharp.Pdf.AcroForms\PdfTextField.cs" />
     <Compile Include="PdfSharp.Pdf.Advanced\IContentStream.cs" />
+    <Compile Include="PdfSharp.Pdf.Advanced\PdfCrossReferenceStream.cs" />
+    <Compile Include="PdfSharp.Pdf.Advanced\PdfCrossReferenceTable.cs" />
     <Compile Include="PdfSharp.Pdf.Advanced\PdfDictionaryWithContentStream.cs" />
     <Compile Include="PdfSharp.Pdf.Advanced\PdfGroupAttributes.cs" />
     <Compile Include="PdfSharp.Pdf.Advanced\PdfImage.FaxEncode.cs" />
@@ -725,6 +727,7 @@
     <Compile Include="PdfSharp.SharpZipLib\Zip\Compression\Streams\StreamManipulator.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="PdfSharp\enums\PdfFlateEncodeMode.cs" />
     <Compile Include="PdfSharp\ProductVersionInfo.cs" />
     <Compile Include="PdfSharp\enums\PageOrientation.cs">
       <SubType>Code</SubType>

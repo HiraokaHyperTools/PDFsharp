@@ -40,7 +40,7 @@ namespace PdfSharp.Pdf.Advanced
   /// Represents a PDF trailer dictionary. Even trailers are dictionaries their never have a cross
   /// reference entry in PdfReferenceTable.
   /// </summary>
-  internal sealed class PdfTrailer : PdfDictionary
+  internal class PdfTrailer : PdfDictionary
   {
     /// <summary>
     /// Initializes a new instance of PdfTrailer.
@@ -205,7 +205,7 @@ namespace PdfSharp.Pdf.Advanced
     /// <summary>
     /// Predefined keys of this dictionary.
     /// </summary>
-    internal sealed class Keys : KeysBase
+    internal class Keys : KeysBase
     {
       /// <summary>
       /// (Required; must not be an indirect reference) The total number of entries in the file’s 
