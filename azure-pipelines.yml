@@ -8,11 +8,6 @@ trigger:
 - fix-*
 - pr-*
 
-pool:
-  name: Default
-  demands:
-  - POPPLER_WIN32_BUILDER -equals 1
-
 variables:
   solution: '**/PdfSharp.Xps.sln'
   buildPlatform: 'Any CPU'
