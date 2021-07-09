@@ -9,6 +9,7 @@ namespace PdfSharp.Xps.Rendering
   {
     internal static string Combine(string path1, string path2)
     {
+      path1 = "/" + path1.TrimStart('/');
       if (path2.StartsWith("/"))
       {
         return path2;

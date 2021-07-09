@@ -572,7 +572,7 @@ namespace PdfSharp.Xps.Rendering
 
         // Get the font object.
         // Important: font.PdfFont is not yet defined here on the first call
-        string uriString = glyphs.FontUri;
+        string uriString = PathHelper.Combine(fpage.UriString + "/", glyphs.FontUri);
         Font font = payload.GetFont(uriString);
 
         // Get the page local resource name and define font.PdfFont if it is not yet defined
