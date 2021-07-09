@@ -16,6 +16,7 @@ using PdfSharp.Xps.UnitTests.Helpers;
 using PdfSharp.Xps.XpsModel;
 using PdfSharp.Xps.Rendering;
 using IOPath = System.IO.Path;
+using System.Linq;
 
 namespace PdfSharp.Xps.UnitTests.XpsRendering
 {
@@ -38,99 +39,60 @@ namespace PdfSharp.Xps.UnitTests.XpsRendering
     {
     }
 
+    public static IEnumerable<string> GetAllSamples() => Directory.GetFiles(
+      DirectoryPointHelper.Resolve("@testing/SampleXpsDocuments_1_0"),
+      "*.xps",
+      SearchOption.AllDirectories
+    )
+      // No negative tests here
+      .Where(it => !it.Contains(@"\ConformanceViolations\"));
+
     [Test]
-    [DeploymentItemFrom("@testing/SampleXpsDocuments_1_0", "SampleXpsDocuments_1_0")]
-    public void TestRenderingAllSamples()
+    [TestCaseSource(nameof(GetAllSamples))]
+    public void TestXpsConvertAllSamples(string xpsFile)
     {
-      string path = "SampleXpsDocuments_1_0";
-      string dir = (path);
-      if (dir == null)
+      using (var streamIn = File.OpenRead(xpsFile))
+      using (var streamOut = new MemoryStream())
       {
-        Assert.Inconclusive("Path not found: " + path + ". Follow instructions in ../../../SampleXpsDocuments_1_0/!readme.txt to download samples from the Internet.");
-        return;
+        XpsConverter.Convert(streamIn, streamOut, false);
       }
-      if (!Directory.Exists(dir))
+    }
+
+    [Test]
+    [TestCaseSource(nameof(GetAllSamples))]
+    public void TestRenderingAllSamples(string xpsFile)
+    {
+      int docIndex = 1;
+      using (XpsDocument xpsDoc = XpsDocument.Open(xpsFile))
       {
-        Assert.Inconclusive("Path not found: " + path + ". Follow instructions in ../../../SampleXpsDocuments_1_0/!readme.txt to download samples from the Internet.");
-        return;
-      }
-#if true
-      string[] files = Directory.GetFiles(dir, "*.xps", SearchOption.AllDirectories);
-#else
-      string[] files = Directory.GetFiles("../../../XPS-TestDocuments", "*.xps", SearchOption.AllDirectories);
-#endif
-      //files = Directory.GetFiles(@"G:\!StLa\PDFsharp-1.20\SourceCode\PdfSharp\testing\SampleXpsDocuments_1_0\MXDW", "*.xps", SearchOption.AllDirectories);
-      //files = Directory.GetFiles(@"G:\!StLa\PDFsharp-1.20\SourceCode\PdfSharp\testing\SampleXpsDocuments_1_0\Handcrafted", "*.xps", SearchOption.AllDirectories);
-      //files = Directory.GetFiles(@"G:\!StLa\PDFsharp-1.20\SourceCode\PdfSharp\testing\SampleXpsDocuments_1_0\Showcase", "*.xps", SearchOption.AllDirectories);
-      //files = Directory.GetFiles(@"G:\!StLa\PDFsharp-1.20\SourceCode\PdfSharp\testing\SampleXpsDocuments_1_0\QualityLogicMinBar", "*.xps", SearchOption.AllDirectories);
-      
-
-      if (files.Length == 0)
-      {
-        Assert.Inconclusive("No sample file found. Copy sample files to the \"SampleXpsDocuments_1_0\" folder!");
-        return;
-      }
-
-      foreach (string filename in files)
-      {
-        // No negative tests here
-        if (filename.Contains("\\ConformanceViolations\\"))
-          continue;
-
-        //if (filename.Contains("\\Showcase\\"))
-        //  continue;
-        
-        //if (!filename.Contains("Vista"))
-        //  continue;
-
-        Debug.WriteLine(filename);
-        try
+        foreach (FixedDocument doc in xpsDoc.Documents)
         {
-          int docIndex = 0;
-          using (XpsDocument xpsDoc = XpsDocument.Open(filename))
+          PdfDocument pdfDoc = new PdfDocument();
+          PdfRenderer renderer = new PdfRenderer();
+
+          int pageIndex = 0;
+          foreach (FixedPage page in doc.Pages)
           {
-            foreach (FixedDocument doc in xpsDoc.Documents)
-            {
-              try
-              {
-                PdfDocument pdfDoc = new PdfDocument();
-                PdfRenderer renderer = new PdfRenderer();
+            if (page == null)
+              continue;
+            Debug.WriteLine(String.Format("  doc={0}, page={1}", docIndex, pageIndex));
+            PdfPage pdfPage = renderer.CreatePage(pdfDoc, page);
+            renderer.RenderPage(pdfPage, page);
+            pageIndex++;
 
-                int pageIndex = 0;
-                foreach (FixedPage page in doc.Pages)
-                {
-                  if (page == null)
-                    continue;
-                  Debug.WriteLine(String.Format("  doc={0}, page={1}", docIndex, pageIndex));
-                  PdfPage pdfPage = renderer.CreatePage(pdfDoc, page);
-                  renderer.RenderPage(pdfPage, page);
-                  pageIndex++;
-
-                  // stop at page...
-                  if (pageIndex == 50)
-                    break;
-                }
-
-                string pdfFilename = IOPath.GetFileNameWithoutExtension(filename);
-                if (docIndex != 0)
-                  pdfFilename += docIndex.ToString();
-                pdfFilename += ".pdf";
-                pdfFilename = IOPath.Combine(IOPath.GetDirectoryName(filename), pdfFilename);
-
-                pdfDoc.Save(pdfFilename);
-              }
-              catch (Exception ex)
-              {
-                Debug.WriteLine("Exception: " + ex.Message);
-              }
-              docIndex++;
-            }
+            // stop at page...
+            if (pageIndex == 50)
+              break;
           }
-        }
-        catch (Exception ex)
-        {
-          Debug.WriteLine(ex.Message);
-          GetType();
+
+          var pdfFilename = IOPath.Combine(
+            TestContext.WorkDirectory,
+            $"{GetOutputPDFNameFor(xpsFile)}-{docIndex}.pdf"
+          );
+
+          pdfDoc.Save(pdfFilename);
+
+          docIndex++;
         }
       }
     }

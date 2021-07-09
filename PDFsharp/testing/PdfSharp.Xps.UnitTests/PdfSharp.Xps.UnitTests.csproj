@@ -91,11 +91,9 @@
     </Compile>
     <Compile Include="Typography\RenderingTypography.cs" />
     <Compile Include="XpsConverterTest\Converts.cs" />
-    <Compile Include="XpsFiles\SampleXpsDocuments_1_0.cs" />
     <Compile Include="XpsParsing\ParsingXpsDocument.cs" />
     <Compile Include="XpsParsing\%28PrimaryFixedPayload.Test01%29.cs" />
     <Compile Include="XpsParsing\FileParser.cs" />
-    <Compile Include="xternal\Rendering.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Test02.png" />
@@ -156,7 +154,6 @@
     <None Include="XpsConverterTest\xps\page3.xps">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="xternal\XPS_export_test.xps" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Primitives.Glyphs.Xaml\Test01.xaml">
@@ -316,13 +313,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="OpacityMasks\" />
-    <Folder Include="Primitives.Canvas\" />
-    <Folder Include="Primitives.Geometries\" />
-    <Folder Include="Primitives.Transforming\" />
-    <Folder Include="XamlTests\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Render2\png-reference\bulletMarks-1.png">

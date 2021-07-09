@@ -124,14 +124,17 @@ namespace PdfSharp.Xps.Parsing
                 break;
 
               case "FixedPage.Resources":
-                MoveToNextElement();
-                ResourceDictionary rd = new ResourceDictionary();
-                fpage.Resources = rd;
-                rd.Parent = fpage;
-                rd.ResourceParent = ResourceDictionaryStack.Current;
-                ResourceDictionaryStack.Push(rd);
-                ParseResourceDictionary(rd);
-                MoveToNextElement();
+                if (MoveToNextElement())
+                {
+                  ResourceDictionary rd = new ResourceDictionary();
+                  fpage.Resources = rd;
+                  rd.Parent = fpage;
+                  rd.ResourceParent = ResourceDictionaryStack.Current;
+                  ResourceDictionaryStack.Push(rd);
+                  ParseResourceDictionary(rd);
+
+                  MoveToNextElement();
+                }
                 break;
 
               case "mc:AlternateContent":

@@ -147,8 +147,7 @@ namespace PdfSharp.Xps.XpsModel
         uriString = "/" + uriString;
 
       // Documents with relative uri exists.
-      if (uriString.StartsWith("/.."))
-        uriString = uriString.Substring(3);
+      uriString = ResolveAntiMonikerInPath(uriString);
 
       ZipPackagePart part = package.GetPart(new Uri(uriString, UriKind.Relative)) as ZipPackagePart;
       string xml = String.Empty;
@@ -161,6 +160,28 @@ namespace PdfSharp.Xps.XpsModel
       }
       XmlTextReader reader = new XmlTextReader(new StringReader(xml));
       return reader;
+    }
+
+    private static string ResolveAntiMonikerInPath(string path)
+    {
+      var elements = new List<string>(path.Split('/'));
+      for (var x = 0; x < elements.Count; x++)
+      {
+        if (elements[x] == "..")
+        {
+          elements.RemoveAt(x);
+          if (x >= 2)
+          {
+            elements.RemoveAt(x - 1);
+            x -= 2;
+          }
+          else
+          {
+            x -= 1;
+          }
+        }
+      }
+      return string.Join("/", elements);
     }
 
     internal byte[] GetPartAsBytes(string uriString)

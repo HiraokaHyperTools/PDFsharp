@@ -434,6 +434,13 @@ namespace PdfSharp.Xps.UnitTests.Helpers
       pdfResultDocument.Save(resultFileName);
     }
 
+    public string GetOutputPDFNameFor(string xpsFile) => Path.GetFileNameWithoutExtension(
+      xpsFile
+        .Split(new string[] { "SampleXpsDocuments_1_0" }, StringSplitOptions.None)[1]
+        .Replace("\\", "_")
+        .Replace("/", "_")
+    );
+
     public string Name;
     Visual visual;
     RenderTargetBitmap image;
@@ -456,7 +463,7 @@ namespace PdfSharp.Xps.UnitTests.Helpers
       using (Stream stream = Assembly.GetAssembly(this.type).GetManifestResourceStream(this.type, this.name))
         if (stream != null)
           using (XmlReader xmlReader = XmlReader.Create(stream))
-            canvas = (Canvas) XamlReader.Load(xmlReader);
+            canvas = (Canvas)XamlReader.Load(xmlReader);
       Debug.Assert(canvas != null);
       return canvas;
     }
