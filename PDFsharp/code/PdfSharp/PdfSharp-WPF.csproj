@@ -329,6 +329,15 @@
     <Compile Include="PdfSharp\ProductVersionInfo.cs" />
     <Compile Include="PdfSharp\PSSR.cs" />
     <Compile Include="PdfSharp\VersionInfo.cs" />
+    <Compile Include="Resources\Messages.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Resources\Messages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
 

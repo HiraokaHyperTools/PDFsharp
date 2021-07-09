@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DeploymentItemFromAttribute.cs" />
+    <Compile Include="DirectoryPointHelper.cs" />
     <Compile Include="GotoWorkDirectoryAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

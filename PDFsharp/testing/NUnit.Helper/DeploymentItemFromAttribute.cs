@@ -28,25 +28,7 @@ namespace NUnit.Helper
 
     public void ApplyToContext(TestExecutionContext context)
     {
-      var inputDir = TestContext.CurrentContext.TestDirectory;
-      if (!path.StartsWith("@"))
-      {
-        throw new ArgumentException(path);
-      }
-      var inputAddionalPath = path.Substring(1);
-      var firstMatch = inputAddionalPath.Split('\\')[0];
-      while (true)
-      {
-        if (Path.GetFileName(inputDir) == firstMatch)
-        {
-          inputDir = Path.Combine(Path.GetDirectoryName(inputDir), inputAddionalPath);
-          break;
-        }
-        else
-        {
-          inputDir = Path.GetDirectoryName(inputDir);
-        }
-      }
+      var inputDir = DirectoryPointHelper.Resolve(path);
       var outputDir = TestContext.CurrentContext.WorkDirectory;
       if (outputDirectory != null)
       {

@@ -98,8 +98,6 @@
     <DebugType>none</DebugType>
   </PropertyGroup>
   <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="!internal\Directives.cs" />
     <Compile Include="PdfSharp.Drawing.BarCodes\DataMatrixImage.cs" />
     <Compile Include="PdfSharp.Drawing.Layout\enums\XParagraphAlignment.cs" />
@@ -750,13 +748,21 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="PdfSharp.Drawing.BarCodes\%40BarCodes.txt" />
+    <Compile Include="Resources\Messages.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
     <Content Include="PdfSharp.SharpZipLib\ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="PdfSharp.Forms\PagePreviewCanvas.resx">
       <DependentUpon>PagePreviewCanvas.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Messages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

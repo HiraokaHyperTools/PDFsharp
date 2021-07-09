@@ -335,7 +335,7 @@ namespace PdfSharp
           // Force the English language, even on German Windows.
           System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.InvariantCulture;
 #endif
-          PSSR.resmngr = new ResourceManager("PdfSharp.Resources.Messages", Assembly.GetExecutingAssembly());
+          PSSR.resmngr = Resources.Messages.ResourceManager;
         }
         return PSSR.resmngr;
       }
