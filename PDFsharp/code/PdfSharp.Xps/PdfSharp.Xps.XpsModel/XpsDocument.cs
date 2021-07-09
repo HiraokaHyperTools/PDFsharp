@@ -35,6 +35,16 @@ namespace PdfSharp.Xps.XpsModel
     }
 
     /// <summary>
+    /// Initializes a new instance of the <see cref="XpsDocument"/> class from a path.
+    /// </summary>
+    XpsDocument(string path, FileMode packageMode, FileAccess packageAccess)
+    {
+      this.package = ZipPackage.Open(path, packageMode, packageAccess) as ZipPackage;
+      this.path = path;
+      Initialize();
+    }
+
+    /// <summary>
     /// Opens an XPS document from the specifed stream.
     /// </summary>
     public static XpsDocument Open(Stream stream)
@@ -48,6 +58,14 @@ namespace PdfSharp.Xps.XpsModel
     public static XpsDocument Open(string path)
     {
       return new XpsDocument(path);
+    }
+
+    /// <summary>
+    /// Opens an XPS document from the specifed path.
+    /// </summary>
+    public static XpsDocument OpenRead(string path)
+    {
+      return new XpsDocument(path, FileMode.Open, FileAccess.Read);
     }
 
     /// <summary>
@@ -149,9 +167,8 @@ namespace PdfSharp.Xps.XpsModel
       // Documents with relative uri exists.
       uriString = ResolveAntiMonikerInPath(uriString);
 
-      ZipPackagePart part = package.GetPart(new Uri(uriString, UriKind.Relative)) as ZipPackagePart;
       string xml = String.Empty;
-      using (Stream stream = part.GetStream())
+      using (Stream stream = PartHelper.OpenPartStream(package, new Uri(uriString, UriKind.Relative)))
       {
         using (StreamReader sr = new StreamReader(stream))
         {

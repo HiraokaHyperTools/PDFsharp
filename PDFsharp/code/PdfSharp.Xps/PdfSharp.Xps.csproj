@@ -74,6 +74,7 @@
     <Compile Include="PdfSharp.Xps.Rendering\PdfContentWriter-Glyphs.cs" />
     <Compile Include="PdfSharp.Xps.Rendering\RadialShadingBuilder.cs" />
     <Compile Include="PdfSharp.Xps.Rendering\ReuseableTable.cs" />
+    <Compile Include="PdfSharp.Xps.XpsModel\PartHelper.cs" />
     <Compile Include="PdfSharp.Xps\DevHelper.cs" />
     <Compile Include="PdfSharp.Xps.Rendering\XPGlyphs.cs" />
     <Compile Include="PdfSharp.Xps.Rendering\XPCanvas.cs" />

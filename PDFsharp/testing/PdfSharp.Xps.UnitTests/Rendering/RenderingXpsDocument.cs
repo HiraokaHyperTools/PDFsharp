@@ -51,6 +51,17 @@ namespace PdfSharp.Xps.UnitTests.XpsRendering
         && !it.Contains("WindowsMediaPhoto.xps") // Currently missing support of: `<ImageBrush x:Key="I1"  ImageSource="{ColorConvertedBitmap /wdp/CcMmYK_noprof.wdp /profiles/C_____.icc}"`
         && !it.Contains("XPS_Examples.xps") // Currently missing support of: `<ResourceDictionary Source="Resources/resource.xaml"/>`
         && !it.Contains("mb05.xps") // Currently missing support of: `<ResourceDictionary Source="/Resources/resources.dict" />`
+
+#if NETCOREAPP
+        // Skipping due to lack of piece splitter support of ZipPackage in System.IO.Packaging.
+        && !it.Contains("Interleaved.xps")
+        && !it.Contains("ZipI_2FixedDoc_All_out.xps")
+        && !it.Contains("ZipI_60FixedPage_out.xps")
+        && !it.Contains("ZipI_Thumbnail_02_out.xps")
+        && !it.Contains("Zip64I_2FixedDoc_All_out.xps")
+        && !it.Contains("Zip64I_60FixedPage_out.xps")
+        && !it.Contains("Zip64I_Thumbnail_02_out.xps")
+#endif
       );
 
     [Test]
@@ -69,7 +80,7 @@ namespace PdfSharp.Xps.UnitTests.XpsRendering
     public void TestRenderingAllSamples(string xpsFile)
     {
       int docIndex = 1;
-      using (XpsDocument xpsDoc = XpsDocument.Open(xpsFile))
+      using (XpsDocument xpsDoc = XpsDocument.OpenRead(xpsFile))
       {
         foreach (FixedDocument doc in xpsDoc.Documents)
         {
