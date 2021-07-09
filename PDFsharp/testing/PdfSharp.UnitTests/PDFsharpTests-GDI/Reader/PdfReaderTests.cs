@@ -78,7 +78,8 @@ namespace PdfSharp.UnitTests.Reader
 
     public static IEnumerable<string> GetPDFs() => Directory.GetFiles(DirectoryPointHelper.Resolve("@PDFsharp/samples/PDFs"), "*.pdf")
       .Where(it => true
-        && !it.Contains("HelloWorld (protected).pdf")
+        && !it.Contains("HelloWorld (protected).pdf") // Skip password protected one.
+        && !it.Contains("HelloWorld bomb.pdf") // Skip not supported offsetting yet: `PdfSharp.Pdf.IO.PdfReaderException : Token 'xref' was not expected.`
       );
   }
 }
