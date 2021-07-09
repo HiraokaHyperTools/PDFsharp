@@ -339,6 +339,11 @@
       <LastGenOutput>Messages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PdfSharp\enums\PdfFlateEncodeMode.cs" />
+    <Compile Include="PdfSharp.Pdf.Advanced\PdfCrossReferenceTable.cs" />
+    <Compile Include="PdfSharp.Pdf.Advanced\PdfCrossReferenceStream.cs" />
+    <Compile Include="PdfSharp.Pdf.Advanced\PdfObjectStream.cs" />
+    <Compile Include="PdfSharp.Internal\Diagnostics.cs" />
   </ItemGroup>
 
   <ItemGroup>
