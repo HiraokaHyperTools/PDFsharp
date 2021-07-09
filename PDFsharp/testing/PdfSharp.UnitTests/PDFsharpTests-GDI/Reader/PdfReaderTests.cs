@@ -19,22 +19,6 @@ namespace PdfSharp.UnitTests.Reader
     }
 
     [Test]
-    public void Test16()
-    {
-      DoOpen(@"H:\DL2\DSA.pdf");
-    }
-
-    [Test]
-    public void OpenHelloWorldTest()
-    {
-      // PdfSharp.Pdf.IO.PdfReaderException : Token '/Count' was not expected.
-      var pdfFile = DirectoryPointHelper.Resolve("@PDFsharp/samples/PDFs/HelloWorld.pdf");
-
-      Assert.AreEqual(2407, new FileInfo(pdfFile).Length);
-      DoOpen(pdfFile);
-    }
-
-    [Test]
     public void OpenPasswordProtectedTest()
     {
       Assert.Throws<PdfReaderException>(

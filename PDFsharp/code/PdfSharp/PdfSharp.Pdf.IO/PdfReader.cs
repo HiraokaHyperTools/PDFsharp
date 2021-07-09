@@ -38,6 +38,7 @@ using PdfSharp.Pdf.Advanced;
 using PdfSharp.Pdf.Security;
 using PdfSharp.Pdf.Internal;
 using PdfSharp.Internal;
+using System.Collections.Generic;
 
 namespace PdfSharp.Pdf.IO
 {
@@ -151,7 +152,7 @@ namespace PdfSharp.Pdf.IO
       {
         // Acrobat accepts headers like «%!PS-Adobe-N.n PDF-M.m»...
         string header = Encoding.ASCII.GetString(bytes);
-        if (header[0] == '%' || header.IndexOf("%PDF")>=0)
+        if (header[0] == '%' || header.IndexOf("%PDF") >= 0)
         {
           int ich = header.IndexOf("PDF-");
           if (ich > 0 && header[ich + 5] == (byte)'.')
@@ -163,7 +164,7 @@ namespace PdfSharp.Pdf.IO
           }
         }
       }
-      catch {}
+      catch { }
       return 0;
 #else
       return 50; // AGHACK
@@ -340,10 +341,63 @@ namespace PdfSharp.Pdf.IO
           }
         }
 
+        PdfReference[] irefs2 = document.irefTable.AllReferences;
+        int count2 = irefs2.Length;
+
+        // 3rd: Create iRefs for all compressed objects.
+        var objectStreams = new Dictionary<int, object>();
+        for (int idx = 0; idx < count2; idx++)
+        {
+          PdfReference iref = irefs2[idx];
+          PdfCrossReferenceStream xrefStream = iref.Value as PdfCrossReferenceStream;
+          if (xrefStream != null)
+          {
+            for (int idx2 = 0; idx2 < xrefStream.Entries.Count; idx2++)
+            {
+              PdfCrossReferenceStream.CrossReferenceStreamEntry item = xrefStream.Entries[idx2];
+              // Is type xref to compressed object?
+              if (item.Type == 2)
+              {
+                //PdfReference irefNew = parser.ReadCompressedObject(new PdfObjectID((int)item.Field2), (int)item.Field3);
+                //document._irefTable.Add(irefNew);
+                int objectNumber = (int)item.Field2;
+                if (!objectStreams.ContainsKey(objectNumber))
+                {
+                  objectStreams.Add(objectNumber, null);
+                  PdfObjectID objectID = new PdfObjectID((int)item.Field2);
+                  parser.ReadIRefsFromCompressedObject(objectID);
+                }
+              }
+            }
+          }
+        }
+
+        // 4th: Read compressed objects.
+        for (int idx = 0; idx < count2; idx++)
+        {
+          PdfReference iref = irefs2[idx];
+          PdfCrossReferenceStream xrefStream = iref.Value as PdfCrossReferenceStream;
+          if (xrefStream != null)
+          {
+            for (int idx2 = 0; idx2 < xrefStream.Entries.Count; idx2++)
+            {
+              PdfCrossReferenceStream.CrossReferenceStreamEntry item = xrefStream.Entries[idx2];
+              // Is type xref to compressed object?
+              if (item.Type == 2)
+              {
+                PdfReference irefNew = parser.ReadCompressedObject(new PdfObjectID((int)item.Field2),
+                    (int)item.Field3);
+                Debug.Assert(document.irefTable.Contains(iref.ObjectID));
+                //document._irefTable.Add(irefNew);
+              }
+            }
+          }
+        }
+
         PdfReference[] irefs = document.irefTable.AllReferences;
         int count = irefs.Length;
 
-        // Read all indirect objects
+        // Read all indirect objects.
         for (int idx = 0; idx < count; idx++)
         {
           PdfReference iref = irefs[idx];

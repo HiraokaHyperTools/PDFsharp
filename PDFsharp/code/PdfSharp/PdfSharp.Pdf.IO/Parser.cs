@@ -36,6 +36,7 @@ using System.IO;
 using PdfSharp.Pdf;
 using PdfSharp.Pdf.Advanced;
 using PdfSharp.Pdf.Filters;
+using PdfSharp.Internal;
 
 namespace PdfSharp.Pdf.IO
 {
@@ -1112,6 +1113,398 @@ namespace PdfSharp.Pdf.IO
     {
       public int Position;
       public Symbol Symbol;
+    }
+
+
+    /// <summary>
+    /// Reads the irefs from the compressed object with the specified index in the object stream
+    /// of the object with the specified object id.
+    /// </summary>
+    internal void ReadIRefsFromCompressedObject(PdfObjectID objectID)
+    {
+      PdfReference iref;
+
+      Debug.Assert(document.irefTable.ObjectTable.ContainsKey(objectID));
+      if (!document.irefTable.ObjectTable.TryGetValue(objectID, out iref))
+      {
+        // We should never come here because the object stream must be a type 1 entry in the xref stream
+        // and iref was created before.
+        throw new NotImplementedException("This case is not coded or something else went wrong");
+      }
+
+      // Read in object stream object when we come here for the very first time.
+      if (iref.Value == null)
+      {
+        try
+        {
+          Debug.Assert(document.irefTable.Contains(iref.ObjectID));
+          PdfDictionary pdfObject = (PdfDictionary)ReadObject(null, iref.ObjectID, false, false);
+          PdfObjectStream objectStream = new PdfObjectStream(pdfObject);
+          Debug.Assert(objectStream.Reference == iref);
+          // objectStream.Reference = iref; Superfluous, see Assert in line before.
+          Debug.Assert(objectStream.Reference.Value != null, "Something went wrong.");
+        }
+        catch (Exception ex)
+        {
+          Debug.WriteLine(ex.Message);
+          throw;
+        }
+      }
+      Debug.Assert(iref.Value != null);
+
+      PdfObjectStream objectStreamStream = iref.Value as PdfObjectStream;
+      if (objectStreamStream == null)
+      {
+        Debug.Assert(((PdfDictionary)iref.Value).Elements.GetName("/Type") == "/ObjStm");
+
+        objectStreamStream = new PdfObjectStream((PdfDictionary)iref.Value);
+        Debug.Assert(objectStreamStream.Reference == iref);
+        // objectStream.Reference = iref; Superfluous, see Assert in line before.
+        Debug.Assert(objectStreamStream.Reference.Value != null, "Something went wrong.");
+      }
+      Debug.Assert(objectStreamStream != null);
+
+
+      //PdfObjectStream objectStreamStream = (PdfObjectStream)iref.Value;
+      if (objectStreamStream == null)
+        throw new Exception("Something went wrong here.");
+      objectStreamStream.ReadReferences(document.irefTable);
+    }
+
+    /// <summary>
+    /// Reads PDF object from input stream.
+    /// </summary>
+    /// <param name="pdfObject">Either the instance of a derived type or null. If it is null
+    /// an appropriate object is created.</param>
+    /// <param name="objectID">The address of the object.</param>
+    /// <param name="includeReferences">If true, specifies that all indirect objects
+    /// are included recursively.</param>
+    /// <param name="fromObjecStream">If true, the objects is parsed from an object stream.</param>
+    public PdfObject ReadObject(PdfObject pdfObject, PdfObjectID objectID, bool includeReferences, bool fromObjecStream)
+    {
+#if DEBUG_
+            Debug.WriteLine("ReadObject: " + objectID);
+            if (objectID.ObjectNumber == 20)
+                GetType();
+#endif
+      int objectNumber = objectID.ObjectNumber;
+      int generationNumber = objectID.GenerationNumber;
+      if (!fromObjecStream)
+      {
+        MoveToObject(objectID);
+        objectNumber = ReadInteger();
+        generationNumber = ReadInteger();
+      }
+#if DEBUG
+      // The following assertion sometime failed (see below)
+      //Debug.Assert(objectID == new PdfObjectID(objectNumber, generationNumber));
+      if (!fromObjecStream && objectID != new PdfObjectID(objectNumber, generationNumber))
+      {
+        // A special kind of bug? Or is this an undocumented PDF feature?
+        // PDF4NET 2.6 provides a sample called 'Unicode', which produces a file 'unicode.pdf'
+        // The iref table of this file contains the following entries:
+        //    iref
+        //    0 148
+        //    0000000000 65535 f 
+        //    0000000015 00000 n 
+        //    0000000346 00000 n 
+        //    ....
+        //    0000083236 00000 n 
+        //    0000083045 00000 n 
+        //    0000083045 00000 n 
+        //    0000083045 00000 n 
+        //    0000083045 00000 n 
+        //    0000080334 00000 n 
+        //    ....
+        // Object 84, 85, 86, and 87 maps to the same dictionary, but all PDF readers I tested
+        // ignores this mismatch! The following assertion failed about 50 times with this file.
+#if true_
+                string message = String.Format("xref entry {0} {1} maps to object {2} {3}.",
+                    objectID.ObjectNumber, objectID.GenerationNumber, objectNumber, generationNumber);
+                Debug.Assert(false, message);
+#endif
+      }
+#endif
+      // Always use object ID from iref table (see above).
+      objectNumber = objectID.ObjectNumber;
+      generationNumber = objectID.GenerationNumber;
+#if true_
+            Debug.WriteLine(String.Format("obj: {0} {1}", objectNumber, generationNumber));
+#endif
+      if (!fromObjecStream)
+        ReadSymbol(Symbol.Obj);
+
+      bool checkForStream = false;
+      Symbol symbol = ScanNextToken();
+      switch (symbol)
+      {
+        case Symbol.BeginArray:
+          PdfArray array;
+          if (pdfObject == null)
+            array = new PdfArray(document);
+          else
+            array = (PdfArray)pdfObject;
+          //PdfObject.RegisterObject(array, objectID, generation);
+          pdfObject = ReadArray(array, includeReferences);
+          pdfObject.SetObjectID(objectNumber, generationNumber);
+          break;
+
+        case Symbol.BeginDictionary:
+          PdfDictionary dict;
+          if (pdfObject == null)
+            dict = new PdfDictionary(document);
+          else
+            dict = (PdfDictionary)pdfObject;
+          //PdfObject.RegisterObject(dict, objectID, generation);
+          checkForStream = true;
+          pdfObject = ReadDictionary(dict, includeReferences);
+          pdfObject.SetObjectID(objectNumber, generationNumber);
+          break;
+
+        // Acrobat 6 Professional proudly presents: The Null object!
+        // Even with a one-digit object number an indirect reference «x 0 R» to this object is
+        // one character larger than the direct use of «null». Probable this is the reason why
+        // it is true that Acrobat Web Capture 6.0 creates this object, but obviously never 
+        // creates a reference to it!
+        case Symbol.Null:
+          pdfObject = new PdfNullObject(document);
+          pdfObject.SetObjectID(objectNumber, generationNumber);
+          if (!fromObjecStream)
+            ReadSymbol(Symbol.EndObj);
+          return pdfObject;
+
+        // Empty object. Invalid PDF, but we need to handle it. Treat as null object.
+        case Symbol.EndObj:
+          pdfObject = new PdfNullObject(document);
+          pdfObject.SetObjectID(objectNumber, generationNumber);
+          return pdfObject;
+
+        case Symbol.Boolean:
+          pdfObject = new PdfBooleanObject(document, String.Compare(lexer.Token, Boolean.TrueString, StringComparison.OrdinalIgnoreCase) == 0);
+          pdfObject.SetObjectID(objectNumber, generationNumber);
+          if (!fromObjecStream)
+            ReadSymbol(Symbol.EndObj);
+          return pdfObject;
+
+        case Symbol.Integer:
+          pdfObject = new PdfIntegerObject(document, lexer.TokenToInteger);
+          pdfObject.SetObjectID(objectNumber, generationNumber);
+          if (!fromObjecStream)
+            ReadSymbol(Symbol.EndObj);
+          return pdfObject;
+
+        case Symbol.UInteger:
+          pdfObject = new PdfUIntegerObject(document, lexer.TokenToUInteger);
+          pdfObject.SetObjectID(objectNumber, generationNumber);
+          if (!fromObjecStream)
+            ReadSymbol(Symbol.EndObj);
+          return pdfObject;
+
+        case Symbol.Real:
+          pdfObject = new PdfRealObject(document, lexer.TokenToReal);
+          pdfObject.SetObjectID(objectNumber, generationNumber);
+          if (!fromObjecStream)
+            ReadSymbol(Symbol.EndObj);
+          return pdfObject;
+
+        case Symbol.String:
+        case Symbol.UnicodeString:
+        case Symbol.HexString:
+        case Symbol.UnicodeHexString:
+          pdfObject = new PdfStringObject(document, lexer.Token);
+          pdfObject.SetObjectID(objectNumber, generationNumber);
+          if (!fromObjecStream)
+            ReadSymbol(Symbol.EndObj);
+          return pdfObject;
+
+        case Symbol.Name:
+          pdfObject = new PdfNameObject(document, lexer.Token);
+          pdfObject.SetObjectID(objectNumber, generationNumber);
+          if (!fromObjecStream)
+            ReadSymbol(Symbol.EndObj);
+          return pdfObject;
+
+        case Symbol.Keyword:
+          // Should not come here anymore.
+          ParserDiagnostics.HandleUnexpectedToken(lexer.Token);
+          break;
+
+        default:
+          // Should not come here anymore.
+          ParserDiagnostics.HandleUnexpectedToken(lexer.Token);
+          break;
+      }
+      symbol = ScanNextToken();
+      if (symbol == Symbol.BeginStream)
+      {
+        PdfDictionary dict = (PdfDictionary)pdfObject;
+        Debug.Assert(checkForStream, "Unexpected stream...");
+#if true_
+                ReadStream(dict);
+#else
+        int length = GetStreamLength(dict);
+        byte[] bytes = lexer.ReadStream(length);
+#if true_
+                if (dict.Elements.GetString("/Filter") == "/FlateDecode")
+                {
+                    if (dict.Elements["/Subtype"] == null)
+                    {
+                        try
+                        {
+                            byte[] decoded = Filtering.FlateDecode.Decode(bytes);
+                            if (decoded.Length == 0)
+                                goto End;
+                            string pageContent = Filtering.FlateDecode.DecodeToString(bytes);
+                            if (pageContent.Length > 100)
+                                pageContent = pageContent.Substring(pageContent.Length - 100);
+                            pageContent.GetType();
+                            bytes = decoded;
+                            dict.Elements.Remove("/Filter");
+                            dict.Elements.SetInteger("/Length", bytes.Length);
+                        }
+                        catch
+                        {
+                        }
+                    }
+                End: ;
+                }
+#endif
+        PdfDictionary.PdfStream stream = new PdfDictionary.PdfStream(bytes, dict);
+        dict.Stream = stream;
+        ReadSymbol(Symbol.EndStream);
+        symbol = ScanNextToken();
+#endif
+      }
+      if (!fromObjecStream && symbol != Symbol.EndObj)
+        ParserDiagnostics.ThrowParserException(PSSR.UnexpectedToken(lexer.Token));
+      return pdfObject;
+    }
+
+
+    /// <summary>
+    /// Reads the object stream header as pairs of integers from the beginning of the 
+    /// stream of an object stream. Parameter first is the value of the First entry of
+    /// the object stream object.
+    /// </summary>
+    internal int[][] ReadObjectStreamHeader(int n, int first)
+    {
+      // TODO: Concept for general error  handling.
+      // If the stream is corrupted a lot of things can go wrong here.
+      // Make it sense to do a more detailed error checking?
+
+      // Create n pairs of integers with object number and offset.
+      int[][] header = new int[n][];
+      for (int idx = 0; idx < n; idx++)
+      {
+        int number = ReadInteger();
+#if DEBUG
+        if (number == 1074)
+          GetType();
+#endif
+        int offset = ReadInteger() + first;  // Calculate absolute offset.
+        header[idx] = new int[] { number, offset };
+      }
+      return header;
+    }
+
+
+    /// <summary>
+    /// Reads the compressed object with the specified index in the object stream
+    /// of the object with the specified object id.
+    /// </summary>
+    internal PdfReference ReadCompressedObject(PdfObjectID objectID, int index)
+    {
+      PdfReference iref;
+#if true
+      Debug.Assert(document.irefTable.ObjectTable.ContainsKey(objectID));
+      if (!document.irefTable.ObjectTable.TryGetValue(objectID, out iref))
+      {
+        throw new NotImplementedException("This case is not coded or something else went wrong");
+      }
+#else
+            // We should never come here because the object stream must be a type 1 entry in the xref stream
+            // and iref was created before.
+
+            // Has the specified object already an iref in the object table?
+            if (!_document._irefTable.ObjectTable.TryGetValue(objectID, out iref))
+            {
+                try
+                {
+#if true_
+                    iref = new PdfReference(objectID,);
+                    iref.ObjectID = objectID;
+                    _document._irefTable.Add(os);
+#else
+                    PdfDictionary dict = (PdfDictionary)ReadObject(null, objectID, false, false);
+                    PdfObjectStream os = new PdfObjectStream(dict);
+                    iref = new PdfReference(os);
+                    iref.ObjectID = objectID;
+                    _document._irefTable.Add(os);
+#endif
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(ex.Message);
+                    throw;
+                }
+            }
+#endif
+
+      // Read in object stream object when we come here for the very first time.
+      if (iref.Value == null)
+      {
+        try
+        {
+          Debug.Assert(document.irefTable.Contains(iref.ObjectID));
+          PdfDictionary pdfObject = (PdfDictionary)ReadObject(null, iref.ObjectID, false, false);
+          PdfObjectStream objectStream = new PdfObjectStream(pdfObject);
+          Debug.Assert(objectStream.Reference == iref);
+          // objectStream.Reference = iref; Superfluous, see Assert in line before.
+          Debug.Assert(objectStream.Reference.Value != null, "Something went wrong.");
+        }
+        catch (Exception ex)
+        {
+          Debug.WriteLine(ex.Message);
+          throw;
+        }
+      }
+      Debug.Assert(iref.Value != null);
+
+      PdfObjectStream objectStreamStream = iref.Value as PdfObjectStream;
+      if (objectStreamStream == null)
+      {
+        Debug.Assert(((PdfDictionary)iref.Value).Elements.GetName("/Type") == "/ObjStm");
+
+        objectStreamStream = new PdfObjectStream((PdfDictionary)iref.Value);
+        Debug.Assert(objectStreamStream.Reference == iref);
+        // objectStream.Reference = iref; Superfluous, see Assert in line before.
+        Debug.Assert(objectStreamStream.Reference.Value != null, "Something went wrong.");
+      }
+      Debug.Assert(objectStreamStream != null);
+
+
+      //PdfObjectStream objectStreamStream = (PdfObjectStream)iref.Value;
+      if (objectStreamStream == null)
+        throw new Exception("Something went wrong here.");
+      return objectStreamStream.ReadCompressedObject(index);
+    }
+
+
+    /// <summary>
+    /// Reads the compressed object with the specified number at the given offset.
+    /// The parser must be initialized with the stream an object stream object.
+    /// </summary>
+    internal PdfReference ReadCompressedObject(int objectNumber, int offset)
+    {
+#if DEBUG__
+            if (objectNumber == 1034)
+                GetType();
+#endif
+      // Generation is always 0 for compressed objects.
+      PdfObjectID objectID = new PdfObjectID(objectNumber);
+      lexer.Position = offset;
+      PdfObject obj = ReadObject(null, objectID, false, true);
+      return obj.Reference;
     }
   }
 

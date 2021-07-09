@@ -139,6 +139,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="PdfSharp.Internal\ColorHelper.cs" />
+    <Compile Include="PdfSharp.Internal\Diagnostics.cs" />
     <Compile Include="PdfSharp.Internal\DoubleUtil.cs" />
     <Compile Include="PdfSharp.Internal\TokenizerHelper.cs" />
     <Compile Include="PdfSharp.Pdf.AcroForms\enums\PdfAcroFieldFlags.cs" />
@@ -161,6 +162,7 @@
     <Compile Include="PdfSharp.Pdf.Advanced\PdfGroupAttributes.cs" />
     <Compile Include="PdfSharp.Pdf.Advanced\PdfImage.FaxEncode.cs" />
     <Compile Include="PdfSharp.Pdf.Advanced\PdfObjectInternals.cs" />
+    <Compile Include="PdfSharp.Pdf.Advanced\PdfObjectStream.cs" />
     <Compile Include="PdfSharp.Pdf.Advanced\PdfSoftMask.cs" />
     <Compile Include="PdfSharp.Pdf.Advanced\PdfTilingPattern.cs" />
     <Compile Include="PdfSharp.Pdf.Advanced\PdfToUnicodeMap.cs" />
