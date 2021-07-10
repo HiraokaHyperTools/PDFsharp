@@ -1,0 +1,26 @@
+var class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_path =
+[
+    [ "Path", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_path.html#a65e34e0319faeb4d89ac8693af19823d", null ],
+    [ "AutomationProperties_HelpText", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_path.html#a71a6c83b2ee0e7cc134af73bc230d909", null ],
+    [ "AutomationProperties_Name", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_path.html#aa68138724a5e98f348de57db9e95a34c", null ],
+    [ "Clip", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_path.html#a9e31fc5e7216e2a8cb75f40fcd8a8427", null ],
+    [ "Data", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_path.html#ac4cff9f52391b66775ef26f91bba5daf", null ],
+    [ "Fill", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_path.html#af2ab7504a11a32ff1861ca9da97f38f8", null ],
+    [ "FixedPage_NavigateUri", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_path.html#aa8b6b7af1517519841d4e8b6c8075d0d", null ],
+    [ "Key", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_path.html#ab5ed99c2f657bd1c3c9cf5db855d87fe", null ],
+    [ "lang", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_path.html#a7487292bfb3a8d66d512bbdfcc0f2aee", null ],
+    [ "Name", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_path.html#a13d55a22543c0fd11ef3998c509e2336", null ],
+    [ "Opacity", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_path.html#afe4a8e5a00413e6a3b940f4a0e19d064", null ],
+    [ "OpacityMask", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_path.html#a3b5fb05921f88f75ab4e83ded9f59588", null ],
+    [ "RenderTransform", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_path.html#a2dd2bc656c791e1df3447693615754ba", null ],
+    [ "SnapsToDevicePixels", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_path.html#a3d522fbaf6f6078fc41a8d77244b7611", null ],
+    [ "Stroke", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_path.html#af9dc30ff6bd3ba07683281333ea371a5", null ],
+    [ "StrokeDashArray", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_path.html#a25b16fa045a6b01ee3881f84408746c3", null ],
+    [ "StrokeDashCap", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_path.html#ab68a8cd6fdd7be061bba3ba08b9b80bf", null ],
+    [ "StrokeDashOffset", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_path.html#a18fb01b46274cfde4dd3bd1a089b3a5d", null ],
+    [ "StrokeEndLineCap", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_path.html#a15f27303dc19b3298eb192f894d268cc", null ],
+    [ "StrokeLineJoin", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_path.html#a4a2b14ccbee5a39ca7a94a9f0da1bda3", null ],
+    [ "StrokeMiterLimit", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_path.html#a0f02a350c5b2f84082a7f40442dbaab9", null ],
+    [ "StrokeStartLineCap", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_path.html#affff7e1be4e95dc3febabd1cfe9f8a1f", null ],
+    [ "StrokeThickness", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_path.html#a4a9e8711046320ea53b2790cc2dd6dbc", null ]
+];

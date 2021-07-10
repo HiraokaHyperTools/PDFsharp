@@ -1,0 +1,27 @@
+var class_pdf_sharp_1_1_fonts_1_1_open_type_1_1_font_data =
+[
+    [ "FontData", "class_pdf_sharp_1_1_fonts_1_1_open_type_1_1_font_data.html#a2f65d13a59c732baf88779370a7cbf40", null ],
+    [ "FontData", "class_pdf_sharp_1_1_fonts_1_1_open_type_1_1_font_data.html#a51803f003b60907de483c7958e30e616", null ],
+    [ "AddTable", "class_pdf_sharp_1_1_fonts_1_1_open_type_1_1_font_data.html#aa5c6878eaaa16e41af4b8084441679cf", null ],
+    [ "CreateFontSubSet", "class_pdf_sharp_1_1_fonts_1_1_open_type_1_1_font_data.html#a9bcfa2205599a946fe1628696c0ead27", null ],
+    [ "Read", "class_pdf_sharp_1_1_fonts_1_1_open_type_1_1_font_data.html#a87dba6dcc5edf2c66512be94303e9d9b", null ],
+    [ "Read", "class_pdf_sharp_1_1_fonts_1_1_open_type_1_1_font_data.html#a89baa4f07ed74b55cc92457eda9c38e5", null ],
+    [ "ReadByte", "class_pdf_sharp_1_1_fonts_1_1_open_type_1_1_font_data.html#ac6fd9638c0cd76a283c67a4bacd901ca", null ],
+    [ "ReadBytes", "class_pdf_sharp_1_1_fonts_1_1_open_type_1_1_font_data.html#a5236af888737ca985840bcdd8b5165dd", null ],
+    [ "ReadFixed", "class_pdf_sharp_1_1_fonts_1_1_open_type_1_1_font_data.html#a3d8c03bf63cf053c50fd293f3587feef", null ],
+    [ "ReadFWord", "class_pdf_sharp_1_1_fonts_1_1_open_type_1_1_font_data.html#abcaf91dd996bfcd372a6391c3856f5b2", null ],
+    [ "ReadLong", "class_pdf_sharp_1_1_fonts_1_1_open_type_1_1_font_data.html#af9e371ad5a1b50ed2ad244c94c2dd4ec", null ],
+    [ "ReadLongDate", "class_pdf_sharp_1_1_fonts_1_1_open_type_1_1_font_data.html#a8c62fa485d7d97478913b3dcde781b04", null ],
+    [ "ReadShort", "class_pdf_sharp_1_1_fonts_1_1_open_type_1_1_font_data.html#ab8c4930e7cceba754c2d41c1c3cb273f", null ],
+    [ "ReadString", "class_pdf_sharp_1_1_fonts_1_1_open_type_1_1_font_data.html#aee048550b572b28f533c0ec601fe88d3", null ],
+    [ "ReadTag", "class_pdf_sharp_1_1_fonts_1_1_open_type_1_1_font_data.html#a41e403abf8b495db7c7dc57f80c222f8", null ],
+    [ "ReadUFWord", "class_pdf_sharp_1_1_fonts_1_1_open_type_1_1_font_data.html#a28f9b55f17284f759e957cea4c28877b", null ],
+    [ "ReadULong", "class_pdf_sharp_1_1_fonts_1_1_open_type_1_1_font_data.html#ad3579c76726a47472f916a3334ab9b58", null ],
+    [ "ReadUShort", "class_pdf_sharp_1_1_fonts_1_1_open_type_1_1_font_data.html#abbf32ca18da6409a541e9587af004e5c", null ],
+    [ "Seek", "class_pdf_sharp_1_1_fonts_1_1_open_type_1_1_font_data.html#a59b840924e897f31c153b85b5b841be3", null ],
+    [ "SeekOffset", "class_pdf_sharp_1_1_fonts_1_1_open_type_1_1_font_data.html#aa251ea99f5ce97570b1b3d183e731fd6", null ],
+    [ "CanRead", "class_pdf_sharp_1_1_fonts_1_1_open_type_1_1_font_data.html#a4648c4e50dddb205ea5ab75767e5bac5", null ],
+    [ "CanWrite", "class_pdf_sharp_1_1_fonts_1_1_open_type_1_1_font_data.html#a0de4577156f81d38fe6d3a874202dc44", null ],
+    [ "Data", "class_pdf_sharp_1_1_fonts_1_1_open_type_1_1_font_data.html#a3ae109e115bf85958df93a2717b92371", null ],
+    [ "Position", "class_pdf_sharp_1_1_fonts_1_1_open_type_1_1_font_data.html#ad7ed3e5644c9cdf6f5386d16cc297fbc", null ]
+];
