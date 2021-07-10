@@ -17,3 +17,5 @@ XPS to PDF in WPF application:
 ```C#
   PdfSharp.Xps.XpsConverter.Convert(fpXps);
 ```
+
+Docs: https://hiraokahypertools.github.io/PDFsharp/
