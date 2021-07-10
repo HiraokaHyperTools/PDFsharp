@@ -40,18 +40,7 @@ namespace PdfSharp.UnitTests.Reader
       DoOpen2(DirectoryPointHelper.Resolve("@PDFsharp/samples/PDFs/HelloWorld (protected).pdf"), "owner", PdfDocumentOpenMode.ReadOnly);
     }
 
-    private void DoOpen(string pdfFile)
-    {
-      using (var reader = PdfReader.Open(new MemoryStream(File.ReadAllBytes(pdfFile))))
-      {
-        // nop
-      }
-
-      using (var reader = PdfReader.Open(pdfFile))
-      {
-        // nop
-      }
-    }
+    private void DoOpen(string pdfFile) => OpenHelper.Test(pdfFile);
 
     private void DoOpen2(string pdfFile, string password, PdfDocumentOpenMode mode)
     {

@@ -1012,6 +1012,16 @@ namespace PdfSharp.Pdf
         this[key] = obj.Reference;
       }
 
+      /// <summary>
+      /// Sets the entry as a reference to the specified iref.
+      /// </summary>
+      public void SetReference(string key, PdfReference iref)
+      {
+        if (iref == null)
+          throw new ArgumentNullException("iref");
+        this[key] = iref;
+      }
+
       #region IDictionary Members
 
       /// <summary>

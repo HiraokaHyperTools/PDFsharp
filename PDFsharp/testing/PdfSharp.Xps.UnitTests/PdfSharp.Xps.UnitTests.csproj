@@ -138,13 +138,6 @@
     <None Include="StrongnameKey.snk" />
     <Resource Include="Qlbm\arial.ttf" />
     <None Include="Test References\PdfSharp.Xps.accessor" />
-    <None Include="Typography\CalibriPoster.xps" />
-    <None Include="Typography\CambriaPoster.xps" />
-    <None Include="Typography\CandaraPoster.xps" />
-    <None Include="Typography\ConsolasPoster.xps" />
-    <None Include="Typography\ConstantiaPoster.xps" />
-    <None Include="Typography\CorbelPoster.xps" />
-    <None Include="Typography\TypeSamples.xps" />
     <None Include="XpsConverterTest\xps\page1.xps">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

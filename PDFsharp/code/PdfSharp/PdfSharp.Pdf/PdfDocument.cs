@@ -303,6 +303,15 @@ namespace PdfSharp.Pdf
 
       try
       {
+        // HACK: Remove XRefTrailer
+        if (trailer is PdfCrossReferenceStream)
+        {
+          // HACK^2: Preserve the SecurityHandler.
+          PdfStandardSecurityHandler securityHandler = securitySettings.SecurityHandler;
+          trailer = new PdfTrailer((PdfCrossReferenceStream)trailer);
+          trailer.securityHandler = securityHandler;
+        }
+
         bool encrypt = this.securitySettings.DocumentSecurityLevel != PdfDocumentSecurityLevel.None;
         if (encrypt)
         {

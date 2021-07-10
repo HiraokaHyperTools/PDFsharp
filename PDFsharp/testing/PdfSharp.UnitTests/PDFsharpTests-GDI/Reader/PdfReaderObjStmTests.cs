@@ -15,20 +15,7 @@ namespace PdfSharp.UnitTests.Reader
     [TestCaseSource(nameof(GetPDFs))]
     public void OpenTest(string pdfFile)
     {
-      DoOpen(pdfFile);
-    }
-
-    private void DoOpen(string pdfFile)
-    {
-      using (var reader = PdfReader.Open(new MemoryStream(File.ReadAllBytes(pdfFile))))
-      {
-        // nop
-      }
-
-      using (var reader = PdfReader.Open(pdfFile))
-      {
-        // nop
-      }
+      OpenHelper.Test(pdfFile);
     }
 
     public static IEnumerable<string> GetPDFs() => Directory.GetFiles(DirectoryPointHelper.Resolve("@PDFsharp/samples/PDFs/ObjStm"), "*.pdf")

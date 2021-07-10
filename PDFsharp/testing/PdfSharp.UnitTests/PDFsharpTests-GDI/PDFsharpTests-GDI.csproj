@@ -59,8 +59,12 @@
     <Compile Include="Text/*.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Remove="Properties\**" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Reader\PdfReaderObjStmTests.cs" />
     <Compile Include="Reader\PdfReaderTests.cs" />
+    <Compile Include="Reader\OpenHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\code\PdfSharp\PdfSharp.csproj">
@@ -74,9 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\" />
   </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

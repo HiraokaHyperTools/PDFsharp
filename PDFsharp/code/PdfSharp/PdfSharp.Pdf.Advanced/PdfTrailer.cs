@@ -50,6 +50,32 @@ namespace PdfSharp.Pdf.Advanced
       this.document = document;
     }
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="PdfTrailer"/> class from a <see cref="PdfCrossReferenceStream"/>.
+    /// </summary>
+    public PdfTrailer(PdfCrossReferenceStream trailer)
+        : base(trailer.document)
+    {
+      document = trailer.document;
+
+      // /ID [<09F877EBF282E9408ED1882A9A21D9F2><2A4938E896006F499AC1C2EA7BFB08E4>]
+      // /Info 7 0 R
+      // /Root 1 0 R
+      // /Size 10
+
+      PdfReference iref = trailer.Elements.GetReference(Keys.Info);
+      if (iref != null)
+        Elements.SetReference(Keys.Info, iref);
+
+      Elements.SetReference(Keys.Root, trailer.Elements.GetReference(Keys.Root));
+
+      Elements.SetInteger(Keys.Size, trailer.Elements.GetInteger(Keys.Size));
+
+      PdfArray id = trailer.Elements.GetArray(Keys.ID);
+      if (id != null)
+        Elements.SetValue(Keys.ID, id);
+    }
+
     public int Size
     {
       get {return Elements.GetInteger(Keys.Size);}

@@ -76,6 +76,9 @@
     <Compile Include="../PDFsharpTests-GDI/Reader/*.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Remove="Properties\**" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\..\..\code\PdfSharp\PdfSharp-WPF.csproj">
       <Project>{02FCC0BB-2AA2-43BA-8D2F-66D168B87A1D}</Project>
       <Name>PdfSharp-WPF</Name>
@@ -94,9 +97,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\" />
   </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
