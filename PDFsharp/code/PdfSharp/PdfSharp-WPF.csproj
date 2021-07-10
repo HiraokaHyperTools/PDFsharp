@@ -11,13 +11,13 @@
 
     <OutputType>Library</OutputType>
     <RootNamespace>PdfSharp</RootNamespace>
-    <AssemblyName>PdfSharp-WPF</AssemblyName>
+    <AssemblyName>HiraokaHyperTools.PdfSharp-WPF</AssemblyName>
 
     <PackageId>kenjiuno.PdfSharp-WPF</PackageId>
     <PackageVersion>1.31.5973</PackageVersion>
     <Authors>kenjiuno</Authors>
     <Owners>www.pdfsharp.net</Owners>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/HiraokaHyperTools/PDFsharp</RepositoryUrl>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageDescription>PDFsharp - A .NET library for processing PDF</PackageDescription>

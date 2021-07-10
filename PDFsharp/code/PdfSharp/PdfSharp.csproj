@@ -11,13 +11,13 @@
 
     <OutputType>Library</OutputType>
     <RootNamespace>PdfSharp</RootNamespace>
-    <AssemblyName>PdfSharp</AssemblyName>
+    <AssemblyName>HiraokaHyperTools.PdfSharp</AssemblyName>
 
     <PackageId>kenjiuno.PdfSharp-GDI</PackageId>
     <PackageVersion>1.31.5973</PackageVersion>
     <Authors>kenjiuno</Authors>
     <Owners>www.pdfsharp.net</Owners>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/HiraokaHyperTools/PDFsharp</RepositoryUrl>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageDescription>PDFsharp - A .NET library for processing PDF</PackageDescription>
@@ -703,6 +703,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="StrongnameKey.snk" />
+    <None Include="..\..\..\LICENSE" Pack="true" PackagePath="" Visible="false" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">

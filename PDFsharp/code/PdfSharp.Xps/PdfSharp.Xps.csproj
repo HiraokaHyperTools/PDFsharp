@@ -9,13 +9,13 @@
 
     <OutputType>Library</OutputType>
     <RootNamespace>PdfSharp.Xps</RootNamespace>
-    <AssemblyName>PdfSharp.Xps</AssemblyName>
+    <AssemblyName>HiraokaHyperTools.PdfSharp.Xps</AssemblyName>
     <PackageVersion>1.1.8</PackageVersion>
 
     <PackageId>kenjiuno.PdfSharp.Xps</PackageId>
     <Authors>kenjiuno</Authors>
     <Owners>www.pdfsharp.net</Owners>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/HiraokaHyperTools/PDFsharp</RepositoryUrl>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageDescription>PDFsharp - A .NET library for processing PDF</PackageDescription>
