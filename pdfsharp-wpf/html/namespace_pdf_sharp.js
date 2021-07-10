@@ -1,0 +1,88 @@
+var namespace_pdf_sharp =
+[
+    [ "Drawing", "namespace_pdf_sharp_1_1_drawing.html", "namespace_pdf_sharp_1_1_drawing" ],
+    [ "Fonts", "namespace_pdf_sharp_1_1_fonts.html", "namespace_pdf_sharp_1_1_fonts" ],
+    [ "Forms", "namespace_pdf_sharp_1_1_forms.html", "namespace_pdf_sharp_1_1_forms" ],
+    [ "Internal", "namespace_pdf_sharp_1_1_internal.html", "namespace_pdf_sharp_1_1_internal" ],
+    [ "Pdf", "namespace_pdf_sharp_1_1_pdf.html", "namespace_pdf_sharp_1_1_pdf" ],
+    [ "Resources", "namespace_pdf_sharp_1_1_resources.html", null ],
+    [ "SharpZipLib", "namespace_pdf_sharp_1_1_sharp_zip_lib.html", "namespace_pdf_sharp_1_1_sharp_zip_lib" ],
+    [ "Windows", "namespace_pdf_sharp_1_1_windows.html", [
+      [ "RenderMode", "namespace_pdf_sharp_1_1_windows.html#a5d0013c0ecbc322b148388a0f4b3ded3", [
+        [ "Default", "namespace_pdf_sharp_1_1_windows.html#a5d0013c0ecbc322b148388a0f4b3ded3a7a1920d61156abc05a60135aefe8bc67", null ]
+      ] ],
+      [ "Zoom", "namespace_pdf_sharp_1_1_windows.html#a5a7ebb2bda603aed23bfc29724885eb0", [
+        [ "Mininum", "namespace_pdf_sharp_1_1_windows.html#a5a7ebb2bda603aed23bfc29724885eb0a48c6170ccee2934035e221ebed1b8753", null ],
+        [ "Maximum", "namespace_pdf_sharp_1_1_windows.html#a5a7ebb2bda603aed23bfc29724885eb0a8321e79c278ec510f63675c040594892", null ],
+        [ "Percent800", "namespace_pdf_sharp_1_1_windows.html#a5a7ebb2bda603aed23bfc29724885eb0ac82efe418fdb3897b50c8a52aa870c28", null ],
+        [ "Percent600", "namespace_pdf_sharp_1_1_windows.html#a5a7ebb2bda603aed23bfc29724885eb0a3445942cc8f714ec447d696aded05634", null ],
+        [ "Percent400", "namespace_pdf_sharp_1_1_windows.html#a5a7ebb2bda603aed23bfc29724885eb0a2f3f799fc7f5ea3f98bec0715202a908", null ],
+        [ "Percent200", "namespace_pdf_sharp_1_1_windows.html#a5a7ebb2bda603aed23bfc29724885eb0ab51dc9cd2489fd98c70a15501da4fdea", null ],
+        [ "Percent150", "namespace_pdf_sharp_1_1_windows.html#a5a7ebb2bda603aed23bfc29724885eb0a1df4632b5d81e36fd4bf75fd708eb856", null ],
+        [ "Percent100", "namespace_pdf_sharp_1_1_windows.html#a5a7ebb2bda603aed23bfc29724885eb0aa6b2e2702bf6cc4aaa1d9f478fe1b207", null ],
+        [ "Percent75", "namespace_pdf_sharp_1_1_windows.html#a5a7ebb2bda603aed23bfc29724885eb0af9f28d7364149e2b0d9c1b88a8733268", null ],
+        [ "Percent50", "namespace_pdf_sharp_1_1_windows.html#a5a7ebb2bda603aed23bfc29724885eb0a92d64e897b3f1616201d55435738fc1d", null ],
+        [ "Percent25", "namespace_pdf_sharp_1_1_windows.html#a5a7ebb2bda603aed23bfc29724885eb0a196c392d20c682ce386a6940642bf23e", null ],
+        [ "Percent10", "namespace_pdf_sharp_1_1_windows.html#a5a7ebb2bda603aed23bfc29724885eb0a7d48498395f63bdf49ca0870588f37d9", null ],
+        [ "BestFit", "namespace_pdf_sharp_1_1_windows.html#a5a7ebb2bda603aed23bfc29724885eb0a3be09308e76c7409a4e21584527d7f6e", null ],
+        [ "TextFit", "namespace_pdf_sharp_1_1_windows.html#a5a7ebb2bda603aed23bfc29724885eb0a3de2a6052ccc351fa3921559af9668e8", null ],
+        [ "FullPage", "namespace_pdf_sharp_1_1_windows.html#a5a7ebb2bda603aed23bfc29724885eb0abacbf86c988edba468f8275fd812c825", null ],
+        [ "OriginalSize", "namespace_pdf_sharp_1_1_windows.html#a5a7ebb2bda603aed23bfc29724885eb0a74a3b1fc4b5d0383e6a3d23255f48589", null ]
+      ] ]
+    ] ],
+    [ "PdfSharpException", "class_pdf_sharp_1_1_pdf_sharp_exception.html", "class_pdf_sharp_1_1_pdf_sharp_exception" ],
+    [ "PageOrientation", "namespace_pdf_sharp.html#a4ea9a22b6708df1ffd59b49125b9f58e", [
+      [ "Portrait", "namespace_pdf_sharp.html#a4ea9a22b6708df1ffd59b49125b9f58ea1c7444be9626d149ab598fb79b639f96", null ],
+      [ "Landscape", "namespace_pdf_sharp.html#a4ea9a22b6708df1ffd59b49125b9f58ea815dff01257e5ef182b25d4c1ef0a7a0", null ]
+    ] ],
+    [ "PageSize", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33", [
+      [ "Undefined", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33aec0fc0100c4fc1ce4eea230c3dc10360", null ],
+      [ "A0", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33ad88c146dfafdea37a837778a92415bc2", null ],
+      [ "A1", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33a27f237e6b7f96587b6202ff3607ad88a", null ],
+      [ "A2", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33ac6bdf6f65f3845da9085e9ae5790b494", null ],
+      [ "A3", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33a6593d7b12fd418cdb35bbf438de72f66", null ],
+      [ "A4", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33a0c2f3adf2a48bab3adb470f4da57f3d0", null ],
+      [ "A5", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33ac6f2f93133905f75da4b02ccc19ab66a", null ],
+      [ "RA0", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33a64870c19927e742f3b961d009c949e94", null ],
+      [ "RA1", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33a355b352902f38c2777424116d3af503c", null ],
+      [ "RA2", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33ab921ce1fbb0bec70042b6d8359c8fe78", null ],
+      [ "RA3", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33a623c78a351dd25b29a4adbb12fc6f1d4", null ],
+      [ "RA4", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33ad139b61e562f15d090369f2823681d6f", null ],
+      [ "RA5", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33ab572742b1173f557fbc84e5585bf1735", null ],
+      [ "B0", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33a4c769c2c9989abb9fa024ab9930270e5", null ],
+      [ "B1", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33ac9512565ef6194ca664dc41ec0de7a53", null ],
+      [ "B2", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33abbd97b00c539801e32317ab550867ec4", null ],
+      [ "B3", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33a0c4ecd7b59ebc5b9f47974cb9845fd02", null ],
+      [ "B4", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33ad5d4cc7b09d1843517acc9361f8f665e", null ],
+      [ "B5", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33a2a1ab298edf0162a3305e599b47cbeee", null ],
+      [ "Quarto", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33ad98347c441f11a2c19b31fe2fc89c869", null ],
+      [ "Foolscap", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33ab9ea9881af505f98f4221d8104754970", null ],
+      [ "Executive", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33a671aa2e8cc2c2435cf509fa4a3baf26c", null ],
+      [ "GovernmentLetter", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33a4d3b7177453c0a0b93d1bde62348de7b", null ],
+      [ "Letter", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33a17a53d1a012580ef609b70ef6a25d1f1", null ],
+      [ "Legal", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33aa10a9bcd450087de1ce1f80b35f44883", null ],
+      [ "Ledger", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33a4dcb5735ef7ac1cdab0635a81d6570a0", null ],
+      [ "Tabloid", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33a4856da4c90d3427b62339995ab82151e", null ],
+      [ "Post", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33a03d947a2158373c3b9d74325850cb8b9", null ],
+      [ "Crown", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33ae95a34ce4e7feb3a2939c52ddac5d175", null ],
+      [ "LargePost", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33a8071edbd5db6e005186f0bf513ea04f7", null ],
+      [ "Demy", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33adac3ebed07ccecf0b97a0cfb027f1e3a", null ],
+      [ "Medium", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33a87f8a6ab85c9ced3702b4ea641ad4bb5", null ],
+      [ "Royal", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33a3e5e6915cdeeeaf6aba6781fc675f774", null ],
+      [ "Elephant", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33af6cf83978d6a8e7ac57444bb38a540a7", null ],
+      [ "DoubleDemy", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33a86243e7cd71324464a9ceb956fcc0f67", null ],
+      [ "QuadDemy", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33a723e3c1e3878667db4002a5cc77d37fb", null ],
+      [ "STMT", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33adff47c0c8768c9c5259c949005d404a7", null ],
+      [ "Folio", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33a8292553558a75e672bc62e5a84244c82", null ],
+      [ "Statement", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33a2af6fd9ec72aee193ee7ffe09638e08f", null ],
+      [ "Size10x14", "namespace_pdf_sharp.html#a70fc66a8e25153c520c5a3a48b4a6d33a2b08c48cfb9bbaecd1f380a667ee9de2", null ]
+    ] ],
+    [ "PSMsgID", "namespace_pdf_sharp.html#aae35ee0bcc115edde699949f5314c343", [
+      [ "SampleMessage1", "namespace_pdf_sharp.html#aae35ee0bcc115edde699949f5314c343a8407dd66db8f44fb48c7b4839600e791", null ],
+      [ "SampleMessage2", "namespace_pdf_sharp.html#aae35ee0bcc115edde699949f5314c343a5068973de21803e04869f56d54b8ca2d", null ],
+      [ "NameMustStartWithSlash", "namespace_pdf_sharp.html#aae35ee0bcc115edde699949f5314c343a2adb20c48645660caded30c7e3b93c1e", null ],
+      [ "UserOrOwnerPasswordRequired", "namespace_pdf_sharp.html#aae35ee0bcc115edde699949f5314c343a90cd26adb6bdcc17ae35e503a069329a", null ],
+      [ "UnexpectedToken", "namespace_pdf_sharp.html#aae35ee0bcc115edde699949f5314c343ac2a1728fb6705d558a76b01827e56356", null ],
+      [ "UnknownEncryption", "namespace_pdf_sharp.html#aae35ee0bcc115edde699949f5314c343ab9353e6f5a9e6d3fd50168b15ccc5c54", null ]
+    ] ]
+];
