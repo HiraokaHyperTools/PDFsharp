@@ -35,17 +35,15 @@ def extractPublicConstStringPairs(text):
 
 
 def getPdfSharpWpfVersion():  # kenjiuno.PdfSharp-WPF
-    text = readAllText(os.path.join(
-        dirname, "PDFsharp/code/PdfSharp/PdfSharp/ProductVersionInfo.cs"))
-    pairs = extractPublicConstStringPairs(text)
-    return "%s.%s.%s" % (pairs["VersionMajor"], pairs["VersionMinor"], pairs["VersionBuild"])
+    text = getPackageVersionFrom(os.path.join(
+        dirname, "PDFsharp/code/PdfSharp/PdfSharp-WPF.csproj"))
+    return text
 
 
 def getPdfSharpGdiVersion():  # kenjiuno.PdfSharp-GDI
-    text = readAllText(os.path.join(
-        dirname, "PDFsharp/code/PdfSharp/PdfSharp/ProductVersionInfo.cs"))
-    pairs = extractPublicConstStringPairs(text)
-    return "%s.%s.%s" % (pairs["VersionMajor"], pairs["VersionMinor"], pairs["VersionBuild"])
+    text = getPackageVersionFrom(os.path.join(
+        dirname, "PDFsharp/code/PdfSharp/PdfSharp.csproj"))
+    return text
 
 
 def updatePublicConstStringPairs(text, pairs):
@@ -109,10 +107,9 @@ def extractAssemblyAttributePairs(text):
 
 
 def getPdfSharpXpsVersion():  # kenjiuno.PdfSharp.Xps
-    text = readAllText(os.path.join(
-        dirname, "PDFsharp/code/PdfSharp.Xps/Properties/AssemblyInfo.cs"))
-    pairs = extractAssemblyAttributePairs(text)
-    return pairs["AssemblyVersion"]
+    text = getPackageVersionFrom(os.path.join(
+        dirname, "PDFsharp/code/PdfSharp.Xps/PdfSharp.Xps.csproj"))
+    return text
 
 
 def updatePackageVersion(text, elementName, value):
@@ -171,6 +168,17 @@ def updateProjectDependencies(projectFilePath):
                     changes += 1
     if changes != 0:
         tree.write(filePath, "UTF-8")
+
+
+def getPackageVersionFrom(projectFilePath):
+    filePath = os.path.join(dirname, projectFilePath)
+    tree = ET.parse(filePath)
+    project = tree.getroot()
+    changes = 0
+    if project is not None:
+        packageVersions = project.findall("./PropertyGroup/PackageVersion")
+        for packageVersion in packageVersions:
+            return packageVersion.text
 
 
 def updateNuspecs():
