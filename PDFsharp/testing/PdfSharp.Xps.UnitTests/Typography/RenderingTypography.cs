@@ -50,7 +50,7 @@ namespace PdfSharp.Xps.UnitTests.Typography
     [TestCaseSource(nameof(GetTypographySamplesFiles))]
     public void TestRenderingTypographySamples(string xpsFile)
     {
-      using (XpsDocument xpsDoc = XpsDocument.Open(xpsFile))
+      using (XpsDocument xpsDoc = XpsDocument.OpenRead(xpsFile))
       {
         int docIndex = 1;
         foreach (FixedDocument doc in xpsDoc.Documents)
