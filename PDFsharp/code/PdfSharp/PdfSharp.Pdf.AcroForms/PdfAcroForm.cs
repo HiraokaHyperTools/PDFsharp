@@ -76,7 +76,7 @@ namespace PdfSharp.Pdf.AcroForms
     public sealed class Keys : KeysBase
     {
       /// <summary>
-      /// (Required) An array of references to the document’s root fields (those with
+      /// (Required) An array of references to the documentâ€™s root fields (those with
       /// no ancestors in the field hierarchy).
       /// </summary>
       [KeyInfo(KeyType.Array | KeyType.Required, typeof(PdfAcroField.PdfAcroFieldCollection))]

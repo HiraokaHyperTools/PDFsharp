@@ -108,7 +108,7 @@ namespace Graphics
     }
 
     /// <summary>
-    /// Draws a single Bézier curve.
+    /// Draws a single BÃ©zier curve.
     /// </summary>
     void DrawBezier(XGraphics gfx, int number)
     {
@@ -120,7 +120,7 @@ namespace Graphics
     }
 
     /// <summary>
-    /// Draws two Bézier curves.
+    /// Draws two BÃ©zier curves.
     /// </summary>
     void DrawBeziers(XGraphics gfx, int number)
     {

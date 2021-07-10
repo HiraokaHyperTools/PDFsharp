@@ -88,7 +88,7 @@ namespace XDrawing.TestLab.Tester
     }
 
     /// <summary>
-    /// Draws an arc using trigonometry functions to proof visually that the underlying Bézier curves
+    /// Draws an arc using trigonometry functions to proof visually that the underlying BÃ©zier curves
     /// are correctly calculated.
     /// </summary>
     [Conditional("DEBUG")]

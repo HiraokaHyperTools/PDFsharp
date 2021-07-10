@@ -171,11 +171,11 @@ namespace PdfSharp.Pdf.Annotations
       public const string Dest = "/Dest";
 
       /// <summary>
-      /// (Optional; PDF 1.2) The annotation’s highlighting mode, the visual effect to be
+      /// (Optional; PDF 1.2) The annotationâ€™s highlighting mode, the visual effect to be
       /// used when the mouse button is pressed or held down inside its active area:
       /// N (None) No highlighting.
       /// I (Invert) Invert the contents of the annotation rectangle.
-      /// O (Outline) Invert the annotation’s border.
+      /// O (Outline) Invert the annotationâ€™s border.
       /// P (Push) Display the annotation as if it were being pushed below the surface of the page.
       /// Default value: I.
       /// Note: In PDF 1.1, highlighting is always done by inverting colors inside the annotation rectangle.

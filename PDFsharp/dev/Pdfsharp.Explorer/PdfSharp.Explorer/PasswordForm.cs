@@ -73,7 +73,7 @@ namespace PdfSharp.Explorer
       // 
       this.tbxPassword.Location = new System.Drawing.Point(152, 64);
       this.tbxPassword.Name = "tbxPassword";
-      this.tbxPassword.PasswordChar = '•';
+      this.tbxPassword.PasswordChar = 'â€¢';
       this.tbxPassword.Size = new System.Drawing.Size(168, 20);
       this.tbxPassword.TabIndex = 2;
       this.tbxPassword.Text = "";

@@ -332,7 +332,7 @@ namespace PdfSharp.Drawing
 
 #if GDI
     /// <summary>
-    /// Adds a cubic Bézier curve to the current figure.
+    /// Adds a cubic BÃ©zier curve to the current figure.
     /// </summary>
     public void AddBezier(System.Drawing.Point pt1, System.Drawing.Point pt2, System.Drawing.Point pt3, System.Drawing.Point pt4)
     {
@@ -342,7 +342,7 @@ namespace PdfSharp.Drawing
 
 #if WPF
     /// <summary>
-    /// Adds a cubic Bézier curve to the current figure.
+    /// Adds a cubic BÃ©zier curve to the current figure.
     /// </summary>
     public void AddBezier(System.Windows.Point pt1, System.Windows.Point pt2, System.Windows.Point pt3, System.Windows.Point pt4)
     {
@@ -352,7 +352,7 @@ namespace PdfSharp.Drawing
 
 #if GDI
     /// <summary>
-    /// Adds a cubic Bézier curve to the current figure.
+    /// Adds a cubic BÃ©zier curve to the current figure.
     /// </summary>
     public void AddBezier(PointF pt1, PointF pt2, PointF pt3, PointF pt4)
     {
@@ -361,7 +361,7 @@ namespace PdfSharp.Drawing
 #endif
 
     /// <summary>
-    /// Adds a cubic Bézier curve to the current figure.
+    /// Adds a cubic BÃ©zier curve to the current figure.
     /// </summary>
     public void AddBezier(XPoint pt1, XPoint pt2, XPoint pt3, XPoint pt4)
     {
@@ -369,7 +369,7 @@ namespace PdfSharp.Drawing
     }
 
     /// <summary>
-    /// Adds a cubic Bézier curve to the current figure.
+    /// Adds a cubic BÃ©zier curve to the current figure.
     /// </summary>
     public void AddBezier(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4)
     {
@@ -377,7 +377,7 @@ namespace PdfSharp.Drawing
     }
 
     /// <summary>
-    /// Adds a cubic Bézier curve to the current figure.
+    /// Adds a cubic BÃ©zier curve to the current figure.
     /// </summary>
     public void AddBezier(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4)
     {
@@ -422,7 +422,7 @@ namespace PdfSharp.Drawing
 
 #if GDI
     /// <summary>
-    /// Adds a sequence of connected cubic Bézier curves to the current figure.
+    /// Adds a sequence of connected cubic BÃ©zier curves to the current figure.
     /// </summary>
     public void AddBeziers(System.Drawing.Point[] points)
     {
@@ -432,7 +432,7 @@ namespace PdfSharp.Drawing
 
 #if WPF
     /// <summary>
-    /// Adds a sequence of connected cubic Bézier curves to the current figure.
+    /// Adds a sequence of connected cubic BÃ©zier curves to the current figure.
     /// </summary>
     public void AddBeziers(System.Windows.Point[] points)
     {
@@ -442,7 +442,7 @@ namespace PdfSharp.Drawing
 
 #if GDI
     /// <summary>
-    /// Adds a sequence of connected cubic Bézier curves to the current figure.
+    /// Adds a sequence of connected cubic BÃ©zier curves to the current figure.
     /// </summary>
     public void AddBeziers(PointF[] points)
     {
@@ -451,7 +451,7 @@ namespace PdfSharp.Drawing
 #endif
 
     /// <summary>
-    /// Adds a sequence of connected cubic Bézier curves to the current figure.
+    /// Adds a sequence of connected cubic BÃ©zier curves to the current figure.
     /// </summary>
     public void AddBeziers(XPoint[] points)
     {

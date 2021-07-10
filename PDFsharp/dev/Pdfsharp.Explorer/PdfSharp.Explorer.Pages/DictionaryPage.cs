@@ -47,7 +47,7 @@ namespace PdfSharp.Explorer.Pages
       PdfDictionary dict = (PdfDictionary)obj;
 
       if (PdfInternals.GetObjectID(dict).IsEmpty)
-        this.tbxObjectID.Text = "«direct»";
+        this.tbxObjectID.Text = "Â«directÂ»";
       else
         this.tbxObjectID.Text = PdfInternals.GetObjectID(dict).ToString();
       this.txtType.Text = dict.GetType().Name;

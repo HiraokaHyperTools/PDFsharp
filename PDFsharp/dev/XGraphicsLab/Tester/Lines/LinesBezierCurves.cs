@@ -5,7 +5,7 @@ using PdfSharp.Drawing;
 
 namespace XDrawing.TestLab.Tester
 {
-  public class LinesBézierCurves : TesterBase
+  public class LinesBÃ©zierCurves : TesterBase
   {
     /// <summary>
     /// Demonstrates the use of XGraphics.DrawBeziers.

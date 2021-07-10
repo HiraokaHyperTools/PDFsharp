@@ -104,13 +104,13 @@ namespace CombineDocuments
         gfx = XGraphics.FromPdfPage(page1);
         box = page1.MediaBox.ToXRect();
         box.Inflate(0, -10);
-        gfx.DrawString(String.Format("{0} • {1}", filename1, idx + 1),
+        gfx.DrawString(String.Format("{0} â€¢ {1}", filename1, idx + 1),
           font, XBrushes.Red, box, format);
 
         gfx = XGraphics.FromPdfPage(page2);
         box = page2.MediaBox.ToXRect();
         box.Inflate(0, -10);
-        gfx.DrawString(String.Format("{0} • {1}", filename2, idx + 1),
+        gfx.DrawString(String.Format("{0} â€¢ {1}", filename2, idx + 1),
           font, XBrushes.Red, box, format);
       }
 
@@ -176,7 +176,7 @@ namespace CombineDocuments
           // Write document file name and page number on each page
           box = page1.MediaBox.ToXRect();
           box.Inflate(0, -10);
-          gfx.DrawString(String.Format("{0} • {1}", filename1, idx + 1),
+          gfx.DrawString(String.Format("{0} â€¢ {1}", filename1, idx + 1),
             font, XBrushes.Red, box, format);
         }
 
@@ -190,7 +190,7 @@ namespace CombineDocuments
 
           box = page2.MediaBox.ToXRect();
           box.Inflate(0, -10);
-          gfx.DrawString(String.Format("{0} • {1}", filename2, idx + 1),
+          gfx.DrawString(String.Format("{0} â€¢ {1}", filename2, idx + 1),
             font, XBrushes.Red, box, format);
         }
       }

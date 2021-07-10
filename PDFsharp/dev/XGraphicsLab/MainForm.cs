@@ -112,8 +112,8 @@ namespace XDrawing.TestLab
     private System.Windows.Forms.RadioButton btnImagesTiff;
     private System.Windows.Forms.RadioButton btnImagesBmp;
     private System.Windows.Forms.RadioButton btnClock;
-    private System.Windows.Forms.RadioButton btnLinesBézierCurve;
-    private System.Windows.Forms.RadioButton btnLinesBézierCurves;
+    private System.Windows.Forms.RadioButton btnLinesBÃ©zierCurve;
+    private System.Windows.Forms.RadioButton btnLinesBÃ©zierCurves;
     private System.Windows.Forms.RadioButton btnImagesFormXObject;
     private System.Windows.Forms.RadioButton btnImagesBmpOS2;
     private System.Windows.Forms.TabControl tpcMain;
@@ -219,7 +219,7 @@ namespace XDrawing.TestLab
       this.statusBar = new System.Windows.Forms.StatusBar();
       this.tpcMain = new System.Windows.Forms.TabControl();
       this.tabLines = new System.Windows.Forms.TabPage();
-      this.btnLinesBézierCurve = new System.Windows.Forms.RadioButton();
+      this.btnLinesBÃ©zierCurve = new System.Windows.Forms.RadioButton();
       this.btnLinesPolyLines = new System.Windows.Forms.RadioButton();
       this.btnLinesStraightLines = new System.Windows.Forms.RadioButton();
       this.btnLinesArc = new System.Windows.Forms.RadioButton();
@@ -231,7 +231,7 @@ namespace XDrawing.TestLab
       this.radioButton10 = new System.Windows.Forms.RadioButton();
       this.radioButton11 = new System.Windows.Forms.RadioButton();
       this.radioButton12 = new System.Windows.Forms.RadioButton();
-      this.btnLinesBézierCurves = new System.Windows.Forms.RadioButton();
+      this.btnLinesBÃ©zierCurves = new System.Windows.Forms.RadioButton();
       this.tabBrushes = new System.Windows.Forms.TabPage();
       this.radioButton2 = new System.Windows.Forms.RadioButton();
       this.radioButton4 = new System.Windows.Forms.RadioButton();
@@ -421,7 +421,7 @@ namespace XDrawing.TestLab
       // 
       // tabLines
       // 
-      this.tabLines.Controls.Add(this.btnLinesBézierCurve);
+      this.tabLines.Controls.Add(this.btnLinesBÃ©zierCurve);
       this.tabLines.Controls.Add(this.btnLinesPolyLines);
       this.tabLines.Controls.Add(this.btnLinesStraightLines);
       this.tabLines.Controls.Add(this.btnLinesArc);
@@ -433,23 +433,23 @@ namespace XDrawing.TestLab
       this.tabLines.Controls.Add(this.radioButton10);
       this.tabLines.Controls.Add(this.radioButton11);
       this.tabLines.Controls.Add(this.radioButton12);
-      this.tabLines.Controls.Add(this.btnLinesBézierCurves);
+      this.tabLines.Controls.Add(this.btnLinesBÃ©zierCurves);
       this.tabLines.Location = new System.Drawing.Point(4, 22);
       this.tabLines.Name = "tabLines";
       this.tabLines.Size = new System.Drawing.Size(536, 302);
       this.tabLines.TabIndex = 0;
       this.tabLines.Text = "Lines";
       // 
-      // btnLinesBézierCurve
+      // btnLinesBÃ©zierCurve
       // 
-      this.btnLinesBézierCurve.FlatStyle = System.Windows.Forms.FlatStyle.System;
-      this.btnLinesBézierCurve.Location = new System.Drawing.Point(8, 52);
-      this.btnLinesBézierCurve.Name = "btnLinesBézierCurve";
-      this.btnLinesBézierCurve.Size = new System.Drawing.Size(104, 16);
-      this.btnLinesBézierCurve.TabIndex = 11;
-      this.btnLinesBézierCurve.Tag = "LinesBézierCurve";
-      this.btnLinesBézierCurve.Text = "Bézier Curve";
-      this.btnLinesBézierCurve.Click += new System.EventHandler(this.btnTest_Click);
+      this.btnLinesBÃ©zierCurve.FlatStyle = System.Windows.Forms.FlatStyle.System;
+      this.btnLinesBÃ©zierCurve.Location = new System.Drawing.Point(8, 52);
+      this.btnLinesBÃ©zierCurve.Name = "btnLinesBÃ©zierCurve";
+      this.btnLinesBÃ©zierCurve.Size = new System.Drawing.Size(104, 16);
+      this.btnLinesBÃ©zierCurve.TabIndex = 11;
+      this.btnLinesBÃ©zierCurve.Tag = "LinesBÃ©zierCurve";
+      this.btnLinesBÃ©zierCurve.Text = "BÃ©zier Curve";
+      this.btnLinesBÃ©zierCurve.Click += new System.EventHandler(this.btnTest_Click);
       // 
       // btnLinesPolyLines
       // 
@@ -572,16 +572,16 @@ namespace XDrawing.TestLab
       this.radioButton12.Visible = false;
       this.radioButton12.Click += new System.EventHandler(this.btnTest_Click);
       // 
-      // btnLinesBézierCurves
+      // btnLinesBÃ©zierCurves
       // 
-      this.btnLinesBézierCurves.FlatStyle = System.Windows.Forms.FlatStyle.System;
-      this.btnLinesBézierCurves.Location = new System.Drawing.Point(8, 72);
-      this.btnLinesBézierCurves.Name = "btnLinesBézierCurves";
-      this.btnLinesBézierCurves.Size = new System.Drawing.Size(104, 16);
-      this.btnLinesBézierCurves.TabIndex = 11;
-      this.btnLinesBézierCurves.Tag = "LinesBézierCurves";
-      this.btnLinesBézierCurves.Text = "Bézier Curves";
-      this.btnLinesBézierCurves.Click += new System.EventHandler(this.btnTest_Click);
+      this.btnLinesBÃ©zierCurves.FlatStyle = System.Windows.Forms.FlatStyle.System;
+      this.btnLinesBÃ©zierCurves.Location = new System.Drawing.Point(8, 72);
+      this.btnLinesBÃ©zierCurves.Name = "btnLinesBÃ©zierCurves";
+      this.btnLinesBÃ©zierCurves.Size = new System.Drawing.Size(104, 16);
+      this.btnLinesBÃ©zierCurves.TabIndex = 11;
+      this.btnLinesBÃ©zierCurves.Tag = "LinesBÃ©zierCurves";
+      this.btnLinesBÃ©zierCurves.Text = "BÃ©zier Curves";
+      this.btnLinesBÃ©zierCurves.Click += new System.EventHandler(this.btnTest_Click);
       // 
       // tabBrushes
       // 

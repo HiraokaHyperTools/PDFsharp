@@ -84,7 +84,7 @@ namespace PdfSharp
     /// <summary>
     /// The copyright information.
     /// </summary>
-    public const string Copyright = "Copyright � 2005-2009 empira Software GmbH.";
+    public const string Copyright = "Copyright © 2005-2009 empira Software GmbH.";
 
     /// <summary>
     /// The trademark the product.

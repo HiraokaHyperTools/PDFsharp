@@ -87,7 +87,7 @@ namespace PdfSharp.Pdf
     }
 
     /// <summary>
-    /// Writes the keyword «false» or «true».
+    /// Writes the keyword Â«falseÂ» or Â«trueÂ».
     /// </summary>
     internal override void WriteObject(PdfWriter writer)
     {

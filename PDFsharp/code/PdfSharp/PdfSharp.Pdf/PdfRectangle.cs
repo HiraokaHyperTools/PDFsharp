@@ -366,7 +366,7 @@ namespace PdfSharp.Pdf
     }
 
     /// <summary>
-    /// Returns the rectangle as a string in the form «[x1 y1 x2 y2]».
+    /// Returns the rectangle as a string in the form Â«[x1 y1 x2 y2]Â».
     /// </summary>
     public override string ToString()
     {

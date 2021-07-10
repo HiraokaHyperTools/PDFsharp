@@ -51,8 +51,8 @@ namespace PdfSharp.Internal
     /// <summary>
     /// Half of pi.
     /// </summary>
-    public const double πHalf = Math.PI / 2;
-    // α - β κ
+    public const double Ď€Half = Math.PI / 2;
+    // Î± - Î˛ Îş
 
     /// <summary>
     /// Get page size in point from specified PageSize.

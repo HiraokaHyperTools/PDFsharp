@@ -74,8 +74,8 @@ namespace PdfSharp.Pdf.IO
     public const char NumberSign   = '#';
     public const char Question     = '?';
     public const char Hyphen       = '-';  // char(45)
-    public const char SoftHyphen   = '­';  // char(173)
-    public const char Currency     = '¤';
+    public const char SoftHyphen   = 'Â­';  // char(173)
+    public const char Currency     = 'Â¤';
     // ReSharper restore InconsistentNaming
   }
 }

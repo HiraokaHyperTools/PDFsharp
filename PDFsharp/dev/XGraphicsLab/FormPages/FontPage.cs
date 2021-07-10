@@ -189,7 +189,7 @@ namespace XDrawing.TestLab.FormPages
       this.tbxText.Name = "tbxText";
       this.tbxText.Size = new System.Drawing.Size(364, 20);
       this.tbxText.TabIndex = 6;
-      this.tbxText.Text = "AaBbCcfg‚¬ƒ÷‹";
+      this.tbxText.Text = "AaBbCcfg√¢√Ç√Ñ√ñ√ú";
       this.tbxText.TextChanged += new System.EventHandler(this.tbxText_TextChanged);
       // 
       // lblSupportedStyles

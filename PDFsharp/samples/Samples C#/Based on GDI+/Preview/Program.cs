@@ -114,16 +114,16 @@ namespace Preview
       gfx.DrawString("Use the same code to", font, XBrushes.Black, x, y);
       x += 10;
       y += ls * 1.1;
-      gfx.DrawString("• draw on a newly created PDF page", font, XBrushes.Black, x, y);
+      gfx.DrawString("â€¢ draw on a newly created PDF page", font, XBrushes.Black, x, y);
       y += ls;
-      gfx.DrawString("• draw above or beneath of the content of an existing PDF page", 
+      gfx.DrawString("â€¢ draw above or beneath of the content of an existing PDF page", 
           font, XBrushes.Black, x, y);
       y += ls;
-      gfx.DrawString("• draw in a window", font, XBrushes.Black, x, y);
+      gfx.DrawString("â€¢ draw in a window", font, XBrushes.Black, x, y);
       y += ls;
-      gfx.DrawString("• draw on a printer", font, XBrushes.Black, x, y);
+      gfx.DrawString("â€¢ draw on a printer", font, XBrushes.Black, x, y);
       y += ls;
-      gfx.DrawString("• draw in a bitmap image", font, XBrushes.Black, x, y);
+      gfx.DrawString("â€¢ draw in a bitmap image", font, XBrushes.Black, x, y);
       x -= 10;
       y += ls * 1.1;
       gfx.DrawString("You can also import an existing PDF page and use it like " +

@@ -50,7 +50,7 @@ namespace XDrawing.TestLab.Tester
       //XPen pen = XPens.LightBlue.Clone();
       //pen.Width = 2.5;
 
-      // ... graphics like Bézier curves
+      // ... graphics like BÃ©zier curves
       //formGfx.DrawBeziers(pen, XPoint.ParsePoints("30,120 80,20, 100,140 175,33.3"));
 
       //// ... raster images like GIF files

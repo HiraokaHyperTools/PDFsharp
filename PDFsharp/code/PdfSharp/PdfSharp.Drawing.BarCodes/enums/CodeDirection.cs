@@ -40,17 +40,17 @@ namespace PdfSharp.Drawing.BarCodes
     LeftToRight,
 
     /// <summary>
-    /// Rotates the code 180° at the anchor position.
+    /// Rotates the code 180Â° at the anchor position.
     /// </summary>
     BottomToTop,
 
     /// <summary>
-    /// Rotates the code 180° at the anchor position.
+    /// Rotates the code 180Â° at the anchor position.
     /// </summary>
     RightToLeft,
 
     /// <summary>
-    /// Rotates the code 180° at the anchor position.
+    /// Rotates the code 180Â° at the anchor position.
     /// </summary>
     TopToBottom,
   }

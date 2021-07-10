@@ -44,7 +44,7 @@ namespace PdfSharp.Explorer.Pages
       PdfArray array = (PdfArray)obj;
 
       if (PdfInternals.GetObjectID(array).IsEmpty)
-        this.tbxObjectID.Text = "«direct»";
+        this.tbxObjectID.Text = "Â«directÂ»";
       else
         this.tbxObjectID.Text = PdfInternals.GetObjectID(array).ToString();
       this.txtType.Text = array.GetType().Name;

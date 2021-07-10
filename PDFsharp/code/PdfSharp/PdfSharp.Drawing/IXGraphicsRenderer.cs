@@ -66,12 +66,12 @@ namespace PdfSharp.Drawing
     void DrawLines(XPen pen, XPoint[] points);
 
     /// <summary>
-    /// Draws a Bézier spline.
+    /// Draws a BÃ©zier spline.
     /// </summary>
     void DrawBezier(XPen pen, double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4);
 
     /// <summary>
-    /// Draws a series of Bézier splines.
+    /// Draws a series of BÃ©zier splines.
     /// </summary>
     void DrawBeziers(XPen pen, XPoint[] points);
 

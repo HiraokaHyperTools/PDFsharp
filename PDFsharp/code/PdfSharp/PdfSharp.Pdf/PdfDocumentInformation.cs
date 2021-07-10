@@ -135,7 +135,7 @@ namespace PdfSharp.Pdf
     internal sealed class Keys : KeysBase
     {
       /// <summary>
-      /// (Optional; PDF 1.1) The document’s title.
+      /// (Optional; PDF 1.1) The documentâ€™s title.
       /// </summary>
       [KeyInfo(KeyType.String | KeyType.Optional)]
       public const string Title = "/Title";

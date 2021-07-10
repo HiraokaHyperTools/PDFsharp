@@ -70,7 +70,7 @@ namespace PdfSharp.Viewing
     public PdfAcroViewer()
     {
 #if true
-      // HACK²
+      // HACKË›
       // Create ActiveX component only if we are not in Visual Studio 2005
       //string info = AppDomain.CurrentDomain.FriendlyName;
       //MessageBox.Show(info);

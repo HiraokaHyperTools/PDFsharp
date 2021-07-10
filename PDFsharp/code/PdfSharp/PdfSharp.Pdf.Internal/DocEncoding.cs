@@ -81,7 +81,7 @@ namespace PdfSharp.Pdf.Internal
     }
 
     /// <summary>
-    /// Converts WinAnsi to DocEncode characters. Incomplete, just maps € and some other characters.
+    /// Converts WinAnsi to DocEncode characters. Incomplete, just maps â‚¬ and some other characters.
     /// </summary>
     static byte[] AnsiToDoc = new byte[256]
     {
