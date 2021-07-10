@@ -203,7 +203,7 @@ namespace PdfSharp.Xps
       XpsDocument xpsDocument = null;
       try
       {
-        xpsDocument = XpsDocument.Open(xpsFilename);
+        xpsDocument = XpsDocument.OpenRead(xpsFilename);
         FixedDocument fixedDocument = xpsDocument.GetDocument();
 
         using (PdfDocument pdfDocument = Convert(fixedDocument.Pages))
