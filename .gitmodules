@@ -1,3 +1,7 @@
 [submodule "PDFsharp/testing/SampleXpsDocuments_1_0"]
 	path = PDFsharp/testing/SampleXpsDocuments_1_0
 	url = https://github.com/HiraokaHyperTools/SampleXpsDocuments_1_0.git
+[submodule "docs"]
+	path = docs
+	url = https://github.com/HiraokaHyperTools/PDFsharp.git
+	branch = gh-pages
