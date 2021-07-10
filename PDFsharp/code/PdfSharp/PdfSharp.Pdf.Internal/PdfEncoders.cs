@@ -81,7 +81,7 @@ namespace PdfSharp.Pdf.Internal
     static Encoding rawUnicodeEncoding;
 
     /// <summary>
-    /// Gets the Windows 1252 (ANSI) encoding.
+    /// Gets the ISO-8859-1 (code page 28591) encoding.
     /// </summary>
     public static Encoding WinAnsiEncoding
     {
@@ -89,15 +89,7 @@ namespace PdfSharp.Pdf.Internal
       {
         if (PdfEncoders.winAnsiEncoding == null)
         {
-#if !NETFRAMEWORK
-          Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
-#endif
-          PdfEncoders.winAnsiEncoding =
-#if !SILVERLIGHT
-            Encoding.GetEncoding(1252);
-#else
- Encoding.GetEncoding("utf-8"); // AGHACK
-#endif
+          PdfEncoders.winAnsiEncoding = Encoding.GetEncoding("iso-8859-1");
         }
 
         return PdfEncoders.winAnsiEncoding;
