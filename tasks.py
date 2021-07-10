@@ -8,6 +8,8 @@ import os
 import re
 import xml.etree.ElementTree as ET
 import codecs
+import glob
+import sys
 
 dirname = os.path.dirname(os.path.abspath(__file__))
 
@@ -33,6 +35,13 @@ def extractPublicConstStringPairs(text):
 
 
 def getPdfSharpWpfVersion():  # kenjiuno.PdfSharp-WPF
+    text = readAllText(os.path.join(
+        dirname, "PDFsharp/code/PdfSharp/PdfSharp/ProductVersionInfo.cs"))
+    pairs = extractPublicConstStringPairs(text)
+    return "%s.%s.%s" % (pairs["VersionMajor"], pairs["VersionMinor"], pairs["VersionBuild"])
+
+
+def getPdfSharpGdiVersion():  # kenjiuno.PdfSharp-GDI
     text = readAllText(os.path.join(
         dirname, "PDFsharp/code/PdfSharp/PdfSharp/ProductVersionInfo.cs"))
     pairs = extractPublicConstStringPairs(text)
@@ -66,6 +75,25 @@ def setPdfSharpWpfVersion(version):  # kenjiuno.PdfSharp-WPF
 
     filePath = os.path.join(
         dirname, "PDFsharp/code/PdfSharp/PdfSharp-WPF.csproj")
+    text = readAllText(filePath)
+    text = updatePackageVersion(text, "PackageVersion", version)
+    writeAllText(filePath, text)
+
+
+def setPdfSharpGdiVersion(version):  # kenjiuno.PdfSharp-GDI
+    filePath = os.path.join(
+        dirname, "PDFsharp/code/PdfSharp/PdfSharp/ProductVersionInfo.cs")
+    text = readAllText(filePath)
+    versionNumbers = (version + ".0.0.0").split('.')
+    text = updatePublicConstStringPairs(text, {
+        "VersionMajor": versionNumbers[0],
+        "VersionMinor": versionNumbers[1],
+        "VersionBuild": versionNumbers[2],
+    })
+    writeAllText(filePath, text)
+
+    filePath = os.path.join(
+        dirname, "PDFsharp/code/PdfSharp/PdfSharp.csproj")
     text = readAllText(filePath)
     text = updatePackageVersion(text, "PackageVersion", version)
     writeAllText(filePath, text)
@@ -147,6 +175,10 @@ def updateNuspecs():
 
 
 assemblies = {
+    "kenjiuno.PdfSharp-GDI": {
+        "getver": (lambda: getPdfSharpGdiVersion()),
+        "setver": setPdfSharpGdiVersion
+    },
     "kenjiuno.PdfSharp-WPF": {
         "getver": (lambda: getPdfSharpWpfVersion()),
         "setver": setPdfSharpWpfVersion
@@ -157,6 +189,7 @@ assemblies = {
     },
 }
 assemblyAliases = {
+    "gdi": "kenjiuno.PdfSharp-GDI",
     "wpf": "kenjiuno.PdfSharp-WPF",
     "xps": "kenjiuno.PdfSharp.Xps",
 }
@@ -206,6 +239,13 @@ def updateNuspecDependencies(c):
     updateNuspecs()
 
 
+def bumpGdi():
+    it = assemblies["kenjiuno.PdfSharp-GDI"]
+    [major, minor, rev] = (it["getver"]()).split('.')
+    rev = max(int(rev) + 1, calcDays())
+    it["setver"]("%s.%s.%s" % (major, minor, rev))
+
+
 def bumpWpf():
     it = assemblies["kenjiuno.PdfSharp-WPF"]
     [major, minor, rev] = (it["getver"]()).split('.')
@@ -226,7 +266,23 @@ def bump(c):
     Bump versions automatically
     """
     bumpWpf()
+    bumpGdi()
     bumpXps()
 
     updateNuspecDependencies(c)
     ver(c)
+
+
+@task()
+def doc(c):
+    """
+    Invoke doxygen for documentation update
+    """
+    cwd = os.getcwd()
+    for pattern in "**/Doxyfile-*,**/Doxyfile".split(','):
+        os.chdir(cwd)
+        for file in tuple(glob.glob(pattern, recursive=True)):
+            file = os.path.join(cwd, file)
+            print("# " + file)
+            os.chdir(os.path.dirname(file))
+            c.run("doxygen.exe " + os.path.basename(file))

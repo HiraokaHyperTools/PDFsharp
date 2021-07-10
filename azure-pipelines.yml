@@ -21,6 +21,7 @@ steps:
   submodules: true
 
 - task: DotNetCoreCLI@2
+  displayName: 'build'
   inputs:
     command: 'build'
     projects: |
@@ -30,6 +31,7 @@ steps:
     noCache: true
 
 - task: DotNetCoreCLI@2
+  displayName: 'test'
   inputs:
     command: 'test'
     projects: |
@@ -41,12 +43,13 @@ steps:
     noCache: true
 
 - task: DotNetCoreCLI@2
+  displayName: 'pack'
   inputs:
     command: 'pack'
     configuration: '$(buildConfiguration)'
     nobuild: true
     feedsToUse: 'select'
-    packagesToPack: '**/PdfSharp-WPF.csproj;**/PdfSharp.Xps.csproj'
+    packagesToPack: '**/PdfSharp.csproj;**/PdfSharp-WPF.csproj;**/PdfSharp.Xps.csproj'
     versioningScheme: 'off'
     includeNuGetOrg: true
     noCache: true
