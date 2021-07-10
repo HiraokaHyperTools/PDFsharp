@@ -4,13 +4,13 @@
     <TargetFrameworks>net40;netcoreapp3.0;netcoreapp3.1</TargetFrameworks>
     <UseWPF>true</UseWPF>
 
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <EnableDefaultItems>false</EnableDefaultItems>
 
     <OutputType>Library</OutputType>
     <RootNamespace>PdfSharp.Xps</RootNamespace>
     <AssemblyName>HiraokaHyperTools.PdfSharp.Xps</AssemblyName>
     <PackageVersion>1.1.8</PackageVersion>
+    <AssemblyVersion>1.1.8</AssemblyVersion>
 
     <PackageId>kenjiuno.PdfSharp.Xps</PackageId>
     <Authors>kenjiuno</Authors>

@@ -77,6 +77,7 @@ def setPdfSharpWpfVersion(version):  # kenjiuno.PdfSharp-WPF
         dirname, "PDFsharp/code/PdfSharp/PdfSharp-WPF.csproj")
     text = readAllText(filePath)
     text = updatePackageVersion(text, "PackageVersion", version)
+    text = updatePackageVersion(text, "AssemblyVersion", version)
     writeAllText(filePath, text)
 
 
@@ -96,6 +97,7 @@ def setPdfSharpGdiVersion(version):  # kenjiuno.PdfSharp-GDI
         dirname, "PDFsharp/code/PdfSharp/PdfSharp.csproj")
     text = readAllText(filePath)
     text = updatePackageVersion(text, "PackageVersion", version)
+    text = updatePackageVersion(text, "AssemblyVersion", version)
     writeAllText(filePath, text)
 
 
@@ -148,6 +150,7 @@ def setPdfSharpXpsVersion(version):  # kenjiuno.PdfSharp.Xps
         dirname, "PDFsharp/code/PdfSharp.Xps/PdfSharp.Xps.csproj")
     text = readAllText(filePath)
     text = updatePackageVersion(text, "PackageVersion", version)
+    text = updatePackageVersion(text, "AssemblyVersion", version)
     writeAllText(filePath, text)
 
 
