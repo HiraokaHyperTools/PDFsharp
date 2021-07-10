@@ -4002,7 +4002,7 @@ namespace PdfSharp.Drawing
     /// </summary>
     public XGraphicsContainer BeginContainer(Rectangle dstrect, Rectangle srcrect, XGraphicsUnit unit)
     {
-      return BeginContainer(new XRect(dstrect), new XRect(dstrect), unit);
+      return BeginContainer(new XRect(dstrect), new XRect(srcrect), unit);
     }
 #endif
 
@@ -4013,7 +4013,7 @@ namespace PdfSharp.Drawing
     /// </summary>
     public XGraphicsContainer BeginContainer(RectangleF dstrect, RectangleF srcrect, XGraphicsUnit unit)
     {
-      return BeginContainer(new XRect(dstrect), new XRect(dstrect), unit);
+      return BeginContainer(new XRect(dstrect), new XRect(srcrect), unit);
     }
 #endif
 
@@ -4024,7 +4024,7 @@ namespace PdfSharp.Drawing
     /// </summary>
     public XGraphicsContainer BeginContainer(Rect dstrect, Rect srcrect, XGraphicsUnit unit)
     {
-      return BeginContainer(new XRect(dstrect), new XRect(dstrect), unit);
+      return BeginContainer(new XRect(dstrect), new XRect(srcrect), unit);
     }
 #endif
 
