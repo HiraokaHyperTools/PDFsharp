@@ -60,43 +60,61 @@ def updatePublicConstStringPairs(text, pairs):
 
 
 def setPdfSharpWpfVersion(version):  # kenjiuno.PdfSharp-WPF
-    filePath = os.path.join(
-        dirname, "PDFsharp/code/PdfSharp/PdfSharp/ProductVersionInfo.cs")
-    text = readAllText(filePath)
-    versionNumbers = (version + ".0.0.0").split('.')
-    text = updatePublicConstStringPairs(text, {
-        "VersionMajor": versionNumbers[0],
-        "VersionMinor": versionNumbers[1],
-        "VersionBuild": versionNumbers[2],
-    })
-    writeAllText(filePath, text)
+    if True:
+        filePath = os.path.join(
+            dirname, "PDFsharp/code/PdfSharp/PdfSharp/ProductVersionInfo.cs")
+        text = readAllText(filePath)
+        versionNumbers = (version + ".0.0.0").split('.')
+        text = updatePublicConstStringPairs(text, {
+            "VersionMajor": versionNumbers[0],
+            "VersionMinor": versionNumbers[1],
+            "VersionBuild": versionNumbers[2],
+        })
+        writeAllText(filePath, text)
 
-    filePath = os.path.join(
-        dirname, "PDFsharp/code/PdfSharp/PdfSharp-WPF.csproj")
-    text = readAllText(filePath)
-    text = updatePackageVersion(text, "PackageVersion", version)
-    text = updatePackageVersion(text, "AssemblyVersion", version)
-    writeAllText(filePath, text)
+    if True:
+        filePath = os.path.join(
+            dirname, "PDFsharp/code/PdfSharp/PdfSharp-WPF.csproj")
+        text = readAllText(filePath)
+        text = updatePackageVersion(text, "PackageVersion", version)
+        text = updatePackageVersion(text, "AssemblyVersion", version)
+        writeAllText(filePath, text)
+
+    if True:
+        filePath = os.path.join(
+            dirname, "PDFsharp\code\PdfSharp\Doxyfile-wpf")
+        text = readAllText(filePath)
+        text = updateDoxyfileVar(text, "PROJECT_NUMBER", version)
+        writeAllText(filePath, text)
 
 
 def setPdfSharpGdiVersion(version):  # kenjiuno.PdfSharp-GDI
-    filePath = os.path.join(
-        dirname, "PDFsharp/code/PdfSharp/PdfSharp/ProductVersionInfo.cs")
-    text = readAllText(filePath)
-    versionNumbers = (version + ".0.0.0").split('.')
-    text = updatePublicConstStringPairs(text, {
-        "VersionMajor": versionNumbers[0],
-        "VersionMinor": versionNumbers[1],
-        "VersionBuild": versionNumbers[2],
-    })
-    writeAllText(filePath, text)
+    if True:
+        filePath = os.path.join(
+            dirname, "PDFsharp/code/PdfSharp/PdfSharp/ProductVersionInfo.cs")
+        text = readAllText(filePath)
+        versionNumbers = (version + ".0.0.0").split('.')
+        text = updatePublicConstStringPairs(text, {
+            "VersionMajor": versionNumbers[0],
+            "VersionMinor": versionNumbers[1],
+            "VersionBuild": versionNumbers[2],
+        })
+        writeAllText(filePath, text)
 
-    filePath = os.path.join(
-        dirname, "PDFsharp/code/PdfSharp/PdfSharp.csproj")
-    text = readAllText(filePath)
-    text = updatePackageVersion(text, "PackageVersion", version)
-    text = updatePackageVersion(text, "AssemblyVersion", version)
-    writeAllText(filePath, text)
+    if True:
+        filePath = os.path.join(
+            dirname, "PDFsharp/code/PdfSharp/PdfSharp.csproj")
+        text = readAllText(filePath)
+        text = updatePackageVersion(text, "PackageVersion", version)
+        text = updatePackageVersion(text, "AssemblyVersion", version)
+        writeAllText(filePath, text)
+
+    if True:
+        filePath = os.path.join(
+            dirname, "PDFsharp\code\PdfSharp\Doxyfile-gdi")
+        text = readAllText(filePath)
+        text = updateDoxyfileVar(text, "PROJECT_NUMBER", version)
+        writeAllText(filePath, text)
 
 
 def extractAssemblyAttributePairs(text):
@@ -124,6 +142,17 @@ def updatePackageVersion(text, elementName, value):
     return text
 
 
+def updateDoxyfileVar(text, keyName, value):
+    text = re.sub(
+        "^(" + re.escape(keyName) + "\\s*=\\s*)[^\r]*",
+        "\\g<1>" + value,
+        text,
+        0,
+        re.MULTILINE
+    )
+    return text
+
+
 def updateAssemblyAttribute(text, key, value):
     text = re.sub(
         "^\\s*\\[\\s*assembly:\\s*" +
@@ -137,18 +166,28 @@ def updateAssemblyAttribute(text, key, value):
 
 
 def setPdfSharpXpsVersion(version):  # kenjiuno.PdfSharp.Xps
-    filePath = os.path.join(
-        dirname, "PDFsharp/code/PdfSharp.Xps/Properties/AssemblyInfo.cs")
-    text = readAllText(filePath)
-    text = updateAssemblyAttribute(text, "AssemblyVersion", version)
-    writeAllText(filePath, text)
+    if True:
+        filePath = os.path.join(
+            dirname, "PDFsharp/code/PdfSharp.Xps/Properties/AssemblyInfo.cs")
+        text = readAllText(filePath)
+        text = updateAssemblyAttribute(text, "AssemblyVersion", version)
+        writeAllText(filePath, text)
 
-    filePath = os.path.join(
-        dirname, "PDFsharp/code/PdfSharp.Xps/PdfSharp.Xps.csproj")
-    text = readAllText(filePath)
-    text = updatePackageVersion(text, "PackageVersion", version)
-    text = updatePackageVersion(text, "AssemblyVersion", version)
-    writeAllText(filePath, text)
+    if True:
+        filePath = os.path.join(
+            dirname, "PDFsharp/code/PdfSharp.Xps/PdfSharp.Xps.csproj")
+        text = readAllText(filePath)
+        text = updatePackageVersion(text, "PackageVersion", version)
+        text = updatePackageVersion(text, "AssemblyVersion", version)
+        writeAllText(filePath, text)
+
+    if True:
+        filePath = os.path.join(
+            dirname, "PDFsharp/code/PdfSharp.Xps/Doxyfile"
+        )
+        text = readAllText(filePath)
+        text = updateDoxyfileVar(text, "PROJECT_NUMBER", version)
+        writeAllText(filePath, text)
 
 
 def updateProjectDependencies(projectFilePath):
