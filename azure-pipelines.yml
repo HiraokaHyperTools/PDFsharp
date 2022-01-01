@@ -9,6 +9,13 @@ trigger:
 - fix-*
 - pr-*
 
+schedules:
+  - cron: "0 0 1 * *"
+    displayName: Monthly midnight build
+    branches:
+      include:
+        - master
+
 pool:
   vmImage: 'windows-latest'
 
