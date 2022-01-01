@@ -16,7 +16,7 @@ var searchData=
   ['discardcontrol_2ecs_81',['DiscardControl.cs',['../_discard_control_8cs.html',1,'']]],
   ['distanceonly_82',['DistanceOnly',['../namespace_pdf_sharp_1_1_xps_1_1_xps_model.html#a119f606866ad8d911942d74a865947b0a92d8cf7c85497db306fe2b5ff4863e13',1,'PdfSharp::Xps::XpsModel']]],
   ['document_83',['Document',['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_fixed_page.html#a7fac4b7b7dcb211c046e096f2f1e0a02',1,'PdfSharp::Xps::XpsModel::FixedPage']]],
-  ['documentcount_84',['DocumentCount',['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_fixed_payload.html#a7adb9a96bacbc7e645bf4eb7d2691ab9',1,'PdfSharp.Xps.XpsModel.FixedPayload.DocumentCount()'],['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_xps_document.html#ab8f591f7c2212dcc1397b15fdd596595',1,'PdfSharp.Xps.XpsModel.XpsDocument.DocumentCount()']]],
+  ['documentcount_84',['DocumentCount',['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_fixed_payload.html#a5af70f22e42d8607b48e8b572477c7a6',1,'PdfSharp.Xps.XpsModel.FixedPayload.DocumentCount()'],['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_xps_document.html#ab8f591f7c2212dcc1397b15fdd596595',1,'PdfSharp.Xps.XpsModel.XpsDocument.DocumentCount()']]],
   ['documentoutline_85',['DocumentOutline',['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_document_outline.html',1,'PdfSharp::Xps::XpsModel']]],
   ['documentoutline_2ecs_86',['DocumentOutline.cs',['../_document_outline_8cs.html',1,'']]],
   ['documentreference_87',['DocumentReference',['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_document_reference.html',1,'PdfSharp::Xps::XpsModel']]],
