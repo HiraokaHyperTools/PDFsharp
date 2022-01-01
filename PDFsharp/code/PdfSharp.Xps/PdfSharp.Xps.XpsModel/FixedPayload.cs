@@ -43,8 +43,39 @@ namespace PdfSharp.Xps.XpsModel
       }
       Debug.Assert(fdseqString != null);
 
-      this.fdseq = XpsParser.Parse(GetPartAsXmlReader(fdseqString)) as FixedDocumentSequence;
-      this.fdocs = new FixedDocument[this.fdseq.DocumentReferences.Count];
+      var xpsElement = XpsParser.Parse(GetPartAsXmlReader(fdseqString));
+      var fdseq = xpsElement as FixedDocumentSequence;
+      if (fdseq != null)
+      {
+        this.fdseq = fdseq;
+        this.fdocs = new FixedDocument[this.fdseq.DocumentReferences.Count];
+        isSingleDocumentMode = false;
+      }
+      else
+      {
+        var fdoc = xpsElement as FixedDocument;
+        if (fdoc != null)
+        {
+          this.fdseq = null;
+          this.fdocs = new FixedDocument[] { fdoc };
+          fdoc.Payload = this;
+          fdoc.UriString = GetParentPackageOf(fdseqString);
+          isSingleDocumentMode = true;
+        }
+        else
+        {
+          throw new ArgumentException($"Payload '{fdseqString}' needs to be either FixedDocumentSequence or FixedDocument");
+        }
+      }
+    }
+
+    private static string GetParentPackageOf(string source)
+    {
+      source = IOPath.GetDirectoryName(source);
+      source = source.Replace('\\', '/');
+      if (!source.StartsWith("/"))
+        source = "/" + source;
+      return source;
     }
 
     /// <summary>
@@ -61,7 +92,7 @@ namespace PdfSharp.Xps.XpsModel
     /// </summary>
     public int DocumentCount
     {
-      get { return this.fdseq.DocumentReferences.Count; }
+      get { return isSingleDocumentMode ? 1 : this.fdseq.DocumentReferences.Count; }
     }
 
     /// <summary>
@@ -69,7 +100,8 @@ namespace PdfSharp.Xps.XpsModel
     /// </summary>
     public FixedDocument GetDocument(int index)
     {
-      if (index < 0 || index > this.fdocs.Length - 1)
+      var numDocs = isSingleDocumentMode ? 1 : this.fdocs.Length;
+      if (index < 0 || index > numDocs - 1)
         throw new ArgumentOutOfRangeException("index");
       FixedDocument fdoc = this.fdocs[index];
       if (fdoc == null)
@@ -77,11 +109,7 @@ namespace PdfSharp.Xps.XpsModel
         string source = this.fdseq.DocumentReferences[index].Source;
         fdoc = Parsing.XpsParser.Parse(GetPartAsXmlReader(source)) as FixedDocument;
         fdoc.Payload = this;
-        source = IOPath.GetDirectoryName(source);
-        source = source.Replace('\\', '/');
-        if (!source.StartsWith("/"))
-          source = "/" + source;
-        fdoc.UriString = source;
+        fdoc.UriString = GetParentPackageOf(source);
         this.fdocs[index] = fdoc;
       }
       return fdoc;
@@ -242,6 +270,7 @@ namespace PdfSharp.Xps.XpsModel
     /// </summary>
     FixedDocumentSequence fdseq;
     FixedDocument[] fdocs;
+    bool isSingleDocumentMode;
 
     //public string GetFontName(string uriString, PdfContentWriter writer, out PdfFont pdfFont)
     //{
