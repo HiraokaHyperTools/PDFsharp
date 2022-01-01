@@ -257,7 +257,16 @@ namespace PdfSharp.Xps.XpsModel
       {
         int length = (int)stream.Length;
         bytes = new byte[length];
-        stream.Read(bytes, 0, length);
+        int pos = 0;
+        while (pos < length)
+        {
+          int read = stream.Read(bytes, pos, length - pos);
+          if (read <= 0)
+          {
+            throw new EndOfStreamException();
+          }
+          pos += read;
+        }
       }
       return bytes;
     }
