@@ -98,9 +98,13 @@ namespace PdfSharp.Xps.Rendering
       double dx = 2 * brush.RadiusX;
       double dy = 2 * brush.RadiusY;
       XRect brushBox = new XRect(brush.Center.X - brush.RadiusX, brush.Center.Y - brush.RadiusY, dx, dy);
-      Debug.Assert(dx * dy > 0, "Radius is 0.");
       double scaleX, scaleY;
-      if (dx > dy)
+      if (dx * dy == 0)
+      {
+        scaleX = 0;
+        scaleY = 0;
+      }
+      else if (dx > dy)
       {
         scaleX = 1;
         scaleY = dy / dx;

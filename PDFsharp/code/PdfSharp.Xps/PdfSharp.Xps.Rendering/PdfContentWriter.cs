@@ -1469,7 +1469,6 @@ namespace PdfSharp.Xps.Rendering
         pdfFont = null;  // supress compiler warning
       }
 
-      Debug.Assert(font.PdfFont == null || Object.ReferenceEquals(font.PdfFont, pdfFont));
       if (font.PdfFont == null)
         font.PdfFont = pdfFont;
       return name;

@@ -175,18 +175,13 @@ namespace PdfSharp.Fonts.OpenType
       if (fontData.os2.sTypoDescender != 0)
       {
         this.descender = fontData.os2.usWinDescent;
-        Debug.Assert(this.descender > 0, "PDFsharp internal: Font with non positive ascender value found.");
 #if true_
         Debug.WriteLine(String.Format(CultureInfo.InvariantCulture,
           "os2.usWinDescent={0}, hhea.descender={1}, os2.sTypoDescender={2}", fontData.os2.usWinDescent, fontData.hhea.descender, fontData.os2.sTypoDescender));
 #endif
-        // Force sign from hhea.descender
-        // TODO:
-        this.descender = Math.Abs(this.descender) * Math.Sign(fontData.hhea.descender);
       }
       else
         this.descender = fontData.hhea.descender;
-      Debug.Assert(this.descender < 0, "PDFsharp internal: Ascender should be less than 0.");
 
       this.leading = fontData.hhea.lineGap;
 
