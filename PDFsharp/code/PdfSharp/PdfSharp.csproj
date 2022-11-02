@@ -13,8 +13,8 @@
     <AssemblyName>HiraokaHyperTools.PdfSharp</AssemblyName>
 
     <PackageId>kenjiuno.PdfSharp-GDI</PackageId>
-    <PackageVersion>1.31.6209</PackageVersion>
-    <AssemblyVersion>1.31.6209</AssemblyVersion>
+    <PackageVersion>1.31.6514</PackageVersion>
+    <AssemblyVersion>1.31.6514</AssemblyVersion>
     <Authors>kenjiuno</Authors>
     <Owners>www.pdfsharp.net</Owners>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -727,7 +727,7 @@
     <Folder Include="PdfSharp.Drawing.Wpf\" />
   </ItemGroup>
   <ItemGroup Condition=" $(TargetFramework.StartsWith('netcoreapp')) ">
-    <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
+    <PackageReference Include="System.Drawing.Common" Version="4.7.3" />
     <PackageReference Include="System.Text.Encoding.CodePages" Version="4.7.0" />
   </ItemGroup>
   <PropertyGroup>
