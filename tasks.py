@@ -324,6 +324,40 @@ def bump(c):
 
 
 @task()
+def pack(c):
+    """
+    dotnet pack
+    """
+    def dotnetPack(csproj):
+        env = {"DOTNET_CLI_UI_LANGUAGE": "en"}
+        c.run("dotnet pack %s.csproj -p:SymbolPackageFormat=snupkg -c Release --include-symbols --include-source" %
+              (csproj,), env=env, echo=True)
+
+    with c.cd("PDFsharp\code\PdfSharp"):
+        dotnetPack("PdfSharp")
+        dotnetPack("PdfSharp-WPF")
+    with c.cd("PDFsharp\code\PdfSharp.Xps"):
+        dotnetPack("PdfSharp.Xps")
+
+
+@task()
+def art(c):
+    """
+    print list of nupkg artifact files
+    """
+    for file in glob.glob("**/*.nupkg", recursive=True):
+        if "Release" not in file:
+            continue
+        if "symbols.nupkg" in file:
+            continue
+        if "xps2pdf" in file:
+            continue
+
+        path = os.path.realpath(file)
+        print(path)
+
+
+@task()
 def doc(c):
     """
     Invoke doxygen for documentation update
