@@ -284,7 +284,7 @@ namespace PdfSharp.Xps
           xpsDocument.Close();
       }
     }
-    
+
 
     /// <summary>
     /// Implements the PDF file to XPS file conversion.
@@ -307,7 +307,7 @@ namespace PdfSharp.Xps
         {
           pdf.Save(pdfOutStream, closePdfStream);
         }
-        
+
         xpsDocument.Close();
         xpsDocument = null;
       }
