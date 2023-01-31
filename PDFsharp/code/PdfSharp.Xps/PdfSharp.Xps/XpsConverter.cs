@@ -189,6 +189,11 @@ namespace PdfSharp.Xps
     /// </summary>
     public static void Convert(string xpsFilename, string pdfFilename, int docIndex, bool createComparisonDocument)
     {
+      Convert(xpsFilename, pdfFilename, docIndex, createComparisonDocument, null);
+    }
+
+    public static void Convert(string xpsFilename, string pdfFilename, int docIndex, bool createComparisonDocument, ConvertOptions opts = null)
+    {
       if (String.IsNullOrEmpty(xpsFilename))
         throw new ArgumentNullException("xpsFilename");
 
@@ -208,6 +213,7 @@ namespace PdfSharp.Xps
 
         using (PdfDocument pdfDocument = Convert(fixedDocument.Pages))
         {
+          opts?.PdfDocumentPostProcessor(pdfDocument);
           pdfDocument.Save(pdfFilename);
           xpsDocument.Close();
           xpsDocument = null;
@@ -291,6 +297,14 @@ namespace PdfSharp.Xps
     /// </summary>
     public static void Convert(Stream xpsInStream, Stream pdfOutStream, bool closePdfStream)
     {
+      Convert(xpsInStream, pdfOutStream, closePdfStream, null);
+    }
+
+    /// <summary>
+    /// Implements the PDF file to XPS file conversion.
+    /// </summary>
+    public static void Convert(Stream xpsInStream, Stream pdfOutStream, bool closePdfStream, ConvertOptions opts = null)
+    {
       if (xpsInStream == null)
         throw new ArgumentNullException("xpsInStream");
 
@@ -305,6 +319,7 @@ namespace PdfSharp.Xps
 
         using (PdfDocument pdf = Convert(fixedDocument.Pages))
         {
+          opts?.PdfDocumentPostProcessor(pdf);
           pdf.Save(pdfOutStream, closePdfStream);
         }
 
@@ -444,5 +459,23 @@ namespace PdfSharp.Xps
     //  encoder.Save(stream);
     //  stream.Close();
     //}
+
+    public class ConvertOptions
+    {
+      /// <summary>
+      /// Optionally having a chance to manipulate PdfDocument before it saves PDF to file or stream.
+      /// 
+      /// e.g. edit document properties:
+      /// 
+      /// - PdfDocument.Info.Title
+      /// - PdfDocument.Info.Author
+      /// - PdfDocument.Info.Subject
+      /// - PdfDocument.Info.Keywords
+      /// - PdfDocument.Info.Creator
+      /// - PdfDocument.Info.CreationDate
+      /// - PdfDocument.Info.ModificationDate
+      /// </summary>
+      public Action<PdfDocument> PdfDocumentPostProcessor { get; set; }
+    }
   }
 }
