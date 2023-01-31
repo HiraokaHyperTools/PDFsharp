@@ -10,6 +10,7 @@ var hierarchy =
       [ "PdfSharp.Xps.Rendering.XFormBuilder", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_x_form_builder.html", null ]
     ] ],
     [ "PdfSharp.Xps.XpsModel.Color", "struct_pdf_sharp_1_1_xps_1_1_xps_model_1_1_color.html", null ],
+    [ "PdfSharp.Xps.XpsConverter.ConvertOptions", "class_pdf_sharp_1_1_xps_1_1_xps_converter_1_1_convert_options.html", null ],
     [ "PdfSharp.Xps.Rendering.DocumentRenderingContext", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_document_rendering_context.html", null ],
     [ "PdfSharp.Xps.XpsModel.FixedPayload", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_fixed_payload.html", null ],
     [ "PdfSharp.Xps.XpsModel.Font", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_font.html", null ],

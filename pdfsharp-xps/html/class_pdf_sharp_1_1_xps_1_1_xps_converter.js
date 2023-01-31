@@ -1,5 +1,6 @@
 var class_pdf_sharp_1_1_xps_1_1_xps_converter =
 [
+    [ "ConvertOptions", "class_pdf_sharp_1_1_xps_1_1_xps_converter_1_1_convert_options.html", "class_pdf_sharp_1_1_xps_1_1_xps_converter_1_1_convert_options" ],
     [ "XpsConverter", "class_pdf_sharp_1_1_xps_1_1_xps_converter.html#a1d67fa09351846109c012646f3985d67", null ],
     [ "XpsConverter", "class_pdf_sharp_1_1_xps_1_1_xps_converter.html#a0ee7ce6a8bd3f39ab2376d07f0a50097", null ],
     [ "CreatePage", "class_pdf_sharp_1_1_xps_1_1_xps_converter.html#a5d7d0d554395393a28d2576181e1b26b", null ],
