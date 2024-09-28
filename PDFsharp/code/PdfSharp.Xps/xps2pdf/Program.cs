@@ -15,6 +15,7 @@ namespace xps2pdf
       public string PdfFile { get; set; }
     }
 
+    [STAThread]
     static int Main(string[] args)
     {
       return Parser.Default.ParseArguments<Opts>(args)
