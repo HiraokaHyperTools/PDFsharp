@@ -1,13 +1,13 @@
 var searchData=
 [
-  ['r_1080',['R',['../struct_pdf_sharp_1_1_xps_1_1_xps_model_1_1_color.html#ae2793b987febebfc21972445cde14173',1,'PdfSharp::Xps::XpsModel::Color']]],
-  ['radiusx_1081',['RadiusX',['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_radial_gradient_brush.html#a0bc0426f01079196a4132a5f292e4762',1,'PdfSharp::Xps::XpsModel::RadialGradientBrush']]],
-  ['radiusy_1082',['RadiusY',['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_radial_gradient_brush.html#a38171ef3d47cc38e4420a82ecc631a0f',1,'PdfSharp::Xps::XpsModel::RadialGradientBrush']]],
-  ['renderoptions_5fedgemode_1083',['RenderOptions_EdgeMode',['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_canvas.html#ad3ab4b0346e26a2218397d29b466c53a',1,'PdfSharp::Xps::XpsModel::Canvas']]],
-  ['rendertransform_1084',['RenderTransform',['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_canvas.html#af4949b290b1e55bafa6e5e5abc1a1e48',1,'PdfSharp.Xps.XpsModel.Canvas.RenderTransform()'],['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_glyphs.html#a6b49a6602e82e1520ac0f6f90cd873dd',1,'PdfSharp.Xps.XpsModel.Glyphs.RenderTransform()'],['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_path.html#a2dd2bc656c791e1df3447693615754ba',1,'PdfSharp.Xps.XpsModel.Path.RenderTransform()']]],
-  ['resourceparent_1085',['ResourceParent',['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_resource_dictionary.html#a4e714e941ed4d80203156572bfced019',1,'PdfSharp::Xps::XpsModel::ResourceDictionary']]],
-  ['resources_1086',['Resources',['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_canvas.html#a5ede1f3d07245ef54511e69483820210',1,'PdfSharp::Xps::XpsModel::Canvas']]],
-  ['reuseabletable_1087',['ReuseableTable',['../class_pdf_sharp_1_1_xps_1_1_rendering_1_1_document_rendering_context.html#a1e587b2c74055ece60a2709fa4a9a20a',1,'PdfSharp::Xps::Rendering::DocumentRenderingContext']]],
-  ['rotationangle_1088',['RotationAngle',['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_arc_segment.html#ae5465b23a367a90024d503d0045552ec',1,'PdfSharp::Xps::XpsModel::ArcSegment']]],
-  ['rowspan_1089',['RowSpan',['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_table_cell_structure.html#a763858ca61e2574a7dc1de18640f0f82',1,'PdfSharp::Xps::XpsModel::TableCellStructure']]]
+  ['r_1082',['R',['../struct_pdf_sharp_1_1_xps_1_1_xps_model_1_1_color.html#ae2793b987febebfc21972445cde14173',1,'PdfSharp::Xps::XpsModel::Color']]],
+  ['radiusx_1083',['RadiusX',['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_radial_gradient_brush.html#a0bc0426f01079196a4132a5f292e4762',1,'PdfSharp::Xps::XpsModel::RadialGradientBrush']]],
+  ['radiusy_1084',['RadiusY',['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_radial_gradient_brush.html#a38171ef3d47cc38e4420a82ecc631a0f',1,'PdfSharp::Xps::XpsModel::RadialGradientBrush']]],
+  ['renderoptions_5fedgemode_1085',['RenderOptions_EdgeMode',['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_canvas.html#ad3ab4b0346e26a2218397d29b466c53a',1,'PdfSharp::Xps::XpsModel::Canvas']]],
+  ['rendertransform_1086',['RenderTransform',['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_canvas.html#af4949b290b1e55bafa6e5e5abc1a1e48',1,'PdfSharp.Xps.XpsModel.Canvas.RenderTransform()'],['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_glyphs.html#a6b49a6602e82e1520ac0f6f90cd873dd',1,'PdfSharp.Xps.XpsModel.Glyphs.RenderTransform()'],['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_path.html#a2dd2bc656c791e1df3447693615754ba',1,'PdfSharp.Xps.XpsModel.Path.RenderTransform()']]],
+  ['resourceparent_1087',['ResourceParent',['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_resource_dictionary.html#a4e714e941ed4d80203156572bfced019',1,'PdfSharp::Xps::XpsModel::ResourceDictionary']]],
+  ['resources_1088',['Resources',['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_canvas.html#a5ede1f3d07245ef54511e69483820210',1,'PdfSharp::Xps::XpsModel::Canvas']]],
+  ['reuseabletable_1089',['ReuseableTable',['../class_pdf_sharp_1_1_xps_1_1_rendering_1_1_document_rendering_context.html#a1e587b2c74055ece60a2709fa4a9a20a',1,'PdfSharp::Xps::Rendering::DocumentRenderingContext']]],
+  ['rotationangle_1090',['RotationAngle',['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_arc_segment.html#ae5465b23a367a90024d503d0045552ec',1,'PdfSharp::Xps::XpsModel::ArcSegment']]],
+  ['rowspan_1091',['RowSpan',['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_table_cell_structure.html#a763858ca61e2574a7dc1de18640f0f82',1,'PdfSharp::Xps::XpsModel::TableCellStructure']]]
 ];

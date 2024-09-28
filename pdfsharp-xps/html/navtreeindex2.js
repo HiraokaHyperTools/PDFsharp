@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_image_brush.html#a68b1bff97195e0c64e96ef3707eb3909":[2,0,0,0,2,23,9],
 "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_image_brush.html#a8cf46f11679779a835ede08a26afa67c":[2,0,0,0,2,23,2],
 "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_image_brush.html#a988af5aa250ebb612f134b78da8fe537":[2,0,0,0,2,23,10],
 "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_image_brush.html#aa150a0afaea7d5aee75bfcf36006048a":[2,0,0,0,2,23,3],
@@ -231,8 +232,8 @@ var NAVTREEINDEX2 =
 "globals.html":[3,1,0],
 "globals_type.html":[3,1,1],
 "hierarchy.html":[2,2],
-"index.html":[0],
 "index.html":[],
+"index.html":[0],
 "namespace_pdf_sharp.html":[1,0,0],
 "namespace_pdf_sharp.html#a1093116e908c5665e0e4af62ccc9d759":[1,0,0,1],
 "namespace_pdf_sharp_1_1_xps.html":[1,0,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "namespace_pdf_sharp_1_1_xps_1_1_rendering.html#abd92c7f09ee90519236014e878e55187a3c10d426d70a80c34d328f81b87adfce":[1,0,0,0,1,27,3],
 "namespace_pdf_sharp_1_1_xps_1_1_rendering.html#abd92c7f09ee90519236014e878e55187a7394a1a0b695f278f4f112b159d60647":[1,0,0,0,1,27,1],
 "namespace_pdf_sharp_1_1_xps_1_1_rendering.html#abd92c7f09ee90519236014e878e55187a89e5fbe6e785b32588e5fc0b7333cb1f":[1,0,0,0,1,27,2],
-"namespace_pdf_sharp_1_1_xps_1_1_rendering.html#abd92c7f09ee90519236014e878e55187aa948f2f0bd436d0d00b3c0e1138d44e6":[1,0,0,0,1,27,0],
-"namespace_pdf_sharp_1_1_xps_1_1_xps_model.html":[1,0,0,0,2]
+"namespace_pdf_sharp_1_1_xps_1_1_rendering.html#abd92c7f09ee90519236014e878e55187aa948f2f0bd436d0d00b3c0e1138d44e6":[1,0,0,0,1,27,0]
 };

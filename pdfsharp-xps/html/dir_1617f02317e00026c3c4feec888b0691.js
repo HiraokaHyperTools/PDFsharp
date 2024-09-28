@@ -23,6 +23,7 @@ var dir_1617f02317e00026c3c4feec888b0691 =
     [ "PdfContentWriter.cs", "_pdf_content_writer_8cs.html", [
       [ "PdfContentWriter", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_pdf_content_writer.html", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_pdf_content_writer" ]
     ] ],
+    [ "PdfFormXObjectBuilder.cs", "_pdf_form_x_object_builder_8cs.html", null ],
     [ "PdfGraphicsState-ImageBrush.cs", "_pdf_graphics_state-_image_brush_8cs.html", [
       [ "PdfGraphicsState", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_pdf_graphics_state.html", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_pdf_graphics_state" ]
     ] ],
