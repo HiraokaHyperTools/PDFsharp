@@ -72,6 +72,7 @@
     <Compile Include="PdfSharp.Xps.Rendering\extensions\DictExtensions.cs" />
     <Compile Include="PdfSharp.Xps.Rendering\PathHelper.cs" />
     <Compile Include="PdfSharp.Xps.Rendering\PdfContentWriter-Glyphs.cs" />
+    <Compile Include="PdfSharp.Xps.Rendering\PdfFormXObjectBuilder.cs" />
     <Compile Include="PdfSharp.Xps.Rendering\RadialShadingBuilder.cs" />
     <Compile Include="PdfSharp.Xps.Rendering\ReuseableTable.cs" />
     <Compile Include="PdfSharp.Xps.XpsModel\PartHelper.cs" />

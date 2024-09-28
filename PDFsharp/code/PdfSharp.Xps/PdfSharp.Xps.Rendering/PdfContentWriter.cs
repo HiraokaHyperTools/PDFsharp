@@ -531,17 +531,36 @@ namespace PdfSharp.Xps.Rendering
           }
           RealizeExtGState(xgState);
 
-          // 1st draw fill
-          PdfTilingPattern pattern = TilingPatternBuilder.BuildFromImageBrush(Context, iBrush, Transform);
-          string name = Resources.AddPattern(pattern);
+          //iBrush.TileMode;
+          if (iBrush.TileMode != TileMode.None)
+          {
+            // 1st draw fill
+            PdfTilingPattern pattern = TilingPatternBuilder.BuildFromImageBrush(Context, iBrush, Transform);
+            string name = Resources.AddPattern(pattern);
 
-          WriteLiteral("/Pattern cs " + name + " scn\n");
-          WriteGeometry(path.Data);
-          WritePathFillStroke(path);
+            WriteLiteral("/Pattern cs " + name + " scn\n");
+            WriteGeometry(path.Data);
+            WritePathFillStroke(path);
 
-          // 2nd draw stroke
-          if (path.Stroke != null)
-            WriteStrokeGeometry(path);
+            // 2nd draw stroke
+            if (path.Stroke != null)
+              WriteStrokeGeometry(path);
+          }
+          else
+          {
+            // 1st draw fill
+            var pdfForm = new PdfSharp.Xps.Rendering.PdfFormXObjectBuilder(Context).BuildForm(iBrush);
+            double dx = iBrush.Viewport.Width / iBrush.Viewbox.Width * 96 / pdfForm.DpiX;
+            double dy = iBrush.Viewport.Height / iBrush.Viewbox.Height * 96 / pdfForm.DpiY;
+            string name = Resources.AddForm(pdfForm);
+
+            WriteSaveState("begin ImageBrush", null);
+            WriteGeometry(path.Data);
+            WriteLiteral("W n\n");
+            WriteLiteral(name + " Do\n");
+
+            WriteRestoreState("end ImageBrush", null);
+          }
         }
         else if ((vBrush = path.Fill as VisualBrush) != null)
         {

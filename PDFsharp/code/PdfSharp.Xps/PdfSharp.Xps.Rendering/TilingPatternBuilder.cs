@@ -45,8 +45,37 @@ namespace PdfSharp.Xps.Rendering
 
     PdfTilingPattern BuildPattern(ImageBrush brush, XMatrix transform)
     {
+      int numXSides = 1;
+      int numYSides = 1;
+      double xStep;
+      double yStep;
+      switch (brush.TileMode)
+      {
+        default:
+        case TileMode.Tile:
+          xStep = brush.Viewport.Width;
+          yStep = brush.Viewport.Height;
+          break;
+        case TileMode.FlipX:
+          xStep = brush.Viewport.Width * 2;
+          yStep = brush.Viewport.Height;
+          numXSides = 2;
+          break;
+        case TileMode.FlipY:
+          xStep = brush.Viewport.Width;
+          yStep = brush.Viewport.Height * 2;
+          numYSides = 2;
+          break;
+        case TileMode.FlipXY:
+          xStep = brush.Viewport.Width * 2;
+          yStep = brush.Viewport.Height * 2;
+          numXSides = 2;
+          numYSides = 2;
+          break;
+      }
+
       // Bounding box lays always at (0,0)
-      XRect bbox = new XRect(0, 0, brush.Viewport.Width, brush.Viewport.Height);
+      XRect bbox = new XRect(0, 0, xStep, yStep);
 #if true
       XMatrix matrix = transform;
       matrix.Prepend(new XMatrix(1, 0, 0, 1, brush.Viewport.X, brush.Viewport.Y));
@@ -60,8 +89,6 @@ namespace PdfSharp.Xps.Rendering
       //matrix.Append(t);
       matrix = t;
 #endif
-      double xStep = brush.Viewport.Width;
-      double yStep = brush.Viewport.Height;
 
       // PdfTilingPattern
       //<<
@@ -119,15 +146,31 @@ namespace PdfSharp.Xps.Rendering
       // Acrobat 8 clips to bounding box, so do we
       //writer.WriteClip(bbox);
 
-      XMatrix transformation = new XMatrix();
       double dx = brush.Viewport.Width / brush.Viewbox.Width * 96 / pdfForm.DpiX;
       double dy = brush.Viewport.Height / brush.Viewbox.Height * 96 / pdfForm.DpiY;
-      transformation = new XMatrix(dx, 0, 0, dy, 0, 0);
-      writer.WriteMatrix(transformation);
-      writer.WriteGraphicsState(pdfExtGState);
-
       string name = writer.Resources.AddForm(pdfForm);
-      writer.WriteLiteral(name + " Do\n");
+
+      for (int ySide = 0; ySide < numYSides; ySide++)
+      {
+        var ySign = (ySide == 0) ? 1 : -1;
+        for (int xSide = 0; xSide < numXSides; xSide++)
+        {
+          var xSign = (xSide == 0) ? 1 : -1;
+
+          XMatrix transformation = new XMatrix();
+          transformation = new XMatrix(
+            dx * xSign, 0, 0, dy * ySign,
+            brush.Viewport.Width * 2 * xSide,
+            brush.Viewport.Height * 2 * ySide
+          );
+          writer.WriteSaveState("begin pattern xSide " + xSide + " ySide " + ySide, null);
+          writer.WriteMatrix(transformation);
+          writer.WriteGraphicsState(pdfExtGState);
+
+          writer.WriteLiteral(name + " Do\n");
+          writer.WriteRestoreState("end pattern xSide " + xSide + " ySide " + ySide, null);
+        }
+      }
 
       writer.EndContent();
 

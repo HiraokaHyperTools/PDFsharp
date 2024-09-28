@@ -80,6 +80,6 @@ namespace PdfSharp.Xps.XpsModel
     /// </summary>
     public string ImageSource { get; set; }
 
-    public string Describe() => $"ImageBrush:\t{ImageSource}";
+    public string Describe() => $"ImageBrush:\t{ImageSource}\t{Key}";
   }
 }
