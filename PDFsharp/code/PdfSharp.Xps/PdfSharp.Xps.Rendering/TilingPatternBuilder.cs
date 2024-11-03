@@ -78,6 +78,7 @@ namespace PdfSharp.Xps.Rendering
       XRect bbox = new XRect(0, 0, xStep, yStep);
 #if true
       XMatrix matrix = transform;
+      matrix.Prepend(brush.Transform.Matrix);
       matrix.Prepend(new XMatrix(1, 0, 0, 1, brush.Viewport.X, brush.Viewport.Y));
 #else
       double c = 1;
@@ -236,7 +237,6 @@ namespace PdfSharp.Xps.Rendering
       Debug.Assert(ximage != null);
 
       //PdfFormXObject pdfForm = xform.PdfForm;
-      pdfForm.Elements.SetMatrix(PdfFormXObject.Keys.Matrix, new XMatrix());
 
       //formWriter.Size = brush.Viewport.Size;
       writer.BeginContentRaw();
@@ -282,6 +282,7 @@ namespace PdfSharp.Xps.Rendering
       XRect bbox = new XRect(0, 0, brush.Viewport.Width, brush.Viewport.Height);
       XMatrix matrix = transform;
       matrix.Prepend(new XMatrix(1, 0, 0, 1, brush.Viewport.X, brush.Viewport.Y));
+      matrix.Append(brush.Transform.Matrix);
       double xStep = brush.Viewport.Width;
       double yStep = brush.Viewport.Height;
 
