@@ -1,7 +1,6 @@
 var class_pdf_sharp_1_1_drawing_1_1_x_pdf_form =
 [
     [ "Dispose", "class_pdf_sharp_1_1_drawing_1_1_x_pdf_form.html#a642f3106c5c2f4186434604db4100d64", null ],
-    [ "ExternalDocument", "class_pdf_sharp_1_1_drawing_1_1_x_pdf_form.html#ae244070d63ffc10a002a039eae6bfd8e", null ],
     [ "Height", "class_pdf_sharp_1_1_drawing_1_1_x_pdf_form.html#ae14bb93b593a1ab6bc0395a8c4116935", null ],
     [ "Page", "class_pdf_sharp_1_1_drawing_1_1_x_pdf_form.html#ad1b5e2d1559830b4d93dab612df00dd9", null ],
     [ "PageCount", "class_pdf_sharp_1_1_drawing_1_1_x_pdf_form.html#a10e0acd820ca212ef4326077bed85a75", null ],

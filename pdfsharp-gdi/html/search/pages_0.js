@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pdfsharp_20documentation_5501',['PdfSharp Documentation',['../index.html',1,'']]]
+  ['documentation_0',['PdfSharp Documentation',['../index.html',1,'']]]
 ];

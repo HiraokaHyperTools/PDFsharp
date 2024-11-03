@@ -12,6 +12,5 @@ var class_pdf_sharp_1_1_pdf_1_1_pdf_dictionary =
     [ "ToString", "class_pdf_sharp_1_1_pdf_1_1_pdf_dictionary.html#af95ecc0506cdf5e8cfda877e7c5962f9", null ],
     [ "elements", "class_pdf_sharp_1_1_pdf_1_1_pdf_dictionary.html#aa232f01932b41b2785179bd93147e802", null ],
     [ "Elements", "class_pdf_sharp_1_1_pdf_1_1_pdf_dictionary.html#a6af45421e6d6e84a89d08a4f13d2d152", null ],
-    [ "Meta", "class_pdf_sharp_1_1_pdf_1_1_pdf_dictionary.html#a92276a4c6210202d49500034235de9a9", null ],
     [ "Stream", "class_pdf_sharp_1_1_pdf_1_1_pdf_dictionary.html#aa10fc47de274d7fcb106fd0e11ca969f", null ]
 ];

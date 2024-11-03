@@ -5,9 +5,7 @@ var dir_c69ecf6ebbcf9a6bd796d8bde84d33da =
     [ "Lexer.cs", "_lexer_8cs.html", null ],
     [ "Parser.cs", "_parser_8cs.html", null ],
     [ "PdfReader.cs", "_pdf_reader_8cs.html", "_pdf_reader_8cs" ],
-    [ "PdfReaderException.cs", "_pdf_reader_exception_8cs.html", [
-      [ "PdfReaderException", "class_pdf_sharp_1_1_pdf_1_1_i_o_1_1_pdf_reader_exception.html", "class_pdf_sharp_1_1_pdf_1_1_i_o_1_1_pdf_reader_exception" ]
-    ] ],
+    [ "PdfReaderException.cs", "_pdf_reader_exception_8cs.html", "_pdf_reader_exception_8cs" ],
     [ "PdfWriter.cs", "_pdf_writer_8cs.html", null ],
     [ "ShiftStack.cs", "_shift_stack_8cs.html", null ]
 ];

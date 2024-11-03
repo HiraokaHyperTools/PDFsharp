@@ -3,17 +3,16 @@ var annotated_dup =
     [ "PdfSharp", "namespace_pdf_sharp.html", [
       [ "Xps", "namespace_pdf_sharp_1_1_xps.html", [
         [ "Parsing", "namespace_pdf_sharp_1_1_xps_1_1_parsing.html", [
-          [ "XpsParser", "class_pdf_sharp_1_1_xps_1_1_parsing_1_1_xps_parser.html", "class_pdf_sharp_1_1_xps_1_1_parsing_1_1_xps_parser" ]
+          [ "XpsParser", "class_pdf_sharp_1_1_xps_1_1_parsing_1_1_xps_parser.html", null ]
         ] ],
         [ "Rendering", "namespace_pdf_sharp_1_1_xps_1_1_rendering.html", [
           [ "BuilderBase", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_builder_base.html", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_builder_base" ],
-          [ "PatternOrShadingBuilder", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_pattern_or_shading_builder.html", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_pattern_or_shading_builder" ],
           [ "DocumentRenderingContext", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_document_rendering_context.html", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_document_rendering_context" ],
           [ "ImageBuilder", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_image_builder.html", null ],
           [ "LinearShadingBuilder", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_linear_shading_builder.html", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_linear_shading_builder" ],
+          [ "PatternOrShadingBuilder", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_pattern_or_shading_builder.html", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_pattern_or_shading_builder" ],
           [ "PdfContentWriter", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_pdf_content_writer.html", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_pdf_content_writer" ],
-          [ "PdfGraphicsState", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_pdf_graphics_state.html", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_pdf_graphics_state" ],
-          [ "PdfRenderer", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_pdf_renderer.html", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_pdf_renderer" ],
+          [ "PdfRenderer", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_pdf_renderer.html", null ],
           [ "RadialShadingBuilder", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_radial_shading_builder.html", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_radial_shading_builder" ],
           [ "ReuseableTable", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_reuseable_table.html", null ],
           [ "TilingPatternBuilder", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_tiling_pattern_builder.html", null ],
@@ -24,7 +23,7 @@ var annotated_dup =
           [ "XPGlyphs", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_x_p_glyphs.html", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_x_p_glyphs" ],
           [ "XPGradientBrush", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_x_p_gradient_brush.html", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_x_p_gradient_brush" ],
           [ "XPImage", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_x_p_image.html", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_x_p_image" ],
-          [ "XPImageBrush", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_x_p_image_brush.html", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_x_p_image_brush" ],
+          [ "XPImageBrush", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_x_p_image_brush.html", null ],
           [ "XPLinearGradientBrush", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_x_p_linear_gradient_brush.html", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_x_p_linear_gradient_brush" ],
           [ "XPObject", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_x_p_object.html", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_x_p_object" ],
           [ "XPPath", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_x_p_path.html", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_x_p_path" ],
@@ -55,8 +54,8 @@ var annotated_dup =
           [ "GlyphIndices", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_glyph_indices.html", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_glyph_indices" ],
           [ "GlyphIndicesParser", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_glyph_indices_parser.html", null ],
           [ "Glyphs", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_glyphs.html", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_glyphs" ],
-          [ "GradientStopCollection", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_gradient_stop_collection.html", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_gradient_stop_collection" ],
           [ "GradientStop", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_gradient_stop.html", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_gradient_stop" ],
+          [ "GradientStopCollection", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_gradient_stop_collection.html", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_gradient_stop_collection" ],
           [ "ImageBrush", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_image_brush.html", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_image_brush" ],
           [ "LinearGradientBrush", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_linear_gradient_brush.html", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_linear_gradient_brush" ],
           [ "LinkTarget", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_link_target.html", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_link_target" ],

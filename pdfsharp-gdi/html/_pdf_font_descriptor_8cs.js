@@ -1,7 +1,7 @@
 var _pdf_font_descriptor_8cs =
 [
-    [ "PdfFontDescriptor", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_font_descriptor.html", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_font_descriptor" ],
-    [ "Keys", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_font_descriptor_1_1_keys.html", null ],
+    [ "PdfSharp.Pdf.Advanced.PdfFontDescriptor", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_font_descriptor.html", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_font_descriptor" ],
+    [ "PdfSharp.Pdf.Advanced.PdfFontDescriptor.Keys", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_font_descriptor_1_1_keys.html", null ],
     [ "PdfFontDescriptorFlags", "_pdf_font_descriptor_8cs.html#adda0aefaa1b5145489608b66023d7e51", [
       [ "FixedPitch", "_pdf_font_descriptor_8cs.html#adda0aefaa1b5145489608b66023d7e51ab6128e395ba5111e545a628b42b94ce7", null ],
       [ "Serif", "_pdf_font_descriptor_8cs.html#adda0aefaa1b5145489608b66023d7e51a459d24b63e5a5fda317e0ae30e044e04", null ],

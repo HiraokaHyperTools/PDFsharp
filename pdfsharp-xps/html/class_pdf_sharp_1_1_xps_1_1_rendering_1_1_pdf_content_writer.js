@@ -31,8 +31,5 @@ var class_pdf_sharp_1_1_xps_1_1_rendering_1_1_pdf_content_writer =
     [ "Context", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_pdf_content_writer.html#ab6125195681c3dddd32f8b99d23870cc", null ],
     [ "DefaultPageTransform", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_pdf_content_writer.html#a7c98fd0f915fc73c63646c692aea7d85", null ],
     [ "Opacity", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_pdf_content_writer.html#a1ca5f6816ca990f8be4e4037637b16e2", null ],
-    [ "Owner", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_pdf_content_writer.html#ab9f28496e2a91e6de2d92bab4cc39a06", null ],
-    [ "Resources", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_pdf_content_writer.html#a068beaf8351911cc26c09c87b04f8dda", null ],
-    [ "Size", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_pdf_content_writer.html#ae640f590dbfeb5fdd9084ffd842d8ae0", null ],
     [ "Transform", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_pdf_content_writer.html#afe29a8efa7b3405cce70423ea0e8a252", null ]
 ];

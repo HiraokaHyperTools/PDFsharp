@@ -149,7 +149,7 @@ var class_pdf_sharp_1_1_drawing_1_1_x_graphics =
     [ "PageOrigin", "class_pdf_sharp_1_1_drawing_1_1_x_graphics.html#abd9119c68def0e0e618b39163812bf3a", null ],
     [ "PageSize", "class_pdf_sharp_1_1_drawing_1_1_x_graphics.html#a94f7b79d97e1632c1002156dccc640d5", null ],
     [ "PageUnit", "class_pdf_sharp_1_1_drawing_1_1_x_graphics.html#a8c9ea6c0653e6a70f2af7e7e37c46c65", null ],
-    [ "PdfPage", "class_pdf_sharp_1_1_drawing_1_1_x_graphics.html#a34775e0c88ff5fd86e844155d85e81e1", null ],
+    [ "PdfPage", "class_pdf_sharp_1_1_drawing_1_1_x_graphics.html#a6fa2667eb771a3624986eb9d2772653d", null ],
     [ "SmoothingMode", "class_pdf_sharp_1_1_drawing_1_1_x_graphics.html#a2f5ca02377e90d2e11b7392cd24844f1", null ],
     [ "Transform", "class_pdf_sharp_1_1_drawing_1_1_x_graphics.html#a691e206f9b5c454d450b83959dac0b0d", null ],
     [ "Transformer", "class_pdf_sharp_1_1_drawing_1_1_x_graphics.html#a0632a757c9b225499bae1f000d3d43ba", null ]

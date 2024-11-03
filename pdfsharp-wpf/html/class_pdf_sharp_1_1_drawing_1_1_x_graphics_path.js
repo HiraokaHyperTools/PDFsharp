@@ -56,7 +56,6 @@ var class_pdf_sharp_1_1_drawing_1_1_x_graphics_path =
     [ "Widen", "class_pdf_sharp_1_1_drawing_1_1_x_graphics_path.html#aef4ba24d563084e904729a38ef9c49fb", null ],
     [ "Widen", "class_pdf_sharp_1_1_drawing_1_1_x_graphics_path.html#ad1eaa782ca7d7fc122a435771550ce24", null ],
     [ "Widen", "class_pdf_sharp_1_1_drawing_1_1_x_graphics_path.html#a317f1a1b6fb48d47cdf71fba3dd87c26", null ],
-    [ "CurrentPathFigure", "class_pdf_sharp_1_1_drawing_1_1_x_graphics_path.html#ada85adabf1bf956f43b2f80404720518", null ],
-    [ "FillMode", "class_pdf_sharp_1_1_drawing_1_1_x_graphics_path.html#aaa19a887551cc1349e3a20ae6a46909d", null ],
+    [ "FillMode", "class_pdf_sharp_1_1_drawing_1_1_x_graphics_path.html#a241d4509e691de37395556eff12ab661", null ],
     [ "Internals", "class_pdf_sharp_1_1_drawing_1_1_x_graphics_path.html#afd93de0cf02d9d13ced370ebaefeab59", null ]
 ];

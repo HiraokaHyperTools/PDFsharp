@@ -1,5 +1,8 @@
 var namespace_pdf_sharp_1_1_pdf_1_1_advanced =
 [
+    [ "BitReader", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_bit_reader.html", null ],
+    [ "BitWriter", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_bit_writer.html", null ],
+    [ "MonochromeMask", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_monochrome_mask.html", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_monochrome_mask" ],
     [ "PdfCatalog", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_catalog.html", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_catalog" ],
     [ "PdfContent", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_content.html", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_content" ],
     [ "PdfContents", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_contents.html", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_contents" ],
@@ -10,9 +13,6 @@ var namespace_pdf_sharp_1_1_pdf_1_1_advanced =
     [ "PdfFormXObject", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_form_x_object.html", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_form_x_object" ],
     [ "PdfGroupAttributes", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_group_attributes.html", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_group_attributes" ],
     [ "PdfImage", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_image.html", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_image" ],
-    [ "MonochromeMask", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_monochrome_mask.html", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_monochrome_mask" ],
-    [ "BitReader", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_bit_reader.html", null ],
-    [ "BitWriter", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_bit_writer.html", null ],
     [ "PdfInternals", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_internals.html", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_internals" ],
     [ "PdfObjectInternals", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_object_internals.html", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_object_internals" ],
     [ "PdfObjectStream", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_object_stream.html", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_object_stream" ],
@@ -24,10 +24,6 @@ var namespace_pdf_sharp_1_1_pdf_1_1_advanced =
     [ "PdfTilingPattern", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_tiling_pattern.html", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_tiling_pattern" ],
     [ "PdfTransparencyGroupAttributes", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_transparency_group_attributes.html", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_transparency_group_attributes" ],
     [ "PdfXObject", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_x_object.html", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_x_object" ],
-    [ "FontType", "namespace_pdf_sharp_1_1_pdf_1_1_advanced.html#a3208ad203604077e5dd1b1ee0ca9752a", [
-      [ "TrueType", "namespace_pdf_sharp_1_1_pdf_1_1_advanced.html#a3208ad203604077e5dd1b1ee0ca9752aa4cb9f29b541dddb3038f8b7d68393c0f", null ],
-      [ "Type0", "namespace_pdf_sharp_1_1_pdf_1_1_advanced.html#a3208ad203604077e5dd1b1ee0ca9752aa896ce1bb13d2db2281f21758af07896b", null ]
-    ] ],
     [ "PdfFontDescriptorFlags", "namespace_pdf_sharp_1_1_pdf_1_1_advanced.html#adda0aefaa1b5145489608b66023d7e51", [
       [ "FixedPitch", "namespace_pdf_sharp_1_1_pdf_1_1_advanced.html#adda0aefaa1b5145489608b66023d7e51ab6128e395ba5111e545a628b42b94ce7", null ],
       [ "Serif", "namespace_pdf_sharp_1_1_pdf_1_1_advanced.html#adda0aefaa1b5145489608b66023d7e51a459d24b63e5a5fda317e0ae30e044e04", null ],

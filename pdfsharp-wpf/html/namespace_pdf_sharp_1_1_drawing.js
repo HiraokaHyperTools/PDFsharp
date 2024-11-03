@@ -3,7 +3,6 @@ var namespace_pdf_sharp_1_1_drawing =
     [ "BarCodes", "namespace_pdf_sharp_1_1_drawing_1_1_bar_codes.html", "namespace_pdf_sharp_1_1_drawing_1_1_bar_codes" ],
     [ "Layout", "namespace_pdf_sharp_1_1_drawing_1_1_layout.html", "namespace_pdf_sharp_1_1_drawing_1_1_layout" ],
     [ "Pdf", "namespace_pdf_sharp_1_1_drawing_1_1_pdf.html", "namespace_pdf_sharp_1_1_drawing_1_1_pdf" ],
-    [ "XPdfFontOptions", "class_pdf_sharp_1_1_drawing_1_1_x_pdf_font_options.html", "class_pdf_sharp_1_1_drawing_1_1_x_pdf_font_options" ],
     [ "XBrush", "class_pdf_sharp_1_1_drawing_1_1_x_brush.html", null ],
     [ "XColor", "struct_pdf_sharp_1_1_drawing_1_1_x_color.html", "struct_pdf_sharp_1_1_drawing_1_1_x_color" ],
     [ "XColorResourceManager", "class_pdf_sharp_1_1_drawing_1_1_x_color_resource_manager.html", "class_pdf_sharp_1_1_drawing_1_1_x_color_resource_manager" ],
@@ -23,6 +22,7 @@ var namespace_pdf_sharp_1_1_drawing =
     [ "XImageFormat", "class_pdf_sharp_1_1_drawing_1_1_x_image_format.html", "class_pdf_sharp_1_1_drawing_1_1_x_image_format" ],
     [ "XLinearGradientBrush", "class_pdf_sharp_1_1_drawing_1_1_x_linear_gradient_brush.html", "class_pdf_sharp_1_1_drawing_1_1_x_linear_gradient_brush" ],
     [ "XMatrix", "struct_pdf_sharp_1_1_drawing_1_1_x_matrix.html", "struct_pdf_sharp_1_1_drawing_1_1_x_matrix" ],
+    [ "XPdfFontOptions", "class_pdf_sharp_1_1_drawing_1_1_x_pdf_font_options.html", "class_pdf_sharp_1_1_drawing_1_1_x_pdf_font_options" ],
     [ "XPdfForm", "class_pdf_sharp_1_1_drawing_1_1_x_pdf_form.html", "class_pdf_sharp_1_1_drawing_1_1_x_pdf_form" ],
     [ "XPen", "class_pdf_sharp_1_1_drawing_1_1_x_pen.html", "class_pdf_sharp_1_1_drawing_1_1_x_pen" ],
     [ "XPoint", "struct_pdf_sharp_1_1_drawing_1_1_x_point.html", "struct_pdf_sharp_1_1_drawing_1_1_x_point" ],
@@ -77,18 +77,6 @@ var namespace_pdf_sharp_1_1_drawing =
       [ "BoldItalic", "namespace_pdf_sharp_1_1_drawing.html#aed7d53ac454dd58e105cd2f1296ba82ea1e8fb6e2ee37a07189ff20a09cb4d6d5", null ],
       [ "Underline", "namespace_pdf_sharp_1_1_drawing.html#aed7d53ac454dd58e105cd2f1296ba82ea852721aa5fc738dfedff2945d71da439", null ],
       [ "Strikeout", "namespace_pdf_sharp_1_1_drawing.html#aed7d53ac454dd58e105cd2f1296ba82ea7b4cdf52e77f3bad153dbcc7681325d8", null ]
-    ] ],
-    [ "XGraphicsPathItemType", "namespace_pdf_sharp_1_1_drawing.html#a9dcfdfbec1c852764dafcb648107e768", [
-      [ "Lines", "namespace_pdf_sharp_1_1_drawing.html#a9dcfdfbec1c852764dafcb648107e768aa0b0293a2db49f5f93c15a62e095c819", null ],
-      [ "Beziers", "namespace_pdf_sharp_1_1_drawing.html#a9dcfdfbec1c852764dafcb648107e768afe511be151442777c80368511e9978a1", null ],
-      [ "Curve", "namespace_pdf_sharp_1_1_drawing.html#a9dcfdfbec1c852764dafcb648107e768a2cb4d4a3f8dacd623fa045a44febd476", null ],
-      [ "Arc", "namespace_pdf_sharp_1_1_drawing.html#a9dcfdfbec1c852764dafcb648107e768a2b73f91683611c489560a1d163e37902", null ],
-      [ "Rectangle", "namespace_pdf_sharp_1_1_drawing.html#a9dcfdfbec1c852764dafcb648107e768ace9291906a4c3b042650b70d7f3b152e", null ],
-      [ "RoundedRectangle", "namespace_pdf_sharp_1_1_drawing.html#a9dcfdfbec1c852764dafcb648107e768a1350fb96c0f23705730f0052ff66dce4", null ],
-      [ "Ellipse", "namespace_pdf_sharp_1_1_drawing.html#a9dcfdfbec1c852764dafcb648107e768a119518c2134c46108179369f0ce81fa2", null ],
-      [ "Polygon", "namespace_pdf_sharp_1_1_drawing.html#a9dcfdfbec1c852764dafcb648107e768a4c0a11247d92f73fb84baa51e37a3263", null ],
-      [ "CloseFigure", "namespace_pdf_sharp_1_1_drawing.html#a9dcfdfbec1c852764dafcb648107e768ad517f6b31d61e50f07a014b401279140", null ],
-      [ "StartFigure", "namespace_pdf_sharp_1_1_drawing.html#a9dcfdfbec1c852764dafcb648107e768a38d507ee0f8016d225f691bd2b1083e8", null ]
     ] ],
     [ "XGraphicsPdfPageOptions", "namespace_pdf_sharp_1_1_drawing.html#afe42480f1bec5c040267c8e8d6f506c9", [
       [ "Append", "namespace_pdf_sharp_1_1_drawing.html#afe42480f1bec5c040267c8e8d6f506c9a3ac4692f3935a49a0b243eecf529faa9", null ],

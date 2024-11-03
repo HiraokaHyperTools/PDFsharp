@@ -14,18 +14,13 @@ var class_pdf_sharp_1_1_pdf_1_1_pdf_page =
     [ "Contents", "class_pdf_sharp_1_1_pdf_1_1_pdf_page.html#a5c7293cf9b1aa602bb4e18153314a246", null ],
     [ "CropBox", "class_pdf_sharp_1_1_pdf_1_1_pdf_page.html#acc8eee7a743cd47fdd351c5a03bace92", null ],
     [ "CustomValues", "class_pdf_sharp_1_1_pdf_1_1_pdf_page.html#a232ebca766887caf443b3b219f657e0f", null ],
-    [ "Document", "class_pdf_sharp_1_1_pdf_1_1_pdf_page.html#aec1671060d405d3cc25b8d6f642b05e3", null ],
-    [ "Height", "class_pdf_sharp_1_1_pdf_1_1_pdf_page.html#aed93159662a29061a3fcd02011b91942", null ],
-    [ "IsClosed", "class_pdf_sharp_1_1_pdf_1_1_pdf_page.html#ac7c79feb0a3d6b1519180205ea709a1c", null ],
+    [ "Height", "class_pdf_sharp_1_1_pdf_1_1_pdf_page.html#acd25c20844bf5e8adcc483bfe1f675e7", null ],
     [ "MediaBox", "class_pdf_sharp_1_1_pdf_1_1_pdf_page.html#ad6f2fe64d6a3ddf719d31a54110cc93e", null ],
-    [ "Meta", "class_pdf_sharp_1_1_pdf_1_1_pdf_page.html#a11d170f632720a773369877f81eba180", null ],
     [ "Orientation", "class_pdf_sharp_1_1_pdf_1_1_pdf_page.html#ad74ad3edcc6e14986dff93caf32be83e", null ],
-    [ "Resources", "class_pdf_sharp_1_1_pdf_1_1_pdf_page.html#a32849a5b6e6eb391a7794091d7c0a4f1", null ],
-    [ "Resources", "class_pdf_sharp_1_1_pdf_1_1_pdf_page.html#a4ad6772fd8dd3eea9b3c0765a95302fa", null ],
     [ "Rotate", "class_pdf_sharp_1_1_pdf_1_1_pdf_page.html#ac9cdecb94e9052dc465cfadb3c6fd5d7", null ],
     [ "Size", "class_pdf_sharp_1_1_pdf_1_1_pdf_page.html#a1689386b1c1d971f1d0dc890a570976d", null ],
     [ "Tag", "class_pdf_sharp_1_1_pdf_1_1_pdf_page.html#adcc0690de1118df697f23d4b06dab4fe", null ],
     [ "TrimBox", "class_pdf_sharp_1_1_pdf_1_1_pdf_page.html#af1144f775d00660aeda79e6d913cc913", null ],
     [ "TrimMargins", "class_pdf_sharp_1_1_pdf_1_1_pdf_page.html#a943034df6e8672738b94da81179cd74f", null ],
-    [ "Width", "class_pdf_sharp_1_1_pdf_1_1_pdf_page.html#a9547bd3879d723a84ed247f9a7a23101", null ]
+    [ "Width", "class_pdf_sharp_1_1_pdf_1_1_pdf_page.html#ac3798dd80e55742cb7822709e07e396e", null ]
 ];

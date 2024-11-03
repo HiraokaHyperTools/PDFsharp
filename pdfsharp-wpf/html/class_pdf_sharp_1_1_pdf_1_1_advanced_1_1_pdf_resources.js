@@ -8,19 +8,5 @@ var class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_resources =
     [ "AddImage", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_resources.html#a886d516a3db231443bd9de8269e3a0a0", null ],
     [ "AddPattern", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_resources.html#abb040a07f5360ffbcf72825065cf0634", null ],
     [ "AddPattern", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_resources.html#afa4f51c8786a778eb7d940ee9429e981", null ],
-    [ "AddShading", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_resources.html#a62684858b335a31476fd90919ea7d065", null ],
-    [ "ColorSpaces", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_resources.html#ab15ad6f1cfc633bc19328a9682f4d714", null ],
-    [ "ExtGStates", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_resources.html#a08b27cc1ac68d079c5fc397fa7bfc0ca", null ],
-    [ "Fonts", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_resources.html#a3be4473f94e70cf69f969e9c8aad3501", null ],
-    [ "Meta", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_resources.html#ac1f04bac1b2130287eab8d68540462a9", null ],
-    [ "NextExtGStateName", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_resources.html#a1c50a2323ed5ee073218ae7382eab953", null ],
-    [ "NextFontName", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_resources.html#a0eafa604ece9b4606ca1823098cfcedd", null ],
-    [ "NextFormName", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_resources.html#a23df4279f370d2d1371621d29f1a3108", null ],
-    [ "NextImageName", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_resources.html#a074d89b8a37104d4639b497863ebf6e1", null ],
-    [ "NextPatternName", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_resources.html#a799e50adef100153116ec8098c230218", null ],
-    [ "NextShadingName", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_resources.html#aec1ab8d52b24d9274e1797466f836708", null ],
-    [ "Patterns", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_resources.html#a0fcfc124608de0e28211f42e07f5cb3b", null ],
-    [ "Properties", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_resources.html#a25926e341d9a0aeb952e981544dde419", null ],
-    [ "Shadings", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_resources.html#a4481f6a06d27506c677b8e1aadb2ddf2", null ],
-    [ "XObjects", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_resources.html#acf2af54e816500001f878c4c156e445f", null ]
+    [ "AddShading", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_resources.html#a62684858b335a31476fd90919ea7d065", null ]
 ];

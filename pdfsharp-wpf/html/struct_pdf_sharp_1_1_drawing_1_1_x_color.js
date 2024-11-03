@@ -16,7 +16,6 @@ var struct_pdf_sharp_1_1_drawing_1_1_x_color =
     [ "RgbChanged", "struct_pdf_sharp_1_1_drawing_1_1_x_color.html#ae7b67d19a2ff7c5fe7f66ba05398bac6", null ],
     [ "ToWpfColor", "struct_pdf_sharp_1_1_drawing_1_1_x_color.html#a46d19da7f1118557e446cb59175f0006", null ],
     [ "A", "struct_pdf_sharp_1_1_drawing_1_1_x_color.html#a5158f32c24613e9069b2ae3cb9248626", null ],
-    [ "Argb", "struct_pdf_sharp_1_1_drawing_1_1_x_color.html#ab2b633b943fb39e3ddcadb5717447625", null ],
     [ "B", "struct_pdf_sharp_1_1_drawing_1_1_x_color.html#aa1627da96f4879ff4338d36ba4ea668f", null ],
     [ "C", "struct_pdf_sharp_1_1_drawing_1_1_x_color.html#aeb6d6d3cf79a30f5c1780da936348b4e", null ],
     [ "ColorSpace", "struct_pdf_sharp_1_1_drawing_1_1_x_color.html#a2ecb41e0e4e80cc05047b62b3609f4f4", null ],
@@ -27,7 +26,6 @@ var struct_pdf_sharp_1_1_drawing_1_1_x_color =
     [ "K", "struct_pdf_sharp_1_1_drawing_1_1_x_color.html#af2a2d6040d80c451a76d2f2fa0730d49", null ],
     [ "M", "struct_pdf_sharp_1_1_drawing_1_1_x_color.html#abd5a8fb2735ca50eb150efada19b0a38", null ],
     [ "R", "struct_pdf_sharp_1_1_drawing_1_1_x_color.html#a81d7cba448604089cb8ba5cc4f04d368", null ],
-    [ "Rgb", "struct_pdf_sharp_1_1_drawing_1_1_x_color.html#a4d7d60d5937300b315037235c309f8c2", null ],
     [ "RgbCmykG", "struct_pdf_sharp_1_1_drawing_1_1_x_color.html#a38728eb59de99d37ba458e440b72db15", null ],
     [ "Y", "struct_pdf_sharp_1_1_drawing_1_1_x_color.html#aadaae3838f94b0a6b9f6b80449fa7007", null ]
 ];

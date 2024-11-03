@@ -2,9 +2,9 @@ var class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_internals =
 [
     [ "AddObject", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_internals.html#abe74e49a9c82cc68c2963237bdf5bb77", null ],
     [ "CreateIndirectObject< T >", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_internals.html#a9578aa1935c5914f616712f89b1c96fb", null ],
-    [ "GetAllObjects", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_internals.html#adb1d6bf426ce87d880b38c69c4a77268", null ],
-    [ "GetClosure", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_internals.html#a83e1243504fe3b33c4a57ab8ca0f254e", null ],
-    [ "GetClosure", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_internals.html#ab38e98f315bfe9896d7815d8d9176b44", null ],
+    [ "GetAllObjects", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_internals.html#a2aabb3295786bf4b4474926aeb2174cf", null ],
+    [ "GetClosure", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_internals.html#a418ef1752b58067a430ddc8e7d2953b6", null ],
+    [ "GetClosure", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_internals.html#a06a742c08fc5fbacc2a6532dcd1a3314", null ],
     [ "GetObject", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_internals.html#ac68158a071f6c97d1980af8b21b1737d", null ],
     [ "RemoveObject", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_internals.html#a3d02249e60a2fce90e9b7f7a86478c84", null ],
     [ "WriteObject", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_internals.html#a23ea735a78f387be53433d76eda01b01", null ],
