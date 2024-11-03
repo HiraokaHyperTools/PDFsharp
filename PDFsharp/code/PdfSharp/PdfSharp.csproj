@@ -13,8 +13,8 @@
     <AssemblyName>HiraokaHyperTools.PdfSharp</AssemblyName>
 
     <PackageId>kenjiuno.PdfSharp-GDI</PackageId>
-    <PackageVersion>1.31.7210</PackageVersion>
-    <AssemblyVersion>1.31.7210</AssemblyVersion>
+    <PackageVersion>1.31.7247</PackageVersion>
+    <AssemblyVersion>1.31.7247</AssemblyVersion>
     <Authors>kenjiuno</Authors>
     <Owners>www.pdfsharp.net</Owners>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>

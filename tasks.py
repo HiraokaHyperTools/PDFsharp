@@ -82,7 +82,7 @@ def setPdfSharpWpfVersion(version):  # kenjiuno.PdfSharp-WPF
 
     if True:
         filePath = os.path.join(
-            dirname, "PDFsharp\code\PdfSharp\Doxyfile-wpf")
+            dirname, "PDFsharp/code/PdfSharp/Doxyfile-wpf")
         text = readAllText(filePath)
         text = updateDoxyfileVar(text, "PROJECT_NUMBER", version)
         writeAllText(filePath, text)
@@ -111,7 +111,7 @@ def setPdfSharpGdiVersion(version):  # kenjiuno.PdfSharp-GDI
 
     if True:
         filePath = os.path.join(
-            dirname, "PDFsharp\code\PdfSharp\Doxyfile-gdi")
+            dirname, "PDFsharp/code/PdfSharp/Doxyfile-gdi")
         text = readAllText(filePath)
         text = updateDoxyfileVar(text, "PROJECT_NUMBER", version)
         writeAllText(filePath, text)
@@ -333,10 +333,10 @@ def pack(c):
         c.run("dotnet pack %s.csproj -p:SymbolPackageFormat=snupkg -c Release --include-symbols --include-source" %
               (csproj,), env=env, echo=True)
 
-    with c.cd("PDFsharp\code\PdfSharp"):
+    with c.cd("PDFsharp/code/PdfSharp"):
         dotnetPack("PdfSharp")
         dotnetPack("PdfSharp-WPF")
-    with c.cd("PDFsharp\code\PdfSharp.Xps"):
+    with c.cd("PDFsharp/code/PdfSharp.Xps"):
         dotnetPack("PdfSharp.Xps")
 
 
