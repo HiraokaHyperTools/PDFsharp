@@ -43,11 +43,11 @@ namespace PdfSharp.Xps.UnitTests.Render2
 
     [Test]
     [DeploymentItemFrom("@PdfSharp.Xps.UnitTests/Render2/xps", "xps")]
-    //[TestCase("ImageBrushViewportWidthHeight.xps")]
-    //[TestCase("ImageBrushViewportWidthHeightRotateTransform.xps")]
-    //[TestCase("ImageBrushViewportWidthHeightScaling.xps")]
-    //[TestCase("ImageBrushViewportWidthHeightSkewTransform.xps")]
-    //[Ignore("TDD")]
+    [TestCase("ImageBrushViewportWidthHeight.xps")]
+    [TestCase("ImageBrushViewportWidthHeightRotateTransform.xps")]
+    [TestCase("ImageBrushViewportWidthHeightScaling.xps")]
+    [TestCase("ImageBrushViewportWidthHeightSkewTransform.xps")]
+    [Ignore("TDD")]
     public void TestRasterizationAndThenLaunchViewer(string xpsInput)
     {
       string dir = TestContext.WorkDirectory;
