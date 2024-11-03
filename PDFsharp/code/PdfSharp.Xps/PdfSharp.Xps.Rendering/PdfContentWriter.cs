@@ -550,8 +550,6 @@ namespace PdfSharp.Xps.Rendering
           {
             // 1st draw fill
             var pdfForm = new PdfSharp.Xps.Rendering.PdfFormXObjectBuilder(Context).BuildForm(iBrush);
-            double dx = iBrush.Viewport.Width / iBrush.Viewbox.Width * 96 / pdfForm.DpiX;
-            double dy = iBrush.Viewport.Height / iBrush.Viewbox.Height * 96 / pdfForm.DpiY;
             string name = Resources.AddForm(pdfForm);
 
             WriteSaveState("begin ImageBrush", null);
@@ -560,6 +558,10 @@ namespace PdfSharp.Xps.Rendering
             WriteLiteral(name + " Do\n");
 
             WriteRestoreState("end ImageBrush", null);
+
+            // 2nd draw stroke
+            if (path.Stroke != null)
+              WriteStrokeGeometry(path);
           }
         }
         else if ((vBrush = path.Fill as VisualBrush) != null)

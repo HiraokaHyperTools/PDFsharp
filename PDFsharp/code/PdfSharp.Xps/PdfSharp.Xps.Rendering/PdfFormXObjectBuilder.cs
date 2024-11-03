@@ -65,19 +65,16 @@ namespace PdfSharp.Xps.Rendering
       pdfForm.DpiX = ximage.HorizontalResolution;
       pdfForm.DpiY = ximage.VerticalResolution;
 
-      // view box in point
-      // XRect box = new XRect(brush.Viewbox.X * 0.75, brush.Viewbox.Y * 0.75, brush.Viewbox.Width * 0.75, brush.Viewbox.Height * 0.75);
-      XRect box = new XRect(0, 0, width, height);
+      var imageMatrix = (XMatrix)brush.Transform.Matrix;
 
       pdfForm.Elements.SetRectangle(PdfFormXObject.Keys.BBox, new PdfRectangle(0, height, width, 0));
-      pdfForm.Elements.SetMatrix(PdfFormXObject.Keys.Matrix, new XMatrix());
+      pdfForm.Elements.SetMatrix(PdfFormXObject.Keys.Matrix, imageMatrix);
 
       PdfContentWriter writer = new PdfContentWriter(Context, pdfForm);
 
       Debug.Assert(ximage != null);
 
       //PdfFormXObject pdfForm = xform.PdfForm;
-      pdfForm.Elements.SetMatrix(PdfFormXObject.Keys.Matrix, new XMatrix());
 
       //formWriter.Size = brush.Viewport.Size;
       writer.BeginContentRaw();
@@ -89,17 +86,19 @@ namespace PdfSharp.Xps.Rendering
         )
       );
       XMatrix matrix = new XMatrix();
-      //double scaleX = brush.Viewport.Width / brush.Viewbox.Width * 4 / 3 * ximage.PointWidth;
-      //double scaleY = brush.Viewport.Height / brush.Viewbox.Height * 4 / 3 * ximage.PointHeight;
-      //matrix.TranslatePrepend(-brush.Viewbox.X, -brush.Viewbox.Y);
-      //matrix.ScalePrepend(scaleX, scaleY);
-      //matrix.TranslatePrepend(brush.Viewport.X / scaleX, brush.Viewport.Y / scaleY);
+      double scaleX = brush.Viewport.Width / brush.Viewbox.Width * 4 / 3 * ximage.PointWidth;
+      double scaleY = brush.Viewport.Height / brush.Viewbox.Height * 4 / 3 * ximage.PointHeight;
+      matrix.TranslatePrepend(-brush.Viewbox.X, -brush.Viewbox.Y);
+      matrix.ScalePrepend(scaleX, scaleY);
+      matrix.TranslatePrepend(brush.Viewport.X / scaleX, brush.Viewport.Y / scaleY);
+      matrix.TranslatePrepend(0, 1);
+      matrix.ScalePrepend(1, -1);
 
       //double scaleX = 96 / ximage.HorizontalResolution;
       //double scaleY = 96 / ximage.VerticalResolution;
       //width *= scaleX;
       //height *= scaleY;
-      matrix = new XMatrix(width, 0, 0, -height, 0, height);
+      //matrix = new XMatrix(width, 0, 0, -height, 0, height);
       writer.WriteLiteral("q\n");
       // TODO:WriteClip(path.Data);
       //formWriter.WriteLiteral("{0:0.###} 0 0 -{1:0.###} {2:0.###} {3:0.###} cm 100 Tz {4} Do Q\n",

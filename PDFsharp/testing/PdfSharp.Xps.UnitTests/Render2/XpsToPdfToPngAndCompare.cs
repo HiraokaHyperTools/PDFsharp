@@ -43,7 +43,10 @@ namespace PdfSharp.Xps.UnitTests.Render2
 
     [Test]
     [DeploymentItemFrom("@PdfSharp.Xps.UnitTests/Render2/xps", "xps")]
-    [TestCase("ImageBrushTileMode.xps")]
+    [TestCase("ImageBrushViewportWidthHeight.xps")]
+    [TestCase("ImageBrushViewportWidthHeightRotateTransform.xps")]
+    [TestCase("ImageBrushViewportWidthHeightScaling.xps")]
+    [TestCase("ImageBrushViewportWidthHeightSkewTransform.xps")]
     [Ignore("TDD")]
     public void TestRasterizationAndThenLaunchViewer(string xpsInput)
     {
@@ -91,7 +94,7 @@ namespace PdfSharp.Xps.UnitTests.Render2
         throw new Exception($"pdftoppm exit code {process.ExitCode} seems to be error.");
       }
 
-      Directory.GetFiles(Path.GetDirectoryName(pngPrefix), Path.GetFileName(pngPrefix) + "*")
+      Directory.GetFiles(Path.GetDirectoryName(pngPrefix), Path.GetFileName(pngPrefix) + "-*")
         .ToList()
         .ForEach(one => Process.Start(new ProcessStartInfo(one) { UseShellExecute = true }));
     }
