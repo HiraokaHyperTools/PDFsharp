@@ -1,2 +1,2 @@
-echo ay|xcopy /d ..\..\bin\Debug\net48\png\*
+echo ay|xcopy /d ..\..\bin\Debug\net6.0-windows\png\*
 pause

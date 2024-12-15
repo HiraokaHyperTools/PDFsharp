@@ -151,6 +151,9 @@ namespace PdfSharp.Xps.Rendering
       double dy = brush.Viewport.Height / brush.Viewbox.Height * 96 / pdfForm.DpiY;
       string name = writer.Resources.AddForm(pdfForm);
 
+      double pixToDipX = brush.Viewport.Width / brush.Viewbox.Width;
+      double pixToDipY = brush.Viewport.Height / brush.Viewbox.Height;
+
       for (int ySide = 0; ySide < numYSides; ySide++)
       {
         var ySign = (ySide == 0) ? 1 : -1;
@@ -161,8 +164,8 @@ namespace PdfSharp.Xps.Rendering
           XMatrix transformation = new XMatrix();
           transformation = new XMatrix(
             dx * xSign, 0, 0, dy * ySign,
-            brush.Viewport.Width * 2 * xSide,
-            brush.Viewport.Height * 2 * ySide
+            brush.Viewport.Width * 2 * xSide - brush.Viewbox.X * pixToDipX,
+            brush.Viewport.Height * 2 * ySide - brush.Viewbox.Y * pixToDipY
           );
           writer.WriteSaveState("begin pattern xSide " + xSide + " ySide " + ySide, null);
           writer.WriteMatrix(transformation);
@@ -418,8 +421,8 @@ namespace PdfSharp.Xps.Rendering
       PdfContentWriter writer = new PdfContentWriter(Context, pdfForm);
 
       pdfForm.Elements.SetMatrix(PdfFormXObject.Keys.Matrix, new XMatrix(
-          1, 0, 
-          0, 1, 
+          1, 0,
+          0, 1,
           -brush.Viewbox.X, -brush.Viewbox.Y
           ));
 
