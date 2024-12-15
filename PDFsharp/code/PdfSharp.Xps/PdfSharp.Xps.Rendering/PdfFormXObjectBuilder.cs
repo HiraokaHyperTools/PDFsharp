@@ -67,7 +67,6 @@ namespace PdfSharp.Xps.Rendering
 
       var imageMatrix = (XMatrix)brush.Transform.Matrix;
 
-      pdfForm.Elements.SetRectangle(PdfFormXObject.Keys.BBox, new PdfRectangle(0, height, width, 0));
       pdfForm.Elements.SetMatrix(PdfFormXObject.Keys.Matrix, imageMatrix);
 
       PdfContentWriter writer = new PdfContentWriter(Context, pdfForm);
@@ -93,6 +92,8 @@ namespace PdfSharp.Xps.Rendering
       matrix.TranslatePrepend(brush.Viewport.X / scaleX, brush.Viewport.Y / scaleY);
       matrix.TranslatePrepend(0, 1);
       matrix.ScalePrepend(1, -1);
+
+      pdfForm.Elements.SetRectangle(PdfFormXObject.Keys.BBox, new PdfRectangle(0, height * scaleY, width * scaleX, 0));
 
       //double scaleX = 96 / ximage.HorizontalResolution;
       //double scaleY = 96 / ximage.VerticalResolution;
