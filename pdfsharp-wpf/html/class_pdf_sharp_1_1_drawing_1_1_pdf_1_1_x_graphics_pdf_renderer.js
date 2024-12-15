@@ -29,6 +29,10 @@ var class_pdf_sharp_1_1_drawing_1_1_pdf_1_1_x_graphics_pdf_renderer =
     [ "SetClip", "class_pdf_sharp_1_1_drawing_1_1_pdf_1_1_x_graphics_pdf_renderer.html#a63596690f22e4025112e89385154a1b3", null ],
     [ "SetPageTransform", "class_pdf_sharp_1_1_drawing_1_1_pdf_1_1_x_graphics_pdf_renderer.html#ac8f3e32ea25433d1412e0c9346cb9107", null ],
     [ "WriteComment", "class_pdf_sharp_1_1_drawing_1_1_pdf_1_1_x_graphics_pdf_renderer.html#a4e818513cfd03ec9d32beee36d96a68f", null ],
+    [ "Gfx", "class_pdf_sharp_1_1_drawing_1_1_pdf_1_1_x_graphics_pdf_renderer.html#ab6a7d2f16ec02d15bdf3bab5bb5276a1", null ],
+    [ "Owner", "class_pdf_sharp_1_1_drawing_1_1_pdf_1_1_x_graphics_pdf_renderer.html#a0790744a114dec8d506cf0cd1103b8b8", null ],
     [ "PageOptions", "class_pdf_sharp_1_1_drawing_1_1_pdf_1_1_x_graphics_pdf_renderer.html#a26d143883ba8bfbeb2799dab86963d2a", null ],
+    [ "Resources", "class_pdf_sharp_1_1_drawing_1_1_pdf_1_1_x_graphics_pdf_renderer.html#a901a2089ccdc2e89d9111249f2fd7bba", null ],
+    [ "Size", "class_pdf_sharp_1_1_drawing_1_1_pdf_1_1_x_graphics_pdf_renderer.html#a186148d560333bc4490cd876541c5a15", null ],
     [ "Transform", "class_pdf_sharp_1_1_drawing_1_1_pdf_1_1_x_graphics_pdf_renderer.html#a2e9c802a9fda86afb85c461c2cf808c9", null ]
 ];

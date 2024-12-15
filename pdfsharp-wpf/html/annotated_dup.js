@@ -20,6 +20,7 @@ var annotated_dup =
         [ "Pdf", "namespace_pdf_sharp_1_1_drawing_1_1_pdf.html", [
           [ "XGraphicsPdfRenderer", "class_pdf_sharp_1_1_drawing_1_1_pdf_1_1_x_graphics_pdf_renderer.html", "class_pdf_sharp_1_1_drawing_1_1_pdf_1_1_x_graphics_pdf_renderer" ]
         ] ],
+        [ "XPdfFontOptions", "class_pdf_sharp_1_1_drawing_1_1_x_pdf_font_options.html", "class_pdf_sharp_1_1_drawing_1_1_x_pdf_font_options" ],
         [ "XBrush", "class_pdf_sharp_1_1_drawing_1_1_x_brush.html", null ],
         [ "XColor", "struct_pdf_sharp_1_1_drawing_1_1_x_color.html", "struct_pdf_sharp_1_1_drawing_1_1_x_color" ],
         [ "XColorResourceManager", "class_pdf_sharp_1_1_drawing_1_1_x_color_resource_manager.html", "class_pdf_sharp_1_1_drawing_1_1_x_color_resource_manager" ],
@@ -39,7 +40,6 @@ var annotated_dup =
         [ "XImageFormat", "class_pdf_sharp_1_1_drawing_1_1_x_image_format.html", "class_pdf_sharp_1_1_drawing_1_1_x_image_format" ],
         [ "XLinearGradientBrush", "class_pdf_sharp_1_1_drawing_1_1_x_linear_gradient_brush.html", "class_pdf_sharp_1_1_drawing_1_1_x_linear_gradient_brush" ],
         [ "XMatrix", "struct_pdf_sharp_1_1_drawing_1_1_x_matrix.html", "struct_pdf_sharp_1_1_drawing_1_1_x_matrix" ],
-        [ "XPdfFontOptions", "class_pdf_sharp_1_1_drawing_1_1_x_pdf_font_options.html", "class_pdf_sharp_1_1_drawing_1_1_x_pdf_font_options" ],
         [ "XPdfForm", "class_pdf_sharp_1_1_drawing_1_1_x_pdf_form.html", "class_pdf_sharp_1_1_drawing_1_1_x_pdf_form" ],
         [ "XPen", "class_pdf_sharp_1_1_drawing_1_1_x_pen.html", "class_pdf_sharp_1_1_drawing_1_1_x_pen" ],
         [ "XPoint", "struct_pdf_sharp_1_1_drawing_1_1_x_point.html", "struct_pdf_sharp_1_1_drawing_1_1_x_point" ],
@@ -67,8 +67,8 @@ var annotated_dup =
         [ "PagePreviewCanvas", "class_pdf_sharp_1_1_forms_1_1_page_preview_canvas.html", "class_pdf_sharp_1_1_forms_1_1_page_preview_canvas" ]
       ] ],
       [ "Internal", "namespace_pdf_sharp_1_1_internal.html", [
-        [ "SCColor", "struct_pdf_sharp_1_1_internal_1_1_s_c_color.html", "struct_pdf_sharp_1_1_internal_1_1_s_c_color" ],
         [ "SColor", "struct_pdf_sharp_1_1_internal_1_1_s_color.html", "struct_pdf_sharp_1_1_internal_1_1_s_color" ],
+        [ "SCColor", "struct_pdf_sharp_1_1_internal_1_1_s_c_color.html", "struct_pdf_sharp_1_1_internal_1_1_s_c_color" ],
         [ "TokenizerHelper", "class_pdf_sharp_1_1_internal_1_1_tokenizer_helper.html", "class_pdf_sharp_1_1_internal_1_1_tokenizer_helper" ]
       ] ],
       [ "Pdf", "namespace_pdf_sharp_1_1_pdf.html", [
@@ -90,9 +90,6 @@ var annotated_dup =
           [ "PdfAction", "class_pdf_sharp_1_1_pdf_1_1_actions_1_1_pdf_action.html", "class_pdf_sharp_1_1_pdf_1_1_actions_1_1_pdf_action" ]
         ] ],
         [ "Advanced", "namespace_pdf_sharp_1_1_pdf_1_1_advanced.html", [
-          [ "BitReader", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_bit_reader.html", null ],
-          [ "BitWriter", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_bit_writer.html", null ],
-          [ "MonochromeMask", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_monochrome_mask.html", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_monochrome_mask" ],
           [ "PdfCatalog", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_catalog.html", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_catalog" ],
           [ "PdfContent", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_content.html", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_content" ],
           [ "PdfContents", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_contents.html", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_contents" ],
@@ -103,6 +100,9 @@ var annotated_dup =
           [ "PdfFormXObject", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_form_x_object.html", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_form_x_object" ],
           [ "PdfGroupAttributes", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_group_attributes.html", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_group_attributes" ],
           [ "PdfImage", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_image.html", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_image" ],
+          [ "MonochromeMask", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_monochrome_mask.html", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_monochrome_mask" ],
+          [ "BitReader", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_bit_reader.html", null ],
+          [ "BitWriter", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_bit_writer.html", null ],
           [ "PdfInternals", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_internals.html", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_internals" ],
           [ "PdfObjectInternals", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_object_internals.html", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_object_internals" ],
           [ "PdfObjectStream", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_object_stream.html", "class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_pdf_object_stream" ],
@@ -124,16 +124,16 @@ var annotated_dup =
         ] ],
         [ "Content", "namespace_pdf_sharp_1_1_pdf_1_1_content.html", [
           [ "Objects", "namespace_pdf_sharp_1_1_pdf_1_1_content_1_1_objects.html", [
-            [ "CArray", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_array.html", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_array" ],
-            [ "CComment", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_comment.html", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_comment" ],
-            [ "CInteger", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_integer.html", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_integer" ],
-            [ "CName", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_name.html", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_name" ],
-            [ "CNumber", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_number.html", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_number" ],
             [ "CObject", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_object.html", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_object" ],
-            [ "COperator", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_operator.html", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_operator" ],
-            [ "CReal", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_real.html", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_real" ],
+            [ "CComment", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_comment.html", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_comment" ],
             [ "CSequence", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_sequence.html", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_sequence" ],
+            [ "CNumber", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_number.html", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_number" ],
+            [ "CInteger", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_integer.html", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_integer" ],
+            [ "CReal", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_real.html", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_real" ],
             [ "CString", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_string.html", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_string" ],
+            [ "CName", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_name.html", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_name" ],
+            [ "CArray", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_array.html", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_array" ],
+            [ "COperator", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_operator.html", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_operator" ],
             [ "OpCode", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_op_code.html", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_op_code" ],
             [ "OpCodes", "class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_op_codes.html", null ]
           ] ],
@@ -143,8 +143,8 @@ var annotated_dup =
         [ "Filters", "namespace_pdf_sharp_1_1_pdf_1_1_filters.html", [
           [ "ASCII85Decode", "class_pdf_sharp_1_1_pdf_1_1_filters_1_1_a_s_c_i_i85_decode.html", "class_pdf_sharp_1_1_pdf_1_1_filters_1_1_a_s_c_i_i85_decode" ],
           [ "ASCIIHexDecode", "class_pdf_sharp_1_1_pdf_1_1_filters_1_1_a_s_c_i_i_hex_decode.html", "class_pdf_sharp_1_1_pdf_1_1_filters_1_1_a_s_c_i_i_hex_decode" ],
-          [ "Filter", "class_pdf_sharp_1_1_pdf_1_1_filters_1_1_filter.html", "class_pdf_sharp_1_1_pdf_1_1_filters_1_1_filter" ],
           [ "FilterParms", "class_pdf_sharp_1_1_pdf_1_1_filters_1_1_filter_parms.html", null ],
+          [ "Filter", "class_pdf_sharp_1_1_pdf_1_1_filters_1_1_filter.html", "class_pdf_sharp_1_1_pdf_1_1_filters_1_1_filter" ],
           [ "FlateDecode", "class_pdf_sharp_1_1_pdf_1_1_filters_1_1_flate_decode.html", "class_pdf_sharp_1_1_pdf_1_1_filters_1_1_flate_decode" ],
           [ "LzwDecode", "class_pdf_sharp_1_1_pdf_1_1_filters_1_1_lzw_decode.html", "class_pdf_sharp_1_1_pdf_1_1_filters_1_1_lzw_decode" ]
         ] ],

@@ -1,4 +1,5 @@
 var _pdf_graphics_state_8cs =
 [
-    [ "IOPath", "_pdf_graphics_state_8cs.html#aeaeb173f2dfb4f3279467348ec536306", null ]
+    [ "PdfGraphicsState", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_pdf_graphics_state.html", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_pdf_graphics_state" ],
+    [ "IOPath", "_pdf_graphics_state_8cs.html#aea37c717babcb00b68901403adb1c906", null ]
 ];

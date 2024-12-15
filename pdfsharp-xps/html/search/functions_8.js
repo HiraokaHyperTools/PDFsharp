@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['lineargradientbrush_0',['LinearGradientBrush',['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_linear_gradient_brush.html#af1e94745dc0457aaa75bc50a7ed2cf27',1,'PdfSharp::Xps::XpsModel::LinearGradientBrush']]],
-  ['loadresources_1',['LoadResources',['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_fixed_page.html#ac830c6e5d1897d10dfda4acd4b6ec698',1,'PdfSharp::Xps::XpsModel::FixedPage']]]
+  ['lineargradientbrush_857',['LinearGradientBrush',['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_linear_gradient_brush.html#af1e94745dc0457aaa75bc50a7ed2cf27',1,'PdfSharp::Xps::XpsModel::LinearGradientBrush']]],
+  ['loadresources_858',['LoadResources',['../class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_fixed_page.html#ac830c6e5d1897d10dfda4acd4b6ec698',1,'PdfSharp::Xps::XpsModel::FixedPage']]]
 ];

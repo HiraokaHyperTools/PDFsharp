@@ -11,5 +11,6 @@ var class_pdf_sharp_1_1_pdf_1_1_security_1_1_pdf_security_settings =
     [ "PermitFullQualityPrint", "class_pdf_sharp_1_1_pdf_1_1_security_1_1_pdf_security_settings.html#a31302113c41cd5763728f351c10afdae", null ],
     [ "PermitModifyDocument", "class_pdf_sharp_1_1_pdf_1_1_security_1_1_pdf_security_settings.html#a2740d3ca454fd05d5e59ec637aeeda6b", null ],
     [ "PermitPrint", "class_pdf_sharp_1_1_pdf_1_1_security_1_1_pdf_security_settings.html#a953a876ba3588b6e5f2741494aa1341c", null ],
+    [ "SecurityHandler", "class_pdf_sharp_1_1_pdf_1_1_security_1_1_pdf_security_settings.html#a238475050991669b20d708ae18109094", null ],
     [ "UserPassword", "class_pdf_sharp_1_1_pdf_1_1_security_1_1_pdf_security_settings.html#a90b7678874d939ac3c255892106fd857", null ]
 ];

@@ -17,6 +17,9 @@ var hierarchy =
     [ "PdfSharp.Xps.XpsModel.GlyphIndices", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_glyph_indices.html", null ],
     [ "PdfSharp.Xps.XpsModel.GlyphIndicesParser", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_glyph_indices_parser.html", null ],
     [ "PdfSharp.Xps.XpsModel.GlyphIndices.GlyphMapping", "struct_pdf_sharp_1_1_xps_1_1_xps_model_1_1_glyph_indices_1_1_glyph_mapping.html", null ],
+    [ "ICloneable", null, [
+      [ "PdfSharp.Xps.Rendering.PdfGraphicsState", "class_pdf_sharp_1_1_xps_1_1_rendering_1_1_pdf_graphics_state.html", null ]
+    ] ],
     [ "ICollection", null, [
       [ "PdfSharp.Xps.XpsModel.FixedDocumentCollection", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_fixed_document_collection.html", null ],
       [ "PdfSharp.Xps.XpsModel.FixedPageCollection", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_fixed_page_collection.html", null ]

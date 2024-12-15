@@ -10,6 +10,7 @@ var class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_fixed_page =
     [ "Name", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_fixed_page.html#a5cd0743eb405aa6133bcefb534f2b0b1", null ],
     [ "PointHeight", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_fixed_page.html#aa8f599a11022abc8128ae4affdb4986d", null ],
     [ "PointWidth", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_fixed_page.html#a29d618f7da5f5324686a0a24db6b7d79", null ],
+    [ "Resources", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_fixed_page.html#ab3767071b264bc0907428a7196bc89db", null ],
     [ "UriString", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_fixed_page.html#a2083a31992b0e20f9adae098380b166b", null ],
     [ "Width", "class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_fixed_page.html#a0d956751d20367d0c29c1029217bfe09", null ]
 ];

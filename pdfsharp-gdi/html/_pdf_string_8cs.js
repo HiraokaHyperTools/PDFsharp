@@ -1,6 +1,6 @@
 var _pdf_string_8cs =
 [
-    [ "PdfSharp.Pdf.PdfString", "class_pdf_sharp_1_1_pdf_1_1_pdf_string.html", "class_pdf_sharp_1_1_pdf_1_1_pdf_string" ],
+    [ "PdfString", "class_pdf_sharp_1_1_pdf_1_1_pdf_string.html", "class_pdf_sharp_1_1_pdf_1_1_pdf_string" ],
     [ "PdfStringEncoding", "_pdf_string_8cs.html#ae8af0bfb1905e46879b80a6e812d5b17", [
       [ "RawEncoding", "_pdf_string_8cs.html#ae8af0bfb1905e46879b80a6e812d5b17a1704a8c3452d14ea1f60705d71794f64", null ],
       [ "StandardEncoding", "_pdf_string_8cs.html#ae8af0bfb1905e46879b80a6e812d5b17a19e884321b2a1e1a80dd325664f3d8c4", null ],

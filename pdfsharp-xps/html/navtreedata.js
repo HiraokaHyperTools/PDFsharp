@@ -27,8 +27,8 @@ var NAVTREE =
   [ "PdfSharp.Xps", "index.html", [
     [ "PdfSharp.Xps Documentation", "index.html", null ],
     [ "Packages", "namespaces.html", [
-      [ "Package List", "namespaces.html", "namespaces_dup" ],
-      [ "Package Members", "namespacemembers.html", [
+      [ "Packages", "namespaces.html", "namespaces_dup" ],
+      [ "Package Functions", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
         [ "Enumerations", "namespacemembers_enum.html", null ]
       ] ]
@@ -57,11 +57,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_arc_segment_8cs.html",
-"class_pdf_sharp_1_1_xps_1_1_rendering_1_1_builder_base.html#abc63cc42d429ceb4d0e38b0758d42366",
-"class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_fixed_document.html",
-"class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_outline_entry.html#ac24dd815337ab4c7da1250bace82f6fb",
-"class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_xps_document.html#a1a0fbf04183c40df2e3533f5191b87f5",
-"struct_pdf_sharp_1_1_xps_1_1_xps_model_1_1_size.html#ad1a48932342876eb734e42c2dc81825e"
+"class_pdf_sharp_1_1_xps_1_1_parsing_1_1_xps_parser.html",
+"class_pdf_sharp_1_1_xps_1_1_xps_model_1_1_image_brush.html#a68b1bff97195e0c64e96ef3707eb3909",
+"namespace_pdf_sharp_1_1_xps_1_1_xps_model.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -7,7 +7,7 @@ var dir_b7f0c656e9a76389922f25c4099ab48f =
     [ "XFillMode.cs", "_x_fill_mode_8cs.html", "_x_fill_mode_8cs" ],
     [ "XFontStyle.cs", "_x_font_style_8cs.html", "_x_font_style_8cs" ],
     [ "XGraphicRenderTarget.cs", "_x_graphic_render_target_8cs.html", "_x_graphic_render_target_8cs" ],
-    [ "XGraphicsPathItemType.cs", "_x_graphics_path_item_type_8cs.html", null ],
+    [ "XGraphicsPathItemType.cs", "_x_graphics_path_item_type_8cs.html", "_x_graphics_path_item_type_8cs" ],
     [ "XGraphicsPdfPageOptions.cs", "_x_graphics_pdf_page_options_8cs.html", "_x_graphics_pdf_page_options_8cs" ],
     [ "XGraphicsUnit.cs", "_x_graphics_unit_8cs.html", "_x_graphics_unit_8cs" ],
     [ "XKnownColor.cs", "_x_known_color_8cs.html", "_x_known_color_8cs" ],

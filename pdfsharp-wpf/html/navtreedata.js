@@ -27,8 +27,8 @@ var NAVTREE =
   [ "PdfSharp-WPF", "index.html", [
     [ "PdfSharp Documentation", "index.html", null ],
     [ "Packages", "namespaces.html", [
-      [ "Package List", "namespaces.html", "namespaces_dup" ],
-      [ "Package Members", "namespacemembers.html", [
+      [ "Packages", "namespaces.html", "namespaces_dup" ],
+      [ "Package Functions", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
         [ "Functions", "namespacemembers_func.html", null ],
         [ "Enumerations", "namespacemembers_enum.html", null ]
@@ -60,25 +60,20 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_a_s_c_i_i85_decode_8cs.html",
-"_page_size_8cs.html#a70fc66a8e25153c520c5a3a48b4a6d33a0c4ecd7b59ebc5b9f47974cb9845fd02",
-"_pdf_rubber_stamp_annotation_icon_8cs.html#a3d38c1f8dc2d1aedfa71dd42d8843849a3e6912d9edf078375c9e015fb05851d4",
-"_x_known_color_8cs.html#aee1e06ecbec0ece3277fdafae4a0799ea1d4f55b32e039f4900e18b52b082c7a5",
-"class_pdf_sharp_1_1_drawing_1_1_bar_codes_1_1_code3of9_standard.html#a2d2fab60efb977a68d99b8947d4b8d8a",
-"class_pdf_sharp_1_1_drawing_1_1_x_font_weight.html#a7c9fd43a6de3d08ee7c203560c5521e5",
-"class_pdf_sharp_1_1_drawing_1_1_x_graphics.html#aa1125480c96023c160c4a7461fec1853",
-"class_pdf_sharp_1_1_drawing_1_1_x_graphics_state.html",
-"class_pdf_sharp_1_1_fonts_1_1_open_type_1_1_font_data.html#aa5c6878eaaa16e41af4b8084441679cf",
-"class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_monochrome_mask.html#aafa9a1c64bb786871824df5e2bc9ed0a",
-"class_pdf_sharp_1_1_pdf_1_1_annotations_1_1_pdf_annotations.html#ae937de5854e89a1c4e219e24940b0870",
-"class_pdf_sharp_1_1_pdf_1_1_pdf_array.html#a63006eec117109d667d5e31336989206",
-"class_pdf_sharp_1_1_pdf_1_1_pdf_dictionary_1_1_dictionary_elements.html#af9f137a5b1a2960e6ef30e2f9a44bd66",
-"class_pdf_sharp_1_1_pdf_1_1_pdf_outline.html#a3b064e51fb2ac2f8d54d48692a62f031",
-"class_pdf_sharp_1_1_pdf_1_1_pdf_u_integer.html#ace38466cff51cf0b8441a0aaeed02dfd",
-"functions_q.html",
-"namespace_pdf_sharp_1_1_drawing.html#aee1e06ecbec0ece3277fdafae4a0799ea8dc5344bc0746e1cc5abf896ca03bbdf",
-"namespace_pdf_sharp_1_1_pdf_1_1_acro_forms.html#a3e43a69e09a96ac1cf737250b62db327afa067f3b66a0329ad8d373e3c22cb015",
-"struct_pdf_sharp_1_1_drawing_1_1_x_color.html#ab7789d09df28c828804c05d9a4f4c085",
-"struct_pdf_sharp_1_1_drawing_1_1_x_rect.html#a9a50ed8ad186adc15ddf26196729f010"
+"_op_code_name_8cs.html#a4a1d69ccda6168a8e630d25cb092da89ab2f5ff47436671b6e533d8dc3614845d",
+"_pdf_named_action_names_8cs.html#afef4914aa897604fd76c006c507bf2f0a9949113fe80352e0811374de833bc2da",
+"_stream_mode_8cs.html#a8322feed89c59fec85fe04cb67b634f2",
+"_x_known_color_8cs.html#aee1e06ecbec0ece3277fdafae4a0799eafc1cebf02dc2ee68655f3e7bf1b84230",
+"class_pdf_sharp_1_1_drawing_1_1_x_form.html#a89877f37280ca099ba515bc347ed9245",
+"class_pdf_sharp_1_1_drawing_1_1_x_image.html#a9c718dec6753016cff1ffd8dc91ae27e",
+"class_pdf_sharp_1_1_pdf_1_1_advanced_1_1_monochrome_mask.html#a287069709a21b8e4098785cfc5110413",
+"class_pdf_sharp_1_1_pdf_1_1_content_1_1_objects_1_1_c_string.html#af7c06c54e58ffe525cf9ef595e90db41",
+"class_pdf_sharp_1_1_pdf_1_1_pdf_document_settings.html#aed89582e702ad14e7b2b596d6c325fdc",
+"class_pdf_sharp_1_1_pdf_1_1_security_1_1_pdf_standard_security_handler.html#a6629af9a9a7dd702856ed493eaacfa86",
+"namespace_pdf_sharp_1_1_drawing.html#a6e05d52301938421090d9088cb4c0590abee12d309ba5730e1e121733b7b67956",
+"namespace_pdf_sharp_1_1_drawing_1_1_bar_codes.html#a98ff9da58b7af2672dec5f1ef87915f7a744ba77812af2948e5a85261cbefb0c7",
+"namespace_pdf_sharp_1_1_pdf_1_1_content.html#a4ad92bb3babc8a91b3a6de0813195323a28eba72f5e41e1aa926ed48f93baec15",
+"struct_pdf_sharp_1_1_drawing_1_1_x_matrix.html#a4ce653316cf85e83dcac1911fefa5e22"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,7 +1,7 @@
 var namespace_pdf_sharp_1_1_internal =
 [
-    [ "SCColor", "struct_pdf_sharp_1_1_internal_1_1_s_c_color.html", "struct_pdf_sharp_1_1_internal_1_1_s_c_color" ],
     [ "SColor", "struct_pdf_sharp_1_1_internal_1_1_s_color.html", "struct_pdf_sharp_1_1_internal_1_1_s_color" ],
+    [ "SCColor", "struct_pdf_sharp_1_1_internal_1_1_s_c_color.html", "struct_pdf_sharp_1_1_internal_1_1_s_c_color" ],
     [ "TokenizerHelper", "class_pdf_sharp_1_1_internal_1_1_tokenizer_helper.html", "class_pdf_sharp_1_1_internal_1_1_tokenizer_helper" ],
     [ "NotImplementedBehaviour", "namespace_pdf_sharp_1_1_internal.html#a802105e7addb66a6cae97f29deefcbef", [
       [ "DoNothing", "namespace_pdf_sharp_1_1_internal.html#a802105e7addb66a6cae97f29deefcbefa71b7f3fcd4098ebf8a3b387579d90dd7", null ],

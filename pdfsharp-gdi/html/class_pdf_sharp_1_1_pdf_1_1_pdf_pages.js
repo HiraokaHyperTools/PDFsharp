@@ -9,6 +9,7 @@ var class_pdf_sharp_1_1_pdf_1_1_pdf_pages =
     [ "Remove", "class_pdf_sharp_1_1_pdf_1_1_pdf_pages.html#ac62c056de8a66a7770c278582f2a253a", null ],
     [ "RemoveAt", "class_pdf_sharp_1_1_pdf_1_1_pdf_pages.html#a2203a0eb40abdf1857fe51cce5bdfec6", null ],
     [ "Count", "class_pdf_sharp_1_1_pdf_1_1_pdf_pages.html#a568fe2c216120e09864cb225e8bed2e4", null ],
+    [ "Meta", "class_pdf_sharp_1_1_pdf_1_1_pdf_pages.html#a372bddbd9f4db72fd022ec3f9fbdb334", null ],
     [ "PagesArray", "class_pdf_sharp_1_1_pdf_1_1_pdf_pages.html#a7667554996e35f96ffc0ac67556ba63d", null ],
     [ "this[int index]", "class_pdf_sharp_1_1_pdf_1_1_pdf_pages.html#ac675493e404b7fbef603e9629be9aa2e", null ]
 ];
