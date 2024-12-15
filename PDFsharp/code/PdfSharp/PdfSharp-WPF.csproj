@@ -13,8 +13,8 @@
     <AssemblyName>HiraokaHyperTools.PdfSharp-WPF</AssemblyName>
 
     <PackageId>kenjiuno.PdfSharp-WPF</PackageId>
-    <PackageVersion>1.31.7247</PackageVersion>
-    <AssemblyVersion>1.31.7247</AssemblyVersion>
+    <PackageVersion>1.31.7289</PackageVersion>
+    <AssemblyVersion>1.31.7289</AssemblyVersion>
     <Authors>kenjiuno</Authors>
     <Owners>www.pdfsharp.net</Owners>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>

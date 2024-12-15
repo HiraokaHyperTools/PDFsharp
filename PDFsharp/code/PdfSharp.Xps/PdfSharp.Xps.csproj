@@ -9,8 +9,8 @@
     <OutputType>Library</OutputType>
     <RootNamespace>PdfSharp.Xps</RootNamespace>
     <AssemblyName>HiraokaHyperTools.PdfSharp.Xps</AssemblyName>
-    <PackageVersion>1.1.14</PackageVersion>
-    <AssemblyVersion>1.1.14</AssemblyVersion>
+    <PackageVersion>1.1.15</PackageVersion>
+    <AssemblyVersion>1.1.15</AssemblyVersion>
 
     <PackageId>kenjiuno.PdfSharp.Xps</PackageId>
     <Authors>kenjiuno</Authors>
