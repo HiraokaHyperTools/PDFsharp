@@ -67,7 +67,6 @@ namespace PdfSharp.Xps.Rendering
 
       var imageMatrix = (XMatrix)brush.Transform.Matrix;
 
-      pdfForm.Elements.SetRectangle(PdfFormXObject.Keys.BBox, new PdfRectangle(0, height, width, 0));
       pdfForm.Elements.SetMatrix(PdfFormXObject.Keys.Matrix, imageMatrix);
 
       PdfContentWriter writer = new PdfContentWriter(Context, pdfForm);
@@ -86,13 +85,25 @@ namespace PdfSharp.Xps.Rendering
         )
       );
       XMatrix matrix = new XMatrix();
-      double scaleX = brush.Viewport.Width / brush.Viewbox.Width * 4 / 3 * ximage.PointWidth;
-      double scaleY = brush.Viewport.Height / brush.Viewbox.Height * 4 / 3 * ximage.PointHeight;
-      matrix.TranslatePrepend(-brush.Viewbox.X, -brush.Viewbox.Y);
-      matrix.ScalePrepend(scaleX, scaleY);
-      matrix.TranslatePrepend(brush.Viewport.X / scaleX, brush.Viewport.Y / scaleY);
-      matrix.TranslatePrepend(0, 1);
-      matrix.ScalePrepend(1, -1);
+      double scaleX = brush.Viewport.Width / brush.Viewbox.Width * 4.0 / 3.0 * ximage.PointWidth;
+      double scaleY = brush.Viewport.Height / brush.Viewbox.Height * 4.0 / 3.0 * ximage.PointHeight;
+      double pixToDipX = brush.Viewport.Width / (ximage.PointWidth * 4.0 / 3.0);
+      double pixToDipY = brush.Viewport.Height / (ximage.PointHeight * 4.0 / 3.0);
+      matrix.ScaleAppend(1, -1);
+      matrix.TranslateAppend(0, 1);
+      matrix.ScaleAppend(scaleX, scaleY);
+      matrix.TranslateAppend(-brush.Viewbox.X * pixToDipX, -brush.Viewbox.Y * pixToDipY);
+      matrix.TranslateAppend(brush.Viewport.X, brush.Viewport.Y);
+
+      //matrix.TranslatePrepend(0, 1);
+      //matrix.ScalePrepend(1, -1);
+
+      pdfForm.Elements.SetRectangle(PdfFormXObject.Keys.BBox, new PdfRectangle(
+        brush.Viewport.X,
+        brush.Viewport.Y,
+        brush.Viewport.X + brush.Viewport.Width,
+        brush.Viewport.Y + brush.Viewport.Height
+      ));
 
       //double scaleX = 96 / ximage.HorizontalResolution;
       //double scaleY = 96 / ximage.VerticalResolution;
